@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="coursework_console.cpp" />
     <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="Display.cpp" />
     <ClCompile Include="GPU.cpp" />
     <ClCompile Include="Motherboard.cpp" />
     <ClCompile Include="RAM.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.h" />
+    <ClInclude Include="Display.h" />
     <ClInclude Include="GPU.h" />
     <ClInclude Include="Motherboard.h" />
     <ClInclude Include="RAM.h" />
