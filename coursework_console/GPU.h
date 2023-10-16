@@ -9,6 +9,7 @@ public:
 	~GPU();
 
 	void operator=(GPU other);
+	friend std::ostream& operator << (std::ostream& out, const GPU& gpu);
 
 	std::string GetName() const;
 	float GetFrequency() const;
@@ -16,8 +17,9 @@ public:
 	void Input();
 private:
 	std::string name;
-	float frequency;
-	int vram;
+	float frequency = 0;
+	int vram = 0;
 
 	bool CheckArguments(std::string name, float frequency, int vram);
+	void SetArguments(std::string name, float frequency, int vram);
 };

@@ -4,35 +4,29 @@
 
 void CPU::operator=(CPU other) {
 	this->name = other.GetName();
+	this->socket = other.GetSocket();
 	this->frequency = other.GetFrequency();
 	this->numOfCores = other.GetNumOfCores();
-	this->socket = other.GetSocket();
 }
 
-bool CPU::CheckArguments(std::string name, float frequency, int numOfCores, std::string socket) {
-	return frequency >= 0 && frequency < maxFreq && numOfCores >= 0;
+std::ostream& operator << (std::ostream& out, const CPU& cpu) {
+	out << cpu.GetName() << ", " << cpu.GetSocket() << ", " << cpu.GetFrequency() << " ГГц, " << cpu.GetNumOfCores() << "-ядерный";
+	return out;
 }
 
 CPU::CPU()
 {
-	frequency = numOfCores = 0;
+
 }
 
 CPU::CPU(std::string name)
 {
 	this->name = name;
-	frequency = numOfCores = 0;
 }
 
-CPU::CPU(std::string name, float frequency, int numOfCores, std::string socket)
+CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores)
 {
-	if (CheckArguments(name, frequency, numOfCores, socket)) {
-		this->name = name;
-		this->frequency = frequency;
-		this->numOfCores = numOfCores;
-		this->socket = socket;
-	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+	SetArguments(name, socket, frequency, numOfCores);
 }
 
 CPU::~CPU()
@@ -43,16 +37,16 @@ std::string CPU::GetName() const {
 	return name;
 }
 
+std::string CPU::GetSocket() const {
+	return socket;
+}
+
 float CPU::GetFrequency() const {
 	return frequency;
 }
 
 int CPU::GetNumOfCores() const {
 	return numOfCores;
-}
-
-std::string CPU::GetSocket() const {
-	return socket;
 }
 
 void CPU::Input() {
@@ -62,19 +56,28 @@ void CPU::Input() {
 
 	std::cout << "Введите название процессора: ";
 	std::getline(std::cin, name);
+	std::cout << "Введите название сокета процессора: ";
+	std::getline(std::cin, socket);
 	std::cout << "Введите его тактовую частоту (в ГГц): ";
 	std::cin >> frequency;
 	std::cout << "Введите количество ядер: ";
 	std::cin >> numOfCores;
 	while (getchar() != '\n'); //очистка входного потока после cin
-	std::cout << "Введите название сокета процессора: ";
-	std::getline(std::cin, socket);
 
-	if (CheckArguments(name, frequency, numOfCores, socket)) {
+	SetArguments(name, socket, frequency, numOfCores);
+}
+
+
+bool CPU::CheckArguments(std::string name, std::string socket, float frequency, int numOfCores) {
+	return frequency >= 0 && frequency < maxFreq && numOfCores >= 0;
+}
+
+void CPU::SetArguments(std::string name, std::string socket, float frequency, int numOfCores) {
+	if (CheckArguments(name, socket, frequency, numOfCores)) {
 		this->name = name;
+		this->socket = socket;
 		this->frequency = frequency;
 		this->numOfCores = numOfCores;
-		this->socket = socket;
 	}
 	else throw std::invalid_argument("Некорректный формат данных!");
 }

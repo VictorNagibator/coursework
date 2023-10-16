@@ -8,29 +8,24 @@ void GPU::operator=(GPU other) {
 	this->vram = other.GetVRAM();
 }
 
-bool GPU::CheckArguments(std::string name, float frequency, int vram) {
-	return frequency >= 0 && vram >= 0;
+std::ostream& operator << (std::ostream& out, const GPU& gpu) {
+	out << gpu.GetName() << ", " << gpu.GetFrequency() << " МГц, " << gpu.GetVRAM() << " ГБ";
+	return out;
 }
 
 GPU::GPU()
 {
-	frequency = vram = 0;
+
 }
 
 GPU::GPU(std::string name)
 {
 	this->name = name;
-	frequency = vram = 0;
 }
 
 GPU::GPU(std::string name, float frequency, int vram)
 {
-	if (CheckArguments(name, frequency, vram)) {
-		this->name = name;
-		this->frequency = frequency;
-		this->vram = vram;
-	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+	SetArguments(name, frequency, vram);
 }
 
 GPU::~GPU()
@@ -61,6 +56,16 @@ void GPU::Input() {
 	std::cout << "Введите объем видеопамяти (в ГБ): ";
 	std::cin >> vram;
 	while (getchar() != '\n');
+	
+	SetArguments(name, frequency, vram);
+}
+
+
+bool GPU::CheckArguments(std::string name, float frequency, int vram) {
+	return frequency >= 0 && vram >= 0;
+}
+
+void GPU::SetArguments(std::string name, float frequency, int vram) {
 	if (CheckArguments(name, frequency, vram)) {
 		this->name = name;
 		this->frequency = frequency;
