@@ -11,17 +11,18 @@ class RAM
 public:
 	RAM();
 	RAM(std::string name);
+	RAM(RAMType type);
 	RAM(std::string name, RAMType type, float frequency, int capacity);
 	~RAM();
 
 	void operator=(RAM other);
 	friend std::ostream& operator << (std::ostream& out, const RAM& ram);
 
-	std::string GetName() const;
-	RAMType GetRAMType() const;
-	float GetFrequency() const;
-	int GetCapacity() const;
-	void Input();
+	std::string getName() const;
+	RAMType getRAMType() const;
+	float getFrequency() const;
+	int getCapacity() const;
+	void input();
 
 	//вектор максимально возможных частот для каждого типа памяти
 	const std::vector<int> DDRFreqMax = { 400, 1066, 2400, 3333, 6400 };
@@ -32,6 +33,6 @@ private:
 	float frequency = 0;
 	int capacity = 0;
 
-	bool CheckArguments(std::string name, RAMType type, float frequency, int capacity);
-	void SetArguments(std::string name, RAMType type, float frequency, int capacity);
+	bool checkArguments(std::string name, RAMType type, float frequency, int capacity);
+	void setArguments(std::string name, RAMType type, float frequency, int capacity);
 };

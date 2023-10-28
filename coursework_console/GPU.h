@@ -11,15 +11,15 @@ public:
 	void operator=(GPU other);
 	friend std::ostream& operator << (std::ostream& out, const GPU& gpu);
 
-	std::string GetName() const;
-	float GetFrequency() const;
-	int GetVRAM() const;
-	void Input();
+	std::string getName() const;
+	float getFrequency() const;
+	int getVRAM() const;
+	void input();
 private:
 	std::string name;
 	float frequency = 0;
 	int vram = 0;
 
-	bool CheckArguments(std::string name, float frequency, int vram);
-	void SetArguments(std::string name, float frequency, int vram);
+	bool checkArguments(std::string name, float frequency, int vram);
+	void setArguments(std::string name, float frequency, int vram);
 };

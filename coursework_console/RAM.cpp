@@ -56,14 +56,14 @@ std::ostream& operator << (std::ostream& out, RAMType& type) {
 
 
 void RAM::operator=(RAM other) {
-	this->name = other.GetName();
-	this->type = other.GetRAMType();
-	this->frequency = other.GetFrequency();
-	this->capacity = other.GetCapacity();
+	this->name = other.getName();
+	this->type = other.getRAMType();
+	this->frequency = other.getFrequency();
+	this->capacity = other.getCapacity();
 }
 
 std::ostream& operator << (std::ostream& out, const RAM& ram) {
-	out << ram.GetName() << ", " << ram.GetRAMType() << ", " << ram.GetCapacity() << " ÃÁ, " << ram.GetFrequency() << " ÌÃö";
+	out << ram.getName() << ", " << ram.getRAMType() << ", " << ram.getCapacity() << " ÃÁ, " << ram.getFrequency() << " ÌÃö";
 	return out;
 }
 
@@ -77,32 +77,36 @@ RAM::RAM(std::string name)
 	this->name = name;
 }
 
+RAM::RAM(RAMType type) {
+	this->type = type;
+}
+
 RAM::RAM(std::string name, RAMType type, float frequency, int capacity)
 {
-	SetArguments(name, type, frequency, capacity);
+	setArguments(name, type, frequency, capacity);
 }
 
 RAM::~RAM()
 {
 }
 
-std::string RAM::GetName() const {
+std::string RAM::getName() const {
 	return name;
 }
 
-RAMType RAM::GetRAMType() const {
+RAMType RAM::getRAMType() const {
 	return type;
 }
 
-float RAM::GetFrequency() const {
+float RAM::getFrequency() const {
 	return frequency;
 }
 
-int RAM::GetCapacity() const {
+int RAM::getCapacity() const {
 	return capacity;
 }
 
-void RAM::Input() {
+void RAM::input() {
 	std::string name;
 	RAMType type;
 	float frequency;
@@ -118,16 +122,16 @@ void RAM::Input() {
 	std::cin >> capacity;
 	while (getchar() != '\n');
 
-	CheckArguments(name, type, frequency, capacity);
+	checkArguments(name, type, frequency, capacity);
 }
 
 
-bool RAM::CheckArguments(std::string name, RAMType type, float frequency, int capacity) {
+bool RAM::checkArguments(std::string name, RAMType type, float frequency, int capacity) {
 	return type >= DDR && type <= DDR5 && frequency >= 0 && frequency <= DDRFreqMax[type] && capacity >= 0;
 }
 
-void RAM::SetArguments(std::string name, RAMType type, float frequency, int capacity) {
-	if (CheckArguments(name, type, frequency, capacity)) {
+void RAM::setArguments(std::string name, RAMType type, float frequency, int capacity) {
+	if (checkArguments(name, type, frequency, capacity)) {
 		this->name = name;
 		this->type = type;
 		this->frequency = frequency;

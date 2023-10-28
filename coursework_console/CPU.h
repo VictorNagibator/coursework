@@ -11,20 +11,20 @@ public:
 	void operator=(CPU other);
 	friend std::ostream& operator << (std::ostream& out, const CPU& cpu);
 
-	std::string GetName() const;
-	std::string GetSocket() const;
-	float GetFrequency() const;
-	int GetNumOfCores() const;
-	void Input();
+	std::string getName() const;
+	std::string getSocket() const;
+	float getFrequency() const;
+	int getNumOfCores() const;
+	void input();
 
 	const float maxFreq = 9.0; //условная максимальная тактовая частота для процессора
-	const float tryFreq = 0.2; //условное повышение частоты для разгона
+	const double tryFreq = 0.2; //условное повышение частоты для разгона
 private:
 	std::string name;
 	std::string socket;
 	float frequency = 0;
 	int numOfCores = 0;
 
-	bool CheckArguments(std::string name, std::string socket, float frequency, int numOfCores);
-	void SetArguments(std::string name, std::string socket, float frequency, int numOfCores);
+	bool checkArguments(std::string name, std::string socket, float frequency, int numOfCores);
+	void setArguments(std::string name, std::string socket, float frequency, int numOfCores);
 };

@@ -3,14 +3,14 @@
 #include "Cpu.h"
 
 void CPU::operator=(CPU other) {
-	this->name = other.GetName();
-	this->socket = other.GetSocket();
-	this->frequency = other.GetFrequency();
-	this->numOfCores = other.GetNumOfCores();
+	this->name = other.getName();
+	this->socket = other.getSocket();
+	this->frequency = other.getFrequency();
+	this->numOfCores = other.getNumOfCores();
 }
 
 std::ostream& operator << (std::ostream& out, const CPU& cpu) {
-	out << cpu.GetName() << ", " << cpu.GetSocket() << ", " << cpu.GetFrequency() << " √√ц, " << cpu.GetNumOfCores() << "-€дерный";
+	out << cpu.getName() << ", " << cpu.getSocket() << ", " << cpu.getFrequency() << " √√ц, " << cpu.getNumOfCores() << "-€дерный";
 	return out;
 }
 
@@ -26,30 +26,30 @@ CPU::CPU(std::string name)
 
 CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores)
 {
-	SetArguments(name, socket, frequency, numOfCores);
+	setArguments(name, socket, frequency, numOfCores);
 }
 
 CPU::~CPU()
 {
 }
 
-std::string CPU::GetName() const {
+std::string CPU::getName() const {
 	return name;
 }
 
-std::string CPU::GetSocket() const {
+std::string CPU::getSocket() const {
 	return socket;
 }
 
-float CPU::GetFrequency() const {
+float CPU::getFrequency() const {
 	return frequency;
 }
 
-int CPU::GetNumOfCores() const {
+int CPU::getNumOfCores() const {
 	return numOfCores;
 }
 
-void CPU::Input() {
+void CPU::input() {
 	std::string name, socket;
 	float frequency;
 	int numOfCores;
@@ -64,16 +64,16 @@ void CPU::Input() {
 	std::cin >> numOfCores;
 	while (getchar() != '\n'); //очистка входного потока после cin
 
-	SetArguments(name, socket, frequency, numOfCores);
+	setArguments(name, socket, frequency, numOfCores);
 }
 
 
-bool CPU::CheckArguments(std::string name, std::string socket, float frequency, int numOfCores) {
+bool CPU::checkArguments(std::string name, std::string socket, float frequency, int numOfCores) {
 	return frequency >= 0 && frequency < maxFreq && numOfCores >= 0;
 }
 
-void CPU::SetArguments(std::string name, std::string socket, float frequency, int numOfCores) {
-	if (CheckArguments(name, socket, frequency, numOfCores)) {
+void CPU::setArguments(std::string name, std::string socket, float frequency, int numOfCores) {
+	if (checkArguments(name, socket, frequency, numOfCores)) {
 		this->name = name;
 		this->socket = socket;
 		this->frequency = frequency;

@@ -3,13 +3,13 @@
 #include "GPU.h"
 
 void GPU::operator=(GPU other) {
-	this->name = other.GetName();
-	this->frequency = other.GetFrequency();
-	this->vram = other.GetVRAM();
+	this->name = other.getName();
+	this->frequency = other.getFrequency();
+	this->vram = other.getVRAM();
 }
 
 std::ostream& operator << (std::ostream& out, const GPU& gpu) {
-	out << gpu.GetName() << ", " << gpu.GetFrequency() << " ÌÃö, " << gpu.GetVRAM() << " ÃÁ";
+	out << gpu.getName() << ", " << gpu.getFrequency() << " ÌÃö, " << gpu.getVRAM() << " ÃÁ";
 	return out;
 }
 
@@ -25,26 +25,26 @@ GPU::GPU(std::string name)
 
 GPU::GPU(std::string name, float frequency, int vram)
 {
-	SetArguments(name, frequency, vram);
+	setArguments(name, frequency, vram);
 }
 
 GPU::~GPU()
 {
 }
 
-std::string GPU::GetName() const {
+std::string GPU::getName() const {
 	return name;
 }
 
-float GPU::GetFrequency() const {
+float GPU::getFrequency() const {
 	return frequency;
 }
 
-int GPU::GetVRAM() const {
+int GPU::getVRAM() const {
 	return vram;
 }
 
-void GPU::Input() {
+void GPU::input() {
 	std::string name;
 	float frequency;
 	int vram;
@@ -57,16 +57,16 @@ void GPU::Input() {
 	std::cin >> vram;
 	while (getchar() != '\n');
 	
-	SetArguments(name, frequency, vram);
+	setArguments(name, frequency, vram);
 }
 
 
-bool GPU::CheckArguments(std::string name, float frequency, int vram) {
+bool GPU::checkArguments(std::string name, float frequency, int vram) {
 	return frequency >= 0 && vram >= 0;
 }
 
-void GPU::SetArguments(std::string name, float frequency, int vram) {
-	if (CheckArguments(name, frequency, vram)) {
+void GPU::setArguments(std::string name, float frequency, int vram) {
+	if (checkArguments(name, frequency, vram)) {
 		this->name = name;
 		this->frequency = frequency;
 		this->vram = vram;

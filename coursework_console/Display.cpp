@@ -2,13 +2,13 @@
 #include "Display.h"
 
 void Display::operator=(Display other) {
-	this->width = other.GetWidth();
-	this->height = other.GetHeight();
-	this->refreshRate = other.GetRefreshRate();
+	this->width = other.getWidth();
+	this->height = other.getHeight();
+	this->refreshRate = other.getRefreshRate();
 }
 
 std::ostream& operator << (std::ostream& out, const Display& display) {
-	out << display.GetWidth() << "x" << display.GetHeight() << ", " << display.GetRefreshRate() << " √ц";
+	out << display.getWidth() << "x" << display.getHeight() << ", " << display.getRefreshRate() << " √ц";
 	return out;
 }
 
@@ -19,31 +19,31 @@ Display::Display()
 
 Display::Display(int width, int height)
 {
-	SetArguments(width, height, 0);
+	setArguments(width, height, 0);
 }
 
 Display::Display(int width, int height, int refreshRate)
 {
-	SetArguments(width, height, refreshRate);
+	setArguments(width, height, refreshRate);
 }
 
 Display::~Display()
 {
 }
 
-int Display::GetWidth() const {
+int Display::getWidth() const {
 	return width;
 }
 
-int Display::GetHeight() const {
+int Display::getHeight() const {
 	return height;
 }
 
-int Display::GetRefreshRate() const {
+int Display::getRefreshRate() const {
 	return refreshRate;
 }
 
-void Display::Input() {
+void Display::input() {
 	int width, height, refreshRate;
 
 	std::cout << "¬ведите ширину и высоту экрана (в пиксел€х): ";
@@ -52,16 +52,16 @@ void Display::Input() {
 	std::cin >> refreshRate;
 	while (getchar() != '\n');
 	
-	SetArguments(width, height, refreshRate);
+	setArguments(width, height, refreshRate);
 }
 
 
-bool Display::CheckArguments(int width, int height, int refreshRate) {
+bool Display::checkArguments(int width, int height, int refreshRate) {
 	return width >= 0 && height >= 0 && refreshRate >= 0;
 }
 
-void Display::SetArguments(int width, int height, int refreshRate) {
-	if (CheckArguments(width, height, refreshRate)) {
+void Display::setArguments(int width, int height, int refreshRate) {
+	if (checkArguments(width, height, refreshRate)) {
 		this->width = width;
 		this->height = height;
 		this->refreshRate = refreshRate;

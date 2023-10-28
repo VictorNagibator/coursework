@@ -1,4 +1,5 @@
 #pragma once
+
 class Display
 {
 public:
@@ -10,13 +11,13 @@ public:
 	void operator=(Display other);
 	friend std::ostream& operator << (std::ostream& out, const Display& display);
 
-	int GetWidth() const;
-	int GetHeight() const;
-	int GetRefreshRate() const;
-	void Input();
+	int getWidth() const;
+	int getHeight() const;
+	int getRefreshRate() const;
+	void input();
 private:
 	int width = 0, height = 0, refreshRate = 0;
 
-	bool CheckArguments(int width, int height, int refreshRate);
-	void SetArguments(int width, int height, int refreshRate);
+	bool checkArguments(int width, int height, int refreshRate);
+	void setArguments(int width, int height, int refreshRate);
 };

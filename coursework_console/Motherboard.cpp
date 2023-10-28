@@ -4,14 +4,14 @@
 #include "RAM.h"
 
 void Motherboard::operator=(Motherboard other) {
-	this->name = other.GetName();
-	this->socket = other.GetSocket();
-	this->chipset = other.GetChipset();
-	this->supportedRAMType = other.GetSupportedRAMType();
+	this->name = other.getName();
+	this->socket = other.getSocket();
+	this->chipset = other.getChipset();
+	this->supportedRAMType = other.getSupportedRAMType();
 }
 
 std::ostream& operator << (std::ostream& out, const Motherboard& motherboard) {
-	out << motherboard.GetName() << ", " << motherboard.GetSocket() << ", " << motherboard.GetChipset();
+	out << motherboard.getName() << ", " << motherboard.getSocket() << ", " << motherboard.getChipset();
 	return out;
 }
 
@@ -26,30 +26,30 @@ Motherboard::Motherboard(std::string name)
 
 Motherboard::Motherboard(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType)
 {
-	SetArguments(name, socket, chipset, supportedRAMType);
+	setArguments(name, socket, chipset, supportedRAMType);
 }
 
 Motherboard::~Motherboard()
 {
 }
 
-std::string Motherboard::GetName() const {
+std::string Motherboard::getName() const {
 	return name;
 }
 
-std::string Motherboard::GetSocket() const {
+std::string Motherboard::getSocket() const {
 	return socket;
 }
 
-std::string Motherboard::GetChipset() const {
+std::string Motherboard::getChipset() const {
 	return chipset;
 }
 
-RAMType Motherboard::GetSupportedRAMType() const {
+RAMType Motherboard::getSupportedRAMType() const {
 	return supportedRAMType;
 }
 
-void Motherboard::Input() {
+void Motherboard::input() {
 	std::string name, socket, chipset;
 	RAMType supportedRAMType;
 
@@ -63,16 +63,16 @@ void Motherboard::Input() {
 	std::cin >> supportedRAMType;
 	while (getchar() != '\n');
 	
-	SetArguments(name, socket, chipset, supportedRAMType);
+	setArguments(name, socket, chipset, supportedRAMType);
 }
 
 
-bool Motherboard::CheckArguments(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType) {
+bool Motherboard::checkArguments(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType) {
 	return supportedRAMType >= DDR && supportedRAMType <= DDR5;
 }
 
-void Motherboard::SetArguments(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType) {
-	if (CheckArguments(name, socket, chipset, supportedRAMType)) {
+void Motherboard::setArguments(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType) {
+	if (checkArguments(name, socket, chipset, supportedRAMType)) {
 		this->name = name;
 		this->socket = socket;
 		this->chipset = chipset;

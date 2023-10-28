@@ -131,14 +131,18 @@
     <ClCompile Include="CPU.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="GPU.cpp" />
+    <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="Motherboard.cpp" />
+    <ClCompile Include="Order.cpp" />
     <ClCompile Include="RAM.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="GPU.h" />
+    <ClInclude Include="Laptop.h" />
     <ClInclude Include="Motherboard.h" />
+    <ClInclude Include="Order.h" />
     <ClInclude Include="RAM.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
