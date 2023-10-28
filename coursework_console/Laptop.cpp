@@ -1,11 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Laptop.h"
-#include "CPU.h"
-#include "Display.h"
-#include "GPU.h"
-#include "Motherboard.h"
-#include "RAM.h"
 
 void Laptop::operator=(Laptop other) {
 	this->name = other.getName();

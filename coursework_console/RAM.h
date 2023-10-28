@@ -1,10 +1,6 @@
 #pragma once
 #include <vector>
-
-enum RAMType { DDR, DDR2, DDR3, DDR4, DDR5 };
-
-std::istream& operator >> (std::istream& in, RAMType& type);
-std::ostream& operator << (std::ostream& out, RAMType& type);
+#include "RAMType.h"
 
 class RAM
 {

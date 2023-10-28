@@ -1,10 +1,6 @@
 #pragma once
 #include "Laptop.h"
-
-enum StatusType { ONHOLD, INPROCCESS, FINISHED };
-
-std::istream& operator >> (std::istream& in, StatusType& status);
-std::ostream& operator << (std::ostream& out, StatusType& status);
+#include "StatusType.h"
 
 class Order
 {

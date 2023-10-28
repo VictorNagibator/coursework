@@ -3,7 +3,6 @@
 #include "Display.h"
 #include "GPU.h"
 #include "Motherboard.h"
-#include "RAM.h"
 
 class Laptop
 {
