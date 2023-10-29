@@ -26,10 +26,6 @@ Laptop::Laptop(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherbo
 	setArguments(name, cpu, gpu, ram, motherboard, display, dataStorage);
 }
 
-Laptop::~Laptop() {
-
-}
-
 std::string Laptop::getName() const {
 	return name;
 }

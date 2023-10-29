@@ -19,10 +19,6 @@ Display::Display(int width, int height, int refreshRate) {
 	setArguments(width, height, refreshRate);
 }
 
-Display::~Display() {
-
-}
-
 int Display::getWidth() const {
 	return width;
 }

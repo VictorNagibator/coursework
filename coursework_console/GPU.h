@@ -8,7 +8,7 @@ public:
 	GPU() = default;
 	GPU(std::string name);
 	GPU(std::string name, float frequency, int vram);
-	~GPU();
+	~GPU() = default;
 
 	void operator=(GPU other);
 	friend std::ostream& operator << (std::ostream& out, const GPU& gpu);

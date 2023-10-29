@@ -31,10 +31,6 @@ Order::Order(int num, Laptop laptop, StatusType status) {
 	else throw std::invalid_argument("Некорректный формат данных!");
 }
 
-Order::~Order() {
-
-}
-
 int Order::getNum() const {
 	return num;
 }

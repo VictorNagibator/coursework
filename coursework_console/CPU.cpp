@@ -20,10 +20,6 @@ CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores) 
 	setArguments(name, socket, frequency, numOfCores);
 }
 
-CPU::~CPU() {
-
-}
-
 std::string CPU::getName() const {
 	return name;
 }

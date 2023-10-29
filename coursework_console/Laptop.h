@@ -15,7 +15,7 @@ class Laptop
 public:
 	Laptop() = default;
 	Laptop(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage);
-	~Laptop();
+	~Laptop() = default;
 
 	void operator=(Laptop other);
 	friend std::ostream& operator << (std::ostream& out, const Laptop& laptop);

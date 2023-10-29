@@ -20,10 +20,6 @@ Motherboard::Motherboard(std::string name, std::string socket, std::string chips
 	setArguments(name, socket, chipset, supportedRAMType);
 }
 
-Motherboard::~Motherboard() {
-
-}
-
 std::string Motherboard::getName() const {
 	return name;
 }

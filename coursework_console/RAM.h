@@ -12,7 +12,7 @@ public:
 	RAM(std::string name);
 	RAM(RAMType type);
 	RAM(std::string name, RAMType type, float frequency, int capacity);
-	~RAM();
+	~RAM() = default;
 
 	void operator=(RAM other);
 	friend std::ostream& operator << (std::ostream& out, const RAM& ram);

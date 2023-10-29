@@ -9,7 +9,7 @@ public:
 	Motherboard() = default;
 	Motherboard(std::string name);
 	Motherboard(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType);
-	~Motherboard();
+	~Motherboard() = default;
 
 	void operator=(Motherboard other);
 	friend std::ostream& operator << (std::ostream& out, const Motherboard& motherboard);

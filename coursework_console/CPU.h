@@ -8,7 +8,7 @@ public:
 	CPU() = default;
 	CPU(std::string name);
 	CPU(std::string name, std::string socket, float frequency, int numOfCores);
-	~CPU();
+	~CPU() = default;
 
 	void operator=(CPU other);
 	friend std::ostream& operator << (std::ostream& out, const CPU& cpu);

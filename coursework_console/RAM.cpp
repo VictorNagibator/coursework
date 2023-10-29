@@ -25,10 +25,6 @@ RAM::RAM(std::string name, RAMType type, float frequency, int capacity) {
 	setArguments(name, type, frequency, capacity);
 }
 
-RAM::~RAM() {
-
-}
-
 std::string RAM::getName() const {
 	return name;
 }

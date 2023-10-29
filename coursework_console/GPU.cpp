@@ -19,10 +19,6 @@ GPU::GPU(std::string name, float frequency, int vram) {
 	setArguments(name, frequency, vram);
 }
 
-GPU::~GPU() {
-
-}
-
 std::string GPU::getName() const {
 	return name;
 }

@@ -7,9 +7,10 @@
 class Order
 {
 public:
+	Order() = default;
 	Order(Laptop laptop);
 	Order(int num, Laptop laptop, StatusType status);
-	~Order();
+	~Order() = default;
 
 	void operator=(Order other);
 	friend std::ostream& operator << (std::ostream& out, Order& order);

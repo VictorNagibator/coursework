@@ -11,6 +11,7 @@ public:
 	SSD() = default;
 	SSD(DataTransferInterface transferInterface);
 	SSD(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor);
+	~SSD() = default;
 
 	void operator=(SSD other);
 	friend std::ostream& operator << (std::ostream& out, const SSD& ssd);

@@ -7,7 +7,7 @@ public:
 	Display() = default;
 	Display(int width, int height);
 	Display(int width, int height, int refreshRate);
-	~Display();
+	~Display() = default;
 
 	void operator=(Display other);
 	friend std::ostream& operator << (std::ostream& out, const Display& display);
