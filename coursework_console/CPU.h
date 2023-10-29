@@ -1,9 +1,11 @@
 #pragma once
+#include <iostream>
+#include <string>
 
 class CPU
 {
 public:
-	CPU();
+	CPU() = default;
 	CPU(std::string name);
 	CPU(std::string name, std::string socket, float frequency, int numOfCores);
 	~CPU();

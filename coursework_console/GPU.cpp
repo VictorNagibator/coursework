@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "GPU.h"
 
 void GPU::operator=(GPU other) {
@@ -13,23 +11,16 @@ std::ostream& operator << (std::ostream& out, const GPU& gpu) {
 	return out;
 }
 
-GPU::GPU()
-{
-
-}
-
-GPU::GPU(std::string name)
-{
+GPU::GPU(std::string name) {
 	this->name = name;
 }
 
-GPU::GPU(std::string name, float frequency, int vram)
-{
+GPU::GPU(std::string name, float frequency, int vram) {
 	setArguments(name, frequency, vram);
 }
 
-GPU::~GPU()
-{
+GPU::~GPU() {
+
 }
 
 std::string GPU::getName() const {

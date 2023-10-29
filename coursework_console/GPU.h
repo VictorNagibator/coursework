@@ -1,9 +1,11 @@
 #pragma once
+#include <iostream>
+#include <string>
 
 class GPU
 {
 public:
-	GPU();
+	GPU() = default;
 	GPU(std::string name);
 	GPU(std::string name, float frequency, int vram);
 	~GPU();

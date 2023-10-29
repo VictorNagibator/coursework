@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "Cpu.h"
 
 void CPU::operator=(CPU other) {
@@ -14,23 +12,16 @@ std::ostream& operator << (std::ostream& out, const CPU& cpu) {
 	return out;
 }
 
-CPU::CPU()
-{
-
-}
-
-CPU::CPU(std::string name)
-{
+CPU::CPU(std::string name) {
 	this->name = name;
 }
 
-CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores)
-{
+CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores) {
 	setArguments(name, socket, frequency, numOfCores);
 }
 
-CPU::~CPU()
-{
+CPU::~CPU() {
+
 }
 
 std::string CPU::getName() const {

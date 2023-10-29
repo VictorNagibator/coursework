@@ -2,30 +2,30 @@
 
 enum DataTransferInterface { PATA, SATA, SAS, NVME };
 
-static std::istream& operator >> (std::istream& in, DataTransferInterface& interface) {
+static std::istream& operator >> (std::istream& in, DataTransferInterface& transferInterface) {
 	int choice;
 	in >> choice;
 	switch (choice)
 	{
 	case 0:
-		interface = PATA;
+		transferInterface = PATA;
 		break;
 	case 1:
-		interface = SATA;
+		transferInterface = SATA;
 		break;
 	case 2:
-		interface = SAS;
+		transferInterface = SAS;
 		break;
 	case 3:
-		interface = NVME;
+		transferInterface = NVME;
 		break;
 	default:
 		break;
 	}
 	return in;
 }
-static std::ostream& operator << (std::ostream& out, DataTransferInterface& interface) {
-	switch (interface)
+static std::ostream& operator << (std::ostream& out, DataTransferInterface& transferInterface) {
+	switch (transferInterface)
 	{
 	case PATA:
 		out << "PATA";

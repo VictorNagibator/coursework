@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Display.h"
 
 void Display::operator=(Display other) {
@@ -12,23 +11,16 @@ std::ostream& operator << (std::ostream& out, const Display& display) {
 	return out;
 }
 
-Display::Display()
-{
-
-}
-
-Display::Display(int width, int height)
-{
+Display::Display(int width, int height) {
 	setArguments(width, height, 0);
 }
 
-Display::Display(int width, int height, int refreshRate)
-{
+Display::Display(int width, int height, int refreshRate) {
 	setArguments(width, height, refreshRate);
 }
 
-Display::~Display()
-{
+Display::~Display() {
+
 }
 
 int Display::getWidth() const {

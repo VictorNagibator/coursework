@@ -1,7 +1,3 @@
-#include <istream>
-#include <iostream>
-#include <string>
-#include <vector>
 #include "RAM.h"
 
 void RAM::operator=(RAM other) {
@@ -12,17 +8,12 @@ void RAM::operator=(RAM other) {
 }
 
 std::ostream& operator << (std::ostream& out, const RAM& ram) {
-	out << ram.getName() << ", " << ram.getRAMType() << ", " << ram.getCapacity() << " ÃÁ, " << ram.getFrequency() << " ÌÃö";
+	RAMType type = ram.getRAMType();
+	out << ram.getName() << ", " << type << ", " << ram.getCapacity() << " ÃÁ, " << ram.getFrequency() << " ÌÃö";
 	return out;
 }
 
-RAM::RAM()
-{
-
-}
-
-RAM::RAM(std::string name)
-{
+RAM::RAM(std::string name) {
 	this->name = name;
 }
 
@@ -30,13 +21,12 @@ RAM::RAM(RAMType type) {
 	this->type = type;
 }
 
-RAM::RAM(std::string name, RAMType type, float frequency, int capacity)
-{
+RAM::RAM(std::string name, RAMType type, float frequency, int capacity) {
 	setArguments(name, type, frequency, capacity);
 }
 
-RAM::~RAM()
-{
+RAM::~RAM() {
+
 }
 
 std::string RAM::getName() const {
@@ -71,7 +61,7 @@ void RAM::input() {
 	std::cin >> capacity;
 	while (getchar() != '\n');
 
-	checkArguments(name, type, frequency, capacity);
+	setArguments(name, type, frequency, capacity);
 }
 
 

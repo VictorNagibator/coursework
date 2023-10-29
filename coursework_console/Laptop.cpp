@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "Laptop.h"
 
 void Laptop::operator=(Laptop other) {
@@ -9,43 +7,27 @@ void Laptop::operator=(Laptop other) {
 	this->motherboard = other.getMotherboard();
 	this->ram = other.getRAM();
 	this->display = other.getDisplay();
+	this->dataStorage = other.getDataStorage();
 }
 
 std::ostream& operator << (std::ostream& out, const Laptop& laptop) {
-	out << 
+	out <<
 		"Название модели: " << laptop.name << "\n" <<
 		"CPU: " << laptop.cpu << "\n" <<
 		"GPU: " << laptop.gpu << "\n" <<
 		"RAM: " << laptop.ram << "\n" <<
 		"Материнская плата: " << laptop.motherboard << "\n" <<
-		"Экран: " << laptop.display;
+		"Экран: " << laptop.display << "\n" <<
+		laptop.dataStorage->getStorageName() << ": " << *dynamic_cast<HDD*>(laptop.dataStorage) << "\n";
 	return out;
 }
 
-Laptop::Laptop()
-{
-	cpu = CPU();
-	gpu = GPU();
-	ram = RAM();
-	motherboard = Motherboard();
-	display = Display();
+Laptop::Laptop(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
+	setArguments(name, cpu, gpu, ram, motherboard, display, dataStorage);
 }
 
-Laptop::Laptop(std::string name) {
-	this->name = name;
-	cpu = CPU();
-	gpu = GPU();
-	ram = RAM();
-	motherboard = Motherboard();
-	display = Display();
-}
+Laptop::~Laptop() {
 
-Laptop::Laptop(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display) {
-	setArguments(name, cpu, gpu, ram, motherboard, display);
-}
-
-Laptop::~Laptop()
-{
 }
 
 std::string Laptop::getName() const {
@@ -72,8 +54,12 @@ Display Laptop::getDisplay() const {
 	return display;
 }
 
+DataStorage* Laptop::getDataStorage() const {
+	return dataStorage;
+}
+
 void Laptop::setCPU(CPU cpu) {
-	if (checkArguments(this->name, cpu, this->gpu, this->ram, this->motherboard, this->display)) {
+	if (checkArguments(this->name, cpu, this->gpu, this->ram, this->motherboard, this->display, this->dataStorage)) {
 		this->cpu = cpu;
 	}
 	else throw std::invalid_argument("Неподходящий сокет!");
@@ -84,7 +70,7 @@ void Laptop::setGPU(GPU gpu) {
 }
 
 void Laptop::setRAM(RAM ram) {
-	if (checkArguments(this->name, this->cpu, this->gpu, ram, this->motherboard, this->display)) {
+	if (checkArguments(this->name, this->cpu, this->gpu, ram, this->motherboard, this->display, this->dataStorage)) {
 		this->ram = ram;
 	}
 	else throw std::invalid_argument("Неподходящий тип памяти!");
@@ -103,6 +89,10 @@ void Laptop::setDisplay(Display display) {
 	this->display = display;
 }
 
+void Laptop::setDataStorage(DataStorage* dataStorage) {
+	this->dataStorage = dataStorage;
+}
+
 void Laptop::input() {
 	std::cout << "Введите название ноутбука: ";
 	std::getline(std::cin, name);
@@ -116,6 +106,17 @@ void Laptop::input() {
 	motherboard.input();
 	std::cout << "\tВвод параметров экрана\n";
 	display.input();
+	std::cout << "\tВвод параметров хранилища\n";
+	std::cout << "Введите тип хранилища (0 - HDD, 1 - SSD): ";
+	int choice;
+	do
+	{
+		std::cin >> choice;
+		if (choice != 0 && choice != 1) std::cout << "Некорректный вариант!\nВведите еще раз: ";
+	} while (choice != 0 && choice != 1);
+	if (choice == 0) dataStorage = new HDD();
+	else dataStorage = new SSD();
+	dataStorage->input();
 }
 
 void Laptop::boostCPU() {
@@ -140,18 +141,19 @@ void Laptop::boostRAM() {
 }
 
 
-bool Laptop::checkArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display) {
+bool Laptop::checkArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
 	return (cpu.getSocket() == motherboard.getSocket()) && (ram.getRAMType() == motherboard.getSupportedRAMType());
 }
 
-void Laptop::setArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display) {
-	if (checkArguments(name, cpu, gpu, ram, motherboard, display)) {
+void Laptop::setArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage) {
+	if (checkArguments(name, cpu, gpu, ram, motherboard, display, dataStorage)) {
 		this->name = name;
 		this->cpu = cpu;
 		this->gpu = gpu;
 		this->ram = ram;
 		this->motherboard = motherboard;
 		this->display = display;
+		this->dataStorage = dataStorage;
 	}
 	else throw std::invalid_argument("Некорректный формат данных!");
 }

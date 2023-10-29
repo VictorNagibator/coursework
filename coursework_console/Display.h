@@ -1,9 +1,10 @@
 #pragma once
+#include <iostream>
 
 class Display
 {
 public:
-	Display();
+	Display() = default;
 	Display(int width, int height);
 	Display(int width, int height, int refreshRate);
 	~Display();

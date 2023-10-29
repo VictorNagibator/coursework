@@ -1,31 +1,29 @@
-#include <string>
-#include <iostream>
-#include <istream>
 #include "HDD.h"
 
 void HDD::operator=(HDD other) {
 	this->capacity = other.capacity;
-	this->interface = other.interface;
+	this->transferInterface = other.transferInterface;
 	this->brand = other.brand;
 	this->spindleSpeed = other.spindleSpeed;
 	this->formFactor = other.formFactor;
 }
 
 std::ostream& operator << (std::ostream& out, const HDD& hdd) {
-	out << hdd.getBrand() << ", " << hdd.getCapacity() << "ГБ, " << hdd.getInterface() << ", " << hdd.getFormFactor();
+	DataTransferInterface strInterface = hdd.getInterface();
+	out << hdd.getBrand() << ", " << hdd.getCapacity() << " ГБ, " << strInterface << ", " << hdd.getFormFactor();
 	return out;
 }
 
-HDD::HDD() {
-
+HDD::HDD(DataTransferInterface transferInterface) {
+	this->transferInterface = transferInterface;
 }
 
-HDD::HDD(DataTransferInterface interface) {
-	this->interface = interface;
+HDD::HDD(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor) {
+	setArguments(capacity, transferInterface, brand, spindleSpeed, formFactor);
 }
 
-HDD::HDD(int capacity, DataTransferInterface interface, std::string brand, int spindleSpeed, float formFactor) {
-	setArguments(capacity, interface, brand, spindleSpeed, formFactor);
+std::string HDD::getStorageName() const {
+	return "HDD";
 }
 
 int HDD::getCapacity() const {
@@ -33,7 +31,7 @@ int HDD::getCapacity() const {
 }
 
 DataTransferInterface HDD::getInterface() const {
-	return interface;
+	return transferInterface;
 }
 
 std::string HDD::getBrand() const {
@@ -55,9 +53,9 @@ void HDD::input() {
 	int spindleSpeed;
 	float formFactor;
 
-	std::cout << "Введите вместимость: ";
+	std::cout << "Введите вместимость (в ГБ): ";
 	std::cin >> capacity;
-	std::cout << "Введите интерфейс подключения (PATA - 0, SATA - 1, SAS - 2): ";
+	std::cout << "Введите интерфейс подключения (PATA - 0, SATA - 1, SAS - 2, NVMe - 3): ";
 	std::cin >> interface;
 	while (getchar() != '\n');
 	std::cout << "Введите производителя: ";
@@ -68,18 +66,18 @@ void HDD::input() {
 	std::cin >> formFactor;
 	while (getchar() != '\n');
 
-	checkArguments(capacity, interface, brand, spindleSpeed, formFactor);
+	setArguments(capacity, interface, brand, spindleSpeed, formFactor);
 }
 
 
-bool HDD::checkArguments(int capacity, DataTransferInterface interface, std::string brand, int spindleSpeed, float formFactor) {
-	return capacity >= 0 && interface >= PATA && interface <= SAS && spindleSpeed >= 0 && formFactor >= 0;
+bool HDD::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor) {
+	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && spindleSpeed >= 0 && formFactor >= 0;
 }
 
-void HDD::setArguments(int capacity, DataTransferInterface interface, std::string brand, int spindleSpeed, float formFactor) {
-	if (checkArguments(capacity, interface, brand, spindleSpeed, formFactor)) {
+void HDD::setArguments(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor) {
+	if (checkArguments(capacity, transferInterface, brand, spindleSpeed, formFactor)) {
 		this->capacity = capacity;
-		this->interface = interface;
+		this->transferInterface = transferInterface;
 		this->brand = brand;
 		this->spindleSpeed = spindleSpeed;
 		this->formFactor = formFactor;

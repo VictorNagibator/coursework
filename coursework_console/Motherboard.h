@@ -1,10 +1,12 @@
 #pragma once
-#include "RAM.h"
+#include <iostream>
+#include <string>
+#include "RAMType.h"
 
 class Motherboard
 {
 public:
-	Motherboard();
+	Motherboard() = default;
 	Motherboard(std::string name);
 	Motherboard(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType);
 	~Motherboard();

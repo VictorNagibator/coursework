@@ -1,7 +1,4 @@
-#include <iostream>
-#include <istream>
 #include "Order.h"
-#include "Laptop.h"
 
 void Order::operator=(Order other) {
 	this->num = other.num;
@@ -10,7 +7,8 @@ void Order::operator=(Order other) {
 }
 
 std::ostream& operator << (std::ostream& out, Order& order) {
-	out << order.getNum() << ". " << order.laptop.getName() << "\t" << order.getStatus();
+	StatusType type = order.getStatus();
+	out << order.getNum() << ". " << order.laptop.getName() << "\t" << type;
 	return out;
 }
 
@@ -18,22 +16,13 @@ bool Order::checkArguments(int num, Laptop laptop, StatusType status) {
 	return num > 0 && status >= ONHOLD && status <= FINISHED;
 }
 
-Order::Order()
-{
-	num = 1;
-	laptop = Laptop();
-	status = ONHOLD;
-}
-
-Order::Order(Laptop laptop)
-{
+Order::Order(Laptop laptop) {
 	num = 1;
 	this->laptop = laptop;
 	status = ONHOLD;
 }
 
-Order::Order(int num, Laptop laptop, StatusType status)
-{
+Order::Order(int num, Laptop laptop, StatusType status) {
 	if (checkArguments(num, laptop, status)) {
 		this->num = num;
 		this->laptop = laptop;
@@ -42,8 +31,8 @@ Order::Order(int num, Laptop laptop, StatusType status)
 	else throw std::invalid_argument("Некорректный формат данных!");
 }
 
-Order::~Order()
-{
+Order::~Order() {
+
 }
 
 int Order::getNum() const {

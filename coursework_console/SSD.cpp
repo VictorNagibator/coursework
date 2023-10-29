@@ -1,31 +1,30 @@
-#include <string>
-#include <iostream>
-#include <istream>
 #include "SSD.h"
 
 void SSD::operator=(SSD other) {
 	this->capacity = other.capacity;
-	this->interface = other.interface;
+	this->transferInterface = other.transferInterface;
 	this->brand = other.brand;
 	this->formFactor = other.formFactor;
 	this->typeOfFlashMemory = other.typeOfFlashMemory;
 }
 
 std::ostream& operator << (std::ostream& out, const SSD& ssd) {
-	out << ssd.getBrand() << ", " << ssd.getCapacity() << "ГБ, " << ssd.getInterface() << ", " << ssd.getFormFactor() << ", " << ssd.getTypeOfFlashMemory();
+	DataTransferInterface strInterface = ssd.getInterface();
+	FlashMemoryType strMemoryType = ssd.getTypeOfFlashMemory();
+	out << ssd.getBrand() << ", " << ssd.getCapacity() << " ГБ, " << strInterface << ", " << ssd.getFormFactor() << ", " << strMemoryType;
 	return out;
 }
 
-SSD::SSD() {
-
+SSD::SSD(DataTransferInterface transferInterface) {
+	this->transferInterface = transferInterface;
 }
 
-SSD::SSD(DataTransferInterface interface) {
-	this->interface = interface;
+SSD::SSD(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
+	setArguments(capacity, transferInterface, brand, typeOfFlashMemory, formFactor);
 }
 
-SSD::SSD(int capacity, DataTransferInterface interface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
-	setArguments(capacity, interface, brand, typeOfFlashMemory, formFactor);
+std::string SSD::getStorageName() const {
+	return "SSD";
 }
 
 int SSD::getCapacity() const {
@@ -33,7 +32,7 @@ int SSD::getCapacity() const {
 }
 
 DataTransferInterface SSD::getInterface() const {
-	return interface;
+	return transferInterface;
 }
 
 std::string SSD::getBrand() const {
@@ -50,15 +49,15 @@ float SSD::getFormFactor() const {
 
 void SSD::input() {
 	int capacity;
-	DataTransferInterface interface;
+	DataTransferInterface transferInterface;
 	std::string brand;
 	FlashMemoryType typeOfFlashMemory;
 	float formFactor;
 
-	std::cout << "Введите вместимость: ";
+	std::cout << "Введите вместимость (в ГБ): ";
 	std::cin >> capacity;
-	std::cout << "Введите интерфейс подключения (PATA - 0, SATA - 1, SAS - 2): ";
-	std::cin >> interface;
+	std::cout << "Введите интерфейс подключения (PATA - 0, SATA - 1, SAS - 2, NVMe - 3): ";
+	std::cin >> transferInterface;
 	while (getchar() != '\n');
 	std::cout << "Введите производителя: ";
 	std::getline(std::cin, brand);
@@ -68,18 +67,18 @@ void SSD::input() {
 	std::cin >> formFactor;
 	while (getchar() != '\n');
 
-	checkArguments(capacity, interface, brand, typeOfFlashMemory, formFactor);
+	setArguments(capacity, transferInterface, brand, typeOfFlashMemory, formFactor);
 }
 
 
-bool SSD::checkArguments(int capacity, DataTransferInterface interface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
-	return capacity >= 0 && interface >= PATA && interface <= SAS && typeOfFlashMemory >= SLC && typeOfFlashMemory <= NAND3D && formFactor >= 0;
+bool SSD::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
+	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && typeOfFlashMemory >= SLC && typeOfFlashMemory <= NAND3D && formFactor >= 0;
 }
 
-void SSD::setArguments(int capacity, DataTransferInterface interface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
-	if (checkArguments(capacity, interface, brand, typeOfFlashMemory, formFactor)) {
+void SSD::setArguments(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor) {
+	if (checkArguments(capacity, transferInterface, brand, typeOfFlashMemory, formFactor)) {
 		this->capacity = capacity;
-		this->interface = interface;
+		this->transferInterface = transferInterface;
 		this->brand = brand;
 		this->typeOfFlashMemory = typeOfFlashMemory;
 		this->formFactor = formFactor;

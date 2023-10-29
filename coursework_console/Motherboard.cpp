@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
 #include "Motherboard.h"
-#include "RAM.h"
 
 void Motherboard::operator=(Motherboard other) {
 	this->name = other.getName();
@@ -15,22 +12,16 @@ std::ostream& operator << (std::ostream& out, const Motherboard& motherboard) {
 	return out;
 }
 
-Motherboard::Motherboard()
-{
-}
-
-Motherboard::Motherboard(std::string name)
-{
+Motherboard::Motherboard(std::string name) {
 	this->name = name;
 }
 
-Motherboard::Motherboard(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType)
-{
+Motherboard::Motherboard(std::string name, std::string socket, std::string chipset, RAMType supportedRAMType) {
 	setArguments(name, socket, chipset, supportedRAMType);
 }
 
-Motherboard::~Motherboard()
-{
+Motherboard::~Motherboard() {
+
 }
 
 std::string Motherboard::getName() const {

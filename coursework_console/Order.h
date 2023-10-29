@@ -1,11 +1,12 @@
 #pragma once
+#include <iostream>
+#include <istream>
 #include "Laptop.h"
 #include "StatusType.h"
 
 class Order
 {
 public:
-	Order();
 	Order(Laptop laptop);
 	Order(int num, Laptop laptop, StatusType status);
 	~Order();

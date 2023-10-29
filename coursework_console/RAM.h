@@ -1,11 +1,14 @@
 #pragma once
+#include <istream>
+#include <iostream>
+#include <string>
 #include <vector>
 #include "RAMType.h"
 
 class RAM
 {
 public:
-	RAM();
+	RAM() = default;
 	RAM(std::string name);
 	RAM(RAMType type);
 	RAM(std::string name, RAMType type, float frequency, int capacity);
