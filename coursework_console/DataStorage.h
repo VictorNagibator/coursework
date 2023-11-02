@@ -1,19 +1,32 @@
 #pragma once
+#include <string>
+#include <format>
 #include "DataTransferInterface.h"
+#include "LaptopComponent.h"
 
-class DataStorage abstract
+class DataStorage abstract : public LaptopComponent
 {
 public:
-	virtual std::string getStorageName() const abstract;
+	DataStorage() = default;
+	DataStorage(DataTransferInterface transferInterface);
+	DataStorage(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor);
+	~DataStorage() = default;
 
-	virtual int getCapacity() const abstract;
-	virtual DataTransferInterface getInterface() const abstract;
-	virtual std::string getBrand() const abstract;
-	virtual float getFormFactor() const abstract;
-	virtual void input() abstract;
+	virtual std::string getStorageName() const abstract = 0;
+
+	virtual int getCapacity() const;
+	virtual DataTransferInterface getInterface() const;
+	virtual std::string getBrand() const;
+	virtual float getFormFactor() const;
+
+	virtual void input();
+	virtual std::string toString() const abstract;
 protected:
 	int capacity = 0;
 	DataTransferInterface transferInterface = SATA;
 	float formFactor = 0;
 	std::string brand;
+
+	bool checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor);
+	void tryToSetArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor);
 };

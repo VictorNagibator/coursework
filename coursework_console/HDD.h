@@ -9,22 +9,19 @@ class HDD : public DataStorage
 public:
 	HDD() = default;
 	HDD(DataTransferInterface transferInterface);
-	HDD(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor);
+	HDD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, int spindleSpeed);
 	~HDD() = default;
 
 	void operator=(HDD other);
 	friend std::ostream& operator << (std::ostream& out, const HDD& hdd);
 
-	std::string getStorageName() const;
-	int getCapacity() const;
-	DataTransferInterface getInterface() const;
-	std::string getBrand() const;
+	std::string getStorageName() const override;
 	int getSpindleSpeed() const;
-	float getFormFactor() const;
-	void input();
+	void input() override;
+	std::string toString() const override;
 private:
 	int spindleSpeed = 0;
 
-	bool checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor);
-	void setArguments(int capacity, DataTransferInterface transferInterface, std::string brand, int spindleSpeed, float formFactor);
+	bool checkArguments(int spindleSpeed);
+	void tryToSetArguments(int spindleSpeed);
 };

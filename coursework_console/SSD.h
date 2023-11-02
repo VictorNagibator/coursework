@@ -10,22 +10,19 @@ class SSD : public DataStorage
 public:
 	SSD() = default;
 	SSD(DataTransferInterface transferInterface);
-	SSD(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor);
+	SSD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, FlashMemoryType typeOfFlashMemory);
 	~SSD() = default;
 
 	void operator=(SSD other);
 	friend std::ostream& operator << (std::ostream& out, const SSD& ssd);
 
 	std::string getStorageName() const;
-	int getCapacity() const;
-	DataTransferInterface getInterface() const;
-	std::string getBrand() const;
 	FlashMemoryType getTypeOfFlashMemory() const;
-	float getFormFactor() const;
-	void input();
+	void input() override;
+	std::string toString() const override;
 private:
 	FlashMemoryType typeOfFlashMemory = NAND3D;
 
-	bool checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor);
-	void setArguments(int capacity, DataTransferInterface transferInterface, std::string brand, FlashMemoryType typeOfFlashMemory, float formFactor);
+	bool checkArguments(FlashMemoryType typeOfFlashMemory);
+	void tryToSetArguments(FlashMemoryType typeOfFlashMemory);
 };

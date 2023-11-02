@@ -1,6 +1,32 @@
 #pragma once
+#include <iostream>
 
 enum FlashMemoryType { SLC, MLC, NOR, NAND, NAND3D };
+
+static std::string FlashMemoryTypeToString(FlashMemoryType type) {
+	std::string result;
+	switch (type)
+	{
+	case SLC:
+		result = "SLC";
+		break;
+	case MLC:
+		result = "MLC";
+		break;
+	case NOR:
+		result = "NOR";
+		break;
+	case NAND:
+		result = "NAND";
+		break;
+	case NAND3D:
+		result = "3D NAND";
+		break;
+	default:
+		break;
+	}
+	return result;
+}
 
 static std::istream& operator >> (std::istream& in, FlashMemoryType& type) {
 	int choice;
@@ -28,25 +54,6 @@ static std::istream& operator >> (std::istream& in, FlashMemoryType& type) {
 	return in;
 };
 static std::ostream& operator << (std::ostream& out, FlashMemoryType& type) {
-	switch (type)
-	{
-	case SLC:
-		out << "SLC";
-		break;
-	case MLC:
-		out << "MLC";
-		break;
-	case NOR:
-		out << "NOR";
-		break;
-	case NAND:
-		out << "NAND";
-		break;
-	case NAND3D:
-		out << "3D NAND";
-		break;
-	default:
-		break;
-	}
+	out << FlashMemoryTypeToString(type);
 	return out;
 };

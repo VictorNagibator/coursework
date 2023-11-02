@@ -45,6 +45,9 @@
     <ClCompile Include="SSD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DataStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.h">
@@ -68,9 +71,6 @@
     <ClInclude Include="Order.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataStorage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HDD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -87,6 +87,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StatusType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStorage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LaptopComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

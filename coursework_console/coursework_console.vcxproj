@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="coursework_console.cpp" />
     <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="DataStorage.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="GPU.cpp" />
     <ClCompile Include="HDD.cpp" />
@@ -147,6 +149,7 @@
     <ClInclude Include="GPU.h" />
     <ClInclude Include="HDD.h" />
     <ClInclude Include="Laptop.h" />
+    <ClInclude Include="LaptopComponent.h" />
     <ClInclude Include="Motherboard.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="RAM.h" />

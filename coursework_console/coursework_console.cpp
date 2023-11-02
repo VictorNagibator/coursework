@@ -7,10 +7,9 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	Laptop laptop;
-	laptop.input();
-	std::cout << laptop << "\n";
+	HDD test;
+	test.input();
 
-	Order test = Order(laptop);
-	std::cout << test << "\n";
+	std::cout << test;
+
 }
