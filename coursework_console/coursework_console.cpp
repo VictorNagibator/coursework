@@ -7,7 +7,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	HDD test;
+	SSD test;
 	test.input();
 
 	std::cout << test;

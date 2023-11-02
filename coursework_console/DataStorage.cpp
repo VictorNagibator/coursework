@@ -40,11 +40,13 @@ void DataStorage::input() {
 	std::cout << "Введите форм фактор (в дюймах): ";
 	std::cin >> formFactor;
 	while (getchar() != '\n');
+
+	tryToSetArguments(capacity, interface, brand, formFactor);
 }
 
 
 std::string DataStorage::toString() const {
-	std::string name = this->getBrand() + ", " + std::to_string(this->getCapacity()) + " ГБ, " + DataTransferInterfaceToString(this->getInterface()) + ", " + std::format("{:.2f}", this->getFormFactor());
+	std::string name = this->getBrand() + ", " + std::to_string(this->getCapacity()) + " ГБ, " + DataTransferInterfaceToString(this->getInterface()) + ", " + std::format("{:.1f}", this->getFormFactor());
 	return name;
 }
 
