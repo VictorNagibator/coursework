@@ -23,7 +23,7 @@ SSD::SSD(int capacity, DataTransferInterface transferInterface, std::string bran
 		tryToSetArguments(typeOfFlashMemory);
 }
 
-std::string SSD::getStorageName() const {
+std::string SSD::getComponentName() const {
 	return "SSD";
 }
 
@@ -43,12 +43,12 @@ void SSD::input() {
 }
 
 std::string SSD::toString() const {
-	std::string name = DataStorage::toString() + ", " + FlashMemoryTypeToString(this->typeOfFlashMemory);
+	std::string name = DataStorage::toString() + ", " + FlashMemoryTypeToString(getTypeOfFlashMemory());
 	return name;
 }
 
 
-bool SSD::checkArguments(FlashMemoryType typeOfFlashMemory) {
+bool SSD::checkArguments(FlashMemoryType typeOfFlashMemory) const {
 	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && typeOfFlashMemory >= SLC && typeOfFlashMemory <= NAND3D && formFactor >= 0;
 }
 

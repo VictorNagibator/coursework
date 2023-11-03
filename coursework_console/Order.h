@@ -7,24 +7,27 @@
 class Order
 {
 public:
-	Order() = default;
 	Order(Laptop laptop);
-	Order(int num, Laptop laptop, StatusType status);
+	Order(Laptop laptop, StatusType status);
 	~Order() = default;
 
-	void operator=(Order other);
 	friend std::ostream& operator << (std::ostream& out, Order& order);
 
-	int getNum() const;
+	static int getNumOfLastOrder();
+	int getNumOfOrder() const;
 	Laptop getLaptop() const;
 	StatusType getStatus() const;
 	void input();
 	void setStatus(StatusType status);
 	void setLaptop(Laptop laptop);
+	std::string toString() const;
 private:
-	int num;
-	Laptop laptop;
-	StatusType status;
+	static inline int numOfLastOrder{};
 
-	bool checkArguments(int num, Laptop laptop, StatusType status);
+	int numOfOrder;
+	Laptop laptop;
+	StatusType status = ONHOLD;
+
+	bool checkArguments(StatusType status) const;
+	void tryToSetArguments(StatusType status);
 };

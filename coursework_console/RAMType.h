@@ -2,6 +2,31 @@
 
 enum RAMType { DDR, DDR2, DDR3, DDR4, DDR5 };
 
+static std::string RAMTypeToString(RAMType type) {
+	std::string result;
+	switch (type)
+	{
+	case DDR:
+		result = "DDR";
+		break;
+	case DDR2:
+		result = "DDR2";
+		break;
+	case DDR3:
+		result = "DDR3";
+		break;
+	case DDR4:
+		result = "DDR4";
+		break;
+	case DDR5:
+		result = "DDR5";
+		break;
+	default:
+		break;
+	}
+	return result;
+}
+
 static std::istream& operator >> (std::istream& in, RAMType& type) {
 	int choice;
 	in >> choice;
@@ -28,25 +53,6 @@ static std::istream& operator >> (std::istream& in, RAMType& type) {
 	return in;
 };
 static std::ostream& operator << (std::ostream& out, RAMType& type) {
-	switch (type)
-	{
-	case DDR:
-		out << "DDR";
-		break;
-	case DDR2:
-		out << "DDR2";
-		break;
-	case DDR3:
-		out << "DDR3";
-		break;
-	case DDR4:
-		out << "DDR4";
-		break;
-	case DDR5:
-		out << "DDR5";
-		break;
-	default:
-		break;
-	}
+	out << RAMTypeToString(type);
 	return out;
 };

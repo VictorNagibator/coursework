@@ -16,13 +16,13 @@ public:
 	void operator=(SSD other);
 	friend std::ostream& operator << (std::ostream& out, const SSD& ssd);
 
-	std::string getStorageName() const;
+	std::string getComponentName() const override;
 	FlashMemoryType getTypeOfFlashMemory() const;
 	void input() override;
 	std::string toString() const override;
 private:
 	FlashMemoryType typeOfFlashMemory = NAND3D;
 
-	bool checkArguments(FlashMemoryType typeOfFlashMemory);
+	bool checkArguments(FlashMemoryType typeOfFlashMemory) const;
 	void tryToSetArguments(FlashMemoryType typeOfFlashMemory);
 };

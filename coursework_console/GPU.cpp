@@ -1,26 +1,30 @@
 #include "GPU.h"
 
 void GPU::operator=(GPU other) {
-	this->name = other.getName();
+	this->modelName = other.getModelName();
 	this->frequency = other.getFrequency();
 	this->vram = other.getVRAM();
 }
 
 std::ostream& operator << (std::ostream& out, const GPU& gpu) {
-	out << gpu.getName() << ", " << gpu.getFrequency() << " МГц, " << gpu.getVRAM() << " ГБ";
+	out << gpu.toString();
 	return out;
 }
 
-GPU::GPU(std::string name) {
-	this->name = name;
+GPU::GPU(std::string modelName) {
+	this->modelName = modelName;
 }
 
-GPU::GPU(std::string name, float frequency, int vram) {
-	setArguments(name, frequency, vram);
+GPU::GPU(std::string modelName, float frequency, int vram) {
+	tryToSetArguments(modelName, frequency, vram);
 }
 
-std::string GPU::getName() const {
-	return name;
+std::string GPU::getComponentName() const {
+	return "GPU";
+}
+
+std::string GPU::getModelName() const {
+	return modelName;
 }
 
 float GPU::getFrequency() const {
@@ -32,29 +36,34 @@ int GPU::getVRAM() const {
 }
 
 void GPU::input() {
-	std::string name;
+	std::string modelName;
 	float frequency;
 	int vram;
 
 	std::cout << "Введите название видеокарты: ";
-	std::getline(std::cin, name);
+	std::getline(std::cin, modelName);
 	std::cout << "Введите тактовую частоту графического процессора (в МГц): ";
 	std::cin >> frequency;
 	std::cout << "Введите объем видеопамяти (в ГБ): ";
 	std::cin >> vram;
 	while (getchar() != '\n');
 	
-	setArguments(name, frequency, vram);
+	tryToSetArguments(modelName, frequency, vram);
+}
+
+std::string GPU::toString() const {
+	std::string name = this->getModelName() + ", " + std::format("{:.1f}", this->getFrequency()) + " МГц, " + std::to_string(this->getVRAM()) + " ГБ";
+	return name;
 }
 
 
-bool GPU::checkArguments(std::string name, float frequency, int vram) {
+bool GPU::checkArguments(std::string modelName, float frequency, int vram) const {
 	return frequency >= 0 && vram >= 0;
 }
 
-void GPU::setArguments(std::string name, float frequency, int vram) {
-	if (checkArguments(name, frequency, vram)) {
-		this->name = name;
+void GPU::tryToSetArguments(std::string modelName, float frequency, int vram) {
+	if (checkArguments(modelName, frequency, vram)) {
+		this->modelName = modelName;
 		this->frequency = frequency;
 		this->vram = vram;
 	}

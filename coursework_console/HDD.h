@@ -15,13 +15,13 @@ public:
 	void operator=(HDD other);
 	friend std::ostream& operator << (std::ostream& out, const HDD& hdd);
 
-	std::string getStorageName() const override;
+	std::string getComponentName() const override;
 	int getSpindleSpeed() const;
 	void input() override;
 	std::string toString() const override;
 private:
 	int spindleSpeed = 0;
 
-	bool checkArguments(int spindleSpeed);
+	bool checkArguments(int spindleSpeed) const;
 	void tryToSetArguments(int spindleSpeed);
 };

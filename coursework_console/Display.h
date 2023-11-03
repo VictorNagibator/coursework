@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include "LaptopComponent.h"
 
-class Display
+class Display : public LaptopComponent
 {
 public:
 	Display() = default;
@@ -12,13 +14,15 @@ public:
 	void operator=(Display other);
 	friend std::ostream& operator << (std::ostream& out, const Display& display);
 
+	std::string getComponentName() const override;
 	int getWidth() const;
 	int getHeight() const;
 	int getRefreshRate() const;
-	void input();
+	void input() override;
+	std::string toString() const override;
 private:
 	int width = 0, height = 0, refreshRate = 0;
-
-	bool checkArguments(int width, int height, int refreshRate);
-	void setArguments(int width, int height, int refreshRate);
+	
+	bool checkArguments(int width, int height, int refreshRate) const;
+	void tryToSetArguments(int width, int height, int refreshRate);
 };

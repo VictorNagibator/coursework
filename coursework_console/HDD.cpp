@@ -23,7 +23,7 @@ HDD::HDD(int capacity, DataTransferInterface transferInterface, std::string bran
 		tryToSetArguments(spindleSpeed);
 }
 
-std::string HDD::getStorageName() const {
+std::string HDD::getComponentName() const {
 	return "HDD";
 }
 
@@ -43,12 +43,12 @@ void HDD::input() {
 }
 
 std::string HDD::toString() const {
-	std::string name = DataStorage::toString() + ", " + std::to_string(spindleSpeed);
+	std::string name = DataStorage::toString() + ", " + std::to_string(this->getSpindleSpeed());
 	return name;
 }
 
 
-bool HDD::checkArguments(int spindleSpeed) {
+bool HDD::checkArguments(int spindleSpeed) const {
 	return spindleSpeed >= 0;
 }
 

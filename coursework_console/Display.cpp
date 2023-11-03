@@ -7,16 +7,20 @@ void Display::operator=(Display other) {
 }
 
 std::ostream& operator << (std::ostream& out, const Display& display) {
-	out << display.getWidth() << "x" << display.getHeight() << ", " << display.getRefreshRate() << " Ãö";
+	out << display.toString();
 	return out;
 }
 
 Display::Display(int width, int height) {
-	setArguments(width, height, 0);
+	tryToSetArguments(width, height, 0);
 }
 
 Display::Display(int width, int height, int refreshRate) {
-	setArguments(width, height, refreshRate);
+	tryToSetArguments(width, height, refreshRate);
+}
+
+std::string Display::getComponentName() const {
+	return "Display";
 }
 
 int Display::getWidth() const {
@@ -40,15 +44,20 @@ void Display::input() {
 	std::cin >> refreshRate;
 	while (getchar() != '\n');
 	
-	setArguments(width, height, refreshRate);
+	tryToSetArguments(width, height, refreshRate);
+}
+
+std::string Display::toString() const {
+	std::string name = std::to_string(width) + "x" + std::to_string(height) + ", " + std::to_string(refreshRate) + " Ãö";
+	return name;
 }
 
 
-bool Display::checkArguments(int width, int height, int refreshRate) {
+bool Display::checkArguments(int width, int height, int refreshRate) const {
 	return width >= 0 && height >= 0 && refreshRate >= 0;
 }
 
-void Display::setArguments(int width, int height, int refreshRate) {
+void Display::tryToSetArguments(int width, int height, int refreshRate) {
 	if (checkArguments(width, height, refreshRate)) {
 		this->width = width;
 		this->height = height;

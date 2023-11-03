@@ -1,7 +1,7 @@
 #include "Laptop.h"
 
 void Laptop::operator=(Laptop other) {
-	this->name = other.getName();
+	this->modelName = other.getModelName();
 	this->cpu = other.getCPU();
 	this->gpu = other.getGPU();
 	this->motherboard = other.getMotherboard();
@@ -11,23 +11,16 @@ void Laptop::operator=(Laptop other) {
 }
 
 std::ostream& operator << (std::ostream& out, const Laptop& laptop) {
-	out <<
-		"Название модели: " << laptop.name << "\n" <<
-		"CPU: " << laptop.cpu << "\n" <<
-		"GPU: " << laptop.gpu << "\n" <<
-		"RAM: " << laptop.ram << "\n" <<
-		"Материнская плата: " << laptop.motherboard << "\n" <<
-		"Экран: " << laptop.display << "\n" <<
-		laptop.dataStorage->getStorageName() << ": " << *dynamic_cast<HDD*>(laptop.dataStorage) << "\n";
+	out << laptop.toString();
 	return out;
 }
 
-Laptop::Laptop(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
-	setArguments(name, cpu, gpu, ram, motherboard, display, dataStorage);
+Laptop::Laptop(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
+	tryToSetArguments(modelName, cpu, gpu, ram, motherboard, display, dataStorage);
 }
 
-std::string Laptop::getName() const {
-	return name;
+std::string Laptop::getModelName() const {
+	return modelName;
 }
 
 CPU Laptop::getCPU() const {
@@ -50,12 +43,12 @@ Display Laptop::getDisplay() const {
 	return display;
 }
 
-DataStorage* Laptop::getDataStorage() const {
+const DataStorage& Laptop::getDataStorage() const {
 	return dataStorage;
 }
 
 void Laptop::setCPU(CPU cpu) {
-	if (checkArguments(this->name, cpu, this->gpu, this->ram, this->motherboard, this->display, this->dataStorage)) {
+	if (checkArguments(this->modelName, cpu, this->gpu, this->ram, this->motherboard, this->display, this->dataStorage)) {
 		this->cpu = cpu;
 	}
 	else throw std::invalid_argument("Неподходящий сокет!");
@@ -66,7 +59,7 @@ void Laptop::setGPU(GPU gpu) {
 }
 
 void Laptop::setRAM(RAM ram) {
-	if (checkArguments(this->name, this->cpu, this->gpu, ram, this->motherboard, this->display, this->dataStorage)) {
+	if (checkArguments(this->modelName, this->cpu, this->gpu, ram, this->motherboard, this->display, this->dataStorage)) {
 		this->ram = ram;
 	}
 	else throw std::invalid_argument("Неподходящий тип памяти!");
@@ -86,12 +79,13 @@ void Laptop::setDisplay(Display display) {
 }
 
 void Laptop::setDataStorage(DataStorage* dataStorage) {
-	this->dataStorage = dataStorage;
+	DataStorage* newDataStorage = dataStorage;
+	this->dataStorage = newDataStorage;
 }
 
 void Laptop::input() {
 	std::cout << "Введите название ноутбука: ";
-	std::getline(std::cin, name);
+	std::getline(std::cin, modelName);
 	std::cout << "\tВвод параметров процессора\n";
 	cpu.input();
 	std::cout << "\tВвод параметров видеокарты\n";
@@ -110,17 +104,16 @@ void Laptop::input() {
 		std::cin >> choice;
 		if (choice != 0 && choice != 1) std::cout << "Некорректный вариант!\nВведите еще раз: ";
 	} while (choice != 0 && choice != 1);
-	if (choice == 0) dataStorage = new HDD();
-	else dataStorage = new SSD();
+	dataStorage = createDataStorage(choice);
 	dataStorage->input();
 }
 
 void Laptop::boostCPU() {
 	if (this->cpu.getFrequency() + this->cpu.tryFreq <= this->cpu.maxFreq) {
-		cpu = CPU(this->cpu.getName(), this->cpu.getSocket(), this->cpu.getFrequency() + this->cpu.tryFreq, this->cpu.getNumOfCores());
+		cpu = CPU(this->cpu.getModelName(), this->cpu.getSocket(), this->cpu.getFrequency() + this->cpu.tryFreq, this->cpu.getNumOfCores());
 	}
 	else if (this->cpu.getFrequency() < this->cpu.maxFreq) {
-		cpu = CPU(this->cpu.getName(), this->cpu.getSocket(), this->cpu.maxFreq, this->cpu.getNumOfCores());
+		cpu = CPU(this->cpu.getModelName(), this->cpu.getSocket(), this->cpu.maxFreq, this->cpu.getNumOfCores());
 	}
 	else std::cout << "Разгон CPU больше невозможен!\n";
 }
@@ -128,22 +121,34 @@ void Laptop::boostCPU() {
 void Laptop::boostRAM() {
 	float maxFreq = this->ram.DDRFreqMax[this->ram.getRAMType()];
 	if (this->ram.getFrequency() + this->ram.tryFreq <= maxFreq) {
-		ram = RAM(this->ram.getName(), this->ram.getRAMType(), this->ram.getFrequency() + this->ram.tryFreq, this->ram.getCapacity());
+		ram = RAM(this->ram.getModelName(), this->ram.getRAMType(), this->ram.getFrequency() + this->ram.tryFreq, this->ram.getCapacity());
 	}
 	else if (this->ram.getFrequency() < maxFreq) {
-		ram = RAM(this->ram.getName(), this->ram.getRAMType(), maxFreq, this->ram.getCapacity());
+		ram = RAM(this->ram.getModelName(), this->ram.getRAMType(), maxFreq, this->ram.getCapacity());
 	}
 	else std::cout << "Разгон RAM больше невозможен!\n";
 }
 
+std::string Laptop::toString() const {
+	std::string name = 
+		"Название модели: " + this->modelName + "\n" +
+		"CPU: " + this->cpu.toString() + "\n" +
+		"GPU: " + this->gpu.toString() + "\n" +
+		"RAM: " + this->ram.toString() + "\n" +
+		"Материнская плата: " + this->motherboard.toString() + "\n" +
+		"Экран: " + this->display.toString() + "\n" +
+		this->dataStorage->getComponentName() + ": " + dataStorage->toString() + "\n";
+	return name;
+}
 
-bool Laptop::checkArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
+
+bool Laptop::checkArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage) {
 	return (cpu.getSocket() == motherboard.getSocket()) && (ram.getRAMType() == motherboard.getSupportedRAMType());
 }
 
-void Laptop::setArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage) {
-	if (checkArguments(name, cpu, gpu, ram, motherboard, display, dataStorage)) {
-		this->name = name;
+void Laptop::tryToSetArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage) {
+	if (checkArguments(modelName, cpu, gpu, ram, motherboard, display, dataStorage)) {
+		this->modelName = modelName;
 		this->cpu = cpu;
 		this->gpu = gpu;
 		this->ram = ram;
@@ -152,4 +157,11 @@ void Laptop::setArguments(std::string name, CPU cpu, GPU gpu, RAM ram, Motherboa
 		this->dataStorage = dataStorage;
 	}
 	else throw std::invalid_argument("Некорректный формат данных!");
+}
+
+DataStorage* Laptop::createDataStorage(int choice) {
+	DataStorage* dataStorage;
+	if (choice == 0) dataStorage = new HDD();
+	else dataStorage = new SSD();
+	return dataStorage;
 }

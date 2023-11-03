@@ -1,38 +1,25 @@
 #include "Order.h"
 
-void Order::operator=(Order other) {
-	this->num = other.num;
-	this->laptop = other.laptop;
-	this->status = other.status;
-}
-
 std::ostream& operator << (std::ostream& out, Order& order) {
-	StatusType type = order.getStatus();
-	out << order.getNum() << ". " << order.laptop.getName() << "\t" << type;
+	out << order.toString();
 	return out;
 }
 
-bool Order::checkArguments(int num, Laptop laptop, StatusType status) {
-	return num > 0 && status >= ONHOLD && status <= FINISHED;
-}
-
 Order::Order(Laptop laptop) {
-	num = 1;
+	numOfOrder = ++numOfLastOrder;
 	this->laptop = laptop;
-	status = ONHOLD;
 }
 
-Order::Order(int num, Laptop laptop, StatusType status) {
-	if (checkArguments(num, laptop, status)) {
-		this->num = num;
-		this->laptop = laptop;
-		this->status = status;
-	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+Order::Order(Laptop laptop, StatusType status) : Order(laptop) {
+	tryToSetArguments(status);
 }
 
-int Order::getNum() const {
-	return num;
+int Order::getNumOfLastOrder() {
+	return numOfLastOrder;
+}
+
+int Order::getNumOfOrder() const {
+	return numOfOrder;
 }
 
 Laptop Order::getLaptop() const {
@@ -44,26 +31,22 @@ StatusType Order::getStatus() const {
 }
 
 void Order::input() {
-	int num;
-	Laptop laptop;
-	StatusType status;
+	StatusType type;
+	numOfLastOrder++;
 
-	std::cout << "Введите номер заказа: ";
-	std::cin >> num;
+	std::cout << "Номер заказа: " << numOfLastOrder;
 	std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
-	std::cin >> status;
+	std::cin >> type;
 	std::cout << "\tВвод параметров ноутбука\n";
-	laptop.input();
-	if (checkArguments(num, laptop, status)) {
-		this->num = num;
-		this->laptop = laptop;
-		this->status = status;
-	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+	this->laptop.input();
+
+	this->numOfOrder = numOfLastOrder;
+	this->laptop = laptop;
+	tryToSetArguments(type);
 }
 
 void Order::setStatus(StatusType status) {
-	if (status >= ONHOLD && status <= FINISHED) {
+	if (checkArguments(status)) {
 		this->status = status;
 		std::cout << "Состояние заказа успешно изменено!\n";
 	}
@@ -72,4 +55,21 @@ void Order::setStatus(StatusType status) {
 
 void Order::setLaptop(Laptop laptop) {
 	this->laptop = laptop;
+}
+
+std::string Order::toString() const {
+	std::string name = std::to_string(this->getNumOfOrder()) + ". " + this->laptop.getModelName() + "\t" + StatusTypeToString(this->getStatus());
+	return name;
+}
+
+
+bool Order::checkArguments(StatusType status) const {
+	return status >= ONHOLD && status <= FINISHED;
+}
+
+void Order::tryToSetArguments(StatusType status) {
+	if (checkArguments(status)) {
+		this->status = status;
+	}
+	else throw std::invalid_argument("Некорректный формат данных!");
 }

@@ -2,6 +2,25 @@
 
 enum StatusType { ONHOLD, INPROCCESS, FINISHED };
 
+static std::string StatusTypeToString(StatusType type) {
+	std::string result;
+	switch (type)
+	{
+	case ONHOLD:
+		result = "В ожидании";
+		break;
+	case INPROCCESS:
+		result = "В ремонте";
+		break;
+	case FINISHED:
+		result = "Готов";
+		break;
+	default:
+		break;
+	}
+	return result;
+}
+
 static std::istream& operator >> (std::istream& in, StatusType& status) {
 	int choice;
 	in >> choice;
@@ -22,19 +41,6 @@ static std::istream& operator >> (std::istream& in, StatusType& status) {
 	return in;
 };
 static std::ostream& operator << (std::ostream& out, StatusType& status) {
-	switch (status)
-	{
-	case ONHOLD:
-		out << "В ожидании";
-		break;
-	case INPROCCESS:
-		out << "В ремонте";
-		break;
-	case FINISHED:
-		out << "Готов";
-		break;
-	default:
-		break;
-	}
+	out << StatusTypeToString(status);
 	return out;
 };

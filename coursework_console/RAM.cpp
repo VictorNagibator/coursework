@@ -1,32 +1,35 @@
 #include "RAM.h"
 
 void RAM::operator=(RAM other) {
-	this->name = other.getName();
+	this->modelName = other.getModelName();
 	this->type = other.getRAMType();
 	this->frequency = other.getFrequency();
 	this->capacity = other.getCapacity();
 }
 
 std::ostream& operator << (std::ostream& out, const RAM& ram) {
-	RAMType type = ram.getRAMType();
-	out << ram.getName() << ", " << type << ", " << ram.getCapacity() << " √Ѕ, " << ram.getFrequency() << " ћ√ц";
+	out << ram.toString();
 	return out;
 }
 
-RAM::RAM(std::string name) {
-	this->name = name;
+RAM::RAM(std::string modelName) {
+	this->modelName = modelName;
 }
 
 RAM::RAM(RAMType type) {
 	this->type = type;
 }
 
-RAM::RAM(std::string name, RAMType type, float frequency, int capacity) {
-	setArguments(name, type, frequency, capacity);
+RAM::RAM(std::string modelName, RAMType type, float frequency, int capacity) {
+	tryToSetArguments(modelName, type, frequency, capacity);
 }
 
-std::string RAM::getName() const {
-	return name;
+std::string RAM::getComponentName() const {
+	return "RAM";
+}
+
+std::string RAM::getModelName() const {
+	return modelName;
 }
 
 RAMType RAM::getRAMType() const {
@@ -42,13 +45,13 @@ int RAM::getCapacity() const {
 }
 
 void RAM::input() {
-	std::string name;
+	std::string modelName;
 	RAMType type;
 	float frequency;
 	int capacity;
 
 	std::cout << "¬ведите название RAM: ";
-	std::getline(std::cin, name);
+	std::getline(std::cin, modelName);
 	std::cout << "¬ведите тип пам€ти (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
 	std::cin >> type;
 	std::cout << "¬ведите тактовую частоту (в ћ√ц): ";
@@ -57,17 +60,22 @@ void RAM::input() {
 	std::cin >> capacity;
 	while (getchar() != '\n');
 
-	setArguments(name, type, frequency, capacity);
+	tryToSetArguments(modelName, type, frequency, capacity);
+}
+
+std::string RAM::toString() const {
+	std::string name = this->getModelName() + ", " + RAMTypeToString(this->getRAMType()) + ", " + std::to_string(this->getCapacity()) + " √Ѕ, " + std::format("{:.1f}", this->getFrequency()) + " ћ√ц";
+	return name;
 }
 
 
-bool RAM::checkArguments(std::string name, RAMType type, float frequency, int capacity) {
+bool RAM::checkArguments(std::string modelName, RAMType type, float frequency, int capacity) const {
 	return type >= DDR && type <= DDR5 && frequency >= 0 && frequency <= DDRFreqMax[type] && capacity >= 0;
 }
 
-void RAM::setArguments(std::string name, RAMType type, float frequency, int capacity) {
-	if (checkArguments(name, type, frequency, capacity)) {
-		this->name = name;
+void RAM::tryToSetArguments(std::string modelName, RAMType type, float frequency, int capacity) {
+	if (checkArguments(modelName, type, frequency, capacity)) {
+		this->modelName = modelName;
 		this->type = type;
 		this->frequency = frequency;
 		this->capacity = capacity;

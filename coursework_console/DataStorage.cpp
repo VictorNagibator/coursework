@@ -50,7 +50,7 @@ std::string DataStorage::toString() const {
 	return name;
 }
 
-bool DataStorage::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor) {
+bool DataStorage::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor) const {
 	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && formFactor >= 0;
 }
 

@@ -1,27 +1,31 @@
 #include "Cpu.h"
 
 void CPU::operator=(CPU other) {
-	this->name = other.getName();
+	this->modelName = other.getModelName();
 	this->socket = other.getSocket();
 	this->frequency = other.getFrequency();
 	this->numOfCores = other.getNumOfCores();
 }
 
 std::ostream& operator << (std::ostream& out, const CPU& cpu) {
-	out << cpu.getName() << ", " << cpu.getSocket() << ", " << cpu.getFrequency() << " √√ц, " << cpu.getNumOfCores() << "-€дерный";
+	out << cpu.toString();
 	return out;
 }
 
-CPU::CPU(std::string name) {
-	this->name = name;
+CPU::CPU(std::string modelName) {
+	this->modelName = modelName;
 }
 
-CPU::CPU(std::string name, std::string socket, float frequency, int numOfCores) {
-	setArguments(name, socket, frequency, numOfCores);
+CPU::CPU(std::string modelName, std::string socket, float frequency, int numOfCores) {
+	tryToSetArguments(modelName, socket, frequency, numOfCores);
 }
 
-std::string CPU::getName() const {
-	return name;
+std::string CPU::getComponentName() const {
+	return "CPU";
+}
+
+std::string CPU::getModelName() const {
+	return modelName;
 }
 
 std::string CPU::getSocket() const {
@@ -37,12 +41,12 @@ int CPU::getNumOfCores() const {
 }
 
 void CPU::input() {
-	std::string name, socket;
+	std::string modelName, socket;
 	float frequency;
 	int numOfCores;
 
 	std::cout << "¬ведите название процессора: ";
-	std::getline(std::cin, name);
+	std::getline(std::cin, modelName);
 	std::cout << "¬ведите название сокета процессора: ";
 	std::getline(std::cin, socket);
 	std::cout << "¬ведите его тактовую частоту (в √√ц): ";
@@ -51,17 +55,22 @@ void CPU::input() {
 	std::cin >> numOfCores;
 	while (getchar() != '\n'); //очистка входного потока после cin
 
-	setArguments(name, socket, frequency, numOfCores);
+	tryToSetArguments(modelName, socket, frequency, numOfCores);
+}
+
+std::string CPU::toString() const {
+	std::string name = this->getModelName() + ", " + this->getSocket() + ", " + std::format("{:.1f}", this->getFrequency()) + " √√ц, " + std::to_string(this->getNumOfCores()) + "-€дерный";
+	return name;
 }
 
 
-bool CPU::checkArguments(std::string name, std::string socket, float frequency, int numOfCores) {
+bool CPU::checkArguments(std::string modelName, std::string socket, float frequency, int numOfCores) const {
 	return frequency >= 0 && frequency < maxFreq && numOfCores >= 0;
 }
 
-void CPU::setArguments(std::string name, std::string socket, float frequency, int numOfCores) {
-	if (checkArguments(name, socket, frequency, numOfCores)) {
-		this->name = name;
+void CPU::tryToSetArguments(std::string modelName, std::string socket, float frequency, int numOfCores) {
+	if (checkArguments(modelName, socket, frequency, numOfCores)) {
+		this->modelName = modelName;
 		this->socket = socket;
 		this->frequency = frequency;
 		this->numOfCores = numOfCores;
