@@ -15,7 +15,7 @@ public:
 
 	static int getNumOfLastOrder();
 	int getNumOfOrder() const;
-	Laptop getLaptop() const;
+	const Laptop& getLaptop() const;
 	StatusType getStatus() const;
 	void input();
 	void setStatus(StatusType status);
@@ -25,7 +25,7 @@ private:
 	static inline int numOfLastOrder{};
 
 	int numOfOrder;
-	Laptop laptop;
+	Laptop laptop = Laptop();
 	StatusType status = ONHOLD;
 
 	bool checkArguments(StatusType status) const;

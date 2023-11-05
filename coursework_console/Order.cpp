@@ -22,7 +22,7 @@ int Order::getNumOfOrder() const {
 	return numOfOrder;
 }
 
-Laptop Order::getLaptop() const {
+const Laptop& Order::getLaptop() const {
 	return laptop;
 }
 

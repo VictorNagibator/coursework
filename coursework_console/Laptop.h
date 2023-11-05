@@ -21,12 +21,13 @@ public:
 	friend std::ostream& operator << (std::ostream& out, const Laptop& laptop);
 
 	std::string getModelName() const;
-	CPU getCPU() const;
-	GPU getGPU() const;
-	RAM getRAM() const;
-	Motherboard getMotherboard() const;
-	Display getDisplay() const;
-	const DataStorage& getDataStorage() const;
+	const CPU& getCPU() const;
+	const GPU& getGPU() const;
+	const RAM& getRAM() const;
+	const Motherboard& getMotherboard() const;
+	const Display& getDisplay() const;
+	DataStorage* getDataStorage() const;
+	void setModelName(std::string modelName);
 	void setCPU(CPU cpu);
 	void setGPU(GPU gpu);
 	void setRAM(RAM ram);
@@ -44,7 +45,7 @@ private:
 	RAM ram = RAM();
 	Motherboard motherboard = Motherboard();
 	Display display = Display();
-	DataStorage *dataStorage;
+	DataStorage *dataStorage = nullptr;
 
 	bool checkArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage);
 	void tryToSetArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage);

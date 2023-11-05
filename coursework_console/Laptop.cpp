@@ -23,28 +23,32 @@ std::string Laptop::getModelName() const {
 	return modelName;
 }
 
-CPU Laptop::getCPU() const {
+const CPU& Laptop::getCPU() const {
 	return cpu;
 }
 
-GPU Laptop::getGPU() const {
+const GPU& Laptop::getGPU() const {
 	return gpu;
 }
 
-RAM Laptop::getRAM() const {
+const RAM& Laptop::getRAM() const {
 	return ram;
 }
 
-Motherboard Laptop::getMotherboard() const {
+const Motherboard& Laptop::getMotherboard() const {
 	return motherboard;
 }
 
-Display Laptop::getDisplay() const {
+const Display& Laptop::getDisplay() const {
 	return display;
 }
 
-const DataStorage& Laptop::getDataStorage() const {
+DataStorage* Laptop::getDataStorage() const {
 	return dataStorage;
+}
+
+void Laptop::setModelName(std::string modelName) {
+	this->modelName = modelName;
 }
 
 void Laptop::setCPU(CPU cpu) {
