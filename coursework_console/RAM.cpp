@@ -1,4 +1,4 @@
-#include "RAM.h"
+п»ї#include "RAM.h"
 
 void RAM::operator=(RAM other) {
 	this->modelName = other.getModelName();
@@ -50,13 +50,13 @@ void RAM::input() {
 	float frequency;
 	int capacity;
 
-	std::cout << "Введите название RAM: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ RAM: ";
 	std::getline(std::cin, modelName);
-	std::cout << "Введите тип памяти (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
+	std::cout << "Р’РІРµРґРёС‚Рµ С‚РёРї РїР°РјСЏС‚Рё (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
 	std::cin >> type;
-	std::cout << "Введите тактовую частоту (в МГц): ";
+	std::cout << "Р’РІРµРґРёС‚Рµ С‚Р°РєС‚РѕРІСѓСЋ С‡Р°СЃС‚РѕС‚Сѓ (РІ РњР“С†): ";
 	std::cin >> frequency;
-	std::cout << "Введите объем (в ГБ): ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РѕР±СЉРµРј (РІ Р“Р‘): ";
 	std::cin >> capacity;
 	while (getchar() != '\n');
 
@@ -64,7 +64,7 @@ void RAM::input() {
 }
 
 std::string RAM::toString() const {
-	std::string name = this->getModelName() + ", " + RAMTypeToString(this->getRAMType()) + ", " + std::to_string(this->getCapacity()) + " ГБ, " + std::format("{:.1f}", this->getFrequency()) + " МГц";
+	std::string name = this->getModelName() + ", " + RAMTypeToString(this->getRAMType()) + ", " + std::to_string(this->getCapacity()) + " Р“Р‘, " + std::format("{:.1f}", this->getFrequency()) + " РњР“С†";
 	return name;
 }
 
@@ -80,5 +80,5 @@ void RAM::tryToSetArguments(std::string modelName, RAMType type, float frequency
 		this->frequency = frequency;
 		this->capacity = capacity;
 	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+	else throw std::invalid_argument("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…!");
 }

@@ -1,4 +1,4 @@
-#include "Motherboard.h"
+п»ї#include "Motherboard.h"
 
 void Motherboard::operator=(Motherboard other) {
 	this->modelName = other.getModelName();
@@ -44,13 +44,13 @@ void Motherboard::input() {
 	std::string modelName, socket, chipset;
 	RAMType supportedRAMType;
 
-	std::cout << "Введите название материнской платы: ";
+	std::cout << "                                  : ";
 	std::getline(std::cin, modelName);
-	std::cout << "Введите сокет: ";
+	std::cout << "             : ";
 	std::getline(std::cin, socket);
-	std::cout << "Введите чипсет: ";
+	std::cout << "              : ";
 	std::getline(std::cin, chipset);
-	std::cout << "Введите поддерживаемый тип памяти (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
+	std::cout << "                                  (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
 	std::cin >> supportedRAMType;
 	while (getchar() != '\n');
 	
@@ -74,5 +74,5 @@ void Motherboard::tryToSetArguments(std::string modelName, std::string socket, s
 		this->chipset = chipset;
 		this->supportedRAMType = supportedRAMType;
 	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+	else throw std::invalid_argument("                          !");
 }
