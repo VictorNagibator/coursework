@@ -1,11 +1,8 @@
 ﻿#include "HDD.h"
 
 void HDD::operator=(HDD other) {
-	this->capacity = other.capacity;
-	this->transferInterface = other.transferInterface;
-	this->brand = other.brand;
+	DataStorage::operator=(other);
 	this->spindleSpeed = other.spindleSpeed;
-	this->formFactor = other.formFactor;
 }
 
 std::ostream& operator << (std::ostream& out, const HDD& hdd) {
@@ -13,14 +10,14 @@ std::ostream& operator << (std::ostream& out, const HDD& hdd) {
 	return out;
 }
 
-HDD::HDD(DataTransferInterface transferInterface) 
+HDD::HDD(DataTransferInterface transferInterface)
 	: DataStorage(transferInterface) {
-	
+
 }
 
-HDD::HDD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, int spindleSpeed) 
+HDD::HDD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, int spindleSpeed)
 	: DataStorage(capacity, transferInterface, brand, formFactor) {
-		tryToSetArguments(spindleSpeed);
+	tryToSetArguments(spindleSpeed);
 }
 
 std::string HDD::getComponentName() const {

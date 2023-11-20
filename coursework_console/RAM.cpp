@@ -7,6 +7,21 @@ void RAM::operator=(RAM other) {
 	this->capacity = other.getCapacity();
 }
 
+RAM operator+(const RAM& ram, float addable) {
+	return RAM(ram.getModelName(), ram.getRAMType(), ram.getFrequency() + addable, ram.getCapacity());
+}
+
+RAM& operator++(RAM& ram) {
+	ram.tryToSetArguments(ram.getModelName(), ram.getRAMType(), ram.getFrequency() + ram.tryFreq, ram.getCapacity());
+	return ram;
+}
+
+RAM operator++(RAM& ram, int) {
+	RAM tempRAM = ram;
+	++ram;
+	return tempRAM;
+}
+
 std::ostream& operator << (std::ostream& out, const RAM& ram) {
 	out << ram.toString();
 	return out;
@@ -50,11 +65,11 @@ void RAM::input() {
 	float frequency;
 	int capacity;
 
-	std::cout << "Введите название RAM: ";
+	std::cout << "Введите название модели RAM: ";
 	std::getline(std::cin, modelName);
 	std::cout << "Введите тип памяти (DDR - 0, DDR2 - 1, DDR3 - 2, DDR4 - 3, DDR5 - 4): ";
 	std::cin >> type;
-	std::cout << "Введите тактовую частоту (в МГц): ";
+	std::cout << "Введите частоту памяти (в МГц): ";
 	std::cin >> frequency;
 	std::cout << "Введите объем (в ГБ): ";
 	std::cin >> capacity;
@@ -70,7 +85,7 @@ std::string RAM::toString() const {
 
 
 bool RAM::checkArguments(std::string modelName, RAMType type, float frequency, int capacity) const {
-	return type >= DDR && type <= DDR5 && frequency >= 0 && frequency <= DDRFreqMax[type] && capacity >= 0;
+	return frequency >= 0 && frequency <= DDRFreqMax[RAMTypeToInt(type)] && capacity >= 0;
 }
 
 void RAM::tryToSetArguments(std::string modelName, RAMType type, float frequency, int capacity) {

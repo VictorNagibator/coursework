@@ -1,10 +1,7 @@
 ﻿#include "SSD.h"
 
 void SSD::operator=(SSD other) {
-	this->capacity = other.capacity;
-	this->transferInterface = other.transferInterface;
-	this->brand = other.brand;
-	this->formFactor = other.formFactor;
+	DataStorage::operator=(other);
 	this->typeOfFlashMemory = other.typeOfFlashMemory;
 }
 
@@ -13,14 +10,14 @@ std::ostream& operator << (std::ostream& out, const SSD& ssd) {
 	return out;
 }
 
-SSD::SSD(DataTransferInterface transferInterface) 
+SSD::SSD(DataTransferInterface transferInterface)
 	: DataStorage(transferInterface) {
-	
+
 }
 
-SSD::SSD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, FlashMemoryType typeOfFlashMemory) 
+SSD::SSD(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor, FlashMemoryType typeOfFlashMemory)
 	: DataStorage(capacity, transferInterface, brand, formFactor) {
-		tryToSetArguments(typeOfFlashMemory);
+	setArguments(typeOfFlashMemory);
 }
 
 std::string SSD::getComponentName() const {
@@ -39,7 +36,7 @@ void SSD::input() {
 	std::cin >> typeOfFlashMemory;
 	while (getchar() != '\n');
 
-	tryToSetArguments(typeOfFlashMemory);
+	setArguments(typeOfFlashMemory);
 }
 
 std::string SSD::toString() const {
@@ -48,13 +45,6 @@ std::string SSD::toString() const {
 }
 
 
-bool SSD::checkArguments(FlashMemoryType typeOfFlashMemory) const {
-	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && typeOfFlashMemory >= SLC && typeOfFlashMemory <= NAND3D && formFactor >= 0;
-}
-
-void SSD::tryToSetArguments(FlashMemoryType typeOfFlashMemory) {
-	if (checkArguments(typeOfFlashMemory)) {
-		this->typeOfFlashMemory = typeOfFlashMemory;
-	}
-	else throw std::invalid_argument("Некорректный формат данных!");
+void SSD::setArguments(FlashMemoryType typeOfFlashMemory) {
+	this->typeOfFlashMemory = typeOfFlashMemory;
 }

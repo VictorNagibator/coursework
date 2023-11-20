@@ -36,9 +36,6 @@
     <ClCompile Include="Laptop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Order.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HDD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

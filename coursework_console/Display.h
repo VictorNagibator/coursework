@@ -22,7 +22,7 @@ public:
 	std::string toString() const override;
 private:
 	int width = 0, height = 0, refreshRate = 0;
-	
+
 	bool checkArguments(int width, int height, int refreshRate) const;
 	void tryToSetArguments(int width, int height, int refreshRate);
 };

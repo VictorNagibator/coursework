@@ -1,7 +1,5 @@
 ﻿#pragma once
 #include <iostream>
-#include <string>
-#include <typeinfo>
 #include "CPU.h"
 #include "Display.h"
 #include "GPU.h"
@@ -14,7 +12,7 @@ class Laptop
 {
 public:
 	Laptop() = default;
-	Laptop(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage *dataStorage);
+	Laptop(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage);
 	~Laptop() = default;
 
 	void operator=(Laptop other);
@@ -36,7 +34,9 @@ public:
 	void setDataStorage(DataStorage* dataStorage);
 	void input();
 	void boostCPU();
+	void boostCPU(float addable);
 	void boostRAM();
+	void boostRAM(float addable);
 	std::string toString() const;
 private:
 	std::string modelName;
@@ -45,7 +45,7 @@ private:
 	RAM ram = RAM();
 	Motherboard motherboard = Motherboard();
 	Display display = Display();
-	DataStorage *dataStorage = nullptr;
+	DataStorage* dataStorage = new HDD(); //По умолчанию в ноутбуке стоит HDD
 
 	bool checkArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage);
 	void tryToSetArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage);

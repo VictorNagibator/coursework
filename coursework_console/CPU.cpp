@@ -1,10 +1,25 @@
 ﻿#include "Cpu.h"
 
-void CPU::operator=(CPU other) {
+void CPU::operator=(const CPU other) {
 	this->modelName = other.getModelName();
 	this->socket = other.getSocket();
 	this->frequency = other.getFrequency();
 	this->numOfCores = other.getNumOfCores();
+}
+
+CPU operator+(const CPU& cpu, float addable) {
+	return CPU(cpu.getModelName(), cpu.getSocket(), cpu.getFrequency() + addable, cpu.getNumOfCores());
+}
+
+CPU& operator++(CPU& cpu) {
+	cpu.tryToSetArguments(cpu.getModelName(), cpu.getSocket(), cpu.getFrequency() + cpu.tryFreq, cpu.getNumOfCores());
+	return cpu;
+}
+
+CPU operator++(CPU& cpu, int) {
+	CPU tempCPU = cpu;
+	++cpu;
+	return tempCPU;
 }
 
 std::ostream& operator << (std::ostream& out, const CPU& cpu) {

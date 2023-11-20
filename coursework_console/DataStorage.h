@@ -12,6 +12,8 @@ public:
 	DataStorage(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor);
 	~DataStorage() = default;
 
+	void operator=(DataStorage* other);
+
 	virtual std::string getComponentName() const abstract = 0;
 
 	virtual int getCapacity() const;
@@ -23,7 +25,7 @@ public:
 	virtual std::string toString() const abstract;
 protected:
 	int capacity = 0;
-	DataTransferInterface transferInterface = SATA;
+	DataTransferInterface transferInterface = DataTransferInterface::SATA;
 	float formFactor = 0;
 	std::string brand;
 

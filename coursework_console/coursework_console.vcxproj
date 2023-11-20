@@ -136,7 +136,6 @@
     <ClCompile Include="HDD.cpp" />
     <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="Motherboard.cpp" />
-    <ClCompile Include="Order.cpp" />
     <ClCompile Include="RAM.cpp" />
     <ClCompile Include="SSD.cpp" />
   </ItemGroup>

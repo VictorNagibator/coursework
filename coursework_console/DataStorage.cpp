@@ -1,5 +1,12 @@
 ﻿#include "DataStorage.h"
 
+void DataStorage::operator=(DataStorage* other) {
+	this->capacity = other->capacity;
+	this->transferInterface = other->transferInterface;
+	this->brand = other->brand;
+	this->formFactor = other->formFactor;
+}
+
 DataStorage::DataStorage(DataTransferInterface transferInterface) {
 	this->transferInterface = transferInterface;
 }
@@ -51,7 +58,7 @@ std::string DataStorage::toString() const {
 }
 
 bool DataStorage::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor) const {
-	return capacity >= 0 && transferInterface >= PATA && transferInterface <= NVME && formFactor >= 0;
+	return capacity >= 0 && formFactor >= 0;
 }
 
 void DataStorage::tryToSetArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor) {
