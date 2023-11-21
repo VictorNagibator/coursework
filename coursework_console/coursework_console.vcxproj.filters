@@ -18,78 +18,99 @@
     <ClCompile Include="coursework_console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CPU.cpp">
+    <ClCompile Include="OrderComponents\CPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GPU.cpp">
+    <ClCompile Include="OrderComponents\GPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RAM.cpp">
+    <ClCompile Include="OrderComponents\RAM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Motherboard.cpp">
+    <ClCompile Include="OrderComponents\Motherboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Display.cpp">
+    <ClCompile Include="OrderComponents\Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Laptop.cpp">
+    <ClCompile Include="OrderComponents\Laptop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HDD.cpp">
+    <ClCompile Include="OrderComponents\HDD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SSD.cpp">
+    <ClCompile Include="OrderComponents\SSD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DataStorage.cpp">
+    <ClCompile Include="OrderComponents\DataStorage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\ExitItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CPU.h">
+    <ClInclude Include="OrderComponents\CPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GPU.h">
+    <ClInclude Include="OrderComponents\GPU.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RAM.h">
+    <ClInclude Include="OrderComponents\RAM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Motherboard.h">
+    <ClInclude Include="OrderComponents\Motherboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Display.h">
+    <ClInclude Include="OrderComponents\Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Laptop.h">
+    <ClInclude Include="OrderComponents\Laptop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Order.h">
+    <ClInclude Include="OrderComponents\Order.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HDD.h">
+    <ClInclude Include="OrderComponents\HDD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SSD.h">
+    <ClInclude Include="OrderComponents\SSD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataTransferInterface.h">
+    <ClInclude Include="OrderComponents\DataTransferInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RAMType.h">
+    <ClInclude Include="OrderComponents\RAMType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FlashMemoryType.h">
+    <ClInclude Include="OrderComponents\FlashMemoryType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StatusType.h">
+    <ClInclude Include="OrderComponents\StatusType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataStorage.h">
+    <ClInclude Include="OrderComponents\DataStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LaptopComponent.h">
+    <ClInclude Include="OrderComponents\LaptopComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\ExitItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
