@@ -1,0 +1,15 @@
+{
+    "people":
+    {
+        "First":
+        {
+            "name": "Victor",
+            "age": 12
+        },
+        "Second":
+        {
+            "name": "Leha",
+            "age": 15
+        }
+    }  
+}

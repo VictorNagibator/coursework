@@ -1,7 +1,8 @@
 #include <string>
+#include <fstream>
 #include <conio.h>
 #include "ChooseFileButton.h"
-#include "../DatabaseConnector.h"
+#include "../FileInfo.h"
 
 ChooseFileButton::ChooseFileButton() : Button("Выход") {
 
@@ -18,14 +19,22 @@ void ChooseFileButton::execute() {
 	std::getline(std::cin, path);
 
 	if (path == "default") {
-		path = "D:/Projects/coursework/default.accdb";
-	}
-	else {
-		path = path + ".accdb";
+		path = "..\\orders.json";
 	}
 
-	DatabaseConnector databaseConnector(path);
-	databaseConnector.connect();
+	std::ifstream file(path);
+
+	if (path.find(".json") == std::string::npos) {
+		std::cout << "Неверный формат файла. Пожалуйста, выберите файл с расширением .json." << std::endl;
+	} 
+	else if (file.is_open()) {
+		std::cout << "Файл успешно открыт." << std::endl;
+		FileInfo::setPath(path);
+	} 
+	else {
+		std::cout << "Файл не найден. Проверьте правильность введенного пути." << std::endl;
+	}
+	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
 	_getch();
-	databaseConnector.disconnect();
+	system("cls");
 }

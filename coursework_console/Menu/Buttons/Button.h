@@ -1,14 +1,13 @@
 ﻿#pragma once
 #include <iostream>
-#include "../MenuItem.h"
 
-class Button abstract : public MenuItem
+class Button abstract
 {
 public:
 	Button(const std::string& text);
 
 	std::string getText();
-	void execute() override = 0;
+	virtual void execute() = 0;
 protected:
 	std::string text;
 };
