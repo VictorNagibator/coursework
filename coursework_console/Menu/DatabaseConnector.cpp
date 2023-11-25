@@ -15,7 +15,7 @@ void DatabaseConnector::setPath(const std::string& path) {
 void DatabaseConnector::connect() {
 	this->pConnection.CreateInstance(__uuidof(Connection));
 
-	std::string fullCommand = L"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + ";Persist Security Info=False; ";
+	std::string fullCommand = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + ";Persist Security Info=False; ";
 	try
 	{
 		pConnection->Open(fullCommand.c_str(), "", "", adConnectUnspecified);
