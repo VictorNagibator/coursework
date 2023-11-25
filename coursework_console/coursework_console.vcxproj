@@ -105,6 +105,8 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalBMIDirectories>C:\Program Files\Common Files\System\ado;%(AdditionalBMIDirectories)</AdditionalBMIDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,9 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Menu\DatabaseConnector.cpp" />
+    <ClCompile Include="Menu\Buttons\ChooseFileButton.cpp" />
+    <ClCompile Include="Menu\MenuDirector.cpp" />
+    <ClCompile Include="Menu\MenuBuilder.cpp" />
     <ClCompile Include="Menu\Menu.cpp" />
-    <ClCompile Include="Menu\ExitItem.cpp" />
-    <ClCompile Include="Menu\Button.cpp" />
+    <ClCompile Include="Menu\Buttons\ExitButton.cpp" />
+    <ClCompile Include="Menu\Buttons\Button.cpp" />
     <ClCompile Include="coursework_console.cpp" />
     <ClCompile Include="OrderComponents\CPU.cpp" />
     <ClCompile Include="OrderComponents\DataStorage.cpp" />
@@ -141,11 +147,16 @@
     <ClCompile Include="OrderComponents\Motherboard.cpp" />
     <ClCompile Include="OrderComponents\RAM.cpp" />
     <ClCompile Include="OrderComponents\SSD.cpp" />
+    <ClCompile Include="Menu\StandartMenuDirector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Menu\DatabaseConnector.h" />
+    <ClInclude Include="Menu\Buttons\ChooseFileButton.h" />
+    <ClInclude Include="Menu\MenuDirector.h" />
+    <ClInclude Include="Menu\MenuBuilder.h" />
     <ClInclude Include="Menu\Menu.h" />
-    <ClInclude Include="Menu\ExitItem.h" />
-    <ClInclude Include="Menu\Button.h" />
+    <ClInclude Include="Menu\Buttons\ExitButton.h" />
+    <ClInclude Include="Menu\Buttons\Button.h" />
     <ClInclude Include="OrderComponents\CPU.h" />
     <ClInclude Include="OrderComponents\DataStorage.h" />
     <ClInclude Include="OrderComponents\DataTransferInterface.h" />
@@ -162,6 +173,7 @@
     <ClInclude Include="OrderComponents\RAMType.h" />
     <ClInclude Include="OrderComponents\SSD.h" />
     <ClInclude Include="OrderComponents\StatusType.h" />
+    <ClInclude Include="Menu\StandartMenuDirector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

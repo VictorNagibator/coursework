@@ -45,13 +45,28 @@
     <ClCompile Include="OrderComponents\DataStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Button.cpp">
+    <ClCompile Include="Menu\Buttons\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\ExitItem.cpp">
+    <ClCompile Include="Menu\Buttons\ExitButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Menu\Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\MenuDirector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\StandartMenuDirector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Buttons\ChooseFileButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\DatabaseConnector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -104,13 +119,28 @@
     <ClInclude Include="Menu\MenuItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Button.h">
+    <ClInclude Include="Menu\Buttons\Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\ExitItem.h">
+    <ClInclude Include="Menu\Buttons\ExitButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Menu\Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\MenuDirector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\StandartMenuDirector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Buttons\ChooseFileButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\DatabaseConnector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

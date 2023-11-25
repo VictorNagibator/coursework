@@ -1,10 +1,11 @@
 ﻿#pragma once
+#include <iostream>
 #include <vector>
 #include <Windows.h>
 #include <conio.h>
-#include "Button.h"
+#include "Buttons/Button.h"
 
-class Menu : public MenuItem
+class Menu
 {
 public:
 	Menu(const std::string& name);
@@ -19,6 +20,5 @@ private:
 	std::string name;
 	std::vector<Button*> buttons;
 
-	void execute() override;
 	void chooseButton();
 };

@@ -14,7 +14,7 @@ void Menu::addButton(Button* button) {
 }
 void Menu::removeButton(Button* button) {
 	for (int i = 0; i < buttons.size(); i++) {
-		if (buttons[i] == button) {
+		if (buttons[i]->getText() == button->getText()) {
 			buttons.erase(buttons.begin() + i);
 			break;
 		}
@@ -34,15 +34,12 @@ void Menu::show() {
 	chooseButton();
 }
 
-void Menu::execute() {
-	show();
-}
-
 void Menu::chooseButton()
 {
 	std::cout << "Ваш выбор: ";
 	int choice;
 	std::cin >> choice;
+	while(getchar() != '\n');
 	system("cls");
 	if (choice > 0 && choice <= buttons.size()) {
 		system("cls");
@@ -52,7 +49,7 @@ void Menu::chooseButton()
 		std::cout << "Такого пункта меню нету! Попробуйте еще раз!" << std::endl;
 		std::cout << "Нажмите любую клавишу...";
 		_getch();
-		system("cls");
-		show();
 	}
+	system("cls");
+	show();
 }
