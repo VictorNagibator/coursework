@@ -56,6 +56,18 @@ std::string GPU::toString() const {
 	return name;
 }
 
+json GPU::toJSON() const {
+	json gpu;
+	gpu["modelName"] = modelName;
+	gpu["frequency"] = frequency;
+	gpu["vram"] = vram;
+	return gpu;
+}
+
+void GPU::fromJSON(json gpu) {
+	tryToSetArguments(gpu["modelName"], gpu["frequency"], gpu["vram"]);
+}
+
 
 bool GPU::checkArguments(std::string modelName, float frequency, int vram) const {
 	return frequency >= 0 && vram >= 0;

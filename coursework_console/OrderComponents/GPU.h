@@ -21,6 +21,8 @@ public:
 	int getVRAM() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json gpu) override;
 private:
 	std::string modelName;
 	float frequency = 0;

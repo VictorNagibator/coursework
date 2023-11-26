@@ -52,6 +52,18 @@ std::string Display::toString() const {
 	return name;
 }
 
+json Display::toJSON() const {
+    json display;
+	display["width"] = width;
+	display["height"] = height;
+	display["refreshRate"] = refreshRate;
+	return display;
+}
+
+void Display::fromJSON(json display) {
+	tryToSetArguments(display["width"], display["height"], display["refreshRate"]);
+}
+
 
 bool Display::checkArguments(int width, int height, int refreshRate) const {
 	return width >= 0 && height >= 0 && refreshRate >= 0;

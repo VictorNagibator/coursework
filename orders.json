@@ -1,15 +1,80 @@
-{
-    "people":
+[
     {
-        "First":
-        {
-            "name": "Victor",
-            "age": 12
+        "cpu": {
+            "frequency": 0.0,
+            "modelName": "",
+            "numOfCores": 0,
+            "socket": ""
         },
-        "Second":
-        {
-            "name": "Leha",
-            "age": 15
+        "dataStorage": {
+            "brand": "",
+            "capacity": 0,
+            "componentName": "HDD",
+            "formFactor": 0.0,
+            "spindleSpeed": 0,
+            "transferInterface": 1
+        },
+        "display": {
+            "height": 0,
+            "refreshRate": 0,
+            "width": 0
+        },
+        "gpu": {
+            "frequency": 0.0,
+            "modelName": "",
+            "vram": 0
+        },
+        "modelName": "",
+        "motherboard": {
+            "chipset": "",
+            "modelName": "",
+            "socket": "",
+            "supportedRAMType": 0
+        },
+        "ram": {
+            "capacity": 0,
+            "frequency": 0.0,
+            "modelName": "",
+            "type": 0
         }
-    }  
-}
+    },
+    {
+        "cpu": {
+            "frequency": 0.0,
+            "modelName": "",
+            "numOfCores": 0,
+            "socket": ""
+        },
+        "dataStorage": {
+            "brand": "",
+            "capacity": 0,
+            "componentName": "HDD",
+            "formFactor": 0.0,
+            "spindleSpeed": 0,
+            "transferInterface": 1
+        },
+        "display": {
+            "height": 0,
+            "refreshRate": 0,
+            "width": 0
+        },
+        "gpu": {
+            "frequency": 0.0,
+            "modelName": "",
+            "vram": 0
+        },
+        "modelName": "",
+        "motherboard": {
+            "chipset": "",
+            "modelName": "",
+            "socket": "",
+            "supportedRAMType": 0
+        },
+        "ram": {
+            "capacity": 0,
+            "frequency": 0.0,
+            "modelName": "",
+            "type": 0
+        }
+    }
+]

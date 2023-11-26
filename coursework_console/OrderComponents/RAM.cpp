@@ -83,6 +83,22 @@ std::string RAM::toString() const {
 	return name;
 }
 
+json RAM::toJSON() const {
+	json j;
+	j["modelName"] = modelName;
+	j["type"] = type;
+	j["frequency"] = frequency;
+	j["capacity"] = capacity;
+	return j;
+}
+
+void RAM::fromJSON(json j) {
+	this->modelName = j["modelName"];
+	this->type = j["type"];
+	this->frequency = j["frequency"];
+	this->capacity = j["capacity"];
+}
+
 
 bool RAM::checkArguments(std::string modelName, RAMType type, float frequency, int capacity) const {
 	return frequency >= 0 && frequency <= DDRFreqMax[RAMTypeToInt(type)] && capacity >= 0;

@@ -47,6 +47,7 @@ static std::istream& operator >> (std::istream& in, DataTransferInterface& trans
 	}
 	return in;
 }
+
 static std::ostream& operator << (std::ostream& out, DataTransferInterface& transferInterface) {
 	out << DataTransferInterfaceToString(transferInterface);
 	return out;

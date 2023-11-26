@@ -19,6 +19,8 @@ public:
 	int getSpindleSpeed() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json hdd) override;
 private:
 	int spindleSpeed = 0;
 

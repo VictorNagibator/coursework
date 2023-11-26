@@ -62,6 +62,22 @@ std::string Motherboard::toString() const {
     return name;
 }
 
+json Motherboard::toJSON() const {
+	json j;
+	j["modelName"] = modelName;
+	j["socket"] = socket;
+	j["chipset"] = chipset;
+	j["supportedRAMType"] = supportedRAMType;
+	return j;
+}
+
+void Motherboard::fromJSON(json j) {
+	modelName = j["modelName"];
+	socket = j["socket"];
+	chipset = j["chipset"];
+	supportedRAMType = j["supportedRAMType"];
+}
+
 
 void Motherboard::setArguments(std::string modelName, std::string socket, std::string chipset, RAMType supportedRAMType) {
     this->modelName = modelName;

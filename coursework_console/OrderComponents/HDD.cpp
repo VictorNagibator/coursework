@@ -44,6 +44,17 @@ std::string HDD::toString() const {
 	return name;
 }
 
+json HDD::toJSON() const {
+	json hdd = DataStorage::toJSON();
+	hdd["spindleSpeed"] = spindleSpeed;
+	return hdd;
+}
+
+void HDD::fromJSON(json hdd) {
+	DataStorage::fromJSON(hdd);
+	tryToSetArguments(hdd["spindleSpeed"]);
+}
+
 
 bool HDD::checkArguments(int spindleSpeed) const {
 	return spindleSpeed >= 0;

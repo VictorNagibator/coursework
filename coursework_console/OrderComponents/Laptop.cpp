@@ -122,6 +122,40 @@ std::string Laptop::toString() const {
     return name;
 }
 
+json Laptop::toJSON() const {
+	json j;
+	j["modelName"] = modelName;
+	j["cpu"] = cpu.toJSON();
+	j["gpu"] = gpu.toJSON();
+	j["ram"] = ram.toJSON();
+	j["motherboard"] = motherboard.toJSON();
+	j["display"] = display.toJSON();
+	j["dataStorage"] = dataStorage->toJSON();
+	return j;
+}
+
+void Laptop::fromJSON(json j) {
+    CPU cpu;
+    cpu.fromJSON(j["cpu"]);
+    GPU gpu;
+    gpu.fromJSON(j["gpu"]);
+    RAM ram;
+    ram.fromJSON(j["ram"]);
+    Motherboard motherboard;
+    motherboard.fromJSON(j["motherboard"]);
+    Display display;
+    display.fromJSON(j["display"]);
+    DataStorage* dataStorage;
+    if (j["dataStorage"]["componentName"] == "HDD") {
+		dataStorage = new HDD();
+	}
+    else {
+		dataStorage = new SSD();
+	}
+    dataStorage->fromJSON(j["dataStorage"]);
+	tryToSetArguments(j["modelName"], cpu, gpu, ram, motherboard, display, dataStorage);  
+}
+
 
 bool Laptop::checkArguments(std::string modelName, CPU cpu, GPU gpu, RAM ram, Motherboard motherboard, Display display, DataStorage* dataStorage) {
     return (cpu.getSocket() == motherboard.getSocket()) && (ram.getRAMType() == motherboard.getSupportedRAMType());

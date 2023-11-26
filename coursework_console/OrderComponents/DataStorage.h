@@ -1,8 +1,11 @@
 ﻿#pragma once
 #include <string>
 #include <format>
+#include <nlohmann/json.hpp>
 #include "DataTransferInterface.h"
 #include "LaptopComponent.h"
+
+using json = nlohmann::json;
 
 class DataStorage abstract : public LaptopComponent
 {
@@ -23,6 +26,8 @@ public:
 
 	virtual void input();
 	virtual std::string toString() const abstract;
+	virtual json toJSON() const abstract;
+	virtual void fromJSON(json data);
 protected:
 	int capacity = 0;
 	DataTransferInterface transferInterface = DataTransferInterface::SATA;

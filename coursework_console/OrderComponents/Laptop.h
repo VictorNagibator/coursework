@@ -38,6 +38,8 @@ public:
 	void boostRAM();
 	void boostRAM(float addable);
 	std::string toString() const;
+	json toJSON() const;
+	void fromJSON(json j);
 private:
 	std::string modelName;
 	CPU cpu = CPU();

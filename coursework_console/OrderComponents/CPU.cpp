@@ -78,6 +78,19 @@ std::string CPU::toString() const {
 	return name;
 }
 
+json CPU::toJSON() const {
+    json j;
+	j["modelName"] = modelName;
+	j["socket"] = socket;
+	j["frequency"] = frequency;
+	j["numOfCores"] = numOfCores;
+	return j;
+}
+
+void CPU::fromJSON(json cpu) {
+	tryToSetArguments(cpu["modelName"], cpu["socket"], cpu["frequency"], cpu["numOfCores"]);
+}
+
 
 bool CPU::checkArguments(std::string modelName, std::string socket, float frequency, int numOfCores) const {
 	return frequency >= 0 && frequency < maxFreq && numOfCores >= 0;

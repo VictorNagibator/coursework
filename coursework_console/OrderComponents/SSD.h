@@ -20,6 +20,8 @@ public:
 	FlashMemoryType getTypeOfFlashMemory() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json j) override;
 private:
 	FlashMemoryType typeOfFlashMemory = FlashMemoryType::NAND3D;
 

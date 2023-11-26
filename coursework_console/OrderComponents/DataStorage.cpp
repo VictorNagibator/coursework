@@ -57,6 +57,21 @@ std::string DataStorage::toString() const {
 	return name;
 }
 
+json DataStorage::toJSON() const {
+    json j;
+	j["componentName"] = getComponentName();
+	j["capacity"] = capacity;
+	j["transferInterface"] = transferInterface;
+	j["brand"] = brand;
+	j["formFactor"] = formFactor;
+	return j;
+}
+
+void DataStorage::fromJSON(json data) {
+	tryToSetArguments(data["capacity"], data["transferInterface"], data["brand"], data["formFactor"]);
+}
+
+
 bool DataStorage::checkArguments(int capacity, DataTransferInterface transferInterface, std::string brand, float formFactor) const {
 	return capacity >= 0 && formFactor >= 0;
 }

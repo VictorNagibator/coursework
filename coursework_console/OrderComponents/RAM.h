@@ -26,6 +26,8 @@ public:
 	int getCapacity() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json j) override;
 private:
 	std::string modelName;
 	RAMType type = RAMType::DDR;

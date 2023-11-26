@@ -20,6 +20,8 @@ public:
 	int getRefreshRate() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json display) override;
 private:
 	int width = 0, height = 0, refreshRate = 0;
 

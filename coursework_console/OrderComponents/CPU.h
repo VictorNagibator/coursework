@@ -21,6 +21,8 @@ public:
 	int getNumOfCores() const;
 	void input() override;
 	std::string toString() const override;
+	json toJSON() const override;
+	void fromJSON(json cpu) override;
 private:
 	std::string modelName;
 	std::string socket;
