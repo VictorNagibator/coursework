@@ -4,7 +4,7 @@
 
 enum class StatusType { ONHOLD, INPROCCESS, FINISHED };
 
-static std::string StatusTypeToString(StatusType type) {
+static std::string statusTypeToString(StatusType type) {
 	std::string result;
 	switch (type)
 	{
@@ -19,6 +19,23 @@ static std::string StatusTypeToString(StatusType type) {
 		break;
 	default:
 		break;
+	}
+	return result;
+}
+
+static StatusType stringToStatusType(std::string type) {
+	StatusType result;
+	if (type == "В ожидании") {
+		result = StatusType::ONHOLD;
+	}
+	else if (type == "В ремонте") {
+		result = StatusType::INPROCCESS;
+	}
+	else if (type == "Готов") {
+		result = StatusType::FINISHED;
+	}
+	else {
+		throw std::invalid_argument("Некорректный статус!");
 	}
 	return result;
 }
@@ -44,6 +61,6 @@ static std::istream& operator >> (std::istream& in, StatusType& status) {
 };
 
 static std::ostream& operator << (std::ostream& out, StatusType& status) {
-	out << StatusTypeToString(status);
+	out << statusTypeToString(status);
 	return out;
 };

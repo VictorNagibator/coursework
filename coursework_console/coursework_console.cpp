@@ -16,22 +16,7 @@ int main()
 	dir.buildMenu(builder);
 	Menu menu = builder.getMenu();
 	
-	//menu.show();
-
-	std::vector<Laptop> laptops = { Laptop(), Laptop() };
-	nlohmann::json j;
-
-	for (const auto& laptop : laptops) {
-		j.push_back(laptop.toJSON());
-	}
-
-	std::ofstream file("../orders.json");
-	file << std::setw(4) << j << std::endl;
-	file.close();
-
-	std::ifstream file("../orders.json");
-	nlohmann::json j2;
-	file >> j2;
+	menu.show();
 
 	return 0;
 }

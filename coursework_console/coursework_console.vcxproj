@@ -145,6 +145,7 @@
     <ClCompile Include="OrderComponents\HDD.cpp" />
     <ClCompile Include="OrderComponents\Laptop.cpp" />
     <ClCompile Include="OrderComponents\Motherboard.cpp" />
+    <ClCompile Include="OrderComponents\Order.cpp" />
     <ClCompile Include="OrderComponents\RAM.cpp" />
     <ClCompile Include="OrderComponents\SSD.cpp" />
     <ClCompile Include="Menu\StandartMenuDirector.cpp" />

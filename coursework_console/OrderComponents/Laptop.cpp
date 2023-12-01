@@ -1,4 +1,4 @@
-#include "Laptop.h"
+﻿#include "Laptop.h"
 
 void Laptop::operator=(Laptop other) {
     this->modelName = other.getModelName();

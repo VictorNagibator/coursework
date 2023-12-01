@@ -3,7 +3,7 @@
 
 enum class DataTransferInterface { PATA, SATA, SAS, NVME };
 
-static std::string DataTransferInterfaceToString(DataTransferInterface transferInterface) {
+static std::string dataTransferInterfaceToString(DataTransferInterface transferInterface) {
 	std::string result;
 	switch (transferInterface)
 	{
@@ -21,6 +21,26 @@ static std::string DataTransferInterfaceToString(DataTransferInterface transferI
 		break;
 	default:
 		break;
+	}
+	return result;
+}
+
+static DataTransferInterface stringToDataTransferInterface(std::string transferInterface) {
+	DataTransferInterface result;
+	if (transferInterface == "PATA") {
+		result = DataTransferInterface::PATA;
+	}
+	else if (transferInterface == "SATA") {
+		result = DataTransferInterface::SATA;
+	}
+	else if (transferInterface == "SAS") {
+		result = DataTransferInterface::SAS;
+	}
+	else if (transferInterface == "NVMe") {
+		result = DataTransferInterface::NVME;
+	}
+	else {
+		throw std::invalid_argument("Некорректный тип интерфейса!");
 	}
 	return result;
 }
@@ -49,6 +69,6 @@ static std::istream& operator >> (std::istream& in, DataTransferInterface& trans
 }
 
 static std::ostream& operator << (std::ostream& out, DataTransferInterface& transferInterface) {
-	out << DataTransferInterfaceToString(transferInterface);
+	out << dataTransferInterfaceToString(transferInterface);
 	return out;
 }

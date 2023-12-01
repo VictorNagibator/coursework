@@ -53,7 +53,7 @@ void DataStorage::input() {
 
 
 std::string DataStorage::toString() const {
-	std::string name = this->getBrand() + ", " + std::to_string(this->getCapacity()) + " ГБ, " + DataTransferInterfaceToString(this->getInterface()) + ", " + std::format("{:.1f}", this->getFormFactor());
+	std::string name = this->getBrand() + ", " + std::to_string(this->getCapacity()) + " ГБ, " + dataTransferInterfaceToString(this->getInterface()) + ", " + std::format("{:.1f}", this->getFormFactor());
 	return name;
 }
 
@@ -61,14 +61,14 @@ json DataStorage::toJSON() const {
     json j;
 	j["componentName"] = getComponentName();
 	j["capacity"] = capacity;
-	j["transferInterface"] = transferInterface;
+	j["transferInterface"] = dataTransferInterfaceToString(transferInterface);
 	j["brand"] = brand;
 	j["formFactor"] = formFactor;
 	return j;
 }
 
 void DataStorage::fromJSON(json data) {
-	tryToSetArguments(data["capacity"], data["transferInterface"], data["brand"], data["formFactor"]);
+	tryToSetArguments(data["capacity"], stringToDataTransferInterface(data["transferInterface"]), data["brand"], data["formFactor"]);
 }
 
 

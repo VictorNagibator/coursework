@@ -27,6 +27,29 @@ static std::string RAMTypeToString(RAMType type) {
 	return result;
 }
 
+static RAMType stringToRAMType(std::string type) {
+	RAMType result;
+	if (type == "DDR") {
+		result = RAMType::DDR;
+	}
+	else if (type == "DDR2") {
+		result = RAMType::DDR2;
+	}
+	else if (type == "DDR3") {
+		result = RAMType::DDR3;
+	}
+	else if (type == "DDR4") {
+		result = RAMType::DDR4;
+	}
+	else if (type == "DDR5") {
+		result = RAMType::DDR5;
+	}
+	else {
+		throw std::invalid_argument("Некорректный тип оперативной памяти!");
+	}
+	return result;
+}
+
 static int RAMTypeToInt(RAMType type) {
 	return static_cast<int>(type);
 }

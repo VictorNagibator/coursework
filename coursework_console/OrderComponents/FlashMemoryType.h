@@ -28,6 +28,29 @@ static std::string FlashMemoryTypeToString(FlashMemoryType type) {
 	return result;
 }
 
+static FlashMemoryType stringToFlashMemoryType(std::string type) {
+	FlashMemoryType result;
+	if (type == "SLC") {
+		result = FlashMemoryType::SLC;
+	}
+	else if (type == "MLC") {
+		result = FlashMemoryType::MLC;
+	}
+	else if (type == "NOR") {
+		result = FlashMemoryType::NOR;
+	}
+	else if (type == "NAND") {
+		result = FlashMemoryType::NAND;
+	}
+	else if (type == "3D NAND") {
+		result = FlashMemoryType::NAND3D;
+	}
+	else {
+		throw std::invalid_argument("Некорректный тип флеш-памяти!");
+	}
+	return result;
+}
+
 static std::istream& operator >> (std::istream& in, FlashMemoryType& type) {
 	int choice;
 	in >> choice;

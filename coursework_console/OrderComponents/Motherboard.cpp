@@ -67,7 +67,7 @@ json Motherboard::toJSON() const {
 	j["modelName"] = modelName;
 	j["socket"] = socket;
 	j["chipset"] = chipset;
-	j["supportedRAMType"] = supportedRAMType;
+	j["supportedRAMType"] = RAMTypeToString(supportedRAMType);
 	return j;
 }
 
@@ -75,7 +75,7 @@ void Motherboard::fromJSON(json j) {
 	modelName = j["modelName"];
 	socket = j["socket"];
 	chipset = j["chipset"];
-	supportedRAMType = j["supportedRAMType"];
+	supportedRAMType = stringToRAMType(j["supportedRAMType"]);
 }
 
 

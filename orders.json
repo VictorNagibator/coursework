@@ -12,7 +12,7 @@
             "componentName": "HDD",
             "formFactor": 0.0,
             "spindleSpeed": 0,
-            "transferInterface": 1
+            "transferInterface": "SATA"
         },
         "display": {
             "height": 0,
@@ -29,13 +29,13 @@
             "chipset": "",
             "modelName": "",
             "socket": "",
-            "supportedRAMType": 0
+            "supportedRAMType": "DDR"
         },
         "ram": {
             "capacity": 0,
             "frequency": 0.0,
             "modelName": "",
-            "type": 0
+            "type": "DDR"
         }
     },
     {
@@ -51,7 +51,7 @@
             "componentName": "HDD",
             "formFactor": 0.0,
             "spindleSpeed": 0,
-            "transferInterface": 1
+            "transferInterface": "SATA"
         },
         "display": {
             "height": 0,
@@ -68,13 +68,13 @@
             "chipset": "",
             "modelName": "",
             "socket": "",
-            "supportedRAMType": 0
+            "supportedRAMType": "DDR"
         },
         "ram": {
             "capacity": 0,
             "frequency": 0.0,
             "modelName": "",
-            "type": 0
+            "type": "DDR"
         }
     }
 ]

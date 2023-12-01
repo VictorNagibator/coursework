@@ -46,13 +46,13 @@ std::string SSD::toString() const {
 
 json SSD::toJSON() const {
 	json j = DataStorage::toJSON();
-	j["typeOfFlashMemory"] = getTypeOfFlashMemory();
+	j["typeOfFlashMemory"] = FlashMemoryTypeToString(getTypeOfFlashMemory());
 	return j;
 }
 
 void SSD::fromJSON(json j) {
 	DataStorage::fromJSON(j);
-	setArguments(j["typeOfFlashMemory"]);
+	setArguments(stringToFlashMemoryType(j["typeOfFlashMemory"]));
 }
 
 

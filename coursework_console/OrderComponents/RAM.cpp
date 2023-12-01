@@ -86,7 +86,7 @@ std::string RAM::toString() const {
 json RAM::toJSON() const {
 	json j;
 	j["modelName"] = modelName;
-	j["type"] = type;
+	j["type"] = RAMTypeToString(type);
 	j["frequency"] = frequency;
 	j["capacity"] = capacity;
 	return j;
@@ -94,7 +94,7 @@ json RAM::toJSON() const {
 
 void RAM::fromJSON(json j) {
 	this->modelName = j["modelName"];
-	this->type = j["type"];
+	this->type = stringToRAMType(j["type"]);
 	this->frequency = j["frequency"];
 	this->capacity = j["capacity"];
 }
