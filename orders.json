@@ -1,80 +1,222 @@
 [
     {
-        "cpu": {
-            "frequency": 0.0,
+        "additionalInfo": "",
+        "laptop": {
+            "cpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "numOfCores": 0,
+                "socket": ""
+            },
+            "dataStorage": {
+                "brand": "",
+                "capacity": 0,
+                "componentName": "HDD",
+                "formFactor": 0.0,
+                "spindleSpeed": 0,
+                "transferInterface": "SATA"
+            },
+            "display": {
+                "height": 0,
+                "refreshRate": 0,
+                "width": 0
+            },
+            "gpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "vram": 0
+            },
             "modelName": "",
-            "numOfCores": 0,
-            "socket": ""
+            "motherboard": {
+                "chipset": "",
+                "modelName": "",
+                "socket": "",
+                "supportedRAMType": "DDR"
+            },
+            "ram": {
+                "capacity": 0,
+                "frequency": 0.0,
+                "modelName": "",
+                "type": "DDR"
+            }
         },
-        "dataStorage": {
-            "brand": "",
-            "capacity": 0,
-            "componentName": "HDD",
-            "formFactor": 0.0,
-            "spindleSpeed": 0,
-            "transferInterface": "SATA"
-        },
-        "display": {
-            "height": 0,
-            "refreshRate": 0,
-            "width": 0
-        },
-        "gpu": {
-            "frequency": 0.0,
-            "modelName": "",
-            "vram": 0
-        },
-        "modelName": "",
-        "motherboard": {
-            "chipset": "",
-            "modelName": "",
-            "socket": "",
-            "supportedRAMType": "DDR"
-        },
-        "ram": {
-            "capacity": 0,
-            "frequency": 0.0,
-            "modelName": "",
-            "type": "DDR"
-        }
+        "numOfOrder": 0,
+        "status": "On hold"
     },
     {
-        "cpu": {
-            "frequency": 0.0,
+        "additionalInfo": "",
+        "laptop": {
+            "cpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "numOfCores": 0,
+                "socket": ""
+            },
+            "dataStorage": {
+                "brand": "",
+                "capacity": 0,
+                "componentName": "HDD",
+                "formFactor": 0.0,
+                "spindleSpeed": 0,
+                "transferInterface": "SATA"
+            },
+            "display": {
+                "height": 0,
+                "refreshRate": 0,
+                "width": 0
+            },
+            "gpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "vram": 0
+            },
             "modelName": "",
-            "numOfCores": 0,
-            "socket": ""
+            "motherboard": {
+                "chipset": "",
+                "modelName": "",
+                "socket": "",
+                "supportedRAMType": "DDR"
+            },
+            "ram": {
+                "capacity": 0,
+                "frequency": 0.0,
+                "modelName": "",
+                "type": "DDR"
+            }
         },
-        "dataStorage": {
-            "brand": "",
-            "capacity": 0,
-            "componentName": "HDD",
-            "formFactor": 0.0,
-            "spindleSpeed": 0,
-            "transferInterface": "SATA"
-        },
-        "display": {
-            "height": 0,
-            "refreshRate": 0,
-            "width": 0
-        },
-        "gpu": {
-            "frequency": 0.0,
+        "numOfOrder": 0,
+        "status": "On hold"
+    },
+    {
+        "additionalInfo": "",
+        "laptop": {
+            "cpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "numOfCores": 0,
+                "socket": ""
+            },
+            "dataStorage": {
+                "brand": "",
+                "capacity": 0,
+                "componentName": "HDD",
+                "formFactor": 0.0,
+                "spindleSpeed": 0,
+                "transferInterface": "SATA"
+            },
+            "display": {
+                "height": 0,
+                "refreshRate": 0,
+                "width": 0
+            },
+            "gpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "vram": 0
+            },
             "modelName": "",
-            "vram": 0
+            "motherboard": {
+                "chipset": "",
+                "modelName": "",
+                "socket": "",
+                "supportedRAMType": "DDR"
+            },
+            "ram": {
+                "capacity": 0,
+                "frequency": 0.0,
+                "modelName": "",
+                "type": "DDR"
+            }
         },
-        "modelName": "",
-        "motherboard": {
-            "chipset": "",
+        "numOfOrder": 0,
+        "status": "On hold"
+    },
+    {
+        "additionalInfo": "",
+        "laptop": {
+            "cpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "numOfCores": 0,
+                "socket": ""
+            },
+            "dataStorage": {
+                "brand": "",
+                "capacity": 0,
+                "componentName": "HDD",
+                "formFactor": 0.0,
+                "spindleSpeed": 0,
+                "transferInterface": "SATA"
+            },
+            "display": {
+                "height": 0,
+                "refreshRate": 0,
+                "width": 0
+            },
+            "gpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "vram": 0
+            },
             "modelName": "",
-            "socket": "",
-            "supportedRAMType": "DDR"
+            "motherboard": {
+                "chipset": "",
+                "modelName": "",
+                "socket": "",
+                "supportedRAMType": "DDR"
+            },
+            "ram": {
+                "capacity": 0,
+                "frequency": 0.0,
+                "modelName": "",
+                "type": "DDR"
+            }
         },
-        "ram": {
-            "capacity": 0,
-            "frequency": 0.0,
+        "numOfOrder": 0,
+        "status": "On hold"
+    },
+    {
+        "additionalInfo": "",
+        "laptop": {
+            "cpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "numOfCores": 0,
+                "socket": ""
+            },
+            "dataStorage": {
+                "brand": "",
+                "capacity": 0,
+                "componentName": "HDD",
+                "formFactor": 0.0,
+                "spindleSpeed": 0,
+                "transferInterface": "SATA"
+            },
+            "display": {
+                "height": 0,
+                "refreshRate": 0,
+                "width": 0
+            },
+            "gpu": {
+                "frequency": 0.0,
+                "modelName": "",
+                "vram": 0
+            },
             "modelName": "",
-            "type": "DDR"
-        }
+            "motherboard": {
+                "chipset": "",
+                "modelName": "",
+                "socket": "",
+                "supportedRAMType": "DDR"
+            },
+            "ram": {
+                "capacity": 0,
+                "frequency": 0.0,
+                "modelName": "",
+                "type": "DDR"
+            }
+        },
+        "numOfOrder": 0,
+        "status": "On hold"
     }
 ]

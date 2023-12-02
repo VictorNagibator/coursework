@@ -30,6 +30,7 @@ void ChooseFileButton::execute() {
 	else if (file.is_open()) {
 		std::cout << "Файл успешно открыт." << std::endl;
 		FileInfo::setPath(path);
+		file.close();
 	} 
 	else {
 		std::cout << "Файл не найден. Проверьте правильность введенного пути." << std::endl;

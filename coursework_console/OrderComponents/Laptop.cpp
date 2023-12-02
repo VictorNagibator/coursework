@@ -135,15 +135,15 @@ json Laptop::toJSON() const {
 }
 
 void Laptop::fromJSON(json j) {
-    CPU cpu;
+    CPU cpu = CPU();
     cpu.fromJSON(j["cpu"]);
-    GPU gpu;
+    GPU gpu = GPU();
     gpu.fromJSON(j["gpu"]);
-    RAM ram;
+    RAM ram = RAM();
     ram.fromJSON(j["ram"]);
-    Motherboard motherboard;
+    Motherboard motherboard = Motherboard();
     motherboard.fromJSON(j["motherboard"]);
-    Display display;
+    Display display = Display();
     display.fromJSON(j["display"]);
     DataStorage* dataStorage;
     if (j["dataStorage"]["componentName"] == "HDD") {

@@ -15,21 +15,23 @@ Table::Table(const std::string& filePath) {
 void Table::shortShow() const {
 	showHeader();
 	for (auto& order : data) {
-		Order o;
+		Order o = Order();
 		o.fromJSON(order);
-		std::cout << "* " << o.getNumOfOrder() << " * " << o.getLaptop().getModelName() << " * " << statusTypeToString(o.getStatus()) << " * " << '\n';
+		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", o.getNumOfOrder(), o.getLaptop().getModelName(), statusTypeToString(o.getStatus()), o.getAdditionalInfo());
+		std::cout << res << std::endl;
 		if (o.getNumOfOrder() == 5) break;
 	}
-	std::cout << "* " << "..." << " * " << "..." << " * " << "..." << " * " << '\n';
+	std::cout << std::format("*{:^14s}*{:^17s}*{:^8s}*{:^22s}*", "...", "...", "...", "...") << std::endl;
 	showBottom();
 }
 
 void Table::fullShow() const {
 	showHeader();
 	for (auto& order : data) {
-		Order o;
+		Order o = Order();
 		o.fromJSON(order);
-		std::cout << "* " << o.getNumOfOrder() << " * " << o.getLaptop().getModelName() << " * " << statusTypeToString(o.getStatus()) << " * " << o.getAdditionalInfo() << " *" << '\n';
+		std::string res = std::format("*%14d*%17s*%8s*%22s*\n", o.getNumOfOrder(), o.getLaptop().getModelName(), statusTypeToString(o.getStatus()), o.getAdditionalInfo());
+		std::cout << res << std::endl;
 	}
 	showBottom();
 }
@@ -46,5 +48,6 @@ void Table::showBottom() const {
 
 void Table::loadJSON(const std::string& filePath) {
 	std::ifstream file(filePath);
-	json data = json::parse(file);
+	this->data = json::parse(file);
+	file.close();
 }
