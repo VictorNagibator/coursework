@@ -1,5 +1,5 @@
 #include "MenuWithTable.h"
-#include "FileInfo.h"
+#include "../FileInfo.h"
 
 MenuWithTable::MenuWithTable(const std::string& text) : Menu(text)
 {

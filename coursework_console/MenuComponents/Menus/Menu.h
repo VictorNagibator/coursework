@@ -3,7 +3,7 @@
 #include <vector>
 #include <Windows.h>
 #include <conio.h>
-#include "Buttons/Button.h"
+#include "../Buttons/Button.h"
 
 class Menu
 {

@@ -130,17 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Menu\Buttons\BackButton.cpp" />
-    <ClCompile Include="Menu\MenuWithTable.cpp" />
-    <ClCompile Include="Menu\FileInfo.cpp" />
-    <ClCompile Include="Menu\Buttons\ChooseFileButton.cpp" />
-    <ClCompile Include="Menu\MenuDirector.cpp" />
-    <ClCompile Include="Menu\MenuBuilder.cpp" />
-    <ClCompile Include="Menu\Menu.cpp" />
-    <ClCompile Include="Menu\Buttons\ExitButton.cpp" />
-    <ClCompile Include="Menu\Buttons\Button.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\BackButton.cpp" />
+    <ClCompile Include="MenuComponents\Menus\MenuWithTable.cpp" />
+    <ClCompile Include="MenuComponents\FileInfo.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\ChooseFileButton.cpp" />
+    <ClCompile Include="MenuComponents\Menus\MenuDirector.cpp" />
+    <ClCompile Include="MenuComponents\Menus\MenuBuilder.cpp" />
+    <ClCompile Include="MenuComponents\Menus\Menu.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\ExitButton.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\Button.cpp" />
     <ClCompile Include="coursework_console.cpp" />
-    <ClCompile Include="Menu\Buttons\OpenMenuButton.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\OpenMenuButton.cpp" />
     <ClCompile Include="OrderComponents\CPU.cpp" />
     <ClCompile Include="OrderComponents\DataStorage.cpp" />
     <ClCompile Include="OrderComponents\Display.cpp" />
@@ -151,20 +151,20 @@
     <ClCompile Include="OrderComponents\Order.cpp" />
     <ClCompile Include="OrderComponents\RAM.cpp" />
     <ClCompile Include="OrderComponents\SSD.cpp" />
-    <ClCompile Include="Menu\StandartMenuDirector.cpp" />
-    <ClCompile Include="Menu\Table.cpp" />
+    <ClCompile Include="MenuComponents\Menus\StandartMenuDirector.cpp" />
+    <ClCompile Include="MenuComponents\Table.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Menu\Buttons\BackButton.h" />
-    <ClInclude Include="Menu\MenuWithTable.h" />
-    <ClInclude Include="Menu\FileInfo.h" />
-    <ClInclude Include="Menu\Buttons\ChooseFileButton.h" />
-    <ClInclude Include="Menu\MenuDirector.h" />
-    <ClInclude Include="Menu\MenuBuilder.h" />
-    <ClInclude Include="Menu\Menu.h" />
-    <ClInclude Include="Menu\Buttons\ExitButton.h" />
-    <ClInclude Include="Menu\Buttons\Button.h" />
-    <ClInclude Include="Menu\Buttons\OpenMenuButton.h" />
+    <ClInclude Include="MenuComponents\Buttons\BackButton.h" />
+    <ClInclude Include="MenuComponents\Menus\MenuWithTable.h" />
+    <ClInclude Include="MenuComponents\FileInfo.h" />
+    <ClInclude Include="MenuComponents\Buttons\ChooseFileButton.h" />
+    <ClInclude Include="MenuComponents\Menus\MenuDirector.h" />
+    <ClInclude Include="MenuComponents\Menus\MenuBuilder.h" />
+    <ClInclude Include="MenuComponents\Menus\Menu.h" />
+    <ClInclude Include="MenuComponents\Buttons\ExitButton.h" />
+    <ClInclude Include="MenuComponents\Buttons\Button.h" />
+    <ClInclude Include="MenuComponents\Buttons\OpenMenuButton.h" />
     <ClInclude Include="OrderComponents\CPU.h" />
     <ClInclude Include="OrderComponents\DataStorage.h" />
     <ClInclude Include="OrderComponents\DataTransferInterface.h" />
@@ -180,8 +180,8 @@
     <ClInclude Include="OrderComponents\RAMType.h" />
     <ClInclude Include="OrderComponents\SSD.h" />
     <ClInclude Include="OrderComponents\StatusType.h" />
-    <ClInclude Include="Menu\StandartMenuDirector.h" />
-    <ClInclude Include="Menu\Table.h" />
+    <ClInclude Include="MenuComponents\Menus\StandartMenuDirector.h" />
+    <ClInclude Include="MenuComponents\Table.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

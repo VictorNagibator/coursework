@@ -45,43 +45,43 @@
     <ClCompile Include="OrderComponents\DataStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Buttons\Button.cpp">
+    <ClCompile Include="MenuComponents\Buttons\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Buttons\ExitButton.cpp">
+    <ClCompile Include="MenuComponents\Buttons\ExitButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Menu.cpp">
+    <ClCompile Include="MenuComponents\Menus\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\MenuBuilder.cpp">
+    <ClCompile Include="MenuComponents\Menus\MenuBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\MenuDirector.cpp">
+    <ClCompile Include="MenuComponents\Menus\MenuDirector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\StandartMenuDirector.cpp">
+    <ClCompile Include="MenuComponents\Menus\StandartMenuDirector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Buttons\ChooseFileButton.cpp">
+    <ClCompile Include="MenuComponents\Buttons\ChooseFileButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\FileInfo.cpp">
+    <ClCompile Include="MenuComponents\FileInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Table.cpp">
+    <ClCompile Include="MenuComponents\Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OrderComponents\Order.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Buttons\OpenMenuButton.cpp">
+    <ClCompile Include="MenuComponents\Buttons\OpenMenuButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\MenuWithTable.cpp">
+    <ClCompile Include="MenuComponents\Menus\MenuWithTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu\Buttons\BackButton.cpp">
+    <ClCompile Include="MenuComponents\Buttons\BackButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,40 +131,40 @@
     <ClInclude Include="OrderComponents\LaptopComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Buttons\Button.h">
+    <ClInclude Include="MenuComponents\Buttons\Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Buttons\ExitButton.h">
+    <ClInclude Include="MenuComponents\Buttons\ExitButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Menu.h">
+    <ClInclude Include="MenuComponents\Menus\Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\MenuBuilder.h">
+    <ClInclude Include="MenuComponents\Menus\MenuBuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\MenuDirector.h">
+    <ClInclude Include="MenuComponents\Menus\MenuDirector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\StandartMenuDirector.h">
+    <ClInclude Include="MenuComponents\Menus\StandartMenuDirector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Buttons\ChooseFileButton.h">
+    <ClInclude Include="MenuComponents\Buttons\ChooseFileButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\FileInfo.h">
+    <ClInclude Include="MenuComponents\FileInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Table.h">
+    <ClInclude Include="MenuComponents\Table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Buttons\OpenMenuButton.h">
+    <ClInclude Include="MenuComponents\Buttons\OpenMenuButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\MenuWithTable.h">
+    <ClInclude Include="MenuComponents\Menus\MenuWithTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu\Buttons\BackButton.h">
+    <ClInclude Include="MenuComponents\Buttons\BackButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

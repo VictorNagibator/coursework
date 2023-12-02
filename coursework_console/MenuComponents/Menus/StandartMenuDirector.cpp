@@ -1,9 +1,9 @@
 #include "StandartMenuDirector.h"
 #include "MenuBuilder.h"
-#include "Buttons/ExitButton.h"
-#include "Buttons/ChooseFileButton.h"
-#include "Buttons/OpenMenuButton.h"
-#include "Buttons/BackButton.h"
+#include "../Buttons/ExitButton.h"
+#include "../Buttons/ChooseFileButton.h"
+#include "../Buttons/OpenMenuButton.h"
+#include "../Buttons/BackButton.h"
 #include "MenuWithTable.h"
 
 void StandartMenuDirector::buildMenu(MenuBuilder& builder) {

@@ -2,10 +2,10 @@
 #include <fstream>
 #include <windows.h>
 #include "OrderComponents/Order.h"
-#include "Menu/StandartMenuDirector.h"
-#include "Menu/Menu.h"
-#include "Menu/MenuBuilder.h"
-#include "Menu/MenuWithTable.h"
+#include "MenuComponents/Menus/StandartMenuDirector.h"
+#include "MenuComponents/Menus/Menu.h"
+#include "MenuComponents/Menus/MenuBuilder.h"
+#include "MenuComponents/Menus/MenuWithTable.h"
 
 int main()
 {

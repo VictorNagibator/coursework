@@ -1,6 +1,6 @@
 #pragma once
 #include "Menu.h"
-#include "Table.h"
+#include "../Table.h"
 
 class MenuWithTable : public Menu
 {
