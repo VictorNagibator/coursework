@@ -4,13 +4,13 @@
 class MenuBuilder
 {
 public:
-	MenuBuilder(const std::string& menuName) : currentMenu(menuName) {};
+	MenuBuilder(const std::string& menuName);
 	~MenuBuilder() = default;
 
 	void addButton(Button* button);
 	void removeButton(Button* button);
 	void removeLastButton();
-	Menu getMenu();
+	Menu* getMenu();
 protected:
-	Menu currentMenu;
+	Menu* currentMenu;
 };

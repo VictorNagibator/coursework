@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <iostream>
 
-class Button abstract
+class Button
 {
 public:
 	Button(const std::string& text);

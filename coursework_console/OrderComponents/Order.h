@@ -5,9 +5,12 @@
 #include "Laptop.h"
 #include "StatusType.h"
 
+using json = nlohmann::json;
+
 class Order
 {
 public:
+	Order() = default;
 	Order(Laptop laptop);
 	Order(Laptop laptop, StatusType status, std::string additionalInfo);
 	~Order() = default;
@@ -24,6 +27,9 @@ public:
 	void setLaptop(Laptop laptop);
 	void setAdditionalInfo(std::string additionalInfo);
 	std::string toString() const;
+
+	json toJSON() const;
+	void fromJSON(json j);
 private:
 	static inline int numOfLastOrder{};
 

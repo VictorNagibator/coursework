@@ -130,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Menu\Buttons\BackButton.cpp" />
+    <ClCompile Include="Menu\MenuWithTable.cpp" />
     <ClCompile Include="Menu\FileInfo.cpp" />
     <ClCompile Include="Menu\Buttons\ChooseFileButton.cpp" />
     <ClCompile Include="Menu\MenuDirector.cpp" />
@@ -138,6 +140,7 @@
     <ClCompile Include="Menu\Buttons\ExitButton.cpp" />
     <ClCompile Include="Menu\Buttons\Button.cpp" />
     <ClCompile Include="coursework_console.cpp" />
+    <ClCompile Include="Menu\Buttons\OpenMenuButton.cpp" />
     <ClCompile Include="OrderComponents\CPU.cpp" />
     <ClCompile Include="OrderComponents\DataStorage.cpp" />
     <ClCompile Include="OrderComponents\Display.cpp" />
@@ -152,6 +155,8 @@
     <ClCompile Include="Menu\Table.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Menu\Buttons\BackButton.h" />
+    <ClInclude Include="Menu\MenuWithTable.h" />
     <ClInclude Include="Menu\FileInfo.h" />
     <ClInclude Include="Menu\Buttons\ChooseFileButton.h" />
     <ClInclude Include="Menu\MenuDirector.h" />
@@ -159,6 +164,7 @@
     <ClInclude Include="Menu\Menu.h" />
     <ClInclude Include="Menu\Buttons\ExitButton.h" />
     <ClInclude Include="Menu\Buttons\Button.h" />
+    <ClInclude Include="Menu\Buttons\OpenMenuButton.h" />
     <ClInclude Include="OrderComponents\CPU.h" />
     <ClInclude Include="OrderComponents\DataStorage.h" />
     <ClInclude Include="OrderComponents\DataTransferInterface.h" />

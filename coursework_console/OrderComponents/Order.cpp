@@ -72,3 +72,19 @@ std::string Order::toString() const {
 	std::string name = std::to_string(this->getNumOfOrder()) + ". " + this->laptop.getModelName() + "\t" + statusTypeToString(this->getStatus()) + '\t' + this->getAdditionalInfo();
 	return name;
 }
+
+json Order::toJSON() const {
+	json j;
+	j["numOfOrder"] = numOfOrder;
+	j["laptop"] = laptop.toJSON();
+	j["status"] = statusTypeToString(status);
+	j["additionalInfo"] = additionalInfo;
+	return j;
+}
+
+void Order::fromJSON(json j) {
+	numOfOrder = j["numOfOrder"];
+	laptop.fromJSON(j["laptop"]);
+	status = stringToStatusType(j["status"]);
+	additionalInfo = j["additionalInfo"];
+}

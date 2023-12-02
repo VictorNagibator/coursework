@@ -7,12 +7,15 @@ using json = nlohmann::json;
 class Table
 {
 public:
+	Table();
 	Table(const std::string& filePath);
 
 	void shortShow() const;
 	void fullShow() const;
 private:
-	std::string filePath;
-
 	json data;
+
+	void showHeader() const;
+	void showBottom() const;
+	void loadJSON(const std::string& filePath);
 };

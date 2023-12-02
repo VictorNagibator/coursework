@@ -4,7 +4,7 @@
 #include "ChooseFileButton.h"
 #include "../FileInfo.h"
 
-ChooseFileButton::ChooseFileButton() : Button("Выход") {
+ChooseFileButton::ChooseFileButton() : Button("Выбор файла") {
 
 }
 

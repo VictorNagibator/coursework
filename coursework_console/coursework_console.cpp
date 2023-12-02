@@ -5,6 +5,7 @@
 #include "Menu/StandartMenuDirector.h"
 #include "Menu/Menu.h"
 #include "Menu/MenuBuilder.h"
+#include "Menu/MenuWithTable.h"
 
 int main()
 {
@@ -14,9 +15,9 @@ int main()
 	MenuBuilder builder = MenuBuilder("Главное меню");
 	StandartMenuDirector dir;
 	dir.buildMenu(builder);
-	Menu menu = builder.getMenu();
+	Menu* menu = builder.getMenu();
 	
-	menu.show();
+	menu->show();
 
 	return 0;
 }

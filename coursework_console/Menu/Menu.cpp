@@ -12,6 +12,7 @@ Menu::Menu(const std::string& name, std::vector<Button*> buttons) {
 void Menu::addButton(Button* button) {
 	buttons.push_back(button);
 }
+
 void Menu::removeButton(Button* button) {
 	for (int i = 0; i < buttons.size(); i++) {
 		if (buttons[i]->getText() == button->getText()) {
@@ -42,7 +43,6 @@ void Menu::chooseButton()
 	while(getchar() != '\n');
 	system("cls");
 	if (choice > 0 && choice <= buttons.size()) {
-		system("cls");
 		buttons[choice - 1]->execute();
 	}
 	else {
@@ -52,4 +52,21 @@ void Menu::chooseButton()
 	}
 	system("cls");
 	show();
+}
+
+void Menu::setPreviousMenu(Menu* menu) {
+	previousMenu = menu;
+}
+
+void Menu::back() {
+	if (previousMenu != nullptr) {
+		previousMenu->show();
+	}
+	else {
+		std::cout << "Вы находитесь в корневом меню!" << std::endl;
+		std::cout << "Нажмите любую клавишу...";
+		_getch();
+		system("cls");
+		show();
+	}
 }
