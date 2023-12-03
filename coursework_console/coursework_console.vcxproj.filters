@@ -84,6 +84,15 @@
     <ClCompile Include="MenuComponents\Buttons\BackButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\PlayGameButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\ShowTableButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\AddDataButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OrderComponents\CPU.h">
@@ -165,6 +174,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Buttons\BackButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\PlayGameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\ShowTableButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\AddDataButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

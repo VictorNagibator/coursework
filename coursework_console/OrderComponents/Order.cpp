@@ -41,9 +41,11 @@ void Order::input() {
 	std::string additionalInfo;
 	numOfLastOrder++;
 
-	std::cout << "Номер заказа: " << numOfLastOrder;
+	std::cout << "Номер заказа: " << numOfLastOrder << std::endl;
 	std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
 	std::cin >> type;
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 	std::cout << "\tВвод параметров ноутбука\n";
 	laptop.input();
 	std::cout << "\tВвод дополнительной информации\n";

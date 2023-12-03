@@ -1,4 +1,5 @@
-﻿#include "Menu.h"
+﻿#include <string>
+#include "Menu.h"
 
 Menu::Menu(const std::string& name) {
 	this->name = name;
@@ -40,7 +41,8 @@ void Menu::chooseButton()
 	std::cout << "Ваш выбор: ";
 	int choice;
 	std::cin >> choice;
-	while(getchar() != '\n');
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 	system("cls");
 	if (choice > 0 && choice <= buttons.size()) {
 		buttons[choice - 1]->execute();

@@ -5,6 +5,11 @@ OpenMenuButton::OpenMenuButton(const std::string& text, Menu* menu) : Button(tex
 	this->menu = menu;
 }
 
+void OpenMenuButton::setMenu(Menu* menu)
+{
+	this->menu = menu;
+}
+
 void OpenMenuButton::execute() {
 	menu->show();
 }

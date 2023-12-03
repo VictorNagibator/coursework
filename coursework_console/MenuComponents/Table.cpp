@@ -30,7 +30,7 @@ void Table::fullShow() const {
 	for (auto& order : data) {
 		Order o = Order();
 		o.fromJSON(order);
-		std::string res = std::format("*%14d*%17s*%8s*%22s*\n", o.getNumOfOrder(), o.getLaptop().getModelName(), statusTypeToString(o.getStatus()), o.getAdditionalInfo());
+		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", o.getNumOfOrder(), o.getLaptop().getModelName(), statusTypeToString(o.getStatus()), o.getAdditionalInfo());
 		std::cout << res << std::endl;
 	}
 	showBottom();

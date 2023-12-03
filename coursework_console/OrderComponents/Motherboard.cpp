@@ -1,4 +1,4 @@
-#include "Motherboard.h"
+﻿#include "Motherboard.h"
 
 void Motherboard::operator=(Motherboard other) {
     this->modelName = other.getModelName();
