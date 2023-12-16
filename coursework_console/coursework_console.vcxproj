@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MenuComponents\Buttons\DeleteDataButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\AddDataButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\BackButton.cpp" />
     <ClCompile Include="MenuComponents\Menus\MenuWithTable.cpp" />
@@ -156,8 +157,10 @@
     <ClCompile Include="MenuComponents\Table.cpp" />
     <ClCompile Include="MenuComponents\Buttons\PlayGameButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ShowTableButton.cpp" />
+    <ClCompile Include="MenuComponents\OrdersData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MenuComponents\Buttons\DeleteDataButton.h" />
     <ClInclude Include="MenuComponents\Buttons\AddDataButton.h" />
     <ClInclude Include="MenuComponents\Buttons\BackButton.h" />
     <ClInclude Include="MenuComponents\Menus\MenuWithTable.h" />
@@ -188,6 +191,7 @@
     <ClInclude Include="MenuComponents\Table.h" />
     <ClInclude Include="MenuComponents\Buttons\PlayGameButton.h" />
     <ClInclude Include="MenuComponents\Buttons\ShowTableButton.h" />
+    <ClInclude Include="MenuComponents\OrdersData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

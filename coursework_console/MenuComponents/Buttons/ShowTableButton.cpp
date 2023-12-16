@@ -9,7 +9,6 @@ ShowTableButton::ShowTableButton(const std::string& title) : Button(title)
 
 void ShowTableButton::execute()
 {
-	system("cls");
 	if (FileInfo::isPathSet()) {
 		Table table = Table();
 		table.fullShow();

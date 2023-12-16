@@ -5,8 +5,11 @@ std::ostream& operator << (std::ostream& out, Order& order) {
 	return out;
 }
 
-Order::Order(Laptop laptop) {
+Order::Order() {
 	numOfOrder = ++numOfLastOrder;
+}
+
+Order::Order(Laptop laptop) : Order(){
 	this->laptop = laptop;
 }
 
@@ -39,7 +42,6 @@ void Order::input() {
 	Laptop laptop;
 	StatusType type;
 	std::string additionalInfo;
-	numOfLastOrder++;
 
 	std::cout << "Ќомер заказа: " << numOfLastOrder << std::endl;
 	std::cout << "¬ведите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";

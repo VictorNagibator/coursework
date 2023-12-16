@@ -41,12 +41,14 @@ void DataStorage::input() {
 	std::cin >> capacity;
 	std::cout << "Введите интерфейс подключения (PATA - 0, SATA - 1, SAS - 2, NVMe - 3): ";
 	std::cin >> interface;
-	while (getchar() != '\n');
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 	std::cout << "Введите производителя: ";
 	std::getline(std::cin, brand);
 	std::cout << "Введите форм фактор (в дюймах): ";
 	std::cin >> formFactor;
-	while (getchar() != '\n');
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 
 	tryToSetArguments(capacity, interface, brand, formFactor);
 }

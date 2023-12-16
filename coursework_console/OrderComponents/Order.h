@@ -10,7 +10,7 @@ using json = nlohmann::json;
 class Order
 {
 public:
-	Order() = default;
+	Order();
 	Order(Laptop laptop);
 	Order(Laptop laptop, StatusType status, std::string additionalInfo);
 	~Order() = default;

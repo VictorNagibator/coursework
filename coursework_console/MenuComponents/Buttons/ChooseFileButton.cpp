@@ -3,6 +3,7 @@
 #include <conio.h>
 #include "ChooseFileButton.h"
 #include "../FileInfo.h"
+#include "../OrdersData.h"
 
 ChooseFileButton::ChooseFileButton() : Button("Выбор файла") {
 
@@ -30,6 +31,7 @@ void ChooseFileButton::execute() {
 	else if (file.is_open()) {
 		std::cout << "Файл успешно открыт." << std::endl;
 		FileInfo::setPath(path);
+		OrdersData::loadOrders(path);
 		file.close();
 	} 
 	else {
@@ -37,5 +39,4 @@ void ChooseFileButton::execute() {
 	}
 	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
 	_getch();
-	system("cls");
 }

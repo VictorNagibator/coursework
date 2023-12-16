@@ -42,7 +42,8 @@ void Display::input() {
 	std::cin >> width >> height;
 	std::cout << "Введите частоту обновления экрана (в Гц): ";
 	std::cin >> refreshRate;
-	while (getchar() != '\n');
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 
 	tryToSetArguments(width, height, refreshRate);
 }

@@ -73,7 +73,8 @@ void RAM::input() {
 	std::cin >> frequency;
 	std::cout << "Введите объем (в ГБ): ";
 	std::cin >> capacity;
-	while (getchar() != '\n');
+	std::cin.clear();
+	while (std::cin.get() != '\n');
 
 	tryToSetArguments(modelName, type, frequency, capacity);
 }

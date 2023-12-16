@@ -7,13 +7,14 @@
 #include "../Buttons/PlayGameButton.h"
 #include "../Buttons/ShowTableButton.h"
 #include "../Buttons/AddDataButton.h"
+#include "../Buttons/DeleteDataButton.h"
 #include "MenuWithTable.h"
 
 void StandartMenuDirector::buildMenu(MenuBuilder& builder) {
 	MenuWithTable* menuWithTable = new MenuWithTable("Работа с таблицей");
 	menuWithTable->addButton(new ShowTableButton("Показать полную таблицу"));
 	menuWithTable->addButton(new AddDataButton("Добавить запись"));
-	//menuWithTable->addButton(new OpenMenuButton("Удалить запись", new MenuWithTable("Удаление записи")));
+	menuWithTable->addButton(new DeleteDataButton("Удалить запись"));
 	menuWithTable->addButton(new BackButton("Вернуться", builder.getMenu()));
 	builder.addButton(new OpenMenuButton("Открыть таблицу", menuWithTable));
 	builder.addButton(new ChooseFileButton("Выбрать файл"));
