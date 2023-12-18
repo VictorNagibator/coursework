@@ -11,6 +11,7 @@ public:
 	static void addOrder(Order order);
 	static void removeOrder(int idOfOrder);
 	static void editOrder(int idOfOrder, Order order);
+	static void verifyIDs();
 private:
 	static inline bool isDataLoaded{};
 	static inline std::vector<Order> data;

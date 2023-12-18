@@ -40,6 +40,8 @@ void OrdersData::loadOrders(const std::string& filePath) {
 		order.fromJSON(element);
 		data.push_back(order);
 	}
+
+	verifyIDs();
 }
 
 void OrdersData::saveOrders(const std::string& filePath) {
@@ -55,6 +57,7 @@ void OrdersData::saveOrders(const std::string& filePath) {
 
 void OrdersData::addOrder(Order order) {
 	data.push_back(order);
+	verifyIDs();
 }
 
 void OrdersData::removeOrder(int idOfOrder) {
@@ -81,4 +84,27 @@ void OrdersData::editOrder(int idOfOrder, Order order) {
 	else {
 		throw std::invalid_argument("Заказа с таким id не существует!");
 	}
+}
+
+void OrdersData::verifyIDs() {
+	std::ifstream file("..\\properties.json");
+	json j = json::parse(file);
+	file.close();
+
+	if (j.contains(FileInfo::getPath())) {
+		j[FileInfo::getPath()] = 0;
+	}
+	int maxID = j[FileInfo::getPath()];
+	if (maxID < Order::getNumOfLastOrder()) {
+		j[FileInfo::getPath()] = Order::getNumOfLastOrder();
+	}
+	else {
+		while (Order::getNumOfLastOrder() < maxID) {
+			Order order = Order();
+		}
+	}
+	
+	std::ofstream file2("..\\properties.json");
+	file2 << j.dump(4) << std::endl;
+	file2.close();
 }

@@ -31,8 +31,14 @@ void ChooseFileButton::execute() {
 	else if (file.is_open()) {
 		std::cout << "Файл успешно открыт." << std::endl;
 		FileInfo::setPath(path);
-		OrdersData::loadOrders(path);
 		file.close();
+
+		std::ifstream properties("..\\properties.json");
+		json propertiesJson = json::parse(properties);
+		properties.close();
+		propertiesJson["lastFile"] = path;
+		std::ofstream propertiesOut("..\\properties.json");
+		propertiesOut << propertiesJson.dump(4) << std::endl;
 	} 
 	else {
 		std::cout << "Файл не найден. Проверьте правильность введенного пути." << std::endl;
