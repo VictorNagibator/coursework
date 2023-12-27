@@ -10,6 +10,6 @@ public:
 	void setMenu(Menu* menu);
 
 	void execute() override;
-private:
+protected:
 	Menu* menu;
 };

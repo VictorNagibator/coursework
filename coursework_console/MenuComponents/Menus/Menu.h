@@ -18,7 +18,7 @@ public:
 	void removeLastButton();
 	void back();
 	virtual void show();
-private:
+protected:
 	std::string name;
 	std::vector<Button*> buttons;
 	Menu* previousMenu;

@@ -1,9 +1,6 @@
 #pragma once
 #include <iostream>
-#include <nlohmann/json.hpp>
 #include "../OrderComponents/Order.h"
-
-using json = nlohmann::json;
 
 class Table
 {

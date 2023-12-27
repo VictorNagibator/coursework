@@ -99,6 +99,15 @@
     <ClCompile Include="MenuComponents\Buttons\DeleteDataButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\ChooseOrderButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Menus\ChangeOrderMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\ChangeOrderButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OrderComponents\CPU.h">
@@ -195,6 +204,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Buttons\DeleteDataButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\ChooseOrderButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Menus\ChangeOrderMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
