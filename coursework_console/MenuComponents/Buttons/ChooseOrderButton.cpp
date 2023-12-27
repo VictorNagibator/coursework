@@ -13,7 +13,7 @@ void ChooseOrderButton::execute()
 	std::cin >> orderNumber;
 	std::cin.clear();
 	while (std::cin.get() != '\n');
-
+	system("cls");
 	try
 	{
 		OrdersData::getOrder(orderNumber);

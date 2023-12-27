@@ -22,6 +22,8 @@ void ChangeOrderMenu::show()
 	system("cls");
 	Table table = Table();
 	table.showOrder(this->changableOrder);
+	std::cout << "Информация о ноутбуке:" << std::endl;
+	std::cout << this->changableOrder.getLaptop() << std::endl;
 	Menu::show();
 }
 

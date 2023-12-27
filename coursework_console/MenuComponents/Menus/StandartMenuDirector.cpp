@@ -14,7 +14,7 @@
 #include "ChangeOrderMenu.h"
 
 void StandartMenuDirector::buildMenu(MenuBuilder& builder) {
-	MenuWithTable* menuWithTable = new MenuWithTable("Работа с таблицей");
+	MenuWithTable* menuWithTable = new MenuWithTable("Работа с данными");
 	menuWithTable->addButton(new ShowTableButton("Показать полную таблицу"));
 	menuWithTable->addButton(new AddDataButton("Добавить запись"));
 	ChangeOrderMenu* changeOrderMenu = new ChangeOrderMenu("Редактирование записей");
@@ -31,7 +31,7 @@ void StandartMenuDirector::buildMenu(MenuBuilder& builder) {
 	changeOrderMenu->addButton(new BackButton("Вернуться", menuWithTable));
 	menuWithTable->addButton(new DeleteDataButton("Удалить запись"));
 	menuWithTable->addButton(new BackButton("Вернуться", builder.getMenu()));
-	builder.addButton(new OpenMenuButton("Открыть таблицу", menuWithTable));
+	builder.addButton(new OpenMenuButton("Работа с данными", menuWithTable));
 	builder.addButton(new ChooseFileButton("Выбрать файл"));
 	builder.addButton(new PlayGameButton("Играть"));
 	builder.addButton(new ExitButton("Выйти"));

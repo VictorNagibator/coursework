@@ -20,6 +20,6 @@ void ChangeOrderButton::setChangableObject(ChangableObject changableObject)
 void ChangeOrderButton::execute()
 {
 	std::cout << "Еще не реализовано" << std::endl;
-	std::cout << "Нажмите любую клавишу для продолжения..." << std::endl;
+	std::cout << "Нажмите любую клавишу для продолжения...";
 	_getch();
 }

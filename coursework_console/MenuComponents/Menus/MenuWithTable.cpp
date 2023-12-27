@@ -12,6 +12,7 @@ void MenuWithTable::show()
 	if (FileInfo::isPathSet()) {
 		Table table = Table();
 		table.shortShow();
+		std::cout << std::endl;
 		Menu::show();
 	}	
 	else {
