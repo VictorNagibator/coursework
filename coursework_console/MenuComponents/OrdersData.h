@@ -1,5 +1,6 @@
 #pragma once
 #include "../OrderComponents/Order.h"
+#include "ChangableObject.h"
 
 class OrdersData
 {
@@ -10,7 +11,7 @@ public:
 	static void saveOrders(const std::string& filePath);
 	static void addOrder(Order order);
 	static void removeOrder(int idOfOrder);
-	static void editOrder(int idOfOrder, Order order);
+	static void editOrder(Order newOrder, ChangableObject object);
 	static void verifyIDs();
 private:
 	static inline bool isDataLoaded{};

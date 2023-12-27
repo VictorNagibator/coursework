@@ -17,9 +17,9 @@
                 "typeOfFlashMemory": "3D NAND"
             },
             "display": {
-                "height": 2160,
-                "refreshRate": 140,
-                "width": 3840
+                "height": 1080,
+                "refreshRate": 60,
+                "width": 1920
             },
             "gpu": {
                 "frequency": 2400.0,

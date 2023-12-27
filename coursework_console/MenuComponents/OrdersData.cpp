@@ -1,5 +1,6 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
+#include <conio.h>
 #include "OrdersData.h"
 #include "FileInfo.h"
 
@@ -73,13 +74,73 @@ void OrdersData::removeOrder(int idOfOrder) {
 	}
 }
 
-void OrdersData::editOrder(int idOfOrder, Order order) {
+void OrdersData::editOrder(Order newOrder, ChangableObject object) {
+	try
+	{
+		StatusType type;
+		std::string tempString;
+		Laptop newLaptop = newOrder.getLaptop();
+
+		switch (object)
+		{
+		case ChangableObject::Status:
+			std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
+			std::cin >> type;
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+
+			newOrder.setStatus(type);
+			break;
+		case ChangableObject::AdditionalInfo:
+			std::cout << "Введите дополнительную информацию: ";
+			std::getline(std::cin, tempString);
+
+			newOrder.setAdditionalInfo(tempString);
+			break;
+		case ChangableObject::LaptopName:
+			newLaptop.inputModelName();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopCPU:
+			newLaptop.inputCPU();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopGPU:
+			newLaptop.inputGPU();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopRAM:
+			newLaptop.inputRAM();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopStorage:
+			newLaptop.inputDataStorage();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopDisplay:
+			newLaptop.inputDisplay();
+			newOrder.setLaptop(newLaptop);
+			break;
+		case ChangableObject::LaptopMotherboard:
+			newLaptop.inputMotherboard();
+			newOrder.setLaptop(newLaptop);
+			break;
+		default:
+			break;
+		}
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+		return;
+	}
+
 	auto editable = std::find_if(data.begin(), data.end(), [&](Order order) {
-		return order.getNumOfOrder() == idOfOrder;
+		return order.getNumOfOrder() == newOrder.getNumOfOrder();
 	});
 
 	if (editable != data.end()) {
-		data[editable - data.begin()] = order;
+		data[editable - data.begin()] = newOrder;
 	}
 	else {
 		throw std::invalid_argument("Заказа с таким id не существует!");

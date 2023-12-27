@@ -86,30 +86,64 @@ void Laptop::setDataStorage(DataStorage* dataStorage) {
 }
 
 void Laptop::input() {
-    std::cout << "Введите название ноутбука: ";
-    std::getline(std::cin, modelName);
+    inputModelName();
+    inputCPU();
+    inputGPU();
+    inputRAM();
+    inputMotherboard();
+    inputDisplay();
+    inputDataStorage();
+}
+
+void Laptop::inputModelName() {
+	std::cout << "Введите название ноутбука: ";
+	std::getline(std::cin, modelName);
+}
+
+void Laptop::inputCPU()
+{
     std::cout << "\tВвод параметров процессора\n";
     cpu.input();
-    std::cout << "\tВвод параметров видеокарты\n";
-    gpu.input();
-    std::cout << "\tВвод параметров RAM\n";
-    ram.input();
-    std::cout << "\tВвод параметров материнской платы\n";
-    motherboard.input();
-    std::cout << "\tВвод параметров экрана\n";
-    display.input();
-    std::cout << "\tВвод параметров хранилища\n";
-    std::cout << "Введите тип хранилища (0 - HDD, 1 - SSD): ";
-    int choice;
+}
+
+void Laptop::inputGPU()
+{
+	std::cout << "\tВвод параметров видеокарты\n";
+	gpu.input();
+}
+
+void Laptop::inputRAM()
+{
+	std::cout << "\tВвод параметров RAM\n";
+	ram.input();
+}
+
+void Laptop::inputMotherboard()
+{
+	std::cout << "\tВвод параметров материнской платы\n";
+	motherboard.input();
+}
+
+void Laptop::inputDisplay()
+{
+	std::cout << "\tВвод параметров экрана\n";
+	display.input();
+}
+
+void Laptop::inputDataStorage()
+{
+	std::cout << "\tВвод параметров хранилища\n";
+	std::cout << "Введите тип хранилища (0 - HDD, 1 - SSD): ";
+	int choice;
     do
     {
-        std::cin >> choice;
-        if (choice != 0 && choice != 1) std::cout << "Некорректный ввод!\nПопробуйте еще раз: ";
-    } while (choice != 0 && choice != 1);
-    std::cin.clear();
-    while (std::cin.get() != '\n');
-    dataStorage = createDataStorage(choice);
-    dataStorage->input();
+		std::cin >> choice;
+		if (choice != 0 && choice != 1) std::cout << "Некорректный ввод!\nПопробуйте еще раз: ";
+	} while (choice != 0 && choice != 1);
+	std::cin.clear();
+	while (std::cin.get() != '\n');
+	dataStorage = createDataStorage(choice);
+	dataStorage->input();
 }
 
 std::string Laptop::toString() const {

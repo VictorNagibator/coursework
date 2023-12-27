@@ -163,6 +163,7 @@
     <ClCompile Include="MenuComponents\OrdersData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MenuComponents\ChangableObject.h" />
     <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h" />
     <ClInclude Include="MenuComponents\Menus\ChangeOrderMenu.h" />
     <ClInclude Include="MenuComponents\Buttons\ChooseOrderButton.h" />

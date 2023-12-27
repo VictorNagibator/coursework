@@ -1,15 +1,17 @@
 #include <conio.h>
 #include "ChangeOrderButton.h"
+#include "../OrdersData.h"
+#include "../FileInfo.h"
 
-ChangeOrderButton::ChangeOrderButton(const std::string& title, const Order& order, ChangableObject changableObject) : Button(title)
+ChangeOrderButton::ChangeOrderButton(const std::string& title, ChangeOrderMenu* menu, ChangableObject changableObject) : Button(title)
 {
-	this->changableOrder = order;
+	this->parentMenu = menu;
 	this->changableObject = changableObject;
 }
 
-void ChangeOrderButton::setOrder(const Order& order)
+void ChangeOrderButton::setPreviousMenu(ChangeOrderMenu* menu)
 {
-	this->changableOrder = order;
+	this->parentMenu = menu;
 }
 
 void ChangeOrderButton::setChangableObject(ChangableObject changableObject)
@@ -19,7 +21,8 @@ void ChangeOrderButton::setChangableObject(ChangableObject changableObject)
 
 void ChangeOrderButton::execute()
 {
-	std::cout << "Еще не реализовано" << std::endl;
-	std::cout << "Нажмите любую клавишу для продолжения...";
+	OrdersData::editOrder(this->parentMenu->getOrder(), changableObject);
+	OrdersData::saveOrders(FileInfo::getPath());
+	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
 	_getch();
 }

@@ -2,7 +2,7 @@
 #include "../Table.h"
 #include "../OrdersData.h"
 
-ChangeOrderMenu::ChangeOrderMenu(const std::string& title) : Menu(title) 
+ChangeOrderMenu::ChangeOrderMenu(const std::string& title) : Menu(title)
 {
 	
 }

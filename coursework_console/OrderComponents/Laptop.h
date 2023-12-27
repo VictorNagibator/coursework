@@ -33,6 +33,13 @@ public:
 	void setDisplay(Display display);
 	void setDataStorage(DataStorage* dataStorage);
 	void input();
+	void inputModelName();
+	void inputCPU();
+	void inputGPU();
+	void inputRAM();
+	void inputMotherboard();
+	void inputDisplay();
+	void inputDataStorage();
 	void boostCPU();
 	void boostCPU(float addable);
 	void boostRAM();

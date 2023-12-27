@@ -215,5 +215,8 @@
     <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MenuComponents\ChangableObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
