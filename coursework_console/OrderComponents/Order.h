@@ -17,8 +17,8 @@ public:
 
 	friend std::ostream& operator << (std::ostream& out, Order& order);
 
-	static int getNumOfLastOrder();
-	int getNumOfOrder() const;
+	static int getLastID();
+	int getID() const;
 	const Laptop& getLaptop() const;
 	StatusType getStatus() const;
 	std::string getAdditionalInfo() const;
@@ -31,9 +31,9 @@ public:
 	json toJSON() const;
 	void fromJSON(json j);
 private:
-	static inline int numOfLastOrder{};
+	static inline int lastID{};
 
-	int numOfOrder;
+	int id;
 	Laptop laptop = Laptop();
 	StatusType status = StatusType::ONHOLD;
 	std::string additionalInfo;

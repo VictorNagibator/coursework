@@ -6,7 +6,7 @@ std::ostream& operator << (std::ostream& out, Order& order) {
 }
 
 Order::Order() {
-	numOfOrder = ++numOfLastOrder;
+	id = ++lastID;
 }
 
 Order::Order(Laptop laptop) : Order(){
@@ -18,12 +18,12 @@ Order::Order(Laptop laptop, StatusType status, std::string additionalInfo) : Ord
 	this->additionalInfo = additionalInfo;
 }
 
-int Order::getNumOfLastOrder() {
-	return numOfLastOrder;
+int Order::getLastID() {
+	return lastID;
 }
 
-int Order::getNumOfOrder() const {
-	return numOfOrder;
+int Order::getID() const {
+	return id;
 }
 
 const Laptop& Order::getLaptop() const {
@@ -43,7 +43,7 @@ void Order::input() {
 	StatusType type;
 	std::string additionalInfo;
 
-	std::cout << "Номер заказа: " << numOfLastOrder << std::endl;
+	std::cout << "Номер заказа: " << lastID << std::endl;
 	std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
 	std::cin >> type;
 	std::cin.clear();
@@ -53,7 +53,7 @@ void Order::input() {
 	std::cout << "\tВвод дополнительной информации\n";
 	std::getline(std::cin, additionalInfo);
 
-	this->numOfOrder = this->numOfLastOrder;
+	this->id = this->lastID;
 	this->laptop = laptop;
 	this->status = status;
 	this->additionalInfo = additionalInfo;
@@ -73,13 +73,13 @@ void Order::setAdditionalInfo(std::string additionalInfo) {
 }
 
 std::string Order::toString() const {
-	std::string name = std::to_string(this->getNumOfOrder()) + ". " + this->laptop.getModelName() + "\t" + statusTypeToString(this->getStatus()) + '\t' + this->getAdditionalInfo();
+	std::string name = std::to_string(this->getID()) + ". " + this->laptop.getModelName() + "\t" + statusTypeToString(this->getStatus()) + '\t' + this->getAdditionalInfo();
 	return name;
 }
 
 json Order::toJSON() const {
 	json j;
-	j["numOfOrder"] = numOfOrder;
+	j["numOfOrder"] = id;
 	j["laptop"] = laptop.toJSON();
 	j["status"] = statusTypeToString(status);
 	j["additionalInfo"] = additionalInfo;
@@ -87,7 +87,7 @@ json Order::toJSON() const {
 }
 
 void Order::fromJSON(json j) {
-	numOfOrder = j["numOfOrder"];
+	id = j["numOfOrder"];
 	laptop.fromJSON(j["laptop"]);
 	status = stringToStatusType(j["status"]);
 	additionalInfo = j["additionalInfo"];

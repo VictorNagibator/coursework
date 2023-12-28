@@ -8,7 +8,7 @@ using json = nlohmann::json;
 
 Order OrdersData::getOrder(int idOfOrder) {
 	auto gettable = std::find_if(data.begin(), data.end(), [&](Order order) {
-		return order.getNumOfOrder() == idOfOrder;
+		return order.getID() == idOfOrder;
 	});
 
 	if (gettable != data.end()) {
@@ -63,7 +63,7 @@ void OrdersData::addOrder(Order order) {
 
 void OrdersData::removeOrder(int idOfOrder) {
 	auto removable = std::find_if(data.begin(), data.end(), [&](Order order) {
-		return order.getNumOfOrder() == idOfOrder;
+		return order.getID() == idOfOrder;
 	});
 
 	if (removable != data.end()) {
@@ -75,68 +75,60 @@ void OrdersData::removeOrder(int idOfOrder) {
 }
 
 void OrdersData::editOrder(Order newOrder, ChangableObject object) {
-	try
+	StatusType type;
+	std::string tempString;
+	Laptop newLaptop = newOrder.getLaptop();
+
+	switch (object)
 	{
-		StatusType type;
-		std::string tempString;
-		Laptop newLaptop = newOrder.getLaptop();
+	case ChangableObject::Status:
+		std::cout << "¬ведите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
+		std::cin >> type;
+		std::cin.clear();
+		while (std::cin.get() != '\n');
 
-		switch (object)
-		{
-		case ChangableObject::Status:
-			std::cout << "¬ведите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
-			std::cin >> type;
-			std::cin.clear();
-			while (std::cin.get() != '\n');
+		newOrder.setStatus(type);
+		break;
+	case ChangableObject::AdditionalInfo:
+		std::cout << "¬ведите дополнительную информацию: ";
+		std::getline(std::cin, tempString);
 
-			newOrder.setStatus(type);
-			break;
-		case ChangableObject::AdditionalInfo:
-			std::cout << "¬ведите дополнительную информацию: ";
-			std::getline(std::cin, tempString);
-
-			newOrder.setAdditionalInfo(tempString);
-			break;
-		case ChangableObject::LaptopName:
-			newLaptop.inputModelName();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopCPU:
-			newLaptop.inputCPU();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopGPU:
-			newLaptop.inputGPU();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopRAM:
-			newLaptop.inputRAM();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopStorage:
-			newLaptop.inputDataStorage();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopDisplay:
-			newLaptop.inputDisplay();
-			newOrder.setLaptop(newLaptop);
-			break;
-		case ChangableObject::LaptopMotherboard:
-			newLaptop.inputMotherboard();
-			newOrder.setLaptop(newLaptop);
-			break;
-		default:
-			break;
-		}
-	}
-	catch (const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-		return;
+		newOrder.setAdditionalInfo(tempString);
+		break;
+	case ChangableObject::LaptopName:
+		newLaptop.inputModelName();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopCPU:
+		newLaptop.inputCPU();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopGPU:
+		newLaptop.inputGPU();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopRAM:
+		newLaptop.inputRAM();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopStorage:
+		newLaptop.inputDataStorage();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopDisplay:
+		newLaptop.inputDisplay();
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopMotherboard:
+		newLaptop.inputMotherboard();
+		newOrder.setLaptop(newLaptop);
+		break;
+	default:
+		break;
 	}
 
 	auto editable = std::find_if(data.begin(), data.end(), [&](Order order) {
-		return order.getNumOfOrder() == newOrder.getNumOfOrder();
+		return order.getID() == newOrder.getID();
 	});
 
 	if (editable != data.end()) {
@@ -156,11 +148,11 @@ void OrdersData::verifyIDs() {
 		j[FileInfo::getPath()] = 0;
 	}
 	int maxID = j[FileInfo::getPath()];
-	if (maxID < Order::getNumOfLastOrder()) {
-		j[FileInfo::getPath()] = Order::getNumOfLastOrder();
+	if (maxID < Order::getLastID()) {
+		j[FileInfo::getPath()] = Order::getLastID();
 	}
 	else {
-		while (Order::getNumOfLastOrder() < maxID) {
+		while (Order::getLastID() < maxID) {
 			Order order = Order();
 		}
 	}

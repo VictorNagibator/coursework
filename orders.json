@@ -18,7 +18,7 @@
             },
             "display": {
                 "height": 1080,
-                "refreshRate": 60,
+                "refreshRate": 65,
                 "width": 1920
             },
             "gpu": {

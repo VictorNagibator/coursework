@@ -44,7 +44,7 @@ bool DeleteDataButton::checkArguments(int id)
 	auto data = OrdersData::getData();
 	for (auto& order : data)
 	{
-		if (order.getNumOfOrder() == id) return true;
+		if (order.getID() == id) return true;
 	}
 	return false;
 }

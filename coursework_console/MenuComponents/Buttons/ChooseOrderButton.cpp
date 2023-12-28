@@ -25,7 +25,7 @@ void ChooseOrderButton::execute()
 		_getch();
 		return;
 	}
-	this->menu->setOrder(OrdersData::getOrder(orderNumber));
+	this->menu->setID(orderNumber);
 	std::cout << "Успешно выбран заказ!" << std::endl;
 	std::cout << "Нажмите любую клавишу для продолжения...";
 	_getch();

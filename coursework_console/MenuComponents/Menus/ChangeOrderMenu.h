@@ -11,8 +11,8 @@ public:
 
 	void show() override;
 
-	const Order& getOrder() const;
-	void setOrder(const Order& order);
+	int getID() const;
+	void setID(int id);
 private:
-	Order changableOrder;
+	int idOfChangableOrder;
 };

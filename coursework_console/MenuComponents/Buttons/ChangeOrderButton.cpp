@@ -21,8 +21,18 @@ void ChangeOrderButton::setChangableObject(ChangableObject changableObject)
 
 void ChangeOrderButton::execute()
 {
-	OrdersData::editOrder(this->parentMenu->getOrder(), changableObject);
-	OrdersData::saveOrders(FileInfo::getPath());
+	Order newOrder = OrdersData::getOrder(this->parentMenu->getID());
+	try
+	{
+		OrdersData::editOrder(newOrder, changableObject);
+		OrdersData::saveOrders(FileInfo::getPath());
+
+		std::cout << std::endl << "Успешное изменение данных заказа!" << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << std::endl << e.what() << std::endl;
+	}
 	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
 	_getch();
 }

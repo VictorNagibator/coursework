@@ -6,7 +6,7 @@
 
 void Table::showOrder(Order order) const {
 	showHeader();
-	std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getNumOfOrder(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
+	std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getID(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
 	std::cout << res << std::endl;
 	showFooter();
 }
@@ -17,7 +17,7 @@ void Table::shortShow() const {
 	int num = 0;
 	for (auto& order : data) {
 		num++;
-		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getNumOfOrder(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
+		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getID(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
 		std::cout << res << std::endl;
 		if (num == 5) break;
 	}
@@ -29,7 +29,7 @@ void Table::fullShow() const {
 	showHeader();
 	auto data = OrdersData::getData();
 	for (auto& order : data) {
-		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getNumOfOrder(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
+		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getID(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
 		std::cout << res << std::endl;
 	}
 	showFooter();

@@ -9,30 +9,30 @@ ChangeOrderMenu::ChangeOrderMenu(const std::string& title) : Menu(title)
 
 ChangeOrderMenu::ChangeOrderMenu(const std::string& title, int idOfOrder) : Menu(title) 
 {
-	this->changableOrder = OrdersData::getOrder(idOfOrder);
+	this->idOfChangableOrder = idOfOrder;
 }
 
 ChangeOrderMenu::ChangeOrderMenu(const std::string& title, const Order& order) : Menu(title)
 {
-	this->changableOrder = order;
+	this->idOfChangableOrder = order.getID();
 }
 
 void ChangeOrderMenu::show()
 {
 	system("cls");
 	Table table = Table();
-	table.showOrder(this->changableOrder);
+	table.showOrder(OrdersData::getOrder(this->idOfChangableOrder));
 	std::cout << "Информация о ноутбуке:" << std::endl;
-	std::cout << this->changableOrder.getLaptop() << std::endl;
+	std::cout << OrdersData::getOrder(this->idOfChangableOrder).getLaptop() << std::endl;
 	Menu::show();
 }
 
-const Order& ChangeOrderMenu::getOrder() const
+int ChangeOrderMenu::getID() const
 {
-	return this->changableOrder;
+	return this->idOfChangableOrder;
 }
 
-void ChangeOrderMenu::setOrder(const Order& order)
+void ChangeOrderMenu::setID(int id)
 {
-	this->changableOrder = order;
+	this->idOfChangableOrder = id;
 }
