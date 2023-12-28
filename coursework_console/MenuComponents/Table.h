@@ -8,8 +8,8 @@ public:
 	Table() = default;
 
 	void showOrder(Order order) const;
-	void shortShow() const;
-	void fullShow() const;
+	void shortShow(std::vector<Order> data) const;
+	void fullShow(std::vector<Order> data) const;
 private:
 	void showHeader() const;
 	void showFooter() const;

@@ -13,7 +13,6 @@ public:
 	void setChangableObject(ChangableObject changableObject);
 	void execute() override;
 protected:
-	Order changableOrder;
 	ChangableObject changableObject;
 	ChangeOrderMenu* parentMenu;
 };

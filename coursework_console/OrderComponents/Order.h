@@ -15,6 +15,7 @@ public:
 	Order(Laptop laptop, StatusType status, std::string additionalInfo);
 	~Order() = default;
 
+	void operator=(Order other);
 	friend std::ostream& operator << (std::ostream& out, Order& order);
 
 	static int getLastID();

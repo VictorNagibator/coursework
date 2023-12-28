@@ -191,7 +191,7 @@ void OrdersData::verifyIDs() {
 	json j = json::parse(file);
 	file.close();
 
-	if (j.contains(FileInfo::getPath())) {
+	if (!j.contains(FileInfo::getPath())) {
 		j[FileInfo::getPath()] = 0;
 	}
 	int maxID = j[FileInfo::getPath()];

@@ -1,5 +1,12 @@
 #include "Order.h"
 
+void Order::operator=(Order other) {
+	this->id = other.getID();
+	this->laptop = other.getLaptop();
+	this->status = other.getStatus();
+	this->additionalInfo = other.getAdditionalInfo();
+}
+
 std::ostream& operator << (std::ostream& out, Order& order) {
 	out << order.toString();
 	return out;

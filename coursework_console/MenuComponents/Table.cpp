@@ -11,9 +11,8 @@ void Table::showOrder(Order order) const {
 	showFooter();
 }
 
-void Table::shortShow() const {
+void Table::shortShow(std::vector<Order> data) const {
 	showHeader();
-	auto data = OrdersData::getData();
 	int num = 0;
 	for (auto& order : data) {
 		num++;
@@ -25,9 +24,8 @@ void Table::shortShow() const {
 	showFooter();
 }
 
-void Table::fullShow() const {
+void Table::fullShow(std::vector<Order> data) const {
 	showHeader();
-	auto data = OrdersData::getData();
 	for (auto& order : data) {
 		std::string res = std::format("*{:^14d}*{:^17s}*{:^8s}*{:^22s}*", order.getID(), order.getLaptop().getModelName(), statusTypeToString(order.getStatus()), order.getAdditionalInfo());
 		std::cout << res << std::endl;

@@ -12,11 +12,6 @@ ChangeOrderMenu::ChangeOrderMenu(const std::string& title, int idOfOrder) : Menu
 	this->idOfChangableOrder = idOfOrder;
 }
 
-ChangeOrderMenu::ChangeOrderMenu(const std::string& title, const Order& order) : Menu(title)
-{
-	this->idOfChangableOrder = order.getID();
-}
-
 void ChangeOrderMenu::show()
 {
 	system("cls");

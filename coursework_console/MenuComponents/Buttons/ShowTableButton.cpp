@@ -1,6 +1,7 @@
 #include <conio.h>
 #include "ShowTableButton.h"
 #include "../FileInfo.h"
+#include "../OrdersData.h"
 
 ShowTableButton::ShowTableButton(const std::string& title) : Button(title)
 {
@@ -11,7 +12,7 @@ void ShowTableButton::execute()
 {
 	if (FileInfo::isPathSet()) {
 		Table table = Table();
-		table.fullShow();
+		table.fullShow(OrdersData::getData());
 		std::cout << "Нажмите любую клавишу, чтобы продолжить...";
 		_getch();
 	}

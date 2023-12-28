@@ -16,16 +16,20 @@ void AddDataButton::execute()
 	try
 	{
 		o.input();
+
+		OrdersData::addOrder(o);
+		OrdersData::saveOrders(FileInfo::getPath());
+		
+		system("cls");
+		std::cout << "Запись успешно добавлена!" << std::endl;
 	}
 	catch (const std::invalid_argument& e)
 	{
+		system("cls");
 		std::cout << e.what() << std::endl;
-		std::cout << "Нажмите любую клавишу, чтобы продолжить...";
-		_getch();
 		OrdersData::verifyIDs();
-		return;
 	}
 	
-	OrdersData::addOrder(o);
-	OrdersData::saveOrders(FileInfo::getPath());
+	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
+	_getch();
 }

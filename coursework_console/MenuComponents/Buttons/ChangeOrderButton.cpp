@@ -26,11 +26,13 @@ void ChangeOrderButton::execute()
 	{
 		OrdersData::editOrder(newOrder, changableObject);
 		OrdersData::saveOrders(FileInfo::getPath());
-
-		std::cout << std::endl << "Успешное изменение данных заказа!" << std::endl;
+		
+		system("cls");
+		std::cout << "Успешное изменение данных заказа!" << std::endl;
 	}
 	catch (const std::exception& e)
 	{
+		system("cls");
 		std::cout << std::endl << e.what() << std::endl;
 	}
 	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
