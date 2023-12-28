@@ -12,6 +12,7 @@ public:
 	static void addOrder(Order order);
 	static void removeOrder(int idOfOrder);
 	static void editOrder(Order newOrder, ChangableObject object);
+	static void boostLaptopComponent(Order newOrder, ChangableObject object);
 	static void verifyIDs();
 private:
 	static inline bool isDataLoaded{};

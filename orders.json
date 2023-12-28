@@ -3,7 +3,7 @@
         "additionalInfo": "n",
         "laptop": {
             "cpu": {
-                "frequency": 2.5,
+                "frequency": 3.0,
                 "modelName": "gfvbd",
                 "numOfCores": 6,
                 "socket": "lga"
@@ -35,7 +35,7 @@
             },
             "ram": {
                 "capacity": 16,
-                "frequency": 5000.0,
+                "frequency": 5300.0,
                 "modelName": "gfd",
                 "type": "DDR5"
             }

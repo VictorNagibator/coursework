@@ -108,6 +108,12 @@
     <ClCompile Include="MenuComponents\Buttons\ChangeOrderButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\FindOrderButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\BoostComponentButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OrderComponents\CPU.h">
@@ -216,6 +222,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\ChangableObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\FindOrderButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\BoostComponentButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

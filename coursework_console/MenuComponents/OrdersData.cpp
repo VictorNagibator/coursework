@@ -15,7 +15,7 @@ Order OrdersData::getOrder(int idOfOrder) {
 		return *gettable;
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким id не существует!");
+		throw std::invalid_argument("Заказа с таким ID не существует!");
 	}
 }
 
@@ -70,7 +70,7 @@ void OrdersData::removeOrder(int idOfOrder) {
 		data.erase(removable);
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким id не существует!");
+		throw std::invalid_argument("Заказа с таким ID не существует!");
 	}
 }
 
@@ -135,7 +135,54 @@ void OrdersData::editOrder(Order newOrder, ChangableObject object) {
 		data[editable - data.begin()] = newOrder;
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким id не существует!");
+		throw std::invalid_argument("Заказа с таким ID не существует!");
+	}
+}
+
+void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
+	Laptop newLaptop = newOrder.getLaptop();
+	double boost;
+
+	switch (object)
+	{
+	case ChangableObject::LaptopCPU:
+		std::cout << "Данные о процессоре:" << std::endl;
+		std::cout << newLaptop.getCPU() << std::endl;
+		std::cout << "Введите на какую частоту (в ГГц) разогнать процессор: ";
+		std::cin >> boost;
+		std::cin.clear();
+		while (std::cin.get() != '\n');
+
+		system("cls");
+		newLaptop.boostCPU(boost);
+		newOrder.setLaptop(newLaptop);
+		break;
+	case ChangableObject::LaptopRAM:
+		std::cout << "Данные об оперативной памяти:" << std::endl;
+		std::cout << newLaptop.getRAM() << std::endl;
+		std::cout << "Введите на какую частоту (в МГц) разогнать RAM: ";
+		std::cin >> boost;
+		std::cin.clear();
+		while (std::cin.get() != '\n');
+
+		system("cls");
+		newLaptop.boostRAM(boost);
+		newOrder.setLaptop(newLaptop);
+		break;
+	default:
+		throw std::invalid_argument("Невозможно ускорить данный компонент!");
+		break;
+	}
+
+	auto editable = std::find_if(data.begin(), data.end(), [&](Order order) {
+		return order.getID() == newOrder.getID();
+	});
+
+	if (editable != data.end()) {
+		data[editable - data.begin()] = newOrder;
+	}
+	else {
+		throw std::invalid_argument("Заказа с таким ID не существует!");
 	}
 }
 

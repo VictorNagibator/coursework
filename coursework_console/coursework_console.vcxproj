@@ -130,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MenuComponents\Buttons\BoostComponentButton.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\FindOrderButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ChangeOrderButton.cpp" />
     <ClCompile Include="MenuComponents\Menus\ChangeOrderMenu.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ChooseOrderButton.cpp" />
@@ -163,6 +165,8 @@
     <ClCompile Include="MenuComponents\OrdersData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MenuComponents\Buttons\BoostComponentButton.h" />
+    <ClInclude Include="MenuComponents\Buttons\FindOrderButton.h" />
     <ClInclude Include="MenuComponents\ChangableObject.h" />
     <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h" />
     <ClInclude Include="MenuComponents\Menus\ChangeOrderMenu.h" />

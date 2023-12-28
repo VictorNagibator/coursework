@@ -8,7 +8,7 @@ ChooseOrderButton::ChooseOrderButton(const std::string& title, ChangeOrderMenu* 
 
 void ChooseOrderButton::execute()
 {
-	std::cout << "Введите номер заказа: ";
+	std::cout << "Введите ID заказа: ";
 	int orderNumber;
 	std::cin >> orderNumber;
 	std::cin.clear();
@@ -17,16 +17,16 @@ void ChooseOrderButton::execute()
 	try
 	{
 		OrdersData::getOrder(orderNumber);
+		this->menu->setID(orderNumber);
+		std::cout << "Успешно выбран заказ!" << std::endl;
 	}
-	catch (const std::exception&)
+	catch (const std::exception& e)
 	{
-		std::cout << "Заказа с таким номером не существует!" << std::endl;
+		std::cout << std::endl << e.what() << std::endl;
 		std::cout << "Нажмите любую клавишу для продолжения...";
 		_getch();
 		return;
 	}
-	this->menu->setID(orderNumber);
-	std::cout << "Успешно выбран заказ!" << std::endl;
 	std::cout << "Нажмите любую клавишу для продолжения...";
 	_getch();
 	

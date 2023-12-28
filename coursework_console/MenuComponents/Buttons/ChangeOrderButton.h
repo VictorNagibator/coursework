@@ -12,7 +12,7 @@ public:
 	void setPreviousMenu(ChangeOrderMenu* menu);
 	void setChangableObject(ChangableObject changableObject);
 	void execute() override;
-private:
+protected:
 	Order changableOrder;
 	ChangableObject changableObject;
 	ChangeOrderMenu* parentMenu;
