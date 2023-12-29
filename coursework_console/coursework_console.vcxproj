@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MenuComponents\Logger.cpp" />
     <ClCompile Include="MenuComponents\Buttons\BoostComponentButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\FindOrderButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ChangeOrderButton.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="MenuComponents\OrdersData.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MenuComponents\Logger.h" />
     <ClInclude Include="MenuComponents\Buttons\BoostComponentButton.h" />
     <ClInclude Include="MenuComponents\Buttons\FindOrderButton.h" />
     <ClInclude Include="MenuComponents\ChangableObject.h" />
@@ -203,6 +205,7 @@
     <ClInclude Include="MenuComponents\Buttons\PlayGameButton.h" />
     <ClInclude Include="MenuComponents\Buttons\ShowTableButton.h" />
     <ClInclude Include="MenuComponents\OrdersData.h" />
+    <ClInclude Include="MenuComponents\OrderOperation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

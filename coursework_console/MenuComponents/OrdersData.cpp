@@ -3,6 +3,7 @@
 #include <conio.h>
 #include "OrdersData.h"
 #include "FileInfo.h"
+#include "Logger.h"
 
 using json = nlohmann::json;
 
@@ -58,6 +59,7 @@ void OrdersData::saveOrders(const std::string& filePath) {
 
 void OrdersData::addOrder(Order order) {
 	data.push_back(order);
+	Logger::log(order.getID(), OrderOperation::Adding);
 	verifyIDs();
 }
 
@@ -68,6 +70,7 @@ void OrdersData::removeOrder(int idOfOrder) {
 
 	if (removable != data.end()) {
 		data.erase(removable);
+		Logger::log(idOfOrder, OrderOperation::Removing);
 	}
 	else {
 		throw std::invalid_argument("Заказа с таким ID не существует!");
@@ -133,6 +136,7 @@ void OrdersData::editOrder(Order newOrder, ChangableObject object) {
 
 	if (editable != data.end()) {
 		data[editable - data.begin()] = newOrder;
+		Logger::log(newOrder.getID(), OrderOperation::Editing);
 	}
 	else {
 		throw std::invalid_argument("Заказа с таким ID не существует!");
@@ -180,6 +184,7 @@ void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
 
 	if (editable != data.end()) {
 		data[editable - data.begin()] = newOrder;
+		Logger::log(newOrder.getID(), OrderOperation::Editing);
 	}
 	else {
 		throw std::invalid_argument("Заказа с таким ID не существует!");

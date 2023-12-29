@@ -18,7 +18,7 @@
             },
             "display": {
                 "height": 1080,
-                "refreshRate": 144,
+                "refreshRate": 75,
                 "width": 1920
             },
             "gpu": {
@@ -47,7 +47,7 @@
         "additionalInfo": "",
         "laptop": {
             "cpu": {
-                "frequency": 1.2999999523162842,
+                "frequency": 2.0,
                 "modelName": "fds",
                 "numOfCores": 6,
                 "socket": "lga"
