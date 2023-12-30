@@ -8,6 +8,14 @@ ChooseOrderButton::ChooseOrderButton(const std::string& title, ChangeOrderMenu* 
 
 void ChooseOrderButton::execute()
 {
+	if (OrdersData::isDataEmpty())
+	{
+		std::cout << "Нет данных для изменения!" << std::endl;
+		std::cout << "Нажмите любую клавишу для продолжения...";
+		_getch();
+		return;
+	}
+
 	std::cout << "Введите ID заказа: ";
 	int orderNumber;
 	std::cin >> orderNumber;

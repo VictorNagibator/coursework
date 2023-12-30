@@ -13,6 +13,7 @@ public:
 	Order();
 	Order(Laptop laptop);
 	Order(Laptop laptop, StatusType status, std::string additionalInfo);
+	Order(json j);
 	~Order() = default;
 
 	void operator=(Order other);

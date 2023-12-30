@@ -37,11 +37,26 @@ void OrdersData::loadOrders(const std::string& filePath) {
 	json j = json::parse(file);
 	file.close();
 	
-	for (auto& element : j) {
-		Order order = Order();
-		order.fromJSON(element);
+	try
+	{
+		Order order = Order(j);
 		data.push_back(order);
 	}
+	catch (const std::exception&)
+	{
+		try
+		{
+			for (auto& element : j) {
+				Order order = Order(element);
+				data.push_back(order);
+			}
+		}
+		catch (const std::exception&)
+		{
+
+		}
+	}
+	
 
 	verifyIDs();
 }
@@ -212,4 +227,8 @@ void OrdersData::verifyIDs() {
 	std::ofstream file2("..\\properties.json");
 	file2 << j.dump(4) << std::endl;
 	file2.close();
+}
+
+bool OrdersData::isDataEmpty() {
+	return data.empty();
 }

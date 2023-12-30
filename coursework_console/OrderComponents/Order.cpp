@@ -25,6 +25,11 @@ Order::Order(Laptop laptop, StatusType status, std::string additionalInfo) : Ord
 	this->additionalInfo = additionalInfo;
 }
 
+Order::Order(json j) {
+	fromJSON(j);
+	++lastID;
+}
+
 int Order::getLastID() {
 	return lastID;
 }

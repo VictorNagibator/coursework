@@ -10,6 +10,14 @@ FindOrderButton::FindOrderButton(const std::string& title) : Button(title)
 
 void FindOrderButton::execute()
 {
+	if (OrdersData::isDataEmpty())
+	{
+		std::cout << "Нет данных для поиска!" << std::endl;
+		std::cout << "Нажмите любую клавишу для продолжения...";
+		_getch();
+		return;
+	}
+
 	std::cout << "Введите ID заказа: ";
 	int id;
 	std::cin >> id;

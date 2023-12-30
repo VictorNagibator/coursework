@@ -11,6 +11,13 @@ DeleteDataButton::DeleteDataButton(const std::string& title) : Button(title)
 
 void DeleteDataButton::execute()
 {
+	if (OrdersData::isDataEmpty()) {
+		std::cout << "Нет данных для удаления!" << std::endl;
+		std::cout << "Нажмите любую клавишу для продолжения...";
+		_getch();
+		return;
+	}
+
 	std::cout << "Введите id удаляемого заказа: ";
 	int id;
 	std::cin >> id;

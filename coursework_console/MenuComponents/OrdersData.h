@@ -14,6 +14,7 @@ public:
 	static void editOrder(Order newOrder, ChangableObject object);
 	static void boostLaptopComponent(Order newOrder, ChangableObject object);
 	static void verifyIDs();
+	static bool isDataEmpty();
 private:
 	static inline bool isDataLoaded{};
 	static inline std::vector<Order> data;
