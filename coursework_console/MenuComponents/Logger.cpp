@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ο»Ώ#define _CRT_SECURE_NO_WARNINGS
 #include <fstream>
 #include "Logger.h"
 #include "OrdersData.h"
@@ -7,9 +7,9 @@
 void Logger::log(int IDOfOrder, OrderOperation operation) {
 	std::ofstream file("..\\log.txt", std::ios::app);
 	if (!file.is_open()) {
-		throw std::invalid_argument("Τΰιλ νε νΰιδεν!");
+		throw std::invalid_argument("Π¤Π°ΠΉΠ» Π½Πµ Π½Π°ΠΉΠ΄ΠµΠ½!");
 	}
 	std::time_t time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	file << "Τΰιλ " << FileInfo::getPath() << "; Ηΰκΰη " << IDOfOrder << " αϋλ " << operation << "; " << std::ctime(&time);
+	file << "Π¤Π°ΠΉΠ» " << FileInfo::getPath() << "; Π—Π°ΠΊΠ°Π· " << IDOfOrder << " Π±Ρ‹Π» " << operation << "; " << std::ctime(&time);
 	file.close();
 }

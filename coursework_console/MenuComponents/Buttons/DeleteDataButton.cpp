@@ -1,4 +1,4 @@
-#include <conio.h>
+ï»¿#include <conio.h>
 #include "DeleteDataButton.h"
 #include "../OrdersData.h"
 #include "../Table.h"
@@ -12,13 +12,13 @@ DeleteDataButton::DeleteDataButton(const std::string& title) : Button(title)
 void DeleteDataButton::execute()
 {
 	if (OrdersData::isDataEmpty()) {
-		std::cout << "Íåò äàííûõ äëÿ óäàëåíèÿ!" << std::endl;
-		std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+		std::cout << "ÐÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ!" << std::endl;
+		std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 		_getch();
 		return;
 	}
 
-	std::cout << "Ââåäèòå id óäàëÿåìîãî çàêàçà: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ id ÑƒÐ´Ð°Ð»ÑÐµÐ¼Ð¾Ð³Ð¾ Ð·Ð°ÐºÐ°Ð·Ð°: ";
 	int id;
 	std::cin >> id;
 	std::cin.clear();
@@ -27,22 +27,22 @@ void DeleteDataButton::execute()
 		system("cls");
 		Table table = Table();
 		table.showOrder(OrdersData::getOrder(id));
-		std::cout << "Âû óâåðåíû, ÷òî õîòèòå óäàëèòü çàêàç? (y/n): ";
+		std::cout << "Ð’Ñ‹ ÑƒÐ²ÐµÑ€ÐµÐ½Ñ‹, Ñ‡Ñ‚Ð¾ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð·Ð°ÐºÐ°Ð·? (y/n): ";
 		char answer = _getch();
 		system("cls");
 		if (answer == 'y') {
 			OrdersData::removeOrder(id);
 			OrdersData::saveOrders(FileInfo::getPath());
-			std::cout << "Çàêàç óñïåøíî óäàëåí!" << std::endl;
+			std::cout << "Ð—Ð°ÐºÐ°Ð· ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑƒÐ´Ð°Ð»ÐµÐ½!" << std::endl;
 		}
 		else {
-			std::cout << "Çàêàç íå óäàëåí!" << std::endl;
+			std::cout << "Ð—Ð°ÐºÐ°Ð· Ð½Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½!" << std::endl;
 		}
 	}
 	else {
-		std::cout << "Çàêàçà ñ òàêèì id íå ñóùåñòâóåò!" << std::endl;
+		std::cout << "Ð—Ð°ÐºÐ°Ð·Ð° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ id Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!" << std::endl;
 	}
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 	_getch();
 }
 

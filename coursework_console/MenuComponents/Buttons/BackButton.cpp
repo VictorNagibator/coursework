@@ -1,6 +1,6 @@
-#include "BackButton.h"
+ï»¿#include "BackButton.h"
 
-BackButton::BackButton(Menu* previousMenu) : Button("Íàçàä") {
+BackButton::BackButton(Menu* previousMenu) : Button("ĞĞ°Ğ·Ğ°Ğ´") {
 	this->previousMenu = previousMenu;
 }
 

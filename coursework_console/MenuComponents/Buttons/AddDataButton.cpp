@@ -1,4 +1,4 @@
-#include <fstream>
+ï»¿#include <fstream>
 #include <conio.h>
 #include "AddDataButton.h"
 #include "../../OrderComponents/Order.h"
@@ -21,7 +21,7 @@ void AddDataButton::execute()
 		OrdersData::saveOrders(FileInfo::getPath());
 		
 		system("cls");
-		std::cout << "Çàïèñü óñïåøíî äîáàâëåíà!" << std::endl;
+		std::cout << "Ð—Ð°Ð¿Ð¸ÑÑŒ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð°!" << std::endl;
 	}
 	catch (const std::invalid_argument& e)
 	{
@@ -30,6 +30,6 @@ void AddDataButton::execute()
 		OrdersData::verifyIDs();
 	}
 	
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó, ÷òîáû ïðîäîëæèòü...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ...";
 	_getch();
 }

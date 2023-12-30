@@ -1,4 +1,4 @@
-#include <conio.h>
+ï»¿#include <conio.h>
 #include "PlayGameButton.h"
 
 PlayGameButton::PlayGameButton(const std::string& text) : Button(text)
@@ -8,7 +8,7 @@ PlayGameButton::PlayGameButton(const std::string& text) : Button(text)
 
 void PlayGameButton::execute()
 {
-	std::cout << "Ê ñîæàëåíèþ, Àëåêñåé åùå íå ðåàëèçîâàë èãðó! Òàêæå ïðîøó íàïîìíèòü åìó, ÷òî îí äîëæåí çàáðàòü êðîññîâêè ñî ñïîðòìàíåæà!" << std::endl;
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+	std::cout << "Ðš ÑÐ¾Ð¶Ð°Ð»ÐµÐ½Ð¸ÑŽ, ÐÐ»ÐµÐºÑÐµÐ¹ ÐµÑ‰Ðµ Ð½Ðµ Ñ€ÐµÐ°Ð»Ð¸Ð·Ð¾Ð²Ð°Ð» Ð¸Ð³Ñ€Ñƒ! Ð¢Ð°ÐºÐ¶Ðµ Ð¿Ñ€Ð¾ÑˆÑƒ Ð½Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ñ‚ÑŒ ÐµÐ¼Ñƒ, Ñ‡Ñ‚Ð¾ Ð¾Ð½ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð·Ð°Ð±Ñ€Ð°Ñ‚ÑŒ ÐºÑ€Ð¾ÑÑÐ¾Ð²ÐºÐ¸ ÑÐ¾ ÑÐ¿Ð¾Ñ€Ñ‚Ð¼Ð°Ð½ÐµÐ¶Ð°!" << std::endl;
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 	_getch();
 }

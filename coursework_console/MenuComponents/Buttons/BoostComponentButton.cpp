@@ -1,4 +1,4 @@
-#include "BoostComponentButton.h"
+ï»¿#include "BoostComponentButton.h"
 #include "../OrdersData.h"
 #include "../FileInfo.h"
 
@@ -16,13 +16,13 @@ void BoostComponentButton::execute()
 		OrdersData::boostLaptopComponent(newOrder, changableObject);
 		OrdersData::saveOrders(FileInfo::getPath());
 
-		std::cout << "Óñïåøíûé ðàçãîí êîìïîíåíòà!" << std::endl;
+		std::cout << "Ð£ÑÐ¿ÐµÑˆÐ½Ñ‹Ð¹ Ñ€Ð°Ð·Ð³Ð¾Ð½ ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð°!" << std::endl;
 	}
 	catch (const std::exception&)
 	{
-		std::cout << "Íåêîððåêòíûå äàííûå äëÿ ðàçãîíà êîìïîíåíòà!" << std::endl;
+		std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð»Ñ Ñ€Ð°Ð·Ð³Ð¾Ð½Ð° ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð°!" << std::endl;
 	}
 	
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó, ÷òîáû ïðîäîëæèòü...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ...";
 	_getch();
 }

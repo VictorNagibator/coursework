@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "MenuDirector.h"
 
 class StandartMenuDirector : public MenuDirector

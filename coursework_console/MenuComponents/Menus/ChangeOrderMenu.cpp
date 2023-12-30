@@ -1,4 +1,4 @@
-#include "ChangeOrderMenu.h"
+ï»¿#include "ChangeOrderMenu.h"
 #include "../Table.h"
 #include "../OrdersData.h"
 
@@ -17,7 +17,7 @@ void ChangeOrderMenu::show()
 	system("cls");
 	Table table = Table();
 	table.showOrder(OrdersData::getOrder(this->idOfChangableOrder));
-	std::cout << "Èíôîðìàöèÿ î íîóòáóêå:" << std::endl;
+	std::cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ Ð½Ð¾ÑƒÑ‚Ð±ÑƒÐºÐµ:" << std::endl;
 	std::cout << OrdersData::getOrder(this->idOfChangableOrder).getLaptop() << std::endl;
 	Menu::show();
 }

@@ -1,4 +1,4 @@
-#include "ChooseOrderButton.h"
+ï»¿#include "ChooseOrderButton.h"
 #include "../OrdersData.h"
 
 ChooseOrderButton::ChooseOrderButton(const std::string& title, ChangeOrderMenu* menu) : Button(title)
@@ -10,13 +10,13 @@ void ChooseOrderButton::execute()
 {
 	if (OrdersData::isDataEmpty())
 	{
-		std::cout << "Íåò äàííûõ äëÿ èçìåíåíèÿ!" << std::endl;
-		std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+		std::cout << "ÐÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð´Ð»Ñ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ!" << std::endl;
+		std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 		_getch();
 		return;
 	}
 
-	std::cout << "Ââåäèòå ID çàêàçà: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ID Ð·Ð°ÐºÐ°Ð·Ð°: ";
 	int orderNumber;
 	std::cin >> orderNumber;
 	std::cin.clear();
@@ -26,16 +26,16 @@ void ChooseOrderButton::execute()
 	{
 		OrdersData::getOrder(orderNumber);
 		this->menu->setID(orderNumber);
-		std::cout << "Óñïåøíî âûáðàí çàêàç!" << std::endl;
+		std::cout << "Ð£ÑÐ¿ÐµÑˆÐ½Ð¾ Ð²Ñ‹Ð±Ñ€Ð°Ð½ Ð·Ð°ÐºÐ°Ð·!" << std::endl;
 	}
 	catch (const std::exception& e)
 	{
 		std::cout << std::endl << e.what() << std::endl;
-		std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+		std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 		_getch();
 		return;
 	}
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 	_getch();
 	
 	this->menu->show();

@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 enum class OrderOperation
 {
@@ -10,13 +10,13 @@ enum class OrderOperation
 inline std::ostream& operator <<(std::ostream& out, OrderOperation operation) {
 	switch (operation) {
 	case OrderOperation::Adding:
-		out << "добавлен";
+		out << "РґРѕР±Р°РІР»РµРЅ";
 		break;
 	case OrderOperation::Editing:
-		out << "изменен";
+		out << "РёР·РјРµРЅРµРЅ";
 		break;
 	case OrderOperation::Removing:
-		out << "удален";
+		out << "СѓРґР°Р»РµРЅ";
 		break;
 	}
 	return out;

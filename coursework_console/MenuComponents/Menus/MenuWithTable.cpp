@@ -1,4 +1,4 @@
-#include "MenuWithTable.h"
+ï»¿#include "MenuWithTable.h"
 #include "../FileInfo.h"
 #include "../OrdersData.h"
 
@@ -17,8 +17,8 @@ void MenuWithTable::show()
 		Menu::show();
 	}	
 	else {
-		std::cout << "Ïóòü ê ôàéëó íå óñòàíîâëåí!" << std::endl;
-		std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+		std::cout << "ÐŸÑƒÑ‚ÑŒ Ðº Ñ„Ð°Ð¹Ð»Ñƒ Ð½Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½!" << std::endl;
+		std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 		_getch();
 	}
 }

@@ -1,11 +1,11 @@
-#include <string>
+п»ї#include <string>
 #include <fstream>
 #include <conio.h>
 #include "ChooseFileButton.h"
 #include "../FileInfo.h"
 #include "../OrdersData.h"
 
-ChooseFileButton::ChooseFileButton() : Button("Выбор файла") {
+ChooseFileButton::ChooseFileButton() : Button("Р’С‹Р±РѕСЂ С„Р°Р№Р»Р°") {
 
 }
 
@@ -15,7 +15,7 @@ ChooseFileButton::ChooseFileButton(const std::string& text) : Button(text) {
 
 void ChooseFileButton::execute() {
 	system("cls");
-	std::cout << "Введите путь к файлу (или напишите default, чтобы выбрать стандартный файл в папке с проектом): ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ (РёР»Рё РЅР°РїРёС€РёС‚Рµ default, С‡С‚РѕР±С‹ РІС‹Р±СЂР°С‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ С„Р°Р№Р» РІ РїР°РїРєРµ СЃ РїСЂРѕРµРєС‚РѕРј): ";
 	std::string path;
 	std::getline(std::cin, path);
 
@@ -26,10 +26,10 @@ void ChooseFileButton::execute() {
 	std::ifstream file(path);
 
 	if (path.find(".json") == std::string::npos) {
-		std::cout << "Неверный формат файла. Пожалуйста, выберите файл с расширением .json." << std::endl;
+		std::cout << "РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ С„Р°Р№Р»Р°. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІС‹Р±РµСЂРёС‚Рµ С„Р°Р№Р» СЃ СЂР°СЃС€РёСЂРµРЅРёРµРј .json." << std::endl;
 	} 
 	else if (file.is_open()) {
-		std::cout << "Файл успешно открыт." << std::endl;
+		std::cout << "Р¤Р°Р№Р» СѓСЃРїРµС€РЅРѕ РѕС‚РєСЂС‹С‚." << std::endl;
 		FileInfo::setPath(path);
 		file.close();
 
@@ -41,8 +41,8 @@ void ChooseFileButton::execute() {
 		propertiesOut << propertiesJson.dump(4) << std::endl;
 	} 
 	else {
-		std::cout << "Файл не найден. Проверьте правильность введенного пути." << std::endl;
+		std::cout << "Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІРІРµРґРµРЅРЅРѕРіРѕ РїСѓС‚Рё." << std::endl;
 	}
-	std::cout << "Нажмите любую клавишу, чтобы продолжить...";
+	std::cout << "РќР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ, С‡С‚РѕР±С‹ РїСЂРѕРґРѕР»Р¶РёС‚СЊ...";
 	_getch();
 }

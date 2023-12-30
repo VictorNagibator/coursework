@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "MenuBuilder.h"
 
 class MenuDirector abstract

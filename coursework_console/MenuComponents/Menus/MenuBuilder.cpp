@@ -1,4 +1,4 @@
-#include "MenuBuilder.h"
+﻿#include "MenuBuilder.h"
 
 MenuBuilder::MenuBuilder(const std::string& menuName) {
 	currentMenu = new Menu(menuName);

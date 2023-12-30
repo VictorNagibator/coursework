@@ -1,4 +1,4 @@
-#include <conio.h>
+ï»¿#include <conio.h>
 #include "ChangeOrderButton.h"
 #include "../OrdersData.h"
 #include "../FileInfo.h"
@@ -28,13 +28,13 @@ void ChangeOrderButton::execute()
 		OrdersData::saveOrders(FileInfo::getPath());
 		
 		system("cls");
-		std::cout << "Óñïåøíîå èçìåíåíèå äàííûõ çàêàçà!" << std::endl;
+		std::cout << "Ð£ÑÐ¿ÐµÑˆÐ½Ð¾Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð·Ð°ÐºÐ°Ð·Ð°!" << std::endl;
 	}
 	catch (const std::exception& e)
 	{
 		system("cls");
 		std::cout << std::endl << e.what() << std::endl;
 	}
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó, ÷òîáû ïðîäîëæèòü...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ...";
 	_getch();
 }

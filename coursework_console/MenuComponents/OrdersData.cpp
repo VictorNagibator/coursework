@@ -1,4 +1,4 @@
-#include <nlohmann/json.hpp>
+п»ї#include <nlohmann/json.hpp>
 #include <fstream>
 #include <conio.h>
 #include "OrdersData.h"
@@ -16,7 +16,7 @@ Order OrdersData::getOrder(int idOfOrder) {
 		return *gettable;
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким ID не существует!");
+		throw std::invalid_argument("Р—Р°РєР°Р·Р° СЃ С‚Р°РєРёРј ID РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	}
 }
 
@@ -32,7 +32,7 @@ void OrdersData::loadOrders(const std::string& filePath) {
 
 	std::ifstream file(filePath);
 	if (!file.is_open()) {
-		throw std::invalid_argument("Файл не найден!");
+		throw std::invalid_argument("Р¤Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ!");
 	}
 	json j = json::parse(file);
 	file.close();
@@ -88,7 +88,7 @@ void OrdersData::removeOrder(int idOfOrder) {
 		Logger::log(idOfOrder, OrderOperation::Removing);
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким ID не существует!");
+		throw std::invalid_argument("Р—Р°РєР°Р·Р° СЃ С‚Р°РєРёРј ID РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	}
 }
 
@@ -100,7 +100,7 @@ void OrdersData::editOrder(Order newOrder, ChangableObject object) {
 	switch (object)
 	{
 	case ChangableObject::Status:
-		std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
+		std::cout << "Р’РІРµРґРёС‚Рµ СЃС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° (0 - РІ РѕР¶РёРґР°РЅРёРё, 1 - РІ СЂРµРјРѕРЅС‚Рµ, 2 - РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°РЅ): ";
 		std::cin >> type;
 		std::cin.clear();
 		while (std::cin.get() != '\n');
@@ -108,7 +108,7 @@ void OrdersData::editOrder(Order newOrder, ChangableObject object) {
 		newOrder.setStatus(type);
 		break;
 	case ChangableObject::AdditionalInfo:
-		std::cout << "Введите дополнительную информацию: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ: ";
 		std::getline(std::cin, tempString);
 
 		newOrder.setAdditionalInfo(tempString);
@@ -154,7 +154,7 @@ void OrdersData::editOrder(Order newOrder, ChangableObject object) {
 		Logger::log(newOrder.getID(), OrderOperation::Editing);
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким ID не существует!");
+		throw std::invalid_argument("Р—Р°РєР°Р·Р° СЃ С‚Р°РєРёРј ID РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	}
 }
 
@@ -165,9 +165,9 @@ void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
 	switch (object)
 	{
 	case ChangableObject::LaptopCPU:
-		std::cout << "Данные о процессоре:" << std::endl;
+		std::cout << "Р”Р°РЅРЅС‹Рµ Рѕ РїСЂРѕС†РµСЃСЃРѕСЂРµ:" << std::endl;
 		std::cout << newLaptop.getCPU() << std::endl;
-		std::cout << "Введите на какую частоту (в ГГц) разогнать процессор: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ РЅР° РєР°РєСѓСЋ С‡Р°СЃС‚РѕС‚Сѓ (РІ Р“Р“С†) СЂР°Р·РѕРіРЅР°С‚СЊ РїСЂРѕС†РµСЃСЃРѕСЂ: ";
 		std::cin >> boost;
 		std::cin.clear();
 		while (std::cin.get() != '\n');
@@ -177,9 +177,9 @@ void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
 		newOrder.setLaptop(newLaptop);
 		break;
 	case ChangableObject::LaptopRAM:
-		std::cout << "Данные об оперативной памяти:" << std::endl;
+		std::cout << "Р”Р°РЅРЅС‹Рµ РѕР± РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё:" << std::endl;
 		std::cout << newLaptop.getRAM() << std::endl;
-		std::cout << "Введите на какую частоту (в МГц) разогнать RAM: ";
+		std::cout << "Р’РІРµРґРёС‚Рµ РЅР° РєР°РєСѓСЋ С‡Р°СЃС‚РѕС‚Сѓ (РІ РњР“С†) СЂР°Р·РѕРіРЅР°С‚СЊ RAM: ";
 		std::cin >> boost;
 		std::cin.clear();
 		while (std::cin.get() != '\n');
@@ -189,7 +189,7 @@ void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
 		newOrder.setLaptop(newLaptop);
 		break;
 	default:
-		throw std::invalid_argument("Невозможно ускорить данный компонент!");
+		throw std::invalid_argument("РќРµРІРѕР·РјРѕР¶РЅРѕ СѓСЃРєРѕСЂРёС‚СЊ РґР°РЅРЅС‹Р№ РєРѕРјРїРѕРЅРµРЅС‚!");
 		break;
 	}
 
@@ -202,7 +202,7 @@ void OrdersData::boostLaptopComponent(Order newOrder, ChangableObject object) {
 		Logger::log(newOrder.getID(), OrderOperation::Editing);
 	}
 	else {
-		throw std::invalid_argument("Заказа с таким ID не существует!");
+		throw std::invalid_argument("Р—Р°РєР°Р·Р° СЃ С‚Р°РєРёРј ID РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 	}
 }
 

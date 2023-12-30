@@ -1,4 +1,4 @@
-#include "OpenMenuButton.h"
+﻿#include "OpenMenuButton.h"
 
 OpenMenuButton::OpenMenuButton(const std::string& text, Menu* menu) : Button(text) 
 {

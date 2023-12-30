@@ -1,4 +1,4 @@
-#include "StandartMenuDirector.h"
+Ôªø#include "StandartMenuDirector.h"
 #include "MenuBuilder.h"
 #include "../Buttons/ExitButton.h"
 #include "../Buttons/ChooseFileButton.h"
@@ -16,28 +16,28 @@
 #include "ChangeOrderMenu.h"
 
 void StandartMenuDirector::buildMenu(MenuBuilder& builder) {
-	MenuWithTable* menuWithTable = new MenuWithTable("–‡·ÓÚ‡ Ò ‰‡ÌÌ˚ÏË");
-	menuWithTable->addButton(new ShowTableButton("œÓÍ‡Á‡Ú¸ ÔÓÎÌÛ˛ Ú‡·ÎËˆÛ"));
-	menuWithTable->addButton(new FindOrderButton("Õ‡ÈÚË Á‡Í‡Á ÔÓ ID"));
-	menuWithTable->addButton(new AddDataButton("ƒÓ·‡‚ËÚ¸ Á‡ÔËÒ¸"));
-	ChangeOrderMenu* changeOrderMenu = new ChangeOrderMenu("–Â‰‡ÍÚËÓ‚‡ÌËÂ Á‡ÔËÒÂÈ");
-	menuWithTable->addButton(new ChooseOrderButton("–Â‰‡ÍÚËÓ‚‡Ú¸ Á‡ÔËÒ¸", changeOrderMenu));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ÒÚ‡ÚÛÒ Á‡Í‡Á‡", changeOrderMenu, ChangableObject::Status));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ‰ÓÔÓÎÌËÚÂÎ¸ÌÛ˛ ËÌÙÓÏ‡ˆË˛ Á‡Í‡Á‡", changeOrderMenu, ChangableObject::AdditionalInfo));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ Ì‡Á‚‡ÌËÂ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopName));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ÔÓˆÂÒÒÓ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopCPU));
-	changeOrderMenu->addButton(new BoostComponentButton("–‡ÁÓ„Ì‡Ú¸ ÔÓˆÂÒÒÓ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopCPU));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ‚Ë‰ÂÓÍ‡ÚÛ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopGPU));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ÓÔÂ‡ÚË‚ÌÛ˛ Ô‡ÏˇÚ¸ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopRAM));
-	changeOrderMenu->addButton(new BoostComponentButton("–‡ÁÓ„Ì‡Ú¸ ÓÔÂ‡ÚË‚ÌÛ˛ Ô‡ÏˇÚ¸ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopRAM));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ Ï‡ÚÂËÌÒÍÛ˛ ÔÎ‡ÚÛ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopMotherboard));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ı‡ÌËÎË˘Â ‰‡ÌÌ˚ı ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopStorage));
-	changeOrderMenu->addButton(new ChangeOrderButton("»ÁÏÂÌËÚ¸ ‰ËÒÔÎÂÈ ÌÓÛÚ·ÛÍ‡", changeOrderMenu, ChangableObject::LaptopDisplay));
-	changeOrderMenu->addButton(new BackButton("¬ÂÌÛÚ¸Òˇ", menuWithTable));
-	menuWithTable->addButton(new DeleteDataButton("”‰‡ÎËÚ¸ Á‡ÔËÒ¸"));
-	menuWithTable->addButton(new BackButton("¬ÂÌÛÚ¸Òˇ", builder.getMenu()));
-	builder.addButton(new OpenMenuButton("–‡·ÓÚ‡ Ò ‰‡ÌÌ˚ÏË", menuWithTable));
-	builder.addButton(new ChooseFileButton("¬˚·‡Ú¸ Ù‡ÈÎ"));
-	builder.addButton(new PlayGameButton("»„‡Ú¸"));
-	builder.addButton(new ExitButton("¬˚ÈÚË"));
+	MenuWithTable* menuWithTable = new MenuWithTable("–†–∞–±–æ—Ç–∞ —Å –¥–∞–Ω–Ω—ã–º–∏");
+	menuWithTable->addButton(new ShowTableButton("–ü–æ–∫–∞–∑–∞—Ç—å –ø–æ–ª–Ω—É—é —Ç–∞–±–ª–∏—Ü—É"));
+	menuWithTable->addButton(new FindOrderButton("–ù–∞–π—Ç–∏ –∑–∞–∫–∞–∑ –ø–æ ID"));
+	menuWithTable->addButton(new AddDataButton("–î–æ–±–∞–≤–∏—Ç—å –∑–∞–ø–∏—Å—å"));
+	ChangeOrderMenu* changeOrderMenu = new ChangeOrderMenu("–†–µ–¥–∞–∫—Ç–∏—Ä–æ–≤–∞–Ω–∏–µ –∑–∞–ø–∏—Å–µ–π");
+	menuWithTable->addButton(new ChooseOrderButton("–†–µ–¥–∞–∫—Ç–∏—Ä–æ–≤–∞—Ç—å –∑–∞–ø–∏—Å—å", changeOrderMenu));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å —Å—Ç–∞—Ç—É—Å –∑–∞–∫–∞–∑–∞", changeOrderMenu, ChangableObject::Status));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –¥–æ–ø–æ–ª–Ω–∏—Ç–µ–ª—å–Ω—É—é –∏–Ω—Ñ–æ—Ä–º–∞—Ü–∏—é –∑–∞–∫–∞–∑–∞", changeOrderMenu, ChangableObject::AdditionalInfo));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –Ω–∞–∑–≤–∞–Ω–∏–µ –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopName));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –ø—Ä–æ—Ü–µ—Å—Å–æ—Ä –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopCPU));
+	changeOrderMenu->addButton(new BoostComponentButton("–†–∞–∑–æ–≥–Ω–∞—Ç—å –ø—Ä–æ—Ü–µ—Å—Å–æ—Ä –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopCPU));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –≤–∏–¥–µ–æ–∫–∞—Ä—Ç—É –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopGPU));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –æ–ø–µ—Ä–∞—Ç–∏–≤–Ω—É—é –ø–∞–º—è—Ç—å –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopRAM));
+	changeOrderMenu->addButton(new BoostComponentButton("–†–∞–∑–æ–≥–Ω–∞—Ç—å –æ–ø–µ—Ä–∞—Ç–∏–≤–Ω—É—é –ø–∞–º—è—Ç—å –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopRAM));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –º–∞—Ç–µ—Ä–∏–Ω—Å–∫—É—é –ø–ª–∞—Ç—É –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopMotherboard));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å —Ö—Ä–∞–Ω–∏–ª–∏—â–µ –¥–∞–Ω–Ω—ã—Ö –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopStorage));
+	changeOrderMenu->addButton(new ChangeOrderButton("–ò–∑–º–µ–Ω–∏—Ç—å –¥–∏—Å–ø–ª–µ–π –Ω–æ—É—Ç–±—É–∫–∞", changeOrderMenu, ChangableObject::LaptopDisplay));
+	changeOrderMenu->addButton(new BackButton("–í–µ—Ä–Ω—É—Ç—å—Å—è", menuWithTable));
+	menuWithTable->addButton(new DeleteDataButton("–£–¥–∞–ª–∏—Ç—å –∑–∞–ø–∏—Å—å"));
+	menuWithTable->addButton(new BackButton("–í–µ—Ä–Ω—É—Ç—å—Å—è", builder.getMenu()));
+	builder.addButton(new OpenMenuButton("–†–∞–±–æ—Ç–∞ —Å –¥–∞–Ω–Ω—ã–º–∏", menuWithTable));
+	builder.addButton(new ChooseFileButton("–í—ã–±—Ä–∞—Ç—å —Ñ–∞–π–ª"));
+	builder.addButton(new PlayGameButton("–ò–≥—Ä–∞—Ç—å"));
+	builder.addButton(new ExitButton("–í—ã–π—Ç–∏"));
 }

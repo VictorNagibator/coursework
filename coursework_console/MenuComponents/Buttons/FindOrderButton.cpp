@@ -1,4 +1,4 @@
-#include <conio.h>
+ï»¿#include <conio.h>
 #include "FindOrderButton.h"
 #include "../OrdersData.h"
 #include "../Table.h"
@@ -12,13 +12,13 @@ void FindOrderButton::execute()
 {
 	if (OrdersData::isDataEmpty())
 	{
-		std::cout << "Íåò äàííûõ äëÿ ïîèñêà!" << std::endl;
-		std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+		std::cout << "ÐÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ°!" << std::endl;
+		std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 		_getch();
 		return;
 	}
 
-	std::cout << "Ââåäèòå ID çàêàçà: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ID Ð·Ð°ÐºÐ°Ð·Ð°: ";
 	int id;
 	std::cin >> id;
 	std::cin.clear();
@@ -30,7 +30,7 @@ void FindOrderButton::execute()
 		Order order = OrdersData::getOrder(id);
 		Table table = Table();
 		table.showOrder(order);
-		std::cout << "Èíôîðìàöèÿ î íîóòáóêå:" << std::endl;
+		std::cout << "Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ Ð½Ð¾ÑƒÑ‚Ð±ÑƒÐºÐµ:" << std::endl;
 		std::cout << OrdersData::getOrder(id).getLaptop() << std::endl;
 	}
 	catch (const std::exception& e)
@@ -38,6 +38,6 @@ void FindOrderButton::execute()
 		std::cout << e.what() << std::endl;
 	}
 	
-	std::cout << "Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+	std::cout << "ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ Ð»ÑŽÐ±ÑƒÑŽ ÐºÐ»Ð°Ð²Ð¸ÑˆÑƒ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶ÐµÐ½Ð¸Ñ...";
 	_getch();
 }

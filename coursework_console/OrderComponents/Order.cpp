@@ -1,4 +1,4 @@
-#include "Order.h"
+ï»¿#include "Order.h"
 
 void Order::operator=(Order other) {
 	this->id = other.getID();
@@ -55,14 +55,14 @@ void Order::input() {
 	StatusType type;
 	std::string additionalInfo;
 
-	std::cout << "Íîìåð çàêàçà: " << lastID << std::endl;
-	std::cout << "Ââåäèòå ñòàòóñ çàêàçà (0 - â îæèäàíèè, 1 - â ðåìîíòå, 2 - îòðåìîíòèðîâàí): ";
+	std::cout << "ÐÐ¾Ð¼ÐµÑ€ Ð·Ð°ÐºÐ°Ð·Ð°: " << lastID << std::endl;
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð°Ñ‚ÑƒÑ Ð·Ð°ÐºÐ°Ð·Ð° (0 - Ð² Ð¾Ð¶Ð¸Ð´Ð°Ð½Ð¸Ð¸, 1 - Ð² Ñ€ÐµÐ¼Ð¾Ð½Ñ‚Ðµ, 2 - Ð¾Ñ‚Ñ€ÐµÐ¼Ð¾Ð½Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½): ";
 	std::cin >> type;
 	std::cin.clear();
 	while (std::cin.get() != '\n');
-	std::cout << "\tÂâîä ïàðàìåòðîâ íîóòáóêà\n";
+	std::cout << "\tÐ’Ð²Ð¾Ð´ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð¾Ð² Ð½Ð¾ÑƒÑ‚Ð±ÑƒÐºÐ°\n";
 	laptop.input();
-	std::cout << "\tÂâîä äîïîëíèòåëüíîé èíôîðìàöèè\n";
+	std::cout << "\tÐ’Ð²Ð¾Ð´ Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ð¹ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ð¸\n";
 	std::getline(std::cin, additionalInfo);
 
 	this->id = this->lastID;
@@ -73,7 +73,7 @@ void Order::input() {
 
 void Order::setStatus(StatusType status) {
 	this->status = status;
-	std::cout << "Ñîñòîÿíèå çàêàçà óñïåøíî èçìåíåíî!\n";
+	std::cout << "Ð¡Ð¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð·Ð°ÐºÐ°Ð·Ð° ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¾!\n";
 }
 
 void Order::setLaptop(Laptop laptop) {
