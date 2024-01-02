@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="coursework_console.cpp">
+    <ClCompile Include="courseworkConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OrderComponents\CPU.cpp">
@@ -115,6 +115,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuComponents\Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponents\Buttons\OpenLoggerButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -237,6 +240,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\OrderOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponents\Buttons\OpenLoggerButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

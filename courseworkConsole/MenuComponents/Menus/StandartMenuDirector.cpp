@@ -12,6 +12,7 @@
 #include "../Buttons/ChangeOrderButton.h"
 #include "../Buttons/FindOrderButton.h"
 #include "../Buttons/BoostComponentButton.h"
+#include "../Buttons/OpenLoggerButton.h"
 #include "MenuWithTable.h"
 #include "ChangeOrderMenu.h"
 
@@ -38,6 +39,7 @@ void StandartMenuDirector::buildMenu(MenuBuilder& builder) {
 	menuWithTable->addButton(new BackButton("Вернуться", builder.getMenu()));
 	builder.addButton(new OpenMenuButton("Работа с данными", menuWithTable));
 	builder.addButton(new ChooseFileButton("Выбрать файл"));
+	builder.addButton(new OpenLoggerButton("Открыть логи"));
 	builder.addButton(new PlayGameButton("Играть"));
 	builder.addButton(new ExitButton("Выйти"));
 }

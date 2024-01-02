@@ -24,6 +24,7 @@
     <ProjectGuid>{47375484-cfca-4b08-b8d5-f8f9d5ead31a}</ProjectGuid>
     <RootNamespace>courseworkconsole</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>courseworkСonsole</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -147,8 +148,9 @@
     <ClCompile Include="MenuComponents\Menus\Menu.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ExitButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\Button.cpp" />
-    <ClCompile Include="coursework_console.cpp" />
+    <ClCompile Include="courseworkConsole.cpp" />
     <ClCompile Include="MenuComponents\Buttons\OpenMenuButton.cpp" />
+    <ClCompile Include="MenuComponents\Buttons\OpenLoggerButton.cpp" />
     <ClCompile Include="OrderComponents\CPU.cpp" />
     <ClCompile Include="OrderComponents\DataStorage.cpp" />
     <ClCompile Include="OrderComponents\Display.cpp" />
@@ -185,6 +187,7 @@
     <ClInclude Include="MenuComponents\Buttons\ExitButton.h" />
     <ClInclude Include="MenuComponents\Buttons\Button.h" />
     <ClInclude Include="MenuComponents\Buttons\OpenMenuButton.h" />
+    <ClInclude Include="MenuComponents\Buttons\OpenLoggerButton.h" />
     <ClInclude Include="OrderComponents\CPU.h" />
     <ClInclude Include="OrderComponents\DataStorage.h" />
     <ClInclude Include="OrderComponents\DataTransferInterface.h" />
