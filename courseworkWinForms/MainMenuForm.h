@@ -9,6 +9,7 @@ namespace courseworkWinForms {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Diagnostics;
 
 	/// <summary>
 	/// Summary for MainMenuForm
@@ -162,8 +163,7 @@ namespace courseworkWinForms {
 	}
 	private: System::Void OpenLogggerButton_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		LogsForm^ logsForm = gcnew LogsForm();
-		logsForm->Show();
+		Diagnostics::Process::Start("..\\log.txt");
 	}
 };
 }

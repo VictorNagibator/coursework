@@ -18,15 +18,9 @@
     <ClCompile Include="MainMenuForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LogsForm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainMenuForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LogsForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

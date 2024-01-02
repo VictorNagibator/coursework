@@ -118,21 +118,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LogsForm.cpp" />
     <ClCompile Include="MainMenuForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LogsForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="MainMenuForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LogsForm.resx">
-      <DependentUpon>LogsForm.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.h</DependentUpon>
     </EmbeddedResource>
