@@ -1,8 +1,7 @@
-#include "LogsForm.h"
 #pragma once
+#include "../coursework_console/MenuComponents/FileInfo.h"
 
 namespace courseworkWinForms {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -42,14 +41,6 @@ namespace courseworkWinForms {
 	private: System::Windows::Forms::Button^ OpenLogggerButton;
 	private: System::Windows::Forms::Button^ ExitButton;
 	private: System::Windows::Forms::Label^ AboutMenuLabel;
-	protected:
-
-	protected:
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -92,6 +83,7 @@ namespace courseworkWinForms {
 			this->ChooseFileButton->TabIndex = 1;
 			this->ChooseFileButton->Text = L"Выбрать файл";
 			this->ChooseFileButton->UseVisualStyleBackColor = true;
+			this->ChooseFileButton->Click += gcnew System::EventHandler(this, &MainMenuForm::ChooseFileButton_Click);
 			// 
 			// PlayGameButton
 			// 
@@ -103,6 +95,7 @@ namespace courseworkWinForms {
 			this->PlayGameButton->TabIndex = 2;
 			this->PlayGameButton->Text = L"Играть";
 			this->PlayGameButton->UseVisualStyleBackColor = true;
+			this->PlayGameButton->Click += gcnew System::EventHandler(this, &MainMenuForm::PlayGameButton_Click);
 			// 
 			// OpenLogggerButton
 			// 
@@ -156,7 +149,7 @@ namespace courseworkWinForms {
 			this->PerformLayout();
 
 		}
-#pragma endregion
+
 	private: System::Void ExitButton_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		Application::Exit();
@@ -165,5 +158,25 @@ namespace courseworkWinForms {
 	{
 		Diagnostics::Process::Start("..\\log.txt");
 	}
+	private: System::Void PlayGameButton_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		MessageBox::Show(this, "К сожалению, Алексей еще не реализовал игру! Также прошу напомнить ему, что он должен забрать кроссовки со спортманежа!", "Игра", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	private: System::Void ChooseFileButton_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		OpenFileDialog ^openFileDialog = gcnew OpenFileDialog();
+		openFileDialog->Filter = "JSON files(*.json)|*.json";
+		openFileDialog->Title = "Выберите файл с данными";
+		if (openFileDialog->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+		{
+			MessageBox::Show(this, "Файл успешно выбран!", "Выбор файла", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			
+		}
+		else
+		{
+			MessageBox::Show(this, "Файл не выбран!", "Выбор файла", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
 };
 }
+#pragma endregion
