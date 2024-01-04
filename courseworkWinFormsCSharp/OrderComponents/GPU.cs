@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
-    internal class GPU : ILaptopComponent
+    public class GPU : ILaptopComponent
     {
         public string ModelName
         {
@@ -40,6 +36,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
             TryToSetArguments(ModelName, Frequency, VRAM);
         }
 
+        public GPU(JObject json)
+        {
+            FromJSON(json);
+        }
         public string GetComponentName() => "GPU";
 
         public override string ToString()
@@ -47,7 +47,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return $"{ModelName}, {Frequency:F1} МГц, {VRAM} ГБ";
         }
 
-        public JObject ToJson()
+        public JObject ToJSON()
         {
             JObject json = new JObject
             {
@@ -58,7 +58,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return json;
         }
 
-        public void FromJson(JObject gpu)
+        public void FromJSON(JObject gpu)
         {
             TryToSetArguments(gpu.GetValue("modelName").ToString(), gpu.GetValue("frequency").ToObject<float>(), gpu.GetValue("vram").ToObject<int>());
         }

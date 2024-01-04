@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
-    internal abstract class DataStorage : ILaptopComponent
+    public abstract class DataStorage : ILaptopComponent
     {
         public int Capacity
         {
@@ -40,7 +36,12 @@ namespace courseworkWinFormsCSharp.OrderComponents
             TryToSetArguments(Capacity, TransferInterface, Brand, FormFactor);
         }
 
-        public string GetComponentName() => "DataStorage";
+        public DataStorage(JObject json)
+        {
+            FromJSON(json);
+        }
+
+        public abstract string GetComponentName();
 
 
         public override string ToString()
@@ -48,7 +49,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return $"{Brand}, {Capacity} ГБ, {TransferInterface}, {FormFactor:F1}";
         }
 
-        public JObject ToJson()
+        public virtual JObject ToJSON()
         {
             JObject json = new JObject
             {
@@ -61,7 +62,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return json;
         }
 
-        public void FromJson(JObject data)
+        public virtual void FromJSON(JObject data)
         {
             TryToSetArguments(data.GetValue("capacity").ToObject<int>(), DataTransferInterfaceConverter.StringToDataTransferInterface(data.GetValue("transferInterface").ToString()), data.GetValue("brand").ToString(), data.GetValue("formFactor").ToObject<float>());
         }

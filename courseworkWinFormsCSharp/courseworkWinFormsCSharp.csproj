@@ -61,7 +61,15 @@
     <Compile Include="OrderComponents\Display.cs" />
     <Compile Include="OrderComponents\FlashMemory.cs" />
     <Compile Include="OrderComponents\GPU.cs" />
+    <Compile Include="OrderComponents\HDD.cs" />
     <Compile Include="OrderComponents\ILaptopComponent.cs" />
+    <Compile Include="OrderComponents\Laptop.cs" />
+    <Compile Include="OrderComponents\Motherboard.cs" />
+    <Compile Include="OrderComponents\Order.cs" />
+    <Compile Include="OrderComponents\RAM.cs" />
+    <Compile Include="OrderComponents\RAMType.cs" />
+    <Compile Include="OrderComponents\SSD.cs" />
+    <Compile Include="OrderComponents\StatusType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

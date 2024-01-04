@@ -1,13 +1,9 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
-    internal class Display : ILaptopComponent
+    public class Display : ILaptopComponent
     {
         public int Width
         {
@@ -34,7 +30,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
         {
             TryToSetArguments(width, height, refreshRate);
         }
-
+        public Display(JObject json)
+        {
+            FromJSON(json);
+        }
         public string GetComponentName() => "Display";
 
         public override string ToString()
@@ -42,7 +41,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return $"{Width}x{Height}, {RefreshRate} Гц";
         }
 
-        public JObject ToJson()
+        public JObject ToJSON()
         {
             JObject display = new JObject
             {
@@ -53,7 +52,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return display;
         }
 
-        public void FromJson(JObject display)
+        public void FromJSON(JObject display)
         {
             TryToSetArguments(display.GetValue("width").ToObject<int>(), display.GetValue("height").ToObject<int>(), display.GetValue("refreshRate").ToObject<int>());
         }

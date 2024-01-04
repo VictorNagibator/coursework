@@ -3,7 +3,7 @@ using Newtonsoft.Json.Linq;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
-    internal class CPU : ILaptopComponent
+    public class CPU : ILaptopComponent
     {
         public string ModelName
         {
@@ -45,6 +45,11 @@ namespace courseworkWinFormsCSharp.OrderComponents
             TryToSetArguments(ModelName, Socket, Frequency, NumOfCores);
         }
 
+        public CPU(JObject json)
+        {
+            FromJSON(json);
+        }
+
         public string GetComponentName() => "CPU";
 
         public override string ToString()
@@ -52,7 +57,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return $"{ModelName}, {Socket}, {Frequency:F1} ГГц, {NumOfCores}-ядерный";
         }
 
-        public JObject ToJson()
+        public JObject ToJSON()
         {
             JObject json = new JObject
             {
@@ -64,7 +69,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return json;
         }
 
-        public void FromJson(JObject cpu)
+        public void FromJSON(JObject cpu)
         {
             TryToSetArguments(cpu.GetValue("modelName").ToString(), cpu.GetValue("socket").ToString(), cpu.GetValue("frequency").ToObject<float>(), cpu.GetValue("numOfCores").ToObject<int>());
         }

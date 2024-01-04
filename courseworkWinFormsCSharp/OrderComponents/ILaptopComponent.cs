@@ -2,11 +2,11 @@
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
-    internal interface ILaptopComponent
+    public interface ILaptopComponent
     {
         string GetComponentName();
         string ToString();
-        JObject ToJson();
-        void FromJson(JObject data);
+        JObject ToJSON();
+        void FromJSON(JObject data);
     }
 }
