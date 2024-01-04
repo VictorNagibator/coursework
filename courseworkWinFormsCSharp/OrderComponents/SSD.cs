@@ -30,14 +30,14 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return base.ToString() + ", " + TypeOfFlashMemory.ToString();
         }
 
-        public JObject ToJSON()
+        public override JObject ToJSON()
         {
             JObject json = base.ToJSON();
             json["typeOfFlashMemory"] = TypeOfFlashMemory.ToString();
             return json;
         }
 
-        public void FromJSON(JObject json)
+        public override void FromJSON(JObject json)
         {
             base.FromJSON(json);
             SetArguments(json.GetValue("typeOfFlashMemory").ToObject<FlashMemoryType>());

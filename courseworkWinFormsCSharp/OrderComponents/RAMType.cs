@@ -17,5 +17,9 @@ namespace courseworkWinFormsCSharp.OrderComponents
                 throw new ArgumentException("Некорректный тип оперативной памяти!");
             }
         }
+        public static int RAMTypeToInt(RAMType type)
+        {
+            return (int)type;
+        }
     }
 }
