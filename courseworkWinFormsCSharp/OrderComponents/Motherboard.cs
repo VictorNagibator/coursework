@@ -54,7 +54,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
                 { "modelName", ModelName },
                 { "socket", Socket },
                 { "chipset", Chipset },
-                { "supportedRAMType", RAMTypeConverter.RAMTypeToString(SupportedRAMType) }
+                { "supportedRAMType", SupportedRAMType.ToString() }
             };
             return j;
         }

@@ -55,7 +55,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public override string ToString()
         {
-            return $"{ModelName}, {RAMTypeConverter.RAMTypeToString(Type)}, {Capacity} ГБ, {Frequency:F1} МГц";
+            return $"{ModelName}, {Type}, {Capacity} ГБ, {Frequency:F1} МГц";
         }
 
         public JObject ToJSON()
@@ -63,7 +63,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             JObject json = new JObject
             {
                 { "modelName", ModelName },
-                { "type", RAMTypeConverter.RAMTypeToString(Type) },
+                { "type", Type.ToString() },
                 { "frequency", Frequency },
                 { "capacity", Capacity }
             };
