@@ -5,30 +5,47 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     internal class CPU : ILaptopComponent
     {
-        public string ModelName { get; set; } = string.Empty;
-        public string Socket { get; set; } = string.Empty;
-        public double Frequency { get; set; }
-        public int NumOfCores { get; set; }
+        public string ModelName
+        {
+            get => ModelName;
+            set => TryToSetArguments(value, Socket, Frequency, NumOfCores);
+        }
+        public string Socket
+        {
+            get => Socket;
+            set => TryToSetArguments(ModelName, value, Frequency, NumOfCores);
+        }
+        public float Frequency
+        {
+            get => Frequency;
+            set => TryToSetArguments(ModelName, Socket, value, NumOfCores);
+        }
+        public int NumOfCores
+        {
+            get => NumOfCores;
+            set => TryToSetArguments(ModelName, Socket, Frequency, value);
+        }
 
-        private const double MaxFreq = 9.0;
-        private const double TryFreq = 0.2; 
+        private const float MaxFreq = 9.0f;
+        private const float TryFreq = 0.2f; 
 
         public CPU()
         {
-
+            ModelName = string.Empty;
+            Socket = string.Empty;
         }
 
-        public CPU(string ModelName)
+        public CPU(string ModelName) : this()
         {
             this.ModelName = ModelName;
         }
-
-        public string GetComponentName() => "CPU";
 
         public CPU(string ModelName, string Socket, float Frequency, int NumOfCores)
         {
             TryToSetArguments(ModelName, Socket, Frequency, NumOfCores);
         }
+
+        public string GetComponentName() => "CPU";
 
         public override string ToString()
         {

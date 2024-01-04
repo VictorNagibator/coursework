@@ -56,6 +56,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderComponents\CPU.cs" />
+    <Compile Include="OrderComponents\DataStorage.cs" />
+    <Compile Include="OrderComponents\DataTransferInterface.cs" />
+    <Compile Include="OrderComponents\Display.cs" />
+    <Compile Include="OrderComponents\FlashMemory.cs" />
+    <Compile Include="OrderComponents\GPU.cs" />
     <Compile Include="OrderComponents\ILaptopComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
