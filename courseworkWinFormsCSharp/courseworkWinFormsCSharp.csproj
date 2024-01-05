@@ -52,11 +52,11 @@
     <Compile Include="DataManagers\FileInfo.cs" />
     <Compile Include="DataManagers\Logger.cs" />
     <Compile Include="DataManagers\OrdersData.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderComponents\CPU.cs" />
     <Compile Include="OrderComponents\DataStorage.cs" />
@@ -75,6 +75,9 @@
     <Compile Include="OrderComponents\StatusType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
