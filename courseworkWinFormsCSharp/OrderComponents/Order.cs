@@ -27,6 +27,12 @@ namespace courseworkWinFormsCSharp.OrderComponents
             this.AdditionalInfo = AdditionalInfo;
         }
 
+        public Order(JObject j)
+        {
+            FromJSON(j);
+            ++LastID;
+        }
+
         public static int GetLastID()
         {
             return LastID;
@@ -37,7 +43,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
             return ID + ". " + Laptop.ModelName + "\t" + Status.ToString() + '\t' + AdditionalInfo;
         }
 
-        public JObject ToJson()
+        public JObject ToJSON()
         {
             JObject json = new JObject() 
             {

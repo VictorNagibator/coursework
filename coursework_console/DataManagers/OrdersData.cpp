@@ -25,11 +25,6 @@ std::vector<Order> OrdersData::getData() {
 }
 
 void OrdersData::loadOrders(const std::string& filePath) {
-	if (isDataLoaded) {
-		return;
-	}
-	isDataLoaded = true;
-
 	std::ifstream file(filePath);
 	if (!file.is_open()) {
 		throw std::invalid_argument("Файл не найден!");

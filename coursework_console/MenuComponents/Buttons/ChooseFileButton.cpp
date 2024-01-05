@@ -2,8 +2,8 @@
 #include <fstream>
 #include <conio.h>
 #include "ChooseFileButton.h"
-#include "../FileInfo.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
+#include "../../DataManagers/OrdersData.h"
 
 ChooseFileButton::ChooseFileButton() : Button("Выбор файла") {
 

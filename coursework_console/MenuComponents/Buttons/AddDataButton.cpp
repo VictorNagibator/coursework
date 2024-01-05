@@ -2,8 +2,8 @@
 #include <conio.h>
 #include "AddDataButton.h"
 #include "../../OrderComponents/Order.h"
-#include "../FileInfo.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
 
 AddDataButton::AddDataButton(const std::string& title) : Button(title)
 {

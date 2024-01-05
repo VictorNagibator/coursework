@@ -1,8 +1,8 @@
 ﻿#include <fstream>
 #include "Table.h"
-#include "FileInfo.h"
+#include "../DataManagers/ChangableObject.h"
 #include "../OrderComponents/Order.h"
-#include "OrdersData.h"
+#include "../DataManagers/OrdersData.h"
 
 void Table::showOrder(Order order) const {
 	showHeader();

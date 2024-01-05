@@ -1,6 +1,6 @@
 ﻿#include <conio.h>
 #include "FindOrderButton.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/OrdersData.h"
 #include "../Table.h"
 
 FindOrderButton::FindOrderButton(const std::string& title) : Button(title)

@@ -1,8 +1,8 @@
 ﻿#include <conio.h>
 #include "DeleteDataButton.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/OrdersData.h"
 #include "../Table.h"
-#include "../FileInfo.h"
+#include "../../DataManagers/FileInfo.h"
 
 DeleteDataButton::DeleteDataButton(const std::string& title) : Button(title)
 {

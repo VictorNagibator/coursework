@@ -1,7 +1,7 @@
 ﻿#include <conio.h>
 #include "ShowTableButton.h"
-#include "../FileInfo.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
 
 ShowTableButton::ShowTableButton(const std::string& title) : Button(title)
 {

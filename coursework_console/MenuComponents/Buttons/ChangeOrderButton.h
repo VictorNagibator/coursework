@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Button.h"
 #include "../../OrderComponents/Order.h"
-#include "../ChangableObject.h"
+#include "../../DataManagers/ChangableObject.h"
 #include "../Menus/ChangeOrderMenu.h"
 
 class ChangeOrderButton : public Button

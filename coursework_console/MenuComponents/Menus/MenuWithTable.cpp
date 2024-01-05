@@ -1,6 +1,6 @@
 ﻿#include "MenuWithTable.h"
-#include "../FileInfo.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
+#include "../../DataManagers/OrdersData.h"
 
 MenuWithTable::MenuWithTable(const std::string& text) : Menu(text)
 {

@@ -1,7 +1,7 @@
 ﻿#include <conio.h>
 #include "ChangeOrderButton.h"
-#include "../OrdersData.h"
-#include "../FileInfo.h"
+#include "../../DataManagers/OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
 
 ChangeOrderButton::ChangeOrderButton(const std::string& title, ChangeOrderMenu* menu, ChangableObject changableObject) : Button(title)
 {

@@ -1,6 +1,6 @@
 ﻿#include "BoostComponentButton.h"
-#include "../OrdersData.h"
-#include "../FileInfo.h"
+#include "../../DataManagers/OrdersData.h"
+#include "../../DataManagers/FileInfo.h"
 
 BoostComponentButton::BoostComponentButton(const std::string& title, ChangeOrderMenu* menu, ChangableObject changableObject) : ChangeOrderButton(title, menu, changableObject)
 {

@@ -16,6 +16,5 @@ public:
 	static void verifyIDs();
 	static bool isDataEmpty();
 private:
-	static inline bool isDataLoaded{};
 	static inline std::vector<Order> data;
 };

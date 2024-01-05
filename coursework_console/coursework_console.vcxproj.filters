@@ -66,7 +66,7 @@
     <ClCompile Include="MenuComponents\Buttons\ChooseFileButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MenuComponents\FileInfo.cpp">
+    <ClCompile Include="DataManagers\FileInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuComponents\Table.cpp">
@@ -93,7 +93,7 @@
     <ClCompile Include="MenuComponents\Buttons\AddDataButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MenuComponents\OrdersData.cpp">
+    <ClCompile Include="DataManagers\OrdersData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuComponents\Buttons\DeleteDataButton.cpp">
@@ -114,7 +114,7 @@
     <ClCompile Include="MenuComponents\Buttons\BoostComponentButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MenuComponents\Logger.cpp">
+    <ClCompile Include="DataManagers\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuComponents\Buttons\OpenLoggerButton.cpp">
@@ -188,7 +188,7 @@
     <ClInclude Include="MenuComponents\Buttons\ChooseFileButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuComponents\FileInfo.h">
+    <ClInclude Include="DataManagers\FileInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Table.h">
@@ -212,7 +212,7 @@
     <ClInclude Include="MenuComponents\Buttons\AddDataButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuComponents\OrdersData.h">
+    <ClInclude Include="DataManagers\OrdersData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Buttons\DeleteDataButton.h">
@@ -227,7 +227,7 @@
     <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuComponents\ChangableObject.h">
+    <ClInclude Include="DataManagers\ChangableObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Buttons\FindOrderButton.h">
@@ -236,10 +236,10 @@
     <ClInclude Include="MenuComponents\Buttons\BoostComponentButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuComponents\Logger.h">
+    <ClInclude Include="DataManagers\Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MenuComponents\OrderOperation.h">
+    <ClInclude Include="DataManagers\OrderOperation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MenuComponents\Buttons\OpenLoggerButton.h">

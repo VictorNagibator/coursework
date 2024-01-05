@@ -134,7 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MenuComponents\Logger.cpp" />
+    <ClCompile Include="DataManagers\Logger.cpp" />
     <ClCompile Include="MenuComponents\Buttons\BoostComponentButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\FindOrderButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ChangeOrderButton.cpp" />
@@ -144,7 +144,7 @@
     <ClCompile Include="MenuComponents\Buttons\AddDataButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\BackButton.cpp" />
     <ClCompile Include="MenuComponents\Menus\MenuWithTable.cpp" />
-    <ClCompile Include="MenuComponents\FileInfo.cpp" />
+    <ClCompile Include="DataManagers\FileInfo.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ChooseFileButton.cpp" />
     <ClCompile Include="MenuComponents\Menus\MenuDirector.cpp" />
     <ClCompile Include="MenuComponents\Menus\MenuBuilder.cpp" />
@@ -168,13 +168,13 @@
     <ClCompile Include="MenuComponents\Table.cpp" />
     <ClCompile Include="MenuComponents\Buttons\PlayGameButton.cpp" />
     <ClCompile Include="MenuComponents\Buttons\ShowTableButton.cpp" />
-    <ClCompile Include="MenuComponents\OrdersData.cpp" />
+    <ClCompile Include="DataManagers\OrdersData.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuComponents\Logger.h" />
+    <ClInclude Include="DataManagers\Logger.h" />
     <ClInclude Include="MenuComponents\Buttons\BoostComponentButton.h" />
     <ClInclude Include="MenuComponents\Buttons\FindOrderButton.h" />
-    <ClInclude Include="MenuComponents\ChangableObject.h" />
+    <ClInclude Include="DataManagers\ChangableObject.h" />
     <ClInclude Include="MenuComponents\Buttons\ChangeOrderButton.h" />
     <ClInclude Include="MenuComponents\Menus\ChangeOrderMenu.h" />
     <ClInclude Include="MenuComponents\Buttons\ChooseOrderButton.h" />
@@ -182,7 +182,7 @@
     <ClInclude Include="MenuComponents\Buttons\AddDataButton.h" />
     <ClInclude Include="MenuComponents\Buttons\BackButton.h" />
     <ClInclude Include="MenuComponents\Menus\MenuWithTable.h" />
-    <ClInclude Include="MenuComponents\FileInfo.h" />
+    <ClInclude Include="DataManagers\FileInfo.h" />
     <ClInclude Include="MenuComponents\Buttons\ChooseFileButton.h" />
     <ClInclude Include="MenuComponents\Menus\MenuDirector.h" />
     <ClInclude Include="MenuComponents\Menus\MenuBuilder.h" />
@@ -210,8 +210,8 @@
     <ClInclude Include="MenuComponents\Table.h" />
     <ClInclude Include="MenuComponents\Buttons\PlayGameButton.h" />
     <ClInclude Include="MenuComponents\Buttons\ShowTableButton.h" />
-    <ClInclude Include="MenuComponents\OrdersData.h" />
-    <ClInclude Include="MenuComponents\OrderOperation.h" />
+    <ClInclude Include="DataManagers\OrdersData.h" />
+    <ClInclude Include="DataManagers\OrderOperation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

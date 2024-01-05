@@ -1,6 +1,6 @@
 ﻿#include "ChangeOrderMenu.h"
 #include "../Table.h"
-#include "../OrdersData.h"
+#include "../../DataManagers/OrdersData.h"
 
 ChangeOrderMenu::ChangeOrderMenu(const std::string& title) : Menu(title)
 {
