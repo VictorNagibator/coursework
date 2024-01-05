@@ -54,6 +54,7 @@
             this.WorkWithDataButton.TabIndex = 1;
             this.WorkWithDataButton.Text = "Работа с данными";
             this.WorkWithDataButton.UseVisualStyleBackColor = true;
+            this.WorkWithDataButton.Click += new System.EventHandler(this.WorkWithDataButton_Click);
             // 
             // OpenLoggerButton
             // 

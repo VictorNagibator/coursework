@@ -33,7 +33,7 @@ namespace courseworkWinFormsCSharp.DataManagers
 
     internal static class OrdersData
     {
-        private static List<Order> Data = new List<Order>();
+        public static List<Order> Data { get; private set; } = new List<Order>();
 
         public static Order GetOrder(int idOfOrder)
         {
