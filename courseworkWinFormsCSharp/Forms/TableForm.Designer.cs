@@ -37,6 +37,9 @@
             this.IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LaptopColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StatusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изменитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +66,10 @@
             // 
             // работаСДаннымиToolStripMenuItem
             // 
+            this.работаСДаннымиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьЗаписьToolStripMenuItem,
+            this.изменитьЗаписьToolStripMenuItem,
+            this.удалитьЗаписьToolStripMenuItem});
             this.работаСДаннымиToolStripMenuItem.Enabled = false;
             this.работаСДаннымиToolStripMenuItem.Name = "работаСДаннымиToolStripMenuItem";
             this.работаСДаннымиToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
@@ -115,6 +122,25 @@
             this.StatusColumn.Name = "StatusColumn";
             this.StatusColumn.ReadOnly = true;
             // 
+            // добавитьЗаписьToolStripMenuItem
+            // 
+            this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
+            this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗаписьToolStripMenuItem_Click);
+            // 
+            // изменитьЗаписьToolStripMenuItem
+            // 
+            this.изменитьЗаписьToolStripMenuItem.Name = "изменитьЗаписьToolStripMenuItem";
+            this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.изменитьЗаписьToolStripMenuItem.Text = "Изменить запись";
+            // 
+            // удалитьЗаписьToolStripMenuItem
+            // 
+            this.удалитьЗаписьToolStripMenuItem.Name = "удалитьЗаписьToolStripMenuItem";
+            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
+            // 
             // TableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +170,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn LaptopColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn StatusColumn;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem изменитьЗаписьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem удалитьЗаписьToolStripMenuItem;
     }
 }

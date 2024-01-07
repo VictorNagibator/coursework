@@ -54,5 +54,12 @@ namespace courseworkWinFormsCSharp.Forms
                 dataGridView.Rows.Add(order.ID, order.Laptop, order.Status);
             }
         }
+
+        private void добавитьЗаписьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDataForm form = new AddDataForm();
+            form.ShowDialog();
+            LoadDataInTable();
+        }
     }
 }
