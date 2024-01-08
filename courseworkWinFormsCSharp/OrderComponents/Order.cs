@@ -4,7 +4,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class Order
     {
-        public static int LastID = 0;
+        public static int LastID { get; private set; } = 0;
 
         public int ID { get; private set; }
         public Laptop Laptop { get; set; }
@@ -31,11 +31,6 @@ namespace courseworkWinFormsCSharp.OrderComponents
         {
             FromJSON(j);
             ++LastID;
-        }
-
-        public static int GetLastID()
-        {
-            return LastID;
         }
 
         public override string ToString()

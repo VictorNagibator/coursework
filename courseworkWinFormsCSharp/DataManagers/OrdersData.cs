@@ -131,13 +131,13 @@ namespace courseworkWinFormsCSharp.DataManagers
                 j[FileInfo.Path] = 0;
             }
             int maxID = j[FileInfo.Path].ToObject<int>();
-            if (maxID < Order.GetLastID())
+            if (maxID < Order.LastID)
             {
-                j[FileInfo.Path] = Order.GetLastID();
+                j[FileInfo.Path] = Order.LastID;
             }
             else
             {
-                while (Order.GetLastID() < maxID)
+                while (Order.LastID < maxID)
                 {
                     _ = new Order();
                 }
