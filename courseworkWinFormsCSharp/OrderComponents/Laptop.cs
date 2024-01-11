@@ -1,49 +1,51 @@
 ﻿using Newtonsoft.Json.Linq;
-using System.Net.Configuration;
+using System;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class Laptop
     {
-        public string ModelName
-        {
-            get => ModelName;
-            set => TryToSetArguments(value, CPU, GPU, RAM, Motherboard, Display, DataStorage);
-        }
+        public string ModelName { get; set; } = string.Empty;
+        private CPU _cpu = new CPU();
         public CPU CPU
         {
-            get => CPU;
-            set => TryToSetArguments(ModelName, value, GPU, RAM, Motherboard, Display, DataStorage);
+            get => _cpu;
+            set
+            {
+                if (value.Socket == Motherboard.Socket)
+                    _cpu = value;
+                else
+                    throw new ArgumentException("Неподходящий сокет CPU к данной материнской плате!");
+            }
         }
-        public GPU GPU
-        {
-            get => GPU;
-            set => TryToSetArguments(ModelName, CPU, value, RAM, Motherboard, Display, DataStorage);
-        }
+        public GPU GPU { get; set; } = new GPU();
+        private RAM _ram = new RAM();
         public RAM RAM
         {
-            get => RAM;
-            set => TryToSetArguments(ModelName, CPU, GPU, value, Motherboard, Display, DataStorage);
+            get => _ram;
+            set
+            {
+                if (value.Type == Motherboard.SupportedRAMType)
+                    _ram = value;
+                else
+                    throw new ArgumentException("Неподходящий тип оперативной памяти к данной материнской плате!");
+            }
         }
-        public Motherboard Motherboard
-        {
-            get => Motherboard;
-            set => TryToSetArguments(ModelName, CPU, GPU, RAM, value, Display, DataStorage);
-        }
-        public Display Display
-        {
-            get => Display;
-            set => TryToSetArguments(ModelName, CPU, GPU, RAM, Motherboard, value, DataStorage);
-        }
-        public DataStorage DataStorage
-        {
-            get => DataStorage;
-            set => TryToSetArguments(ModelName, CPU, GPU, RAM, Motherboard, Display, value);
-        }
+        public Motherboard Motherboard { get; set; } = new Motherboard();
+        public Display Display { get; set; } = new Display();
+        public DataStorage DataStorage { get; set; } = new HDD(); //по умолчанию стоит HDD в ноутбуках
 
+        public Laptop() { }
         public Laptop(string ModelName, CPU CPU, GPU GPU, RAM RAM, Motherboard Motherboard, Display Display, DataStorage DataStorage)
         {
-            TryToSetArguments(ModelName, CPU, GPU, RAM, Motherboard, Display, DataStorage);
+            this.Motherboard = Motherboard; //сначала устанавливаем материнскую плату
+
+            this.ModelName = ModelName;
+            this.CPU = CPU;
+            this.GPU = GPU;
+            this.RAM = RAM;
+            this.Display = Display;
+            this.DataStorage = DataStorage;
         }
 
 
@@ -103,37 +105,15 @@ namespace courseworkWinFormsCSharp.OrderComponents
             else
             {
                 dataStorage = new SSD(json.GetValue("dataStorage").ToObject<JObject>());
-            }    
-
-            TryToSetArguments
-            (
-                json.GetValue("modelName").ToString(), 
-                new CPU(json.GetValue("cpu").ToObject<JObject>()), 
-                new GPU(json.GetValue("gpu").ToObject<JObject>()), 
-                new RAM(json.GetValue("ram").ToObject<JObject>()),
-                new Motherboard(json.GetValue("motherboard").ToObject<JObject>()),
-                new Display(json.GetValue("display").ToObject<JObject>()),
-                dataStorage
-            );
-        }
-
-        private bool CheckArguments(string ModelName, CPU CPU, GPU GPU, RAM RAM, Motherboard Motherboard, Display Display, DataStorage DataStorage)
-        {
-            return CPU.Socket == Motherboard.Socket && RAM.Type == Motherboard.SupportedRAMType;
-        }
-
-        private void TryToSetArguments(string ModelName, CPU CPU, GPU GPU, RAM RAM, Motherboard Motherboard, Display Display, DataStorage DataStorage)
-        {
-            if (CheckArguments(ModelName, CPU, GPU, RAM, Motherboard, Display, DataStorage))
-            {
-                this.ModelName = ModelName;
-                this.CPU = CPU;
-                this.GPU = GPU;
-                this.RAM = RAM;
-                this.Motherboard = Motherboard;
-                this.Display = Display;
-                this.DataStorage = DataStorage;
             }
+
+            ModelName = json.GetValue("modelName").ToString();
+            CPU = new CPU(json.GetValue("cpu").ToObject<JObject>());
+            GPU = new GPU(json.GetValue("gpu").ToObject<JObject>());
+            RAM = new RAM(json.GetValue("ram").ToObject<JObject>());
+            Motherboard = new Motherboard(json.GetValue("motherboard").ToObject<JObject>());
+            Display = new Display(json.GetValue("display").ToObject<JObject>());
+            DataStorage = dataStorage;
         }
     }
 }

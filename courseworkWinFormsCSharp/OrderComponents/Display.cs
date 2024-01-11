@@ -5,35 +5,62 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class Display : ILaptopComponent
     {
+        private int _width;
         public int Width
         {
-            get => Width;
-            set => TryToSetArguments(value, Height, RefreshRate);
+            get => _width;
+            set
+            {
+                if (value >= 0)
+                    _width = value;
+                else
+                    throw new ArgumentException("Некорректная ширина экрана!");
+            }
         }
+        private int _height;
         public int Height
         {
-            get => Height;
-            set => TryToSetArguments(Width, value, RefreshRate);
+            get => _height;
+            set
+            {
+                if (value >= 0)
+                    _height = value;
+                else
+                    throw new ArgumentException("Некорректная высота экрана!");
+            }
         }
+        private int _refreshRate;
         public int RefreshRate
         {
-            get => RefreshRate;
-            set => TryToSetArguments(Width, Height, value);
+            get => _refreshRate;
+            set
+            {
+                if (value >= 0)
+                    _refreshRate = value;
+                else
+                    throw new ArgumentException("Некорректная частота обновления экрана!");
+            }
         }
 
-        public Display(int width, int height)
+        public Display() { }
+        public Display(int Width, int Height)
         {
-            TryToSetArguments(width, height, 0);
+            this.Width = Width;
+            this.Height = Height;
         }
 
-        public Display(int width, int height, int refreshRate)
+        public Display(int Width, int Height, int RefreshRate)
         {
-            TryToSetArguments(width, height, refreshRate);
+            this.Width = Width;
+            this.Height = Height;
+            this.RefreshRate = RefreshRate;
         }
+
         public Display(JObject json)
         {
             FromJSON(json);
         }
+
         public string GetComponentName() => "Display";
 
         public override string ToString()
@@ -54,26 +81,9 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public void FromJSON(JObject display)
         {
-            TryToSetArguments(display.GetValue("width").ToObject<int>(), display.GetValue("height").ToObject<int>(), display.GetValue("refreshRate").ToObject<int>());
-        }
-
-        private bool CheckArguments(int Width, int Height, int RefreshRate)
-        {
-            return Width >= 0 && Height >= 0 && RefreshRate >= 0;
-        }
-
-        private void TryToSetArguments(int Width, int Height, int RefreshRate)
-        {
-            if (CheckArguments(Width, Height, RefreshRate))
-            {
-                this.Width = Width;
-                this.Height = Height;
-                this.RefreshRate = RefreshRate;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный формат данных!");
-            }
+            Width = display.GetValue("width").ToObject<int>();
+            Height = display.GetValue("height").ToObject<int>();
+            RefreshRate = display.GetValue("refreshRate").ToObject<int>();
         }
     }
 }

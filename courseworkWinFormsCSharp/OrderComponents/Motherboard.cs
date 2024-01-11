@@ -4,27 +4,12 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class Motherboard : ILaptopComponent
     {
-        public string ModelName
-        {
-            get => ModelName;
-            set => ModelName = value;
-        }
-        public string Socket
-        {
-            get => Socket;
-            set => Socket = value;
-        }
-        public string Chipset
-        {
-            get => Chipset; 
-            set => Chipset = value;
-        }
-        public RAMType SupportedRAMType
-        {
-            get => SupportedRAMType;
-            set => SupportedRAMType = value;
-        }
+        public string ModelName { get; set; } = string.Empty;
+        public string Socket { get; set; } = string.Empty;
+        public string Chipset { get; set; } = string.Empty;
+        public RAMType SupportedRAMType { get; set; } = RAMType.DDR4;
 
+        public Motherboard() { }
         public Motherboard(string ModelName)
         {
             this.ModelName = ModelName;
@@ -32,7 +17,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public Motherboard(string ModelName, string Socket, string Chipset, RAMType SupportedRAMType)
         {
-            SetArguments(ModelName, Socket, Chipset, SupportedRAMType);
+            this.ModelName = ModelName;
+            this.Socket = Socket;
+            this.Chipset = Chipset;
+            this.SupportedRAMType = SupportedRAMType;
         }
 
         public Motherboard(JObject j)
@@ -65,14 +53,6 @@ namespace courseworkWinFormsCSharp.OrderComponents
             Socket = j.GetValue("socket").ToString();
             Chipset = j.GetValue("chipset").ToString();
             SupportedRAMType = RAMTypeConverter.StringToRAMType(j.GetValue("supportedRAMType").ToString());
-        }
-
-        private void SetArguments(string ModelName, string Socket, string Chipset, RAMType SupportedRAMType)
-        {
-            this.ModelName = ModelName;
-            this.Socket = Socket;
-            this.Chipset = Chipset;
-            this.SupportedRAMType = SupportedRAMType;
         }
     }
 }

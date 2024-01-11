@@ -9,7 +9,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
         public int ID { get; private set; }
         public Laptop Laptop { get; set; }
         public StatusType Status { get; set; }
-        public string AdditionalInfo { get; set; }
+        public string AdditionalInfo { get; set; } = string.Empty;
 
         public Order()
         {
@@ -30,7 +30,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
         public Order(JObject j)
         {
             FromJSON(j);
-            ++LastID;
+            ++LastID; //специально после десериализации увеличиваем ID, чтобы перехватывать исключения до увеличения ID
         }
 
         public override string ToString()

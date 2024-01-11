@@ -5,17 +5,14 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class SSD : DataStorage
     {
-        public FlashMemoryType TypeOfFlashMemory { get; set; }
+        public FlashMemoryType TypeOfFlashMemory { get; set; } = FlashMemoryType.NAND3D;
 
-        public SSD(DataTransferInterface transferInterface) : base(transferInterface)
-        {
-
-        }
+        public SSD(DataTransferInterface transferInterface) : base(transferInterface) { }
 
         public SSD(int Capacity, DataTransferInterface TransferInterface, string Brand, float FormFactor, FlashMemoryType TypeOfFlashMemory)
             : base(Capacity, TransferInterface, Brand, FormFactor)
         {
-            SetArguments(TypeOfFlashMemory);
+            this.TypeOfFlashMemory = TypeOfFlashMemory;
         }
 
         public SSD(JObject json) : base(json)
@@ -40,12 +37,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
         public override void FromJSON(JObject json)
         {
             base.FromJSON(json);
-            SetArguments(json.GetValue("typeOfFlashMemory").ToObject<FlashMemoryType>());
-        }
-
-        private void SetArguments(FlashMemoryType typeOfFlashMemory)
-        {
-            TypeOfFlashMemory = typeOfFlashMemory;
+            TypeOfFlashMemory = FlashMemoryTypeConverter.StringToFlashMemoryType(json.GetValue("typeOfFlashMemory").ToString());
         }
     }
 }

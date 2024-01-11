@@ -5,44 +5,49 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class CPU : ILaptopComponent
     {
-        public string ModelName
-        {
-            get => ModelName;
-            set => TryToSetArguments(value, Socket, Frequency, NumOfCores);
-        }
-        public string Socket
-        {
-            get => Socket;
-            set => TryToSetArguments(ModelName, value, Frequency, NumOfCores);
-        }
+        public string ModelName { get; set; } = string.Empty;
+        public string Socket { get; set; } = string.Empty;
+        private float _frequency;
         public float Frequency
         {
-            get => Frequency;
-            set => TryToSetArguments(ModelName, Socket, value, NumOfCores);
+            get => _frequency;
+            set
+            {
+                if (value >= 0 && value < MaxFreq)
+                    _frequency = value;
+                else
+                    throw new ArgumentException("Некорректная частота CPU!");
+            }
         }
+        private int _numOfCores;
         public int NumOfCores
         {
-            get => NumOfCores;
-            set => TryToSetArguments(ModelName, Socket, Frequency, value);
+            get => _numOfCores;
+            set
+            { 
+                if (value >= 0)
+                    _numOfCores = value;
+                else
+                    throw new ArgumentException("Некорректное количество ядер CPU!");
+            }
         }
 
         private const float MaxFreq = 9.0f;
         private const float TryFreq = 0.2f; 
 
-        public CPU()
-        {
-            ModelName = string.Empty;
-            Socket = string.Empty;
-        }
+        public CPU() { }
 
-        public CPU(string ModelName) : this()
+        public CPU(string ModelName)
         {
             this.ModelName = ModelName;
         }
 
         public CPU(string ModelName, string Socket, float Frequency, int NumOfCores)
         {
-            TryToSetArguments(ModelName, Socket, Frequency, NumOfCores);
+            this.ModelName = ModelName;
+            this.Socket = Socket;
+            this.Frequency = Frequency;
+            this.NumOfCores = NumOfCores;
         }
 
         public CPU(JObject json)
@@ -71,27 +76,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public void FromJSON(JObject cpu)
         {
-            TryToSetArguments(cpu.GetValue("modelName").ToString(), cpu.GetValue("socket").ToString(), cpu.GetValue("frequency").ToObject<float>(), cpu.GetValue("numOfCores").ToObject<int>());
-        }
-
-        private bool CheckArguments(string ModelName, string Socket, float Frequency, int NumOfCores)
-        {
-            return Frequency >= 0 && Frequency < MaxFreq && NumOfCores >= 0;
-        }
-
-        private void TryToSetArguments(string ModelName, string Socket, float Frequency, int NumOfCores)
-        {
-            if (CheckArguments(ModelName, Socket, Frequency, NumOfCores))
-            {
-                this.ModelName = ModelName;
-                this.Socket = Socket;
-                this.Frequency = Frequency;
-                this.NumOfCores = NumOfCores;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный формат данных!");
-            }
+            ModelName = cpu.GetValue("modelName").ToString();
+            Socket = cpu.GetValue("socket").ToString();
+            Frequency = cpu.GetValue("frequency").ToObject<float>();
+            NumOfCores = cpu.GetValue("numOfCores").ToObject<int>();
         }
 
         public static CPU operator +(CPU cpu, float addable)

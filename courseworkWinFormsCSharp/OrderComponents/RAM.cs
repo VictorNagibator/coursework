@@ -6,30 +6,37 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class RAM : ILaptopComponent
     {
-        public string ModelName
-        {
-            get => ModelName;
-            set => TryToSetArguments(value, Type, Frequency, Capacity);
-        }
-        public RAMType Type
-        {
-            get => Type;
-            set => TryToSetArguments(ModelName, value, Frequency, Capacity);
-        }
+        public string ModelName { get; set; } = string.Empty;
+        public RAMType Type { get; set; } = RAMType.DDR4;
+        private float _frequency;
         public float Frequency
         {
-            get => Frequency;
-            set => TryToSetArguments(ModelName, Type, value, Capacity);
+            get => _frequency;
+            set
+            {
+                if (value >= 0 && value <= DDRFreqMax[RAMTypeConverter.RAMTypeToInt(Type)])
+                    _frequency = value;
+                else
+                    throw new ArgumentException("Некорректная частота RAM!");
+            }
         }
+        private int _capacity;
         public int Capacity
         {
-            get => Capacity;
-            set => TryToSetArguments(ModelName, Type, Frequency, value);
+            get => _capacity;
+            set
+            {
+                if (value >= 0)
+                    _capacity = value;
+                else
+                    throw new ArgumentException("Некорректный объем RAM!");
+            }
         }
 
         private static readonly List<int> DDRFreqMax = new List<int> { 400, 1066, 2400, 3333, 6400 };
         private const float TryFreq = 50;
 
+        public RAM() { }
         public RAM(string ModelName)
         {
             this.ModelName = ModelName;
@@ -42,7 +49,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public RAM(string ModelName, RAMType Type, float Frequency, int Capacity)
         {
-            TryToSetArguments(ModelName, Type, Frequency, Capacity);
+            this.ModelName = ModelName;
+            this.Type = Type;
+            this.Frequency = Frequency;
+            this.Capacity = Capacity;
         }
 
         public RAM(JObject json)
@@ -72,27 +82,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public void FromJSON(JObject json)
         {
-            TryToSetArguments(json.GetValue("modelName").ToString(), RAMTypeConverter.StringToRAMType(json.GetValue("type").ToString()), json.GetValue("frequency").ToObject<float>(), json.GetValue("capacity").ToObject<int>());
-        }
-
-        private bool CheckArguments(string ModelName, RAMType Type, float Frequency, int Capacity)
-        {
-            return Frequency >= 0 && Frequency <= DDRFreqMax[RAMTypeConverter.RAMTypeToInt(Type)] && Capacity >= 0;
-        }
-
-        private void TryToSetArguments(string ModelName, RAMType Rype, float Frequency, int Capacity)
-        {
-            if (CheckArguments(ModelName, Type, Frequency, Capacity))
-            {
-                this.ModelName = ModelName;
-                this.Type = Type;
-                this.Frequency = Frequency;
-                this.Capacity = Capacity;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный формат данных!");
-            }
+            ModelName = json.GetValue("modelName").ToString();
+            Type = RAMTypeConverter.StringToRAMType(json.GetValue("type").ToString());
+            Frequency = json.GetValue("frequency").ToObject<float>();
+            Capacity = json.GetValue("capacity").ToObject<int>();
         }
 
         public static RAM operator +(RAM ram, float addable)

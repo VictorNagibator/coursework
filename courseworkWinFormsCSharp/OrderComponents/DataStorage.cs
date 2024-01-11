@@ -5,26 +5,35 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public abstract class DataStorage : ILaptopComponent
     {
+        private int _capacity;
         public int Capacity
         {
-            get => Capacity;
-            set => TryToSetArguments(value, TransferInterface, Brand, FormFactor);
+            get => _capacity;
+            set
+            {
+                if (value >= 0)
+                    _capacity = value;
+                else
+                    throw new ArgumentException("Некорректный объем памяти!");
+            }
         }
-        public DataTransferInterface TransferInterface
-        {
-            get => TransferInterface;
-            set => TryToSetArguments(Capacity, value, Brand, FormFactor);
-        }
-        public string Brand
-        {
-            get => Brand;
-            set => TryToSetArguments(Capacity, TransferInterface, value, FormFactor);
-        }
+        public DataTransferInterface TransferInterface { get; set; } = DataTransferInterface.SATA;
+        public string Brand { get; set; } = string.Empty;
+
+        private float _formFactor;
         public float FormFactor
         {
-            get => FormFactor;
-            set => TryToSetArguments(Capacity, TransferInterface, Brand, value);
+            get => _formFactor;
+            set
+            {
+                if (value >= 0)
+                    _formFactor = value;
+                else
+                    throw new ArgumentException("Некорректный форм-фактор!");
+            }
         }
+
+        public DataStorage() { }
 
         public DataStorage(DataTransferInterface TransferInterface)
         {
@@ -33,7 +42,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public DataStorage(int Capacity, DataTransferInterface TransferInterface, string Brand, float FormFactor)
         {
-            TryToSetArguments(Capacity, TransferInterface, Brand, FormFactor);
+            this.Capacity = Capacity;
+            this.TransferInterface = TransferInterface;
+            this.Brand = Brand;
+            this.FormFactor = FormFactor;
         }
 
         public DataStorage(JObject json)
@@ -64,27 +76,10 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public virtual void FromJSON(JObject data)
         {
-            TryToSetArguments(data.GetValue("capacity").ToObject<int>(), DataTransferInterfaceConverter.StringToDataTransferInterface(data.GetValue("transferInterface").ToString()), data.GetValue("brand").ToString(), data.GetValue("formFactor").ToObject<float>());
-        }
-
-        private bool CheckArguments(int Capacity, DataTransferInterface TransferInterface, string Brand, float FormFactor)
-        {
-            return Capacity >= 0 && FormFactor >= 0;
-        }
-
-        private void TryToSetArguments(int Capacity, DataTransferInterface TransferInterface, string Brand, float FormFactor)
-        {
-            if (CheckArguments(Capacity, TransferInterface, Brand, FormFactor))
-            {
-                this.Capacity = Capacity;
-                this.TransferInterface = TransferInterface;
-                this.Brand = Brand;
-                this.FormFactor = FormFactor;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный формат данных!");
-            }
+            Capacity = data.GetValue("capacity").ToObject<int>();
+            TransferInterface = DataTransferInterfaceConverter.StringToDataTransferInterface(data.GetValue("transferInterface").ToString());
+            Brand = data.GetValue("brand").ToString();
+            FormFactor = data.GetValue("formFactor").ToObject<float>();
         }
     }
 }

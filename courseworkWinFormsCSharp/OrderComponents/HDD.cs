@@ -5,18 +5,25 @@ namespace courseworkWinFormsCSharp.OrderComponents
 {
     public class HDD : DataStorage
     {
+        private int _spindleSpeed;
         public int SpindleSpeed
         {
-            get => SpindleSpeed;
-            set => TryToSetArguments(value);
+            get => _spindleSpeed;
+            set
+            {
+                if (value >= 0)
+                    _spindleSpeed = value;
+                else
+                    throw new ArgumentException("Некорректная скорость шпинделя!");
+            }
         }
 
+        public HDD() : base() { }
         public HDD(DataTransferInterface TransferInterface) : base(TransferInterface) { }
-
         public HDD(int Capacity, DataTransferInterface TransferInterface, string Brand, float FormFactor, int SpindleSpeed)
             : base(Capacity, TransferInterface, Brand, FormFactor)
         {
-            TryToSetArguments(SpindleSpeed);
+            this.SpindleSpeed = SpindleSpeed;
         }
 
         public HDD(JObject json) : base(json)
@@ -41,24 +48,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
         public override void FromJSON(JObject hdd)
         {
             base.FromJSON(hdd);
-            TryToSetArguments(hdd.GetValue("spindleSpeed").ToObject<int>());
-        }
-
-        private bool CheckArguments(int SpindleSpeed)
-        {
-            return SpindleSpeed >= 0;
-        }
-
-        private void TryToSetArguments(int SpindleSpeed)
-        {
-            if (CheckArguments(SpindleSpeed))
-            {
-                this.SpindleSpeed = SpindleSpeed;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный формат данных!");
-            }
+            SpindleSpeed = hdd.GetValue("spindleSpeed").ToObject<int>();
         }
     }
 }

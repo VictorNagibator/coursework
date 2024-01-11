@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace courseworkWinFormsCSharp.OrderComponents
 {
@@ -12,13 +8,19 @@ namespace courseworkWinFormsCSharp.OrderComponents
     {
         public static StatusType StringToStatusType(string type)
         {
-            if (Enum.TryParse<StatusType>(type, out var result))
+            switch(type)
             {
-                return result;
-            }
-            else
-            {
-                throw new ArgumentException("Некорректный статус заказа!");
+                case "ONHOLD":
+                case "В ожидании":
+                    return StatusType.ONHOLD;
+                case "INPROCESS":
+                case "В ремонте":
+                    return StatusType.INPROCESS;
+                case "FINISHED":
+                case "Завершен":
+                    return StatusType.FINISHED;
+                default:
+                    throw new Exception("Invalid status type");
             }
         }
     }
