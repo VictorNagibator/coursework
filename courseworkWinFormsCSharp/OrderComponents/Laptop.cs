@@ -97,6 +97,8 @@ namespace courseworkWinFormsCSharp.OrderComponents
 
         public void FromJSON(JObject json)
         {
+            Motherboard = new Motherboard(json.GetValue("motherboard").ToObject<JObject>());
+
             DataStorage dataStorage;
             if (json.GetValue("dataStorage").ToObject<JObject>().GetValue("componentName").ToString() == "HDD")
             {
@@ -111,7 +113,6 @@ namespace courseworkWinFormsCSharp.OrderComponents
             CPU = new CPU(json.GetValue("cpu").ToObject<JObject>());
             GPU = new GPU(json.GetValue("gpu").ToObject<JObject>());
             RAM = new RAM(json.GetValue("ram").ToObject<JObject>());
-            Motherboard = new Motherboard(json.GetValue("motherboard").ToObject<JObject>());
             Display = new Display(json.GetValue("display").ToObject<JObject>());
             DataStorage = dataStorage;
         }

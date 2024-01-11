@@ -9,13 +9,13 @@ static std::string statusTypeToString(StatusType type) {
 	switch (type)
 	{
 	case StatusType::ONHOLD:
-		result = "On hold";
+		result = "ONHOLD";
 		break;
 	case StatusType::INPROCCESS:
-		result = "In proccess";
+		result = "INPROCCESS";
 		break;
 	case StatusType::FINISHED:
-		result = "Finished";
+		result = "FINISHED";
 		break;
 	default:
 		break;
@@ -25,13 +25,13 @@ static std::string statusTypeToString(StatusType type) {
 
 static StatusType stringToStatusType(std::string type) {
 	StatusType result;
-	if (type == "On hold") {
+	if (type == "ONHOLD") {
 		result = StatusType::ONHOLD;
 	}
-	else if (type == "In proccess") {
+	else if (type == "INPROCCESS") {
 		result = StatusType::INPROCCESS;
 	}
-	else if (type == "Finished") {
+	else if (type == "FINISHED") {
 		result = StatusType::FINISHED;
 	}
 	else {

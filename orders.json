@@ -1,1 +1,45 @@
-null
+
+ {
+    "numOfOrder": 1,
+    "laptop": {
+      "modelName": "",
+      "cpu": {
+        "modelName": "",
+        "socket": "",
+        "frequency": 0.0,
+        "numOfCores": 0
+      },
+      "gpu": {
+        "modelName": "",
+        "frequency": 0.0,
+        "vram": 0
+      },
+      "ram": {
+        "modelName": "",
+        "type": "DDR",
+        "frequency": 0.0,
+        "capacity": 0
+      },
+      "motherboard": {
+        "modelName": "",
+        "socket": "",
+        "chipset": "",
+        "supportedRAMType": "DDR"
+      },
+      "display": {
+        "width": 0,
+        "height": 0,
+        "refreshRate": 0
+      },
+      "dataStorage": {
+        "componentName": "HDD",
+        "capacity": 0,
+        "transferInterface": "PATA",
+        "brand": "",
+        "formFactor": 0.0,
+        "spindleSpeed": 0
+      }
+    },
+    "status": "ONHOLD",
+    "additionalInfo": ""
+  }

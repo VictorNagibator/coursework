@@ -37,7 +37,7 @@ void OrdersData::loadOrders(const std::string& filePath) {
 		Order order = Order(j);
 		data.push_back(order);
 	}
-	catch (const std::exception&)
+	catch (const std::exception& e)
 	{
 		try
 		{

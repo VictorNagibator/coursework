@@ -9,11 +9,16 @@ namespace courseworkWinFormsCSharp.Forms
         public TableForm()
         {
             InitializeComponent();
+
             if (!string.IsNullOrEmpty(FileInfo.Path))
             {
+                OrdersData.LoadOrders(FileInfo.Path);
+
                 LoadDataInTable();
+                FileInfoLabel.Text = "Рабочий файл: " + FileInfo.Path;
                 работаСДаннымиToolStripMenuItem.Enabled = true;
             }
+            else FileInfoLabel.Text = "Рабочий файл: не выбран";
         }
 
         private void выйтиВГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,8 +33,10 @@ namespace courseworkWinFormsCSharp.Forms
 
         private void выбратьФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "JSON файлы(*.json)|*.json";
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "JSON файлы(*.json)|*.json"
+            };
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filename = openFileDialog.FileName;
@@ -38,6 +45,8 @@ namespace courseworkWinFormsCSharp.Forms
                     FileInfo.Path = filename;
                     работаСДаннымиToolStripMenuItem.Enabled = true;
                     LoadDataInTable();
+
+                    FileInfoLabel.Text = "Рабочий файл: " + FileInfo.Path;
                 }
                 catch (Exception ex)
                 {
@@ -51,7 +60,7 @@ namespace courseworkWinFormsCSharp.Forms
             dataGridView.Rows.Clear();
             foreach (var order in OrdersData.Data)
             {
-                dataGridView.Rows.Add(order.ID, order.Laptop, order.Status);
+                dataGridView.Rows.Add(order.ID, order.Laptop.ModelName, order.Status);
             }
         }
 

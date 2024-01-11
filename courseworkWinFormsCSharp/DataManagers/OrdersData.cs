@@ -89,6 +89,8 @@ namespace courseworkWinFormsCSharp.DataManagers
             Data.Add(order);
             Logger.Log(order.ID, OrderOperation.Adding);
             VerifyIDs();
+
+            SaveOrders(FileInfo.Path);
         }
 
         public static void RemoveOrder(int idOfOrder)
@@ -99,6 +101,8 @@ namespace courseworkWinFormsCSharp.DataManagers
             {
                 Data.Remove(removable);
                 Logger.Log(idOfOrder, OrderOperation.Removing);
+
+                SaveOrders(FileInfo.Path);
             }
             else
             {
@@ -114,6 +118,8 @@ namespace courseworkWinFormsCSharp.DataManagers
             {
                 Data[Data.IndexOf(editable)] = newOrder;
                 Logger.Log(newOrder.ID, OrderOperation.Editing);
+
+                SaveOrders(FileInfo.Path);
             }
             else
             {
@@ -127,14 +133,10 @@ namespace courseworkWinFormsCSharp.DataManagers
             var j = Newtonsoft.Json.JsonConvert.DeserializeObject<Newtonsoft.Json.Linq.JObject>(jsonText);
 
             if (j[FileInfo.Path] == null)
-            {
                 j[FileInfo.Path] = 0;
-            }
             int maxID = j[FileInfo.Path].ToObject<int>();
             if (maxID < Order.LastID)
-            {
                 j[FileInfo.Path] = Order.LastID;
-            }
             else
             {
                 while (Order.LastID < maxID)

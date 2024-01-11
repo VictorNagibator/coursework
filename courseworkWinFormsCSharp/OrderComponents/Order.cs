@@ -7,7 +7,7 @@ namespace courseworkWinFormsCSharp.OrderComponents
         public static int LastID { get; private set; } = 0;
 
         public int ID { get; private set; }
-        public Laptop Laptop { get; set; }
+        public Laptop Laptop { get; set; } = new Laptop();
         public StatusType Status { get; set; }
         public string AdditionalInfo { get; set; } = string.Empty;
 
