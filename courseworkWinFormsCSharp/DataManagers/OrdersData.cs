@@ -148,9 +148,13 @@ namespace courseworkWinFormsCSharp.DataManagers
             File.WriteAllText("..\\properties.json", Newtonsoft.Json.JsonConvert.SerializeObject(j, Newtonsoft.Json.Formatting.Indented));
         }
 
-        public static bool IsDataEmpty()
+        public static List<int> GetPossibleIDs()
         {
-            return Data.Count == 0;
+            List<int> possibleIDs = new List<int>();
+            foreach (var order in Data)
+                possibleIDs.Add(order.ID);
+
+            return possibleIDs;
         }
     }
 }

@@ -79,21 +79,22 @@
             // добавитьЗаписьToolStripMenuItem
             // 
             this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
-            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
             this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗаписьToolStripMenuItem_Click);
             // 
             // изменитьЗаписьToolStripMenuItem
             // 
             this.изменитьЗаписьToolStripMenuItem.Name = "изменитьЗаписьToolStripMenuItem";
-            this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьЗаписьToolStripMenuItem.Text = "Изменить запись";
             // 
             // удалитьЗаписьToolStripMenuItem
             // 
             this.удалитьЗаписьToolStripMenuItem.Name = "удалитьЗаписьToolStripMenuItem";
-            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
+            this.удалитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьЗаписьToolStripMenuItem_Click);
             // 
             // игратьToolStripMenuItem
             // 
@@ -111,6 +112,8 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDColumn,
             this.LaptopColumn,

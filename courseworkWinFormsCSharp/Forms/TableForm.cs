@@ -17,6 +17,12 @@ namespace courseworkWinFormsCSharp.Forms
                 LoadDataInTable();
                 FileInfoLabel.Text = "Рабочий файл: " + FileInfo.Path;
                 работаСДаннымиToolStripMenuItem.Enabled = true;
+
+                if (OrdersData.Data.Count == 0)
+                {
+                    изменитьЗаписьToolStripMenuItem.Enabled = false;
+                    удалитьЗаписьToolStripMenuItem.Enabled = false;
+                }
             }
             else FileInfoLabel.Text = "Рабочий файл: не выбран";
         }
@@ -69,6 +75,25 @@ namespace courseworkWinFormsCSharp.Forms
             AddDataForm form = new AddDataForm();
             form.ShowDialog();
             LoadDataInTable();
+
+            if (OrdersData.Data.Count != 0)
+            {
+                изменитьЗаписьToolStripMenuItem.Enabled = true;
+                удалитьЗаписьToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void удалитьЗаписьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteDataForm form = new DeleteDataForm();
+            form.ShowDialog();
+            LoadDataInTable();
+
+            if (OrdersData.Data.Count == 0)
+            {
+                изменитьЗаписьToolStripMenuItem.Enabled = false;
+                удалитьЗаписьToolStripMenuItem.Enabled = false;
+            }
         }
     }
 }
