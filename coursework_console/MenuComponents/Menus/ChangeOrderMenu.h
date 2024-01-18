@@ -7,6 +7,7 @@ class ChangeOrderMenu : public Menu
 public:
 	ChangeOrderMenu(const std::string& title);
 	ChangeOrderMenu(const std::string& title, int idOfOrder);
+	~ChangeOrderMenu() = default;
 
 	void show() override;
 

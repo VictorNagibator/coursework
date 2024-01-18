@@ -13,7 +13,7 @@ namespace courseworkWinFormsCSharp.DataManagers
                 using (StreamWriter file = new StreamWriter(filePath, true))
                 {
                     DateTime currentTime = DateTime.Now;
-                    file.WriteLine($"Файл {FileInfo.Path}; Заказ {idOfOrder} был {operation}; {currentTime}");
+                    file.WriteLine($"Файл {FileInfo.Path}; Заказ {idOfOrder} был {OrderOperationConverter.ToString(operation)}; {currentTime}");
                 }
             }
             catch (Exception ex)

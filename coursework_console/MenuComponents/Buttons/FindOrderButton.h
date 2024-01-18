@@ -5,6 +5,7 @@ class FindOrderButton : public Button
 {
 public:
 	FindOrderButton(const std::string& title);
+	~FindOrderButton() = default;
 
 	void execute() override;
 };

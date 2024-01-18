@@ -13,7 +13,7 @@ namespace courseworkWinFormsCSharp.DataManagers
         Removing
     }
 
-    internal class OrderOperationHelper
+    internal class OrderOperationConverter
     {
         internal static string ToString(OrderOperation operation)
         {
