@@ -44,7 +44,7 @@ namespace courseworkWinFormsCSharp.Forms
 
         private void DeleteDataButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите удалить запись?", "Удалить запись", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Вы уверены, что хотите удалить запись?", "Удалить запись", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 OrdersData.RemoveOrder((int)PossibleIDsListBox.SelectedItem);
                 Close();
