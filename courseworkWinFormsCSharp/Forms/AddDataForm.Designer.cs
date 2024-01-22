@@ -1116,6 +1116,7 @@
             // 
             // AddDataButton
             // 
+            this.AddDataButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddDataButton.Location = new System.Drawing.Point(696, 566);

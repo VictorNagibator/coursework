@@ -30,8 +30,9 @@ namespace courseworkWinFormsCSharp
         private void WorkWithDataButton_Click(object sender, EventArgs e)
         {
             TableForm form = new TableForm();
-            //Hide();
+            Hide();
             form.ShowDialog();
+            Show();
         }
     }
 }

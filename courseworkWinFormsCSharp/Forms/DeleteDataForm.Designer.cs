@@ -200,7 +200,9 @@
             // 
             // DeleteDataButton
             // 
+            this.DeleteDataButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteDataButton.Enabled = false;
+            this.DeleteDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.DeleteDataButton.Location = new System.Drawing.Point(431, 340);
             this.DeleteDataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -213,6 +215,8 @@
             // 
             // CloseButton
             // 
+            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.CloseButton.Location = new System.Drawing.Point(607, 340);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
