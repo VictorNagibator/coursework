@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDataForm));
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.IDLabel = new System.Windows.Forms.Label();
             this.AdditionalInfoLabel = new System.Windows.Forms.Label();
@@ -1115,6 +1116,7 @@
             // 
             // AddDataButton
             // 
+            this.AddDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddDataButton.Location = new System.Drawing.Point(696, 566);
             this.AddDataButton.Margin = new System.Windows.Forms.Padding(4);
@@ -1139,9 +1141,13 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LaptopInfoLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddDataForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавить запись";
             ((System.ComponentModel.ISupportInitialize)(this.CPUFrequencyNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPUCoresNumericUpDown)).EndInit();
