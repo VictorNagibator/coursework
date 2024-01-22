@@ -33,11 +33,7 @@ namespace courseworkWinFormsCSharp.Forms
 
         }
 
-        private void игратьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(this, "К сожалению, Алексей еще не реализовал игру! Также прошу напомнить ему, что он должен забрать кроссовки со спортманежа!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
+        
         private void выбратьФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog

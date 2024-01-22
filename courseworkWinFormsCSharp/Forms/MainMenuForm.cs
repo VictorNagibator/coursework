@@ -23,7 +23,7 @@ namespace courseworkWinFormsCSharp
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, "Какое слово начинается на три Г и заканчивается на три Я?", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show(this, "Какое слово начинается на три Г и заканчивается на три Я?", "Загадка", MessageBoxButtons.OK, MessageBoxIcon.Question);
             MessageBox.Show(this, "Тригонометрия!", "Ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

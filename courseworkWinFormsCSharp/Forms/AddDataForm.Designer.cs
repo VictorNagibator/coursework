@@ -136,7 +136,7 @@
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.ReadOnly = true;
             this.IDTextBox.Size = new System.Drawing.Size(140, 30);
-            this.IDTextBox.TabIndex = 2;
+            this.IDTextBox.TabIndex = 1;
             // 
             // IDLabel
             // 
@@ -170,7 +170,7 @@
             this.AdditionalInfoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AdditionalInfoTextBox.Name = "AdditionalInfoTextBox";
             this.AdditionalInfoTextBox.Size = new System.Drawing.Size(140, 30);
-            this.AdditionalInfoTextBox.TabIndex = 4;
+            this.AdditionalInfoTextBox.TabIndex = 3;
             // 
             // StatusLabel
             // 
@@ -198,7 +198,7 @@
             this.StatusListBox.Margin = new System.Windows.Forms.Padding(4);
             this.StatusListBox.Name = "StatusListBox";
             this.StatusListBox.Size = new System.Drawing.Size(140, 29);
-            this.StatusListBox.TabIndex = 7;
+            this.StatusListBox.TabIndex = 2;
             // 
             // OrderInfoLabel
             // 
@@ -256,7 +256,7 @@
             this.CPUModelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CPUModelTextBox.Name = "CPUModelTextBox";
             this.CPUModelTextBox.Size = new System.Drawing.Size(133, 30);
-            this.CPUModelTextBox.TabIndex = 12;
+            this.CPUModelTextBox.TabIndex = 11;
             // 
             // CPUSocketTextBox
             // 
@@ -266,7 +266,7 @@
             this.CPUSocketTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CPUSocketTextBox.Name = "CPUSocketTextBox";
             this.CPUSocketTextBox.Size = new System.Drawing.Size(133, 30);
-            this.CPUSocketTextBox.TabIndex = 14;
+            this.CPUSocketTextBox.TabIndex = 12;
             // 
             // SocketCPULabel
             // 
@@ -299,7 +299,7 @@
             0});
             this.CPUFrequencyNumericUpDown.Name = "CPUFrequencyNumericUpDown";
             this.CPUFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.CPUFrequencyNumericUpDown.TabIndex = 15;
+            this.CPUFrequencyNumericUpDown.TabIndex = 13;
             // 
             // FrequencyLabel
             // 
@@ -333,7 +333,7 @@
             this.CPUCoresNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.CPUCoresNumericUpDown.Name = "CPUCoresNumericUpDown";
             this.CPUCoresNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.CPUCoresNumericUpDown.TabIndex = 17;
+            this.CPUCoresNumericUpDown.TabIndex = 14;
             // 
             // GPUVRAMLabel
             // 
@@ -355,7 +355,7 @@
             this.GPUVRAMNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.GPUVRAMNumericUpDown.Name = "GPUVRAMNumericUpDown";
             this.GPUVRAMNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.GPUVRAMNumericUpDown.TabIndex = 26;
+            this.GPUVRAMNumericUpDown.TabIndex = 7;
             // 
             // GPUFrequencyLabel
             // 
@@ -382,7 +382,7 @@
             0});
             this.GPUFrequencyNumericUpDown.Name = "GPUFrequencyNumericUpDown";
             this.GPUFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.GPUFrequencyNumericUpDown.TabIndex = 24;
+            this.GPUFrequencyNumericUpDown.TabIndex = 6;
             // 
             // GPUModelTextBox
             // 
@@ -392,7 +392,7 @@
             this.GPUModelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.GPUModelTextBox.Name = "GPUModelTextBox";
             this.GPUModelTextBox.Size = new System.Drawing.Size(133, 30);
-            this.GPUModelTextBox.TabIndex = 21;
+            this.GPUModelTextBox.TabIndex = 5;
             // 
             // GPUModelLabel
             // 
@@ -426,7 +426,7 @@
             this.RAMModelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.RAMModelTextBox.Name = "RAMModelTextBox";
             this.RAMModelTextBox.Size = new System.Drawing.Size(133, 30);
-            this.RAMModelTextBox.TabIndex = 30;
+            this.RAMModelTextBox.TabIndex = 15;
             // 
             // RAMModelLabel
             // 
@@ -472,7 +472,7 @@
             this.RAMCapacityNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.RAMCapacityNumericUpDown.Name = "RAMCapacityNumericUpDown";
             this.RAMCapacityNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.RAMCapacityNumericUpDown.TabIndex = 33;
+            this.RAMCapacityNumericUpDown.TabIndex = 18;
             // 
             // RAMFrequencyLabel
             // 
@@ -499,7 +499,7 @@
             0});
             this.RAMFrequencyNumericUpDown.Name = "RAMFrequencyNumericUpDown";
             this.RAMFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.RAMFrequencyNumericUpDown.TabIndex = 31;
+            this.RAMFrequencyNumericUpDown.TabIndex = 17;
             // 
             // RAMTypeLabel
             // 
@@ -529,7 +529,7 @@
             this.RAMTypeListBox.Margin = new System.Windows.Forms.Padding(4);
             this.RAMTypeListBox.Name = "RAMTypeListBox";
             this.RAMTypeListBox.Size = new System.Drawing.Size(133, 29);
-            this.RAMTypeListBox.TabIndex = 36;
+            this.RAMTypeListBox.TabIndex = 16;
             // 
             // DisplayHeightLabel
             // 
@@ -556,7 +556,7 @@
             0});
             this.DisplayHeightNumericUpDown.Name = "DisplayHeightNumericUpDown";
             this.DisplayHeightNumericUpDown.Size = new System.Drawing.Size(128, 30);
-            this.DisplayHeightNumericUpDown.TabIndex = 51;
+            this.DisplayHeightNumericUpDown.TabIndex = 9;
             // 
             // DisplayInfoLabel
             // 
@@ -595,7 +595,7 @@
             0});
             this.DisplayFrequencyNumericUpDown.Name = "DisplayFrequencyNumericUpDown";
             this.DisplayFrequencyNumericUpDown.Size = new System.Drawing.Size(128, 30);
-            this.DisplayFrequencyNumericUpDown.TabIndex = 53;
+            this.DisplayFrequencyNumericUpDown.TabIndex = 10;
             // 
             // DisplayWidthLabel
             // 
@@ -622,7 +622,7 @@
             0});
             this.DisplayWidthNumericUpDown.Name = "DisplayWidthNumericUpDown";
             this.DisplayWidthNumericUpDown.Size = new System.Drawing.Size(128, 30);
-            this.DisplayWidthNumericUpDown.TabIndex = 55;
+            this.DisplayWidthNumericUpDown.TabIndex = 8;
             // 
             // DataStorageInfoLabel
             // 
@@ -659,7 +659,7 @@
             this.ChooseDataStorageListBox.Margin = new System.Windows.Forms.Padding(4);
             this.ChooseDataStorageListBox.Name = "ChooseDataStorageListBox";
             this.ChooseDataStorageListBox.Size = new System.Drawing.Size(133, 29);
-            this.ChooseDataStorageListBox.TabIndex = 59;
+            this.ChooseDataStorageListBox.TabIndex = 24;
             this.ChooseDataStorageListBox.SelectedIndexChanged += new System.EventHandler(this.ChooseDataStorageListBox_SelectedIndexChanged);
             // 
             // DataStorageCapacityLabel
@@ -685,7 +685,7 @@
             0});
             this.DataStorageCapacityNumericUpDown.Name = "DataStorageCapacityNumericUpDown";
             this.DataStorageCapacityNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.DataStorageCapacityNumericUpDown.TabIndex = 60;
+            this.DataStorageCapacityNumericUpDown.TabIndex = 25;
             // 
             // DataStorageInterfaceTypeListBox
             // 
@@ -701,7 +701,7 @@
             this.DataStorageInterfaceTypeListBox.Margin = new System.Windows.Forms.Padding(4);
             this.DataStorageInterfaceTypeListBox.Name = "DataStorageInterfaceTypeListBox";
             this.DataStorageInterfaceTypeListBox.Size = new System.Drawing.Size(133, 29);
-            this.DataStorageInterfaceTypeListBox.TabIndex = 63;
+            this.DataStorageInterfaceTypeListBox.TabIndex = 26;
             // 
             // DataStorageInterfaceTypeLabel
             // 
@@ -722,7 +722,7 @@
             this.DataStorageBrandTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DataStorageBrandTextBox.Name = "DataStorageBrandTextBox";
             this.DataStorageBrandTextBox.Size = new System.Drawing.Size(133, 30);
-            this.DataStorageBrandTextBox.TabIndex = 65;
+            this.DataStorageBrandTextBox.TabIndex = 27;
             // 
             // DataStorageBrandLabel
             // 
@@ -767,7 +767,7 @@
             0});
             this.DataStorageFormFactorNumericUpDown.Name = "DataStorageFormFactorNumericUpDown";
             this.DataStorageFormFactorNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.DataStorageFormFactorNumericUpDown.TabIndex = 66;
+            this.DataStorageFormFactorNumericUpDown.TabIndex = 28;
             // 
             // DataStorageSpindleSpeedLabel
             // 
@@ -794,7 +794,7 @@
             0});
             this.DataStorageSpindleSpeedNumericUpDown.Name = "DataStorageSpindleSpeedNumericUpDown";
             this.DataStorageSpindleSpeedNumericUpDown.Size = new System.Drawing.Size(133, 30);
-            this.DataStorageSpindleSpeedNumericUpDown.TabIndex = 68;
+            this.DataStorageSpindleSpeedNumericUpDown.TabIndex = 30;
             // 
             // DataStorageFlashMemoryTypeListBox
             // 
@@ -812,7 +812,7 @@
             this.DataStorageFlashMemoryTypeListBox.Margin = new System.Windows.Forms.Padding(4);
             this.DataStorageFlashMemoryTypeListBox.Name = "DataStorageFlashMemoryTypeListBox";
             this.DataStorageFlashMemoryTypeListBox.Size = new System.Drawing.Size(133, 29);
-            this.DataStorageFlashMemoryTypeListBox.TabIndex = 70;
+            this.DataStorageFlashMemoryTypeListBox.TabIndex = 29;
             // 
             // DataStorageFlashMemoryTypeLabel
             // 
@@ -846,7 +846,7 @@
             this.LaptopModelTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.LaptopModelTextbox.Name = "LaptopModelTextbox";
             this.LaptopModelTextbox.Size = new System.Drawing.Size(140, 30);
-            this.LaptopModelTextbox.TabIndex = 73;
+            this.LaptopModelTextbox.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -954,7 +954,7 @@
             this.groupBox7.Location = new System.Drawing.Point(20, 424);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(664, 201);
-            this.groupBox7.TabIndex = 80;
+            this.groupBox7.TabIndex = 82;
             this.groupBox7.TabStop = false;
             // 
             // MotherboardModelTextBox
@@ -965,7 +965,7 @@
             this.MotherboardModelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MotherboardModelTextBox.Name = "MotherboardModelTextBox";
             this.MotherboardModelTextBox.Size = new System.Drawing.Size(125, 30);
-            this.MotherboardModelTextBox.TabIndex = 39;
+            this.MotherboardModelTextBox.TabIndex = 23;
             // 
             // MotherboardSocketTextBox
             // 
@@ -975,7 +975,7 @@
             this.MotherboardSocketTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MotherboardSocketTextBox.Name = "MotherboardSocketTextBox";
             this.MotherboardSocketTextBox.Size = new System.Drawing.Size(125, 30);
-            this.MotherboardSocketTextBox.TabIndex = 41;
+            this.MotherboardSocketTextBox.TabIndex = 21;
             // 
             // MotherboardChipsetTextBox
             // 
@@ -985,7 +985,7 @@
             this.MotherboardChipsetTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.MotherboardChipsetTextBox.Name = "MotherboardChipsetTextBox";
             this.MotherboardChipsetTextBox.Size = new System.Drawing.Size(125, 30);
-            this.MotherboardChipsetTextBox.TabIndex = 43;
+            this.MotherboardChipsetTextBox.TabIndex = 20;
             // 
             // MotherboardRAMTypeListBox
             // 
@@ -1003,7 +1003,7 @@
             this.MotherboardRAMTypeListBox.Margin = new System.Windows.Forms.Padding(4);
             this.MotherboardRAMTypeListBox.Name = "MotherboardRAMTypeListBox";
             this.MotherboardRAMTypeListBox.Size = new System.Drawing.Size(125, 29);
-            this.MotherboardRAMTypeListBox.TabIndex = 45;
+            this.MotherboardRAMTypeListBox.TabIndex = 19;
             // 
             // groupBox6
             // 
@@ -1122,7 +1122,7 @@
             this.AddDataButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddDataButton.Name = "AddDataButton";
             this.AddDataButton.Size = new System.Drawing.Size(323, 58);
-            this.AddDataButton.TabIndex = 1;
+            this.AddDataButton.TabIndex = 31;
             this.AddDataButton.Text = "Добавить";
             this.AddDataButton.UseVisualStyleBackColor = true;
             this.AddDataButton.Click += new System.EventHandler(this.AddDataButton_Click);
@@ -1148,7 +1148,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Добавить запись";
+            this.Text = "Добавление записи";
             ((System.ComponentModel.ISupportInitialize)(this.CPUFrequencyNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CPUCoresNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GPUVRAMNumericUpDown)).EndInit();

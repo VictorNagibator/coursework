@@ -35,7 +35,6 @@
             this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.игратьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиВГлавноеМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +51,6 @@
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выбратьФайлToolStripMenuItem,
             this.работаСДаннымиToolStripMenuItem,
-            this.игратьToolStripMenuItem,
             this.выйтиВГлавноеМенюToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
@@ -97,13 +95,6 @@
             this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
             this.удалитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьЗаписьToolStripMenuItem_Click);
-            // 
-            // игратьToolStripMenuItem
-            // 
-            this.игратьToolStripMenuItem.Name = "игратьToolStripMenuItem";
-            this.игратьToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.игратьToolStripMenuItem.Text = "Играть";
-            this.игратьToolStripMenuItem.Click += new System.EventHandler(this.игратьToolStripMenuItem_Click);
             // 
             // выйтиВГлавноеМенюToolStripMenuItem
             // 
@@ -192,7 +183,6 @@
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem выбратьФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem работаСДаннымиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem игратьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиВГлавноеМенюToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDColumn;
