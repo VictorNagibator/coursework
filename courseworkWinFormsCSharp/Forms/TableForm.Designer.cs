@@ -56,14 +56,14 @@
             this.выйтиВГлавноеМенюToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(1067, 30);
+            this.MenuStrip.Size = new System.Drawing.Size(1067, 28);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "MenuStrip";
             // 
             // выбратьФайлToolStripMenuItem
             // 
             this.выбратьФайлToolStripMenuItem.Name = "выбратьФайлToolStripMenuItem";
-            this.выбратьФайлToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.выбратьФайлToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.выбратьФайлToolStripMenuItem.Text = "Выбрать файл";
             this.выбратьФайлToolStripMenuItem.Click += new System.EventHandler(this.выбратьФайлToolStripMenuItem_Click);
             // 
@@ -75,7 +75,7 @@
             this.удалитьЗаписьToolStripMenuItem});
             this.работаСДаннымиToolStripMenuItem.Enabled = false;
             this.работаСДаннымиToolStripMenuItem.Name = "работаСДаннымиToolStripMenuItem";
-            this.работаСДаннымиToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.работаСДаннымиToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.работаСДаннымиToolStripMenuItem.Text = "Работа с данными";
             // 
             // добавитьЗаписьToolStripMenuItem
@@ -101,14 +101,14 @@
             // игратьToolStripMenuItem
             // 
             this.игратьToolStripMenuItem.Name = "игратьToolStripMenuItem";
-            this.игратьToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.игратьToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.игратьToolStripMenuItem.Text = "Играть";
             this.игратьToolStripMenuItem.Click += new System.EventHandler(this.игратьToolStripMenuItem_Click);
             // 
             // выйтиВГлавноеМенюToolStripMenuItem
             // 
             this.выйтиВГлавноеМенюToolStripMenuItem.Name = "выйтиВГлавноеМенюToolStripMenuItem";
-            this.выйтиВГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.выйтиВГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
             this.выйтиВГлавноеМенюToolStripMenuItem.Text = "Выйти в главное меню";
             this.выйтиВГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.выйтиВГлавноеМенюToolStripMenuItem_Click);
             // 
@@ -122,12 +122,12 @@
             this.LaptopColumn,
             this.StatusColumn});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 30);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1067, 524);
+            this.dataGridView.Size = new System.Drawing.Size(1067, 526);
             this.dataGridView.TabIndex = 1;
             // 
             // IDColumn
@@ -175,10 +175,8 @@
             this.Controls.Add(this.MenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TableForm";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа с данными";
             this.MenuStrip.ResumeLayout(false);

@@ -30,6 +30,7 @@ namespace courseworkWinFormsCSharp.Forms
         private void выйтиВГлавноеМенюToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+
         }
 
         private void игратьToolStripMenuItem_Click(object sender, EventArgs e)
