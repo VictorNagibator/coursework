@@ -2,7 +2,7 @@
 #include <iostream>
 #include <istream>
 
-enum class StatusType { ONHOLD, INPROCCESS, FINISHED };
+enum class StatusType { ONHOLD, INPROCESS, FINISHED };
 
 static std::string statusTypeToString(StatusType type) {
 	std::string result;
@@ -11,8 +11,8 @@ static std::string statusTypeToString(StatusType type) {
 	case StatusType::ONHOLD:
 		result = "ONHOLD";
 		break;
-	case StatusType::INPROCCESS:
-		result = "INPROCCESS";
+	case StatusType::INPROCESS:
+		result = "INPROCESS";
 		break;
 	case StatusType::FINISHED:
 		result = "FINISHED";
@@ -28,8 +28,8 @@ static StatusType stringToStatusType(std::string type) {
 	if (type == "ONHOLD") {
 		result = StatusType::ONHOLD;
 	}
-	else if (type == "INPROCCESS") {
-		result = StatusType::INPROCCESS;
+	else if (type == "INPROCESS") {
+		result = StatusType::INPROCESS;
 	}
 	else if (type == "FINISHED") {
 		result = StatusType::FINISHED;
@@ -49,7 +49,7 @@ static std::istream& operator >> (std::istream& in, StatusType& status) {
 		status = StatusType::ONHOLD;
 		break;
 	case 1:
-		status = StatusType::INPROCCESS;
+		status = StatusType::INPROCESS;
 		break;
 	case 2:
 		status = StatusType::FINISHED;
