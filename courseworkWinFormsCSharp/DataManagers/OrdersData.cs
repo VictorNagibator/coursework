@@ -33,6 +33,8 @@ namespace courseworkWinFormsCSharp.DataManagers
 
         public static void LoadOrders(string filePath)
         {
+            Data.RemoveAll(order => true);
+
             try
             {
                 string jsonText = File.ReadAllText(filePath);

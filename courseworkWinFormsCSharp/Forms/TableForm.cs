@@ -12,7 +12,7 @@ namespace courseworkWinFormsCSharp.Forms
 
             if (!string.IsNullOrEmpty(FileInfo.Path))
             {
-                if (OrdersData.Data.Count == 0) OrdersData.LoadOrders(FileInfo.Path);
+                OrdersData.LoadOrders(FileInfo.Path);
 
                 LoadDataInTable();
                 FileInfoLabel.Text = "Рабочий файл: " + FileInfo.Path;
