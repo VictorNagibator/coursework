@@ -1,1 +1,46 @@
-[]
+[
+    {
+        "additionalInfo": "Noisy client",
+        "laptop": {
+            "cpu": {
+                "frequency": 2.5,
+                "modelName": "i5",
+                "numOfCores": 6,
+                "socket": "lga"
+            },
+            "dataStorage": {
+                "brand": "kingston",
+                "capacity": 500,
+                "componentName": "SSD",
+                "formFactor": 2.5,
+                "transferInterface": "SATA",
+                "typeOfFlashMemory": "3D NAND"
+            },
+            "display": {
+                "height": 1080,
+                "refreshRate": 60,
+                "width": 1920
+            },
+            "gpu": {
+                "frequency": 2500.0,
+                "modelName": "gtx1660",
+                "vram": 8
+            },
+            "modelName": "msi",
+            "motherboard": {
+                "chipset": "ab350",
+                "modelName": "msi",
+                "socket": "lga",
+                "supportedRAMType": "DDR4"
+            },
+            "ram": {
+                "capacity": 16,
+                "frequency": 3200.0,
+                "modelName": "patriot",
+                "type": "DDR4"
+            }
+        },
+        "numOfOrder": 3,
+        "status": "ONHOLD"
+    }
+]
