@@ -8,6 +8,7 @@ class ChangeOrderButton : public Button
 {
 public:
 	ChangeOrderButton(const std::string& title, ChangeOrderMenu* menu, ChangableObject changableObject);
+	~ChangeOrderButton() = default;
 
 	void setPreviousMenu(ChangeOrderMenu* menu);
 	void setChangableObject(ChangableObject changableObject);

@@ -6,6 +6,7 @@ class Table
 {
 public:
 	Table() = default;
+	~Table() = default;
 
 	void showOrder(Order order) const;
 	void shortShow(std::vector<Order> data) const;

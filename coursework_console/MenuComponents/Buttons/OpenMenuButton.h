@@ -6,10 +6,11 @@ class OpenMenuButton : public Button
 {
 public:
 	OpenMenuButton(const std::string& text, Menu* menu);
+	~OpenMenuButton() = default;
 
 	void setMenu(Menu* menu);
 
 	void execute() override;
-protected:
+private:
 	Menu* menu;
 };
