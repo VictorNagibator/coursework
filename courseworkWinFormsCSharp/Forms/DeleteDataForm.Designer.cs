@@ -58,12 +58,11 @@
             this.IDColumn,
             this.LaptopColumn,
             this.StatusColumn});
-            this.OrderDataGridView.Location = new System.Drawing.Point(247, 105);
-            this.OrderDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrderDataGridView.Location = new System.Drawing.Point(185, 85);
             this.OrderDataGridView.Name = "OrderDataGridView";
             this.OrderDataGridView.ReadOnly = true;
             this.OrderDataGridView.RowHeadersWidth = 51;
-            this.OrderDataGridView.Size = new System.Drawing.Size(717, 55);
+            this.OrderDataGridView.Size = new System.Drawing.Size(538, 51);
             this.OrderDataGridView.TabIndex = 2;
             // 
             // IDColumn
@@ -101,12 +100,11 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.LaptopDataGridView.Location = new System.Drawing.Point(17, 217);
-            this.LaptopDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LaptopDataGridView.Location = new System.Drawing.Point(13, 176);
             this.LaptopDataGridView.Name = "LaptopDataGridView";
             this.LaptopDataGridView.ReadOnly = true;
             this.LaptopDataGridView.RowHeadersWidth = 51;
-            this.LaptopDataGridView.Size = new System.Drawing.Size(1155, 70);
+            this.LaptopDataGridView.Size = new System.Drawing.Size(866, 57);
             this.LaptopDataGridView.TabIndex = 3;
             // 
             // Column1
@@ -169,10 +167,9 @@
             // 
             this.IDLabel.AutoSize = true;
             this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.IDLabel.Location = new System.Drawing.Point(387, 11);
-            this.IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IDLabel.Location = new System.Drawing.Point(290, 9);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(258, 29);
+            this.IDLabel.Size = new System.Drawing.Size(202, 24);
             this.IDLabel.TabIndex = 5;
             this.IDLabel.Text = "ID удаляемой записи:";
             // 
@@ -180,10 +177,9 @@
             // 
             this.OrderInfoLabel.AutoSize = true;
             this.OrderInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.OrderInfoLabel.Location = new System.Drawing.Point(447, 71);
-            this.OrderInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OrderInfoLabel.Location = new System.Drawing.Point(335, 58);
             this.OrderInfoLabel.Name = "OrderInfoLabel";
-            this.OrderInfoLabel.Size = new System.Drawing.Size(269, 29);
+            this.OrderInfoLabel.Size = new System.Drawing.Size(206, 24);
             this.OrderInfoLabel.TabIndex = 6;
             this.OrderInfoLabel.Text = "Информация о заказе";
             // 
@@ -191,10 +187,9 @@
             // 
             this.LaptopInfoLabel.AutoSize = true;
             this.LaptopInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.LaptopInfoLabel.Location = new System.Drawing.Point(447, 183);
-            this.LaptopInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LaptopInfoLabel.Location = new System.Drawing.Point(335, 149);
             this.LaptopInfoLabel.Name = "LaptopInfoLabel";
-            this.LaptopInfoLabel.Size = new System.Drawing.Size(294, 29);
+            this.LaptopInfoLabel.Size = new System.Drawing.Size(227, 24);
             this.LaptopInfoLabel.TabIndex = 7;
             this.LaptopInfoLabel.Text = "Информация о ноутбуке";
             // 
@@ -204,10 +199,9 @@
             this.DeleteDataButton.Enabled = false;
             this.DeleteDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.DeleteDataButton.Location = new System.Drawing.Point(431, 340);
-            this.DeleteDataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteDataButton.Location = new System.Drawing.Point(323, 276);
             this.DeleteDataButton.Name = "DeleteDataButton";
-            this.DeleteDataButton.Size = new System.Drawing.Size(168, 59);
+            this.DeleteDataButton.Size = new System.Drawing.Size(126, 48);
             this.DeleteDataButton.TabIndex = 9;
             this.DeleteDataButton.Text = "Удалить";
             this.DeleteDataButton.UseVisualStyleBackColor = true;
@@ -218,10 +212,9 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
-            this.CloseButton.Location = new System.Drawing.Point(607, 340);
-            this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CloseButton.Location = new System.Drawing.Point(455, 276);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(168, 59);
+            this.CloseButton.Size = new System.Drawing.Size(126, 48);
             this.CloseButton.TabIndex = 8;
             this.CloseButton.Text = "Закрыть";
             this.CloseButton.UseVisualStyleBackColor = true;
@@ -231,19 +224,18 @@
             // 
             this.PossibleIDsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PossibleIDsListBox.FormattingEnabled = true;
-            this.PossibleIDsListBox.ItemHeight = 30;
-            this.PossibleIDsListBox.Location = new System.Drawing.Point(700, 11);
-            this.PossibleIDsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PossibleIDsListBox.ItemHeight = 25;
+            this.PossibleIDsListBox.Location = new System.Drawing.Point(498, 9);
             this.PossibleIDsListBox.Name = "PossibleIDsListBox";
-            this.PossibleIDsListBox.Size = new System.Drawing.Size(116, 34);
+            this.PossibleIDsListBox.Size = new System.Drawing.Size(88, 29);
             this.PossibleIDsListBox.TabIndex = 10;
             this.PossibleIDsListBox.SelectedIndexChanged += new System.EventHandler(this.PossibleIDsListBox_SelectedIndexChanged);
             // 
             // DeleteDataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 414);
+            this.ClientSize = new System.Drawing.Size(891, 336);
             this.Controls.Add(this.PossibleIDsListBox);
             this.Controls.Add(this.DeleteDataButton);
             this.Controls.Add(this.CloseButton);
@@ -253,7 +245,6 @@
             this.Controls.Add(this.LaptopDataGridView);
             this.Controls.Add(this.OrderDataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DeleteDataForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

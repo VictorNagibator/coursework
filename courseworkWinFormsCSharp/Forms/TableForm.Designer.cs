@@ -54,14 +54,15 @@
             this.выйтиВГлавноеМенюToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(1067, 30);
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.MenuStrip.Size = new System.Drawing.Size(800, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "MenuStrip";
             // 
             // выбратьФайлToolStripMenuItem
             // 
             this.выбратьФайлToolStripMenuItem.Name = "выбратьФайлToolStripMenuItem";
-            this.выбратьФайлToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.выбратьФайлToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.выбратьФайлToolStripMenuItem.Text = "Выбрать файл";
             this.выбратьФайлToolStripMenuItem.Click += new System.EventHandler(this.выбратьФайлToolStripMenuItem_Click);
             // 
@@ -73,33 +74,34 @@
             this.удалитьЗаписьToolStripMenuItem});
             this.работаСДаннымиToolStripMenuItem.Enabled = false;
             this.работаСДаннымиToolStripMenuItem.Name = "работаСДаннымиToolStripMenuItem";
-            this.работаСДаннымиToolStripMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.работаСДаннымиToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
             this.работаСДаннымиToolStripMenuItem.Text = "Работа с данными";
             // 
             // добавитьЗаписьToolStripMenuItem
             // 
             this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
-            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
             this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗаписьToolStripMenuItem_Click);
             // 
             // изменитьЗаписьToolStripMenuItem
             // 
             this.изменитьЗаписьToolStripMenuItem.Name = "изменитьЗаписьToolStripMenuItem";
-            this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьЗаписьToolStripMenuItem.Text = "Изменить запись";
+            this.изменитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.изменитьЗаписьToolStripMenuItem_Click);
             // 
             // удалитьЗаписьToolStripMenuItem
             // 
             this.удалитьЗаписьToolStripMenuItem.Name = "удалитьЗаписьToolStripMenuItem";
-            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
             this.удалитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьЗаписьToolStripMenuItem_Click);
             // 
             // выйтиВГлавноеМенюToolStripMenuItem
             // 
             this.выйтиВГлавноеМенюToolStripMenuItem.Name = "выйтиВГлавноеМенюToolStripMenuItem";
-            this.выйтиВГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.выйтиВГлавноеМенюToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
             this.выйтиВГлавноеМенюToolStripMenuItem.Text = "Выйти в главное меню";
             this.выйтиВГлавноеМенюToolStripMenuItem.Click += new System.EventHandler(this.выйтиВГлавноеМенюToolStripMenuItem_Click);
             // 
@@ -113,12 +115,11 @@
             this.LaptopColumn,
             this.StatusColumn});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 30);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Location = new System.Drawing.Point(0, 24);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1067, 524);
+            this.dataGridView.Size = new System.Drawing.Size(800, 426);
             this.dataGridView.TabIndex = 1;
             // 
             // IDColumn
@@ -149,24 +150,22 @@
             // 
             this.FileInfoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FileInfoLabel.AutoSize = true;
-            this.FileInfoLabel.Location = new System.Drawing.Point(17, 529);
-            this.FileInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FileInfoLabel.Location = new System.Drawing.Point(13, 430);
             this.FileInfoLabel.Name = "FileInfoLabel";
-            this.FileInfoLabel.Size = new System.Drawing.Size(108, 16);
+            this.FileInfoLabel.Size = new System.Drawing.Size(84, 13);
             this.FileInfoLabel.TabIndex = 2;
             this.FileInfoLabel.Text = "Рабочий файл: ";
             // 
             // TableForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.FileInfoLabel);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.MenuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TableForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа с данными";

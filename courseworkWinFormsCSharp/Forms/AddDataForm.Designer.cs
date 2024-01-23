@@ -131,11 +131,10 @@
             // 
             this.IDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IDTextBox.Location = new System.Drawing.Point(179, 72);
-            this.IDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.IDTextBox.Location = new System.Drawing.Point(134, 58);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.ReadOnly = true;
-            this.IDTextBox.Size = new System.Drawing.Size(140, 30);
+            this.IDTextBox.Size = new System.Drawing.Size(106, 26);
             this.IDTextBox.TabIndex = 1;
             // 
             // IDLabel
@@ -143,10 +142,10 @@
             this.IDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.IDLabel.AutoSize = true;
             this.IDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IDLabel.Location = new System.Drawing.Point(140, 75);
-            this.IDLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.IDLabel.Location = new System.Drawing.Point(105, 61);
+            this.IDLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(31, 25);
+            this.IDLabel.Size = new System.Drawing.Size(26, 20);
             this.IDLabel.TabIndex = 3;
             this.IDLabel.Text = "ID";
             // 
@@ -155,10 +154,10 @@
             this.AdditionalInfoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AdditionalInfoLabel.AutoSize = true;
             this.AdditionalInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AdditionalInfoLabel.Location = new System.Drawing.Point(58, 152);
-            this.AdditionalInfoLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.AdditionalInfoLabel.Location = new System.Drawing.Point(44, 124);
+            this.AdditionalInfoLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.AdditionalInfoLabel.Name = "AdditionalInfoLabel";
-            this.AdditionalInfoLabel.Size = new System.Drawing.Size(113, 25);
+            this.AdditionalInfoLabel.Size = new System.Drawing.Size(89, 20);
             this.AdditionalInfoLabel.TabIndex = 5;
             this.AdditionalInfoLabel.Text = "Доп. инфо";
             // 
@@ -166,10 +165,9 @@
             // 
             this.AdditionalInfoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.AdditionalInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AdditionalInfoTextBox.Location = new System.Drawing.Point(179, 147);
-            this.AdditionalInfoTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.AdditionalInfoTextBox.Location = new System.Drawing.Point(134, 119);
             this.AdditionalInfoTextBox.Name = "AdditionalInfoTextBox";
-            this.AdditionalInfoTextBox.Size = new System.Drawing.Size(140, 30);
+            this.AdditionalInfoTextBox.Size = new System.Drawing.Size(106, 26);
             this.AdditionalInfoTextBox.TabIndex = 3;
             // 
             // StatusLabel
@@ -177,10 +175,10 @@
             this.StatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StatusLabel.Location = new System.Drawing.Point(26, 114);
-            this.StatusLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.StatusLabel.Location = new System.Drawing.Point(20, 93);
+            this.StatusLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(145, 25);
+            this.StatusLabel.Size = new System.Drawing.Size(117, 20);
             this.StatusLabel.TabIndex = 6;
             this.StatusLabel.Text = "Статус заказа";
             // 
@@ -189,25 +187,23 @@
             this.StatusListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.StatusListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StatusListBox.FormattingEnabled = true;
-            this.StatusListBox.ItemHeight = 25;
+            this.StatusListBox.ItemHeight = 20;
             this.StatusListBox.Items.AddRange(new object[] {
             "В ожидании",
             "В ремонте",
             "Завершен"});
-            this.StatusListBox.Location = new System.Drawing.Point(179, 110);
-            this.StatusListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.StatusListBox.Location = new System.Drawing.Point(134, 89);
             this.StatusListBox.Name = "StatusListBox";
-            this.StatusListBox.Size = new System.Drawing.Size(140, 29);
+            this.StatusListBox.Size = new System.Drawing.Size(106, 24);
             this.StatusListBox.TabIndex = 2;
             // 
             // OrderInfoLabel
             // 
             this.OrderInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.OrderInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.OrderInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OrderInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.OrderInfoLabel.Name = "OrderInfoLabel";
-            this.OrderInfoLabel.Size = new System.Drawing.Size(320, 42);
+            this.OrderInfoLabel.Size = new System.Drawing.Size(240, 34);
             this.OrderInfoLabel.TabIndex = 8;
             this.OrderInfoLabel.Text = "Данные о заказе";
             this.OrderInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,9 +213,8 @@
             this.LaptopInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LaptopInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LaptopInfoLabel.Location = new System.Drawing.Point(0, 0);
-            this.LaptopInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LaptopInfoLabel.Name = "LaptopInfoLabel";
-            this.LaptopInfoLabel.Size = new System.Drawing.Size(1031, 42);
+            this.LaptopInfoLabel.Size = new System.Drawing.Size(773, 34);
             this.LaptopInfoLabel.TabIndex = 9;
             this.LaptopInfoLabel.Text = "Данные о ноутбуке";
             this.LaptopInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -228,10 +223,9 @@
             // 
             this.CPUInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.CPUInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CPUInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.CPUInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CPUInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.CPUInfoLabel.Name = "CPUInfoLabel";
-            this.CPUInfoLabel.Size = new System.Drawing.Size(323, 25);
+            this.CPUInfoLabel.Size = new System.Drawing.Size(243, 20);
             this.CPUInfoLabel.TabIndex = 10;
             this.CPUInfoLabel.Text = "CPU:";
             this.CPUInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,10 +235,10 @@
             this.ModelCPULabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ModelCPULabel.AutoSize = true;
             this.ModelCPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModelCPULabel.Location = new System.Drawing.Point(87, 50);
-            this.ModelCPULabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.ModelCPULabel.Location = new System.Drawing.Point(65, 41);
+            this.ModelCPULabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ModelCPULabel.Name = "ModelCPULabel";
-            this.ModelCPULabel.Size = new System.Drawing.Size(84, 25);
+            this.ModelCPULabel.Size = new System.Drawing.Size(70, 20);
             this.ModelCPULabel.TabIndex = 11;
             this.ModelCPULabel.Text = "Модель";
             // 
@@ -252,20 +246,18 @@
             // 
             this.CPUModelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUModelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CPUModelTextBox.Location = new System.Drawing.Point(189, 47);
-            this.CPUModelTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CPUModelTextBox.Location = new System.Drawing.Point(142, 38);
             this.CPUModelTextBox.Name = "CPUModelTextBox";
-            this.CPUModelTextBox.Size = new System.Drawing.Size(133, 30);
+            this.CPUModelTextBox.Size = new System.Drawing.Size(101, 26);
             this.CPUModelTextBox.TabIndex = 11;
             // 
             // CPUSocketTextBox
             // 
             this.CPUSocketTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUSocketTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CPUSocketTextBox.Location = new System.Drawing.Point(189, 85);
-            this.CPUSocketTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CPUSocketTextBox.Location = new System.Drawing.Point(142, 69);
             this.CPUSocketTextBox.Name = "CPUSocketTextBox";
-            this.CPUSocketTextBox.Size = new System.Drawing.Size(133, 30);
+            this.CPUSocketTextBox.Size = new System.Drawing.Size(101, 26);
             this.CPUSocketTextBox.TabIndex = 12;
             // 
             // SocketCPULabel
@@ -273,10 +265,10 @@
             this.SocketCPULabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SocketCPULabel.AutoSize = true;
             this.SocketCPULabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SocketCPULabel.Location = new System.Drawing.Point(102, 89);
-            this.SocketCPULabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.SocketCPULabel.Location = new System.Drawing.Point(76, 72);
+            this.SocketCPULabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.SocketCPULabel.Name = "SocketCPULabel";
-            this.SocketCPULabel.Size = new System.Drawing.Size(69, 25);
+            this.SocketCPULabel.Size = new System.Drawing.Size(55, 20);
             this.SocketCPULabel.TabIndex = 13;
             this.SocketCPULabel.Text = "Сокет";
             // 
@@ -290,15 +282,14 @@
             0,
             0,
             65536});
-            this.CPUFrequencyNumericUpDown.Location = new System.Drawing.Point(189, 123);
-            this.CPUFrequencyNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.CPUFrequencyNumericUpDown.Location = new System.Drawing.Point(142, 100);
             this.CPUFrequencyNumericUpDown.Maximum = new decimal(new int[] {
             9,
             0,
             0,
             0});
             this.CPUFrequencyNumericUpDown.Name = "CPUFrequencyNumericUpDown";
-            this.CPUFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.CPUFrequencyNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.CPUFrequencyNumericUpDown.TabIndex = 13;
             // 
             // FrequencyLabel
@@ -306,10 +297,10 @@
             this.FrequencyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FrequencyLabel.AutoSize = true;
             this.FrequencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FrequencyLabel.Location = new System.Drawing.Point(26, 125);
-            this.FrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.FrequencyLabel.Location = new System.Drawing.Point(20, 102);
+            this.FrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.FrequencyLabel.Name = "FrequencyLabel";
-            this.FrequencyLabel.Size = new System.Drawing.Size(145, 25);
+            this.FrequencyLabel.Size = new System.Drawing.Size(115, 20);
             this.FrequencyLabel.TabIndex = 16;
             this.FrequencyLabel.Text = "Частота (ГГц)";
             // 
@@ -318,10 +309,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(46, 163);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label1.Location = new System.Drawing.Point(34, 132);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 25);
+            this.label1.Size = new System.Drawing.Size(103, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Кол-во ядер";
             // 
@@ -329,10 +320,9 @@
             // 
             this.CPUCoresNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CPUCoresNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CPUCoresNumericUpDown.Location = new System.Drawing.Point(189, 161);
-            this.CPUCoresNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.CPUCoresNumericUpDown.Location = new System.Drawing.Point(142, 131);
             this.CPUCoresNumericUpDown.Name = "CPUCoresNumericUpDown";
-            this.CPUCoresNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.CPUCoresNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.CPUCoresNumericUpDown.TabIndex = 14;
             // 
             // GPUVRAMLabel
@@ -340,10 +330,10 @@
             this.GPUVRAMLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUVRAMLabel.AutoSize = true;
             this.GPUVRAMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUVRAMLabel.Location = new System.Drawing.Point(57, 125);
-            this.GPUVRAMLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.GPUVRAMLabel.Location = new System.Drawing.Point(43, 102);
+            this.GPUVRAMLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.GPUVRAMLabel.Name = "GPUVRAMLabel";
-            this.GPUVRAMLabel.Size = new System.Drawing.Size(112, 25);
+            this.GPUVRAMLabel.Size = new System.Drawing.Size(88, 20);
             this.GPUVRAMLabel.TabIndex = 27;
             this.GPUVRAMLabel.Text = "VRAM (Гб)";
             // 
@@ -351,10 +341,9 @@
             // 
             this.GPUVRAMNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUVRAMNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUVRAMNumericUpDown.Location = new System.Drawing.Point(189, 123);
-            this.GPUVRAMNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.GPUVRAMNumericUpDown.Location = new System.Drawing.Point(142, 100);
             this.GPUVRAMNumericUpDown.Name = "GPUVRAMNumericUpDown";
-            this.GPUVRAMNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.GPUVRAMNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.GPUVRAMNumericUpDown.TabIndex = 7;
             // 
             // GPUFrequencyLabel
@@ -362,10 +351,10 @@
             this.GPUFrequencyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUFrequencyLabel.AutoSize = true;
             this.GPUFrequencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUFrequencyLabel.Location = new System.Drawing.Point(20, 87);
-            this.GPUFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.GPUFrequencyLabel.Location = new System.Drawing.Point(15, 71);
+            this.GPUFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.GPUFrequencyLabel.Name = "GPUFrequencyLabel";
-            this.GPUFrequencyLabel.Size = new System.Drawing.Size(149, 25);
+            this.GPUFrequencyLabel.Size = new System.Drawing.Size(119, 20);
             this.GPUFrequencyLabel.TabIndex = 25;
             this.GPUFrequencyLabel.Text = "Частота (МГц)";
             // 
@@ -373,25 +362,23 @@
             // 
             this.GPUFrequencyNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUFrequencyNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUFrequencyNumericUpDown.Location = new System.Drawing.Point(189, 85);
-            this.GPUFrequencyNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.GPUFrequencyNumericUpDown.Location = new System.Drawing.Point(142, 69);
             this.GPUFrequencyNumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.GPUFrequencyNumericUpDown.Name = "GPUFrequencyNumericUpDown";
-            this.GPUFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.GPUFrequencyNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.GPUFrequencyNumericUpDown.TabIndex = 6;
             // 
             // GPUModelTextBox
             // 
             this.GPUModelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUModelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUModelTextBox.Location = new System.Drawing.Point(189, 47);
-            this.GPUModelTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.GPUModelTextBox.Location = new System.Drawing.Point(142, 38);
             this.GPUModelTextBox.Name = "GPUModelTextBox";
-            this.GPUModelTextBox.Size = new System.Drawing.Size(133, 30);
+            this.GPUModelTextBox.Size = new System.Drawing.Size(101, 26);
             this.GPUModelTextBox.TabIndex = 5;
             // 
             // GPUModelLabel
@@ -399,10 +386,10 @@
             this.GPUModelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.GPUModelLabel.AutoSize = true;
             this.GPUModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUModelLabel.Location = new System.Drawing.Point(85, 50);
-            this.GPUModelLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.GPUModelLabel.Location = new System.Drawing.Point(64, 41);
+            this.GPUModelLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.GPUModelLabel.Name = "GPUModelLabel";
-            this.GPUModelLabel.Size = new System.Drawing.Size(84, 25);
+            this.GPUModelLabel.Size = new System.Drawing.Size(70, 20);
             this.GPUModelLabel.TabIndex = 20;
             this.GPUModelLabel.Text = "Модель";
             // 
@@ -410,10 +397,9 @@
             // 
             this.GPUInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GPUInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GPUInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.GPUInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.GPUInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.GPUInfoLabel.Name = "GPUInfoLabel";
-            this.GPUInfoLabel.Size = new System.Drawing.Size(323, 25);
+            this.GPUInfoLabel.Size = new System.Drawing.Size(243, 20);
             this.GPUInfoLabel.TabIndex = 19;
             this.GPUInfoLabel.Text = "GPU:";
             this.GPUInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,10 +408,9 @@
             // 
             this.RAMModelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMModelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMModelTextBox.Location = new System.Drawing.Point(189, 47);
-            this.RAMModelTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.RAMModelTextBox.Location = new System.Drawing.Point(142, 38);
             this.RAMModelTextBox.Name = "RAMModelTextBox";
-            this.RAMModelTextBox.Size = new System.Drawing.Size(133, 30);
+            this.RAMModelTextBox.Size = new System.Drawing.Size(101, 26);
             this.RAMModelTextBox.TabIndex = 15;
             // 
             // RAMModelLabel
@@ -433,10 +418,10 @@
             this.RAMModelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMModelLabel.AutoSize = true;
             this.RAMModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMModelLabel.Location = new System.Drawing.Point(85, 50);
-            this.RAMModelLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.RAMModelLabel.Location = new System.Drawing.Point(64, 41);
+            this.RAMModelLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.RAMModelLabel.Name = "RAMModelLabel";
-            this.RAMModelLabel.Size = new System.Drawing.Size(84, 25);
+            this.RAMModelLabel.Size = new System.Drawing.Size(70, 20);
             this.RAMModelLabel.TabIndex = 29;
             this.RAMModelLabel.Text = "Модель";
             // 
@@ -444,10 +429,9 @@
             // 
             this.RAMInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.RAMInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.RAMInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RAMInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.RAMInfoLabel.Name = "RAMInfoLabel";
-            this.RAMInfoLabel.Size = new System.Drawing.Size(323, 25);
+            this.RAMInfoLabel.Size = new System.Drawing.Size(243, 20);
             this.RAMInfoLabel.TabIndex = 28;
             this.RAMInfoLabel.Text = "RAM:";
             this.RAMInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,10 +441,10 @@
             this.RAMCapacityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMCapacityLabel.AutoSize = true;
             this.RAMCapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMCapacityLabel.Location = new System.Drawing.Point(49, 162);
-            this.RAMCapacityLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.RAMCapacityLabel.Location = new System.Drawing.Point(37, 132);
+            this.RAMCapacityLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.RAMCapacityLabel.Name = "RAMCapacityLabel";
-            this.RAMCapacityLabel.Size = new System.Drawing.Size(120, 25);
+            this.RAMCapacityLabel.Size = new System.Drawing.Size(93, 20);
             this.RAMCapacityLabel.TabIndex = 34;
             this.RAMCapacityLabel.Text = "Объем (Гб)";
             // 
@@ -468,10 +452,9 @@
             // 
             this.RAMCapacityNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMCapacityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMCapacityNumericUpDown.Location = new System.Drawing.Point(189, 160);
-            this.RAMCapacityNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.RAMCapacityNumericUpDown.Location = new System.Drawing.Point(142, 130);
             this.RAMCapacityNumericUpDown.Name = "RAMCapacityNumericUpDown";
-            this.RAMCapacityNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.RAMCapacityNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.RAMCapacityNumericUpDown.TabIndex = 18;
             // 
             // RAMFrequencyLabel
@@ -479,10 +462,10 @@
             this.RAMFrequencyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMFrequencyLabel.AutoSize = true;
             this.RAMFrequencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMFrequencyLabel.Location = new System.Drawing.Point(20, 126);
-            this.RAMFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.RAMFrequencyLabel.Location = new System.Drawing.Point(15, 102);
+            this.RAMFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.RAMFrequencyLabel.Name = "RAMFrequencyLabel";
-            this.RAMFrequencyLabel.Size = new System.Drawing.Size(149, 25);
+            this.RAMFrequencyLabel.Size = new System.Drawing.Size(119, 20);
             this.RAMFrequencyLabel.TabIndex = 32;
             this.RAMFrequencyLabel.Text = "Частота (МГц)";
             // 
@@ -490,15 +473,14 @@
             // 
             this.RAMFrequencyNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMFrequencyNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMFrequencyNumericUpDown.Location = new System.Drawing.Point(189, 122);
-            this.RAMFrequencyNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.RAMFrequencyNumericUpDown.Location = new System.Drawing.Point(142, 99);
             this.RAMFrequencyNumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.RAMFrequencyNumericUpDown.Name = "RAMFrequencyNumericUpDown";
-            this.RAMFrequencyNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.RAMFrequencyNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.RAMFrequencyNumericUpDown.TabIndex = 17;
             // 
             // RAMTypeLabel
@@ -506,10 +488,10 @@
             this.RAMTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMTypeLabel.AutoSize = true;
             this.RAMTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RAMTypeLabel.Location = new System.Drawing.Point(46, 88);
-            this.RAMTypeLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.RAMTypeLabel.Location = new System.Drawing.Point(34, 72);
+            this.RAMTypeLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.RAMTypeLabel.Name = "RAMTypeLabel";
-            this.RAMTypeLabel.Size = new System.Drawing.Size(123, 25);
+            this.RAMTypeLabel.Size = new System.Drawing.Size(96, 20);
             this.RAMTypeLabel.TabIndex = 35;
             this.RAMTypeLabel.Text = "Тип памяти";
             // 
@@ -518,17 +500,16 @@
             this.RAMTypeListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RAMTypeListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RAMTypeListBox.FormattingEnabled = true;
-            this.RAMTypeListBox.ItemHeight = 25;
+            this.RAMTypeListBox.ItemHeight = 20;
             this.RAMTypeListBox.Items.AddRange(new object[] {
             "DDR",
             "DDR2",
             "DDR3",
             "DDR4",
             "DDR5"});
-            this.RAMTypeListBox.Location = new System.Drawing.Point(189, 85);
-            this.RAMTypeListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.RAMTypeListBox.Location = new System.Drawing.Point(142, 69);
             this.RAMTypeListBox.Name = "RAMTypeListBox";
-            this.RAMTypeListBox.Size = new System.Drawing.Size(133, 29);
+            this.RAMTypeListBox.Size = new System.Drawing.Size(101, 24);
             this.RAMTypeListBox.TabIndex = 16;
             // 
             // DisplayHeightLabel
@@ -536,10 +517,10 @@
             this.DisplayHeightLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayHeightLabel.AutoSize = true;
             this.DisplayHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayHeightLabel.Location = new System.Drawing.Point(5, 87);
-            this.DisplayHeightLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DisplayHeightLabel.Location = new System.Drawing.Point(4, 71);
+            this.DisplayHeightLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DisplayHeightLabel.Name = "DisplayHeightLabel";
-            this.DisplayHeightLabel.Size = new System.Drawing.Size(176, 25);
+            this.DisplayHeightLabel.Size = new System.Drawing.Size(142, 20);
             this.DisplayHeightLabel.TabIndex = 52;
             this.DisplayHeightLabel.Text = "Высота (пиксели)";
             // 
@@ -547,25 +528,23 @@
             // 
             this.DisplayHeightNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayHeightNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayHeightNumericUpDown.Location = new System.Drawing.Point(194, 85);
-            this.DisplayHeightNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DisplayHeightNumericUpDown.Location = new System.Drawing.Point(146, 69);
             this.DisplayHeightNumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.DisplayHeightNumericUpDown.Name = "DisplayHeightNumericUpDown";
-            this.DisplayHeightNumericUpDown.Size = new System.Drawing.Size(128, 30);
+            this.DisplayHeightNumericUpDown.Size = new System.Drawing.Size(96, 26);
             this.DisplayHeightNumericUpDown.TabIndex = 9;
             // 
             // DisplayInfoLabel
             // 
             this.DisplayInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DisplayInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.DisplayInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DisplayInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.DisplayInfoLabel.Name = "DisplayInfoLabel";
-            this.DisplayInfoLabel.Size = new System.Drawing.Size(323, 25);
+            this.DisplayInfoLabel.Size = new System.Drawing.Size(243, 20);
             this.DisplayInfoLabel.TabIndex = 46;
             this.DisplayInfoLabel.Text = "Экран:";
             this.DisplayInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -575,10 +554,10 @@
             this.DisplayFrequencyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayFrequencyLabel.AutoSize = true;
             this.DisplayFrequencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayFrequencyLabel.Location = new System.Drawing.Point(48, 125);
-            this.DisplayFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DisplayFrequencyLabel.Location = new System.Drawing.Point(36, 102);
+            this.DisplayFrequencyLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DisplayFrequencyLabel.Name = "DisplayFrequencyLabel";
-            this.DisplayFrequencyLabel.Size = new System.Drawing.Size(133, 25);
+            this.DisplayFrequencyLabel.Size = new System.Drawing.Size(106, 20);
             this.DisplayFrequencyLabel.TabIndex = 54;
             this.DisplayFrequencyLabel.Text = "Частота (Гц)";
             // 
@@ -586,15 +565,14 @@
             // 
             this.DisplayFrequencyNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayFrequencyNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayFrequencyNumericUpDown.Location = new System.Drawing.Point(194, 123);
-            this.DisplayFrequencyNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DisplayFrequencyNumericUpDown.Location = new System.Drawing.Point(146, 100);
             this.DisplayFrequencyNumericUpDown.Maximum = new decimal(new int[] {
             300,
             0,
             0,
             0});
             this.DisplayFrequencyNumericUpDown.Name = "DisplayFrequencyNumericUpDown";
-            this.DisplayFrequencyNumericUpDown.Size = new System.Drawing.Size(128, 30);
+            this.DisplayFrequencyNumericUpDown.Size = new System.Drawing.Size(96, 26);
             this.DisplayFrequencyNumericUpDown.TabIndex = 10;
             // 
             // DisplayWidthLabel
@@ -602,10 +580,10 @@
             this.DisplayWidthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayWidthLabel.AutoSize = true;
             this.DisplayWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayWidthLabel.Location = new System.Drawing.Point(4, 49);
-            this.DisplayWidthLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DisplayWidthLabel.Location = new System.Drawing.Point(3, 40);
+            this.DisplayWidthLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DisplayWidthLabel.Name = "DisplayWidthLabel";
-            this.DisplayWidthLabel.Size = new System.Drawing.Size(177, 25);
+            this.DisplayWidthLabel.Size = new System.Drawing.Size(143, 20);
             this.DisplayWidthLabel.TabIndex = 56;
             this.DisplayWidthLabel.Text = "Ширина (пиксели)";
             // 
@@ -613,25 +591,23 @@
             // 
             this.DisplayWidthNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayWidthNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DisplayWidthNumericUpDown.Location = new System.Drawing.Point(194, 47);
-            this.DisplayWidthNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DisplayWidthNumericUpDown.Location = new System.Drawing.Point(146, 38);
             this.DisplayWidthNumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.DisplayWidthNumericUpDown.Name = "DisplayWidthNumericUpDown";
-            this.DisplayWidthNumericUpDown.Size = new System.Drawing.Size(128, 30);
+            this.DisplayWidthNumericUpDown.Size = new System.Drawing.Size(96, 26);
             this.DisplayWidthNumericUpDown.TabIndex = 8;
             // 
             // DataStorageInfoLabel
             // 
             this.DataStorageInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DataStorageInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.DataStorageInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DataStorageInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.DataStorageInfoLabel.Name = "DataStorageInfoLabel";
-            this.DataStorageInfoLabel.Size = new System.Drawing.Size(658, 25);
+            this.DataStorageInfoLabel.Size = new System.Drawing.Size(494, 20);
             this.DataStorageInfoLabel.TabIndex = 57;
             this.DataStorageInfoLabel.Text = "Хранилище данных:";
             this.DataStorageInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,10 +616,10 @@
             // 
             this.DataStorageTypeLabel.AutoSize = true;
             this.DataStorageTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageTypeLabel.Location = new System.Drawing.Point(17, 49);
-            this.DataStorageTypeLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageTypeLabel.Location = new System.Drawing.Point(13, 40);
+            this.DataStorageTypeLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageTypeLabel.Name = "DataStorageTypeLabel";
-            this.DataStorageTypeLabel.Size = new System.Drawing.Size(154, 25);
+            this.DataStorageTypeLabel.Size = new System.Drawing.Size(124, 20);
             this.DataStorageTypeLabel.TabIndex = 58;
             this.DataStorageTypeLabel.Text = "Тип хранилища";
             // 
@@ -651,14 +627,13 @@
             // 
             this.ChooseDataStorageListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChooseDataStorageListBox.FormattingEnabled = true;
-            this.ChooseDataStorageListBox.ItemHeight = 25;
+            this.ChooseDataStorageListBox.ItemHeight = 20;
             this.ChooseDataStorageListBox.Items.AddRange(new object[] {
             "HDD",
             "SSD"});
-            this.ChooseDataStorageListBox.Location = new System.Drawing.Point(189, 47);
-            this.ChooseDataStorageListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ChooseDataStorageListBox.Location = new System.Drawing.Point(142, 38);
             this.ChooseDataStorageListBox.Name = "ChooseDataStorageListBox";
-            this.ChooseDataStorageListBox.Size = new System.Drawing.Size(133, 29);
+            this.ChooseDataStorageListBox.Size = new System.Drawing.Size(101, 24);
             this.ChooseDataStorageListBox.TabIndex = 24;
             this.ChooseDataStorageListBox.SelectedIndexChanged += new System.EventHandler(this.ChooseDataStorageListBox_SelectedIndexChanged);
             // 
@@ -666,51 +641,49 @@
             // 
             this.DataStorageCapacityLabel.AutoSize = true;
             this.DataStorageCapacityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageCapacityLabel.Location = new System.Drawing.Point(22, 86);
-            this.DataStorageCapacityLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageCapacityLabel.Location = new System.Drawing.Point(16, 70);
+            this.DataStorageCapacityLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageCapacityLabel.Name = "DataStorageCapacityLabel";
-            this.DataStorageCapacityLabel.Size = new System.Drawing.Size(149, 25);
+            this.DataStorageCapacityLabel.Size = new System.Drawing.Size(113, 20);
             this.DataStorageCapacityLabel.TabIndex = 61;
             this.DataStorageCapacityLabel.Text = "Вместим. (Гб)";
             // 
             // DataStorageCapacityNumericUpDown
             // 
             this.DataStorageCapacityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageCapacityNumericUpDown.Location = new System.Drawing.Point(189, 84);
-            this.DataStorageCapacityNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DataStorageCapacityNumericUpDown.Location = new System.Drawing.Point(142, 68);
             this.DataStorageCapacityNumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.DataStorageCapacityNumericUpDown.Name = "DataStorageCapacityNumericUpDown";
-            this.DataStorageCapacityNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.DataStorageCapacityNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.DataStorageCapacityNumericUpDown.TabIndex = 25;
             // 
             // DataStorageInterfaceTypeListBox
             // 
             this.DataStorageInterfaceTypeListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DataStorageInterfaceTypeListBox.FormattingEnabled = true;
-            this.DataStorageInterfaceTypeListBox.ItemHeight = 25;
+            this.DataStorageInterfaceTypeListBox.ItemHeight = 20;
             this.DataStorageInterfaceTypeListBox.Items.AddRange(new object[] {
             "PATA",
             "SATA",
             "SAS",
-            "NVMe"});
-            this.DataStorageInterfaceTypeListBox.Location = new System.Drawing.Point(189, 122);
-            this.DataStorageInterfaceTypeListBox.Margin = new System.Windows.Forms.Padding(4);
+            "NVME"});
+            this.DataStorageInterfaceTypeListBox.Location = new System.Drawing.Point(142, 99);
             this.DataStorageInterfaceTypeListBox.Name = "DataStorageInterfaceTypeListBox";
-            this.DataStorageInterfaceTypeListBox.Size = new System.Drawing.Size(133, 29);
+            this.DataStorageInterfaceTypeListBox.Size = new System.Drawing.Size(101, 24);
             this.DataStorageInterfaceTypeListBox.TabIndex = 26;
             // 
             // DataStorageInterfaceTypeLabel
             // 
             this.DataStorageInterfaceTypeLabel.AutoSize = true;
             this.DataStorageInterfaceTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageInterfaceTypeLabel.Location = new System.Drawing.Point(10, 126);
-            this.DataStorageInterfaceTypeLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageInterfaceTypeLabel.Location = new System.Drawing.Point(8, 102);
+            this.DataStorageInterfaceTypeLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageInterfaceTypeLabel.Name = "DataStorageInterfaceTypeLabel";
-            this.DataStorageInterfaceTypeLabel.Size = new System.Drawing.Size(161, 25);
+            this.DataStorageInterfaceTypeLabel.Size = new System.Drawing.Size(130, 20);
             this.DataStorageInterfaceTypeLabel.TabIndex = 62;
             this.DataStorageInterfaceTypeLabel.Text = "Интерф. подкл.";
             // 
@@ -718,10 +691,9 @@
             // 
             this.DataStorageBrandTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageBrandTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageBrandTextBox.Location = new System.Drawing.Point(524, 46);
-            this.DataStorageBrandTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DataStorageBrandTextBox.Location = new System.Drawing.Point(393, 37);
             this.DataStorageBrandTextBox.Name = "DataStorageBrandTextBox";
-            this.DataStorageBrandTextBox.Size = new System.Drawing.Size(133, 30);
+            this.DataStorageBrandTextBox.Size = new System.Drawing.Size(101, 26);
             this.DataStorageBrandTextBox.TabIndex = 27;
             // 
             // DataStorageBrandLabel
@@ -729,10 +701,10 @@
             this.DataStorageBrandLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageBrandLabel.AutoSize = true;
             this.DataStorageBrandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageBrandLabel.Location = new System.Drawing.Point(435, 49);
-            this.DataStorageBrandLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageBrandLabel.Location = new System.Drawing.Point(326, 40);
+            this.DataStorageBrandLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageBrandLabel.Name = "DataStorageBrandLabel";
-            this.DataStorageBrandLabel.Size = new System.Drawing.Size(69, 25);
+            this.DataStorageBrandLabel.Size = new System.Drawing.Size(58, 20);
             this.DataStorageBrandLabel.TabIndex = 64;
             this.DataStorageBrandLabel.Text = "Бренд";
             // 
@@ -741,10 +713,10 @@
             this.DataStorageFormFactorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageFormFactorLabel.AutoSize = true;
             this.DataStorageFormFactorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageFormFactorLabel.Location = new System.Drawing.Point(341, 89);
-            this.DataStorageFormFactorLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageFormFactorLabel.Location = new System.Drawing.Point(256, 72);
+            this.DataStorageFormFactorLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageFormFactorLabel.Name = "DataStorageFormFactorLabel";
-            this.DataStorageFormFactorLabel.Size = new System.Drawing.Size(163, 25);
+            this.DataStorageFormFactorLabel.Size = new System.Drawing.Size(123, 20);
             this.DataStorageFormFactorLabel.TabIndex = 67;
             this.DataStorageFormFactorLabel.Text = "Размер (Дюйм)";
             // 
@@ -758,15 +730,14 @@
             0,
             0,
             65536});
-            this.DataStorageFormFactorNumericUpDown.Location = new System.Drawing.Point(524, 84);
-            this.DataStorageFormFactorNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DataStorageFormFactorNumericUpDown.Location = new System.Drawing.Point(393, 68);
             this.DataStorageFormFactorNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.DataStorageFormFactorNumericUpDown.Name = "DataStorageFormFactorNumericUpDown";
-            this.DataStorageFormFactorNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.DataStorageFormFactorNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.DataStorageFormFactorNumericUpDown.TabIndex = 28;
             // 
             // DataStorageSpindleSpeedLabel
@@ -774,10 +745,10 @@
             this.DataStorageSpindleSpeedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageSpindleSpeedLabel.AutoSize = true;
             this.DataStorageSpindleSpeedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageSpindleSpeedLabel.Location = new System.Drawing.Point(342, 161);
-            this.DataStorageSpindleSpeedLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageSpindleSpeedLabel.Location = new System.Drawing.Point(256, 131);
+            this.DataStorageSpindleSpeedLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageSpindleSpeedLabel.Name = "DataStorageSpindleSpeedLabel";
-            this.DataStorageSpindleSpeedLabel.Size = new System.Drawing.Size(162, 25);
+            this.DataStorageSpindleSpeedLabel.Size = new System.Drawing.Size(133, 20);
             this.DataStorageSpindleSpeedLabel.TabIndex = 69;
             this.DataStorageSpindleSpeedLabel.Text = "Скор. шпинделя";
             // 
@@ -785,15 +756,14 @@
             // 
             this.DataStorageSpindleSpeedNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageSpindleSpeedNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageSpindleSpeedNumericUpDown.Location = new System.Drawing.Point(524, 159);
-            this.DataStorageSpindleSpeedNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.DataStorageSpindleSpeedNumericUpDown.Location = new System.Drawing.Point(393, 129);
             this.DataStorageSpindleSpeedNumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.DataStorageSpindleSpeedNumericUpDown.Name = "DataStorageSpindleSpeedNumericUpDown";
-            this.DataStorageSpindleSpeedNumericUpDown.Size = new System.Drawing.Size(133, 30);
+            this.DataStorageSpindleSpeedNumericUpDown.Size = new System.Drawing.Size(100, 26);
             this.DataStorageSpindleSpeedNumericUpDown.TabIndex = 30;
             // 
             // DataStorageFlashMemoryTypeListBox
@@ -801,17 +771,16 @@
             this.DataStorageFlashMemoryTypeListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageFlashMemoryTypeListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DataStorageFlashMemoryTypeListBox.FormattingEnabled = true;
-            this.DataStorageFlashMemoryTypeListBox.ItemHeight = 25;
+            this.DataStorageFlashMemoryTypeListBox.ItemHeight = 20;
             this.DataStorageFlashMemoryTypeListBox.Items.AddRange(new object[] {
             "SLC",
             "MLC",
             "NOR",
             "NAND",
             "NAND3D "});
-            this.DataStorageFlashMemoryTypeListBox.Location = new System.Drawing.Point(524, 122);
-            this.DataStorageFlashMemoryTypeListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DataStorageFlashMemoryTypeListBox.Location = new System.Drawing.Point(393, 99);
             this.DataStorageFlashMemoryTypeListBox.Name = "DataStorageFlashMemoryTypeListBox";
-            this.DataStorageFlashMemoryTypeListBox.Size = new System.Drawing.Size(133, 29);
+            this.DataStorageFlashMemoryTypeListBox.Size = new System.Drawing.Size(101, 24);
             this.DataStorageFlashMemoryTypeListBox.TabIndex = 29;
             // 
             // DataStorageFlashMemoryTypeLabel
@@ -819,10 +788,10 @@
             this.DataStorageFlashMemoryTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DataStorageFlashMemoryTypeLabel.AutoSize = true;
             this.DataStorageFlashMemoryTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DataStorageFlashMemoryTypeLabel.Location = new System.Drawing.Point(345, 126);
-            this.DataStorageFlashMemoryTypeLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.DataStorageFlashMemoryTypeLabel.Location = new System.Drawing.Point(259, 102);
+            this.DataStorageFlashMemoryTypeLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.DataStorageFlashMemoryTypeLabel.Name = "DataStorageFlashMemoryTypeLabel";
-            this.DataStorageFlashMemoryTypeLabel.Size = new System.Drawing.Size(159, 25);
+            this.DataStorageFlashMemoryTypeLabel.Size = new System.Drawing.Size(125, 20);
             this.DataStorageFlashMemoryTypeLabel.TabIndex = 71;
             this.DataStorageFlashMemoryTypeLabel.Text = "Тип флеш-пам.";
             // 
@@ -831,10 +800,10 @@
             this.LaptopModelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LaptopModelLabel.AutoSize = true;
             this.LaptopModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LaptopModelLabel.Location = new System.Drawing.Point(23, 188);
-            this.LaptopModelLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.LaptopModelLabel.Location = new System.Drawing.Point(17, 153);
+            this.LaptopModelLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.LaptopModelLabel.Name = "LaptopModelLabel";
-            this.LaptopModelLabel.Size = new System.Drawing.Size(148, 25);
+            this.LaptopModelLabel.Size = new System.Drawing.Size(121, 20);
             this.LaptopModelLabel.TabIndex = 72;
             this.LaptopModelLabel.Text = "Модель ноутб.";
             // 
@@ -842,10 +811,9 @@
             // 
             this.LaptopModelTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LaptopModelTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LaptopModelTextbox.Location = new System.Drawing.Point(179, 185);
-            this.LaptopModelTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.LaptopModelTextbox.Location = new System.Drawing.Point(134, 150);
             this.LaptopModelTextbox.Name = "LaptopModelTextbox";
-            this.LaptopModelTextbox.Size = new System.Drawing.Size(140, 30);
+            this.LaptopModelTextbox.Size = new System.Drawing.Size(106, 26);
             this.LaptopModelTextbox.TabIndex = 4;
             // 
             // groupBox1
@@ -860,10 +828,11 @@
             this.groupBox1.Controls.Add(this.AdditionalInfoTextBox);
             this.groupBox1.Controls.Add(this.IDLabel);
             this.groupBox1.Controls.Add(this.IDTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(20, -17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.groupBox1.Location = new System.Drawing.Point(15, -14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(326, 228);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(244, 185);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             // 
@@ -876,9 +845,11 @@
             this.groupBox2.Controls.Add(this.GPUFrequencyLabel);
             this.groupBox2.Controls.Add(this.GPUInfoLabel);
             this.groupBox2.Controls.Add(this.GPUModelLabel);
-            this.groupBox2.Location = new System.Drawing.Point(355, 48);
+            this.groupBox2.Location = new System.Drawing.Point(266, 39);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(329, 163);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(247, 132);
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
             // 
@@ -891,10 +862,11 @@
             this.groupBox3.Controls.Add(this.DisplayHeightNumericUpDown);
             this.groupBox3.Controls.Add(this.DisplayInfoLabel);
             this.groupBox3.Controls.Add(this.DisplayHeightLabel);
-            this.groupBox3.Location = new System.Drawing.Point(690, 48);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.groupBox3.Location = new System.Drawing.Point(518, 39);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(329, 163);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(247, 132);
             this.groupBox3.TabIndex = 76;
             this.groupBox3.TabStop = false;
             // 
@@ -909,10 +881,11 @@
             this.groupBox4.Controls.Add(this.CPUModelTextBox);
             this.groupBox4.Controls.Add(this.ModelCPULabel);
             this.groupBox4.Controls.Add(this.CPUInfoLabel);
-            this.groupBox4.Location = new System.Drawing.Point(20, 217);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.groupBox4.Location = new System.Drawing.Point(15, 176);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(329, 201);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(247, 163);
             this.groupBox4.TabIndex = 77;
             this.groupBox4.TabStop = false;
             // 
@@ -927,10 +900,11 @@
             this.groupBox5.Controls.Add(this.RAMModelTextBox);
             this.groupBox5.Controls.Add(this.RAMModelLabel);
             this.groupBox5.Controls.Add(this.RAMInfoLabel);
-            this.groupBox5.Location = new System.Drawing.Point(355, 217);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.groupBox5.Location = new System.Drawing.Point(266, 176);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(329, 201);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(247, 163);
             this.groupBox5.TabIndex = 78;
             this.groupBox5.TabStop = false;
             // 
@@ -951,9 +925,11 @@
             this.groupBox7.Controls.Add(this.ChooseDataStorageListBox);
             this.groupBox7.Controls.Add(this.DataStorageTypeLabel);
             this.groupBox7.Controls.Add(this.DataStorageInfoLabel);
-            this.groupBox7.Location = new System.Drawing.Point(20, 424);
+            this.groupBox7.Location = new System.Drawing.Point(15, 344);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(664, 201);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Size = new System.Drawing.Size(498, 163);
             this.groupBox7.TabIndex = 82;
             this.groupBox7.TabStop = false;
             // 
@@ -961,30 +937,27 @@
             // 
             this.MotherboardModelTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardModelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardModelTextBox.Location = new System.Drawing.Point(194, 161);
-            this.MotherboardModelTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MotherboardModelTextBox.Location = new System.Drawing.Point(146, 131);
             this.MotherboardModelTextBox.Name = "MotherboardModelTextBox";
-            this.MotherboardModelTextBox.Size = new System.Drawing.Size(125, 30);
+            this.MotherboardModelTextBox.Size = new System.Drawing.Size(95, 26);
             this.MotherboardModelTextBox.TabIndex = 23;
             // 
             // MotherboardSocketTextBox
             // 
             this.MotherboardSocketTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardSocketTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardSocketTextBox.Location = new System.Drawing.Point(194, 123);
-            this.MotherboardSocketTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MotherboardSocketTextBox.Location = new System.Drawing.Point(146, 100);
             this.MotherboardSocketTextBox.Name = "MotherboardSocketTextBox";
-            this.MotherboardSocketTextBox.Size = new System.Drawing.Size(125, 30);
+            this.MotherboardSocketTextBox.Size = new System.Drawing.Size(95, 26);
             this.MotherboardSocketTextBox.TabIndex = 21;
             // 
             // MotherboardChipsetTextBox
             // 
             this.MotherboardChipsetTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardChipsetTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardChipsetTextBox.Location = new System.Drawing.Point(194, 85);
-            this.MotherboardChipsetTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MotherboardChipsetTextBox.Location = new System.Drawing.Point(146, 69);
             this.MotherboardChipsetTextBox.Name = "MotherboardChipsetTextBox";
-            this.MotherboardChipsetTextBox.Size = new System.Drawing.Size(125, 30);
+            this.MotherboardChipsetTextBox.Size = new System.Drawing.Size(95, 26);
             this.MotherboardChipsetTextBox.TabIndex = 20;
             // 
             // MotherboardRAMTypeListBox
@@ -992,17 +965,16 @@
             this.MotherboardRAMTypeListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardRAMTypeListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MotherboardRAMTypeListBox.FormattingEnabled = true;
-            this.MotherboardRAMTypeListBox.ItemHeight = 25;
+            this.MotherboardRAMTypeListBox.ItemHeight = 20;
             this.MotherboardRAMTypeListBox.Items.AddRange(new object[] {
             "DDR",
             "DDR2",
             "DDR3",
             "DDR4",
             "DDR5"});
-            this.MotherboardRAMTypeListBox.Location = new System.Drawing.Point(194, 48);
-            this.MotherboardRAMTypeListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MotherboardRAMTypeListBox.Location = new System.Drawing.Point(146, 39);
             this.MotherboardRAMTypeListBox.Name = "MotherboardRAMTypeListBox";
-            this.MotherboardRAMTypeListBox.Size = new System.Drawing.Size(125, 29);
+            this.MotherboardRAMTypeListBox.Size = new System.Drawing.Size(95, 24);
             this.MotherboardRAMTypeListBox.TabIndex = 19;
             // 
             // groupBox6
@@ -1020,10 +992,11 @@
             this.groupBox6.Controls.Add(this.MotherboardInfoLabel);
             this.groupBox6.Controls.Add(this.flowLayoutPanel1);
             this.groupBox6.Controls.Add(this.MotherboardRAMTypeListBox);
-            this.groupBox6.Location = new System.Drawing.Point(690, 217);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.groupBox6.Location = new System.Drawing.Point(518, 176);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(329, 201);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Size = new System.Drawing.Size(247, 163);
             this.groupBox6.TabIndex = 81;
             this.groupBox6.TabStop = false;
             // 
@@ -1032,10 +1005,10 @@
             this.MotherboardTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardTypeLabel.AutoSize = true;
             this.MotherboardTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardTypeLabel.Location = new System.Drawing.Point(55, 50);
-            this.MotherboardTypeLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.MotherboardTypeLabel.Location = new System.Drawing.Point(41, 41);
+            this.MotherboardTypeLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.MotherboardTypeLabel.Name = "MotherboardTypeLabel";
-            this.MotherboardTypeLabel.Size = new System.Drawing.Size(123, 25);
+            this.MotherboardTypeLabel.Size = new System.Drawing.Size(96, 20);
             this.MotherboardTypeLabel.TabIndex = 44;
             this.MotherboardTypeLabel.Text = "Тип памяти";
             // 
@@ -1043,9 +1016,10 @@
             // 
             this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(326, 43);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(245, 35);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(0, 155);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(0, 126);
             this.flowLayoutPanel3.TabIndex = 48;
             // 
             // MotherboardChipsetLabel
@@ -1053,10 +1027,10 @@
             this.MotherboardChipsetLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardChipsetLabel.AutoSize = true;
             this.MotherboardChipsetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardChipsetLabel.Location = new System.Drawing.Point(98, 88);
-            this.MotherboardChipsetLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.MotherboardChipsetLabel.Location = new System.Drawing.Point(74, 72);
+            this.MotherboardChipsetLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.MotherboardChipsetLabel.Name = "MotherboardChipsetLabel";
-            this.MotherboardChipsetLabel.Size = new System.Drawing.Size(80, 25);
+            this.MotherboardChipsetLabel.Size = new System.Drawing.Size(65, 20);
             this.MotherboardChipsetLabel.TabIndex = 42;
             this.MotherboardChipsetLabel.Text = "Чипсет";
             // 
@@ -1065,10 +1039,10 @@
             this.MotherboardSocketLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardSocketLabel.AutoSize = true;
             this.MotherboardSocketLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardSocketLabel.Location = new System.Drawing.Point(62, 126);
-            this.MotherboardSocketLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.MotherboardSocketLabel.Location = new System.Drawing.Point(46, 102);
+            this.MotherboardSocketLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.MotherboardSocketLabel.Name = "MotherboardSocketLabel";
-            this.MotherboardSocketLabel.Size = new System.Drawing.Size(116, 25);
+            this.MotherboardSocketLabel.Size = new System.Drawing.Size(92, 20);
             this.MotherboardSocketLabel.TabIndex = 40;
             this.MotherboardSocketLabel.Text = "Сокет CPU";
             // 
@@ -1076,9 +1050,10 @@
             // 
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 43);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 35);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(0, 155);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(0, 126);
             this.flowLayoutPanel2.TabIndex = 47;
             // 
             // MotherboardModelLabel
@@ -1086,10 +1061,10 @@
             this.MotherboardModelLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherboardModelLabel.AutoSize = true;
             this.MotherboardModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardModelLabel.Location = new System.Drawing.Point(94, 165);
-            this.MotherboardModelLabel.Margin = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.MotherboardModelLabel.Location = new System.Drawing.Point(70, 134);
+            this.MotherboardModelLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.MotherboardModelLabel.Name = "MotherboardModelLabel";
-            this.MotherboardModelLabel.Size = new System.Drawing.Size(84, 25);
+            this.MotherboardModelLabel.Size = new System.Drawing.Size(70, 20);
             this.MotherboardModelLabel.TabIndex = 38;
             this.MotherboardModelLabel.Text = "Модель";
             // 
@@ -1097,10 +1072,9 @@
             // 
             this.MotherboardInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MotherboardInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MotherboardInfoLabel.Location = new System.Drawing.Point(3, 18);
-            this.MotherboardInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.MotherboardInfoLabel.Location = new System.Drawing.Point(2, 15);
             this.MotherboardInfoLabel.Name = "MotherboardInfoLabel";
-            this.MotherboardInfoLabel.Size = new System.Drawing.Size(323, 25);
+            this.MotherboardInfoLabel.Size = new System.Drawing.Size(243, 20);
             this.MotherboardInfoLabel.TabIndex = 37;
             this.MotherboardInfoLabel.Text = "Материнская плата:";
             this.MotherboardInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1109,7 +1083,8 @@
             // 
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 15);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanel1.TabIndex = 46;
@@ -1119,10 +1094,9 @@
             this.AddDataButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddDataButton.Location = new System.Drawing.Point(696, 566);
-            this.AddDataButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AddDataButton.Location = new System.Drawing.Point(522, 460);
             this.AddDataButton.Name = "AddDataButton";
-            this.AddDataButton.Size = new System.Drawing.Size(323, 58);
+            this.AddDataButton.Size = new System.Drawing.Size(242, 47);
             this.AddDataButton.TabIndex = 31;
             this.AddDataButton.Text = "Добавить";
             this.AddDataButton.UseVisualStyleBackColor = true;
@@ -1130,9 +1104,9 @@
             // 
             // AddDataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 637);
+            this.ClientSize = new System.Drawing.Size(773, 518);
             this.Controls.Add(this.AddDataButton);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox7);
@@ -1144,7 +1118,6 @@
             this.Controls.Add(this.LaptopInfoLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddDataForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
