@@ -52,12 +52,12 @@ std::string Order::getAdditionalInfo() const {
 
 void Order::input() {
 	Laptop laptop;
-	StatusType type;
+	StatusType status;
 	std::string additionalInfo;
 
 	std::cout << "Номер заказа: " << lastID << std::endl;
 	std::cout << "Введите статус заказа (0 - в ожидании, 1 - в ремонте, 2 - отремонтирован): ";
-	std::cin >> type;
+	std::cin >> status;
 	std::cin.clear();
 	while (std::cin.get() != '\n');
 	std::cout << "\tВвод параметров ноутбука\n";

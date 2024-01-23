@@ -1,90 +1,90 @@
 [
-  {
-    "numOfOrder": 4,
-    "laptop": {
-      "modelName": "fds",
-      "cpu": {
-        "modelName": "gfd",
-        "socket": "lga",
-        "frequency": 1.2,
-        "numOfCores": 6
-      },
-      "gpu": {
-        "modelName": "gdf",
-        "frequency": 1444.0,
-        "vram": 8
-      },
-      "ram": {
-        "modelName": "fdsfs",
-        "type": "DDR5",
-        "frequency": 5000.0,
-        "capacity": 16
-      },
-      "motherboard": {
-        "modelName": "ggfd",
-        "socket": "lga",
-        "chipset": "gfd",
-        "supportedRAMType": "DDR5"
-      },
-      "display": {
-        "width": 1920,
-        "height": 1080,
-        "refreshRate": 60
-      },
-      "dataStorage": {
-        "componentName": "SSD",
-        "capacity": 500,
-        "transferInterface": "NVME",
-        "brand": "fdsf",
-        "formFactor": 2.5,
-        "typeOfFlashMemory": "NAND3D"
-      }
+    {
+        "additionalInfo": "fgdf",
+        "laptop": {
+            "cpu": {
+                "frequency": 1.2000000476837158,
+                "modelName": "gfd",
+                "numOfCores": 6,
+                "socket": "lga"
+            },
+            "dataStorage": {
+                "brand": "fdsf",
+                "capacity": 500,
+                "componentName": "SSD",
+                "formFactor": 2.5,
+                "transferInterface": "NVME",
+                "typeOfFlashMemory": "NAND3D"
+            },
+            "display": {
+                "height": 1080,
+                "refreshRate": 60,
+                "width": 1920
+            },
+            "gpu": {
+                "frequency": 1444.0,
+                "modelName": "gdf",
+                "vram": 8
+            },
+            "modelName": "fds",
+            "motherboard": {
+                "chipset": "gfd",
+                "modelName": "ggfd",
+                "socket": "lga",
+                "supportedRAMType": "DDR5"
+            },
+            "ram": {
+                "capacity": 16,
+                "frequency": 5000.0,
+                "modelName": "fdsfs",
+                "type": "DDR5"
+            }
+        },
+        "numOfOrder": 4,
+        "status": "FINISHED"
     },
-    "status": "ONHOLD",
-    "additionalInfo": "fgdf"
-  },
-  {
-    "numOfOrder": 5,
-    "laptop": {
-      "modelName": "",
-      "cpu": {
-        "modelName": "",
-        "socket": "",
-        "frequency": 0.0,
-        "numOfCores": 0
-      },
-      "gpu": {
-        "modelName": "",
-        "frequency": 0.0,
-        "vram": 0
-      },
-      "ram": {
-        "modelName": "",
-        "type": "DDR",
-        "frequency": 0.0,
-        "capacity": 0
-      },
-      "motherboard": {
-        "modelName": "",
-        "socket": "",
-        "chipset": "",
-        "supportedRAMType": "DDR"
-      },
-      "display": {
-        "width": 0,
-        "height": 0,
-        "refreshRate": 0
-      },
-      "dataStorage": {
-        "componentName": "HDD",
-        "capacity": 0,
-        "transferInterface": "PATA",
-        "brand": "",
-        "formFactor": 0.0,
-        "spindleSpeed": 0
-      }
-    },
-    "status": "ONHOLD",
-    "additionalInfo": ""
-  }
+    {
+        "additionalInfo": "nothing",
+        "laptop": {
+            "cpu": {
+                "frequency": 1.5,
+                "modelName": "bgffb",
+                "numOfCores": 6,
+                "socket": "lga"
+            },
+            "dataStorage": {
+                "brand": "kingston",
+                "capacity": 500,
+                "componentName": "SSD",
+                "formFactor": 2.5,
+                "transferInterface": "NVME",
+                "typeOfFlashMemory": "NAND3D"
+            },
+            "display": {
+                "height": 1080,
+                "refreshRate": 60,
+                "width": 1920
+            },
+            "gpu": {
+                "frequency": 1244.0,
+                "modelName": "gdfg",
+                "vram": 8
+            },
+            "modelName": "gdfgdf",
+            "motherboard": {
+                "chipset": "gfdgd",
+                "modelName": "gfdgdf",
+                "socket": "lga",
+                "supportedRAMType": "DDR5"
+            },
+            "ram": {
+                "capacity": 16,
+                "frequency": 3200.0,
+                "modelName": "dsada",
+                "type": "DDR5"
+            }
+        },
+        "numOfOrder": 6,
+        "status": "ONHOLD"
+    }
 ]

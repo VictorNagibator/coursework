@@ -30,7 +30,7 @@ void ChooseOrderButton::execute()
 	}
 	catch (const std::exception& e)
 	{
-		std::cout << std::endl << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 		std::cout << "Нажмите любую клавишу для продолжения...";
 		_getch();
 		return;
