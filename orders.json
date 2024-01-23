@@ -129,50 +129,6 @@
             }
         },
         "numOfOrder": 7,
-        "status": "INPROCESS"
-    },
-    {
-        "additionalInfo": "",
-        "laptop": {
-            "cpu": {
-                "frequency": 2.5,
-                "modelName": "gfd",
-                "numOfCores": 6,
-                "socket": "lga"
-            },
-            "dataStorage": {
-                "brand": "fgdsd",
-                "capacity": 500,
-                "componentName": "HDD",
-                "formFactor": 2.5,
-                "spindleSpeed": 4200,
-                "transferInterface": "NVME"
-            },
-            "display": {
-                "height": 1080,
-                "refreshRate": 60,
-                "width": 1920
-            },
-            "gpu": {
-                "frequency": 1555.0,
-                "modelName": "gfd",
-                "vram": 6
-            },
-            "modelName": "gdf",
-            "motherboard": {
-                "chipset": "gfd",
-                "modelName": "ghfd",
-                "socket": "lga",
-                "supportedRAMType": "DDR5"
-            },
-            "ram": {
-                "capacity": 16,
-                "frequency": 4500.0,
-                "modelName": "gfd",
-                "type": "DDR5"
-            }
-        },
-        "numOfOrder": 8,
-        "status": "INPROCESS"
+        "status": "FINISHED"
     }
 ]

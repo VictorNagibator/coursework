@@ -22,7 +22,7 @@ namespace courseworkWinFormsCSharp.DataManagers
             set
             {
                 path = value;
-                OrdersData.LoadOrders(path);
+                if (OrdersData.Data.Count != 0) OrdersData.LoadOrders(path);
             }
         }
     }
