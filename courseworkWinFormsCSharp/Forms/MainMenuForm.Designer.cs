@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.label1 = new System.Windows.Forms.Label();
             this.WorkWithDataButton = new System.Windows.Forms.Button();
             this.OpenLoggerButton = new System.Windows.Forms.Button();
@@ -37,20 +38,25 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(165, 35);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 37);
+            this.label1.Size = new System.Drawing.Size(337, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Главное меню";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // WorkWithDataButton
             // 
-            this.WorkWithDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.WorkWithDataButton.Location = new System.Drawing.Point(160, 100);
+            this.WorkWithDataButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WorkWithDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.WorkWithDataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WorkWithDataButton.Location = new System.Drawing.Point(13, 50);
+            this.WorkWithDataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.WorkWithDataButton.Name = "WorkWithDataButton";
-            this.WorkWithDataButton.Size = new System.Drawing.Size(230, 69);
+            this.WorkWithDataButton.Size = new System.Drawing.Size(311, 83);
             this.WorkWithDataButton.TabIndex = 1;
             this.WorkWithDataButton.Text = "Работа с данными";
             this.WorkWithDataButton.UseVisualStyleBackColor = true;
@@ -58,10 +64,13 @@
             // 
             // OpenLoggerButton
             // 
-            this.OpenLoggerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OpenLoggerButton.Location = new System.Drawing.Point(160, 175);
+            this.OpenLoggerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OpenLoggerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.OpenLoggerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenLoggerButton.Location = new System.Drawing.Point(13, 143);
+            this.OpenLoggerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OpenLoggerButton.Name = "OpenLoggerButton";
-            this.OpenLoggerButton.Size = new System.Drawing.Size(230, 69);
+            this.OpenLoggerButton.Size = new System.Drawing.Size(311, 83);
             this.OpenLoggerButton.TabIndex = 2;
             this.OpenLoggerButton.Text = "Открыть логгер";
             this.OpenLoggerButton.UseVisualStyleBackColor = true;
@@ -69,10 +78,13 @@
             // 
             // PlayButton
             // 
-            this.PlayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlayButton.Location = new System.Drawing.Point(160, 250);
+            this.PlayButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlayButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PlayButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlayButton.Location = new System.Drawing.Point(13, 236);
+            this.PlayButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PlayButton.Name = "PlayButton";
-            this.PlayButton.Size = new System.Drawing.Size(230, 69);
+            this.PlayButton.Size = new System.Drawing.Size(311, 83);
             this.PlayButton.TabIndex = 3;
             this.PlayButton.Text = "Играть";
             this.PlayButton.UseVisualStyleBackColor = true;
@@ -80,10 +92,13 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Location = new System.Drawing.Point(160, 325);
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.Location = new System.Drawing.Point(13, 329);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(230, 69);
+            this.ExitButton.Size = new System.Drawing.Size(311, 83);
             this.ExitButton.TabIndex = 4;
             this.ExitButton.Text = "Выйти";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -91,18 +106,21 @@
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 406);
+            this.ClientSize = new System.Drawing.Size(337, 425);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.PlayButton);
             this.Controls.Add(this.OpenLoggerButton);
             this.Controls.Add(this.WorkWithDataButton);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainMenuForm";
-            this.Text = "Главное меню";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Курсач++";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

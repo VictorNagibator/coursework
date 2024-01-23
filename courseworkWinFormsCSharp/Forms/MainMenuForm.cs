@@ -23,13 +23,16 @@ namespace courseworkWinFormsCSharp
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, "К сожалению, Алексей еще не реализовал игру! Также прошу напомнить ему, что он должен забрать кроссовки со спортманежа!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, "Какое слово начинается на три Г и заканчивается на три Я?", "Загадка", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            MessageBox.Show(this, "Тригонометрия!", "Ответ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void WorkWithDataButton_Click(object sender, EventArgs e)
         {
             TableForm form = new TableForm();
+            Hide();
             form.ShowDialog();
+            Show();
         }
     }
 }

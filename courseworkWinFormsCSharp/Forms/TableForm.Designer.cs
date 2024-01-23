@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableForm));
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.выбратьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.работаСДаннымиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изменитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.игратьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиВГлавноеМенюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,13 +47,14 @@
             // 
             // MenuStrip
             // 
+            this.MenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выбратьФайлToolStripMenuItem,
             this.работаСДаннымиToolStripMenuItem,
-            this.игратьToolStripMenuItem,
             this.выйтиВГлавноеМенюToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.MenuStrip.Size = new System.Drawing.Size(800, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "MenuStrip";
@@ -88,6 +89,7 @@
             this.изменитьЗаписьToolStripMenuItem.Name = "изменитьЗаписьToolStripMenuItem";
             this.изменитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.изменитьЗаписьToolStripMenuItem.Text = "Изменить запись";
+            this.изменитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.изменитьЗаписьToolStripMenuItem_Click);
             // 
             // удалитьЗаписьToolStripMenuItem
             // 
@@ -95,13 +97,6 @@
             this.удалитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьЗаписьToolStripMenuItem.Text = "Удалить запись";
             this.удалитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.удалитьЗаписьToolStripMenuItem_Click);
-            // 
-            // игратьToolStripMenuItem
-            // 
-            this.игратьToolStripMenuItem.Name = "игратьToolStripMenuItem";
-            this.игратьToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.игратьToolStripMenuItem.Text = "Играть";
-            this.игратьToolStripMenuItem.Click += new System.EventHandler(this.игратьToolStripMenuItem_Click);
             // 
             // выйтиВГлавноеМенюToolStripMenuItem
             // 
@@ -114,19 +109,23 @@
             // 
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ColumnHeadersHeight = 29;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDColumn,
             this.LaptopColumn,
             this.StatusColumn});
-            this.dataGridView.Location = new System.Drawing.Point(12, 27);
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 24);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(776, 396);
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.Size = new System.Drawing.Size(800, 426);
             this.dataGridView.TabIndex = 1;
             // 
             // IDColumn
             // 
             this.IDColumn.HeaderText = "ID";
+            this.IDColumn.MinimumWidth = 6;
             this.IDColumn.Name = "IDColumn";
             this.IDColumn.ReadOnly = true;
             this.IDColumn.Width = 125;
@@ -135,6 +134,7 @@
             // 
             this.LaptopColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.LaptopColumn.HeaderText = "Ноутбук";
+            this.LaptopColumn.MinimumWidth = 6;
             this.LaptopColumn.Name = "LaptopColumn";
             this.LaptopColumn.ReadOnly = true;
             // 
@@ -142,11 +142,13 @@
             // 
             this.StatusColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.StatusColumn.HeaderText = "Статус заказа";
+            this.StatusColumn.MinimumWidth = 6;
             this.StatusColumn.Name = "StatusColumn";
             this.StatusColumn.ReadOnly = true;
             // 
             // FileInfoLabel
             // 
+            this.FileInfoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FileInfoLabel.AutoSize = true;
             this.FileInfoLabel.Location = new System.Drawing.Point(13, 430);
             this.FileInfoLabel.Name = "FileInfoLabel";
@@ -162,8 +164,10 @@
             this.Controls.Add(this.FileInfoLabel);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.MenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "TableForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа с данными";
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
@@ -178,7 +182,6 @@
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem выбратьФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem работаСДаннымиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem игратьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выйтиВГлавноеМенюToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDColumn;

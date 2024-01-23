@@ -20,7 +20,22 @@ namespace courseworkWinFormsCSharp.OrderComponents
                 case "Завершен":
                     return StatusType.FINISHED;
                 default:
-                    throw new Exception("Invalid status type");
+                    throw new Exception("Некорректный тип заказа");
+            }
+        }
+
+        public static string StatusTypeToString(StatusType type)
+        {
+            switch(type)
+            {
+                case StatusType.ONHOLD:
+                    return "В ожидании";
+                case StatusType.INPROCESS:
+                    return "В ремонте";
+                case StatusType.FINISHED:
+                    return "Завершен";
+                default:
+                    throw new Exception("Некорректный тип заказа");
             }
         }
     }

@@ -12,7 +12,7 @@ namespace courseworkWinFormsCSharp.Forms
 
             if (!string.IsNullOrEmpty(FileInfo.Path))
             {
-                OrdersData.LoadOrders(FileInfo.Path);
+                if (OrdersData.Data.Count == 0) OrdersData.LoadOrders(FileInfo.Path);
 
                 LoadDataInTable();
                 FileInfoLabel.Text = "Рабочий файл: " + FileInfo.Path;
@@ -32,11 +32,7 @@ namespace courseworkWinFormsCSharp.Forms
             Close();
         }
 
-        private void игратьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(this, "К сожалению, Алексей еще не реализовал игру! Также прошу напомнить ему, что он должен забрать кроссовки со спортманежа!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
+        
         private void выбратьФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -94,6 +90,13 @@ namespace courseworkWinFormsCSharp.Forms
                 изменитьЗаписьToolStripMenuItem.Enabled = false;
                 удалитьЗаписьToolStripMenuItem.Enabled = false;
             }
+        }
+
+        private void изменитьЗаписьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeDataForm form = new ChangeDataForm();
+            form.ShowDialog();
+            LoadDataInTable();
         }
     }
 }
