@@ -20,7 +20,7 @@ static std::string FlashMemoryTypeToString(FlashMemoryType type) {
 		result = "NAND";
 		break;
 	case FlashMemoryType::NAND3D:
-		result = "3D NAND";
+		result = "NAND3D";
 		break;
 	default:
 		break;
@@ -42,7 +42,7 @@ static FlashMemoryType stringToFlashMemoryType(std::string type) {
 	else if (type == "NAND") {
 		result = FlashMemoryType::NAND;
 	}
-	else if (type == "3D NAND") {
+	else if (type == "NAND3D") {
 		result = FlashMemoryType::NAND3D;
 	}
 	else {

@@ -30,6 +30,7 @@ void OrdersData::loadOrders(const std::string& filePath) {
 		throw std::invalid_argument("Файл не найден!");
 	}
 	json j = json::parse(file);
+	std::string n = j.dump();
 	file.close();
 	
 	try

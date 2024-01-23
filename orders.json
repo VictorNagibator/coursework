@@ -1,73 +1,29 @@
 [
   {
-    "numOfOrder": 2,
+    "numOfOrder": 4,
     "laptop": {
-      "modelName": "gfdgdf",
+      "modelName": "fds",
       "cpu": {
-        "modelName": "",
-        "socket": "am",
-        "frequency": 0.0,
-        "numOfCores": 5
-      },
-      "gpu": {
-        "modelName": "",
-        "frequency": 0.0,
-        "vram": 0
-      },
-      "ram": {
-        "modelName": "",
-        "type": "DDR4",
-        "frequency": 0.0,
-        "capacity": 0
-      },
-      "motherboard": {
-        "modelName": "",
-        "socket": "am",
-        "chipset": "",
-        "supportedRAMType": "DDR4"
-      },
-      "display": {
-        "width": 0,
-        "height": 0,
-        "refreshRate": 300
-      },
-      "dataStorage": {
-        "componentName": "SSD",
-        "capacity": 0,
-        "transferInterface": "PATA",
-        "brand": "",
-        "formFactor": 0.1,
-        "typeOfFlashMemory": "NAND3D"
-      }
-    },
-    "status": "ONHOLD",
-    "additionalInfo": ""
-  },
-  {
-    "numOfOrder": 3,
-    "laptop": {
-      "modelName": "bgbfdg",
-      "cpu": {
-        "modelName": "gfdvfd",
+        "modelName": "gfd",
         "socket": "lga",
         "frequency": 1.2,
         "numOfCores": 6
       },
       "gpu": {
-        "modelName": "gfgdf",
-        "frequency": 4324.0,
+        "modelName": "gdf",
+        "frequency": 1444.0,
         "vram": 8
       },
       "ram": {
-        "modelName": "kjkh",
+        "modelName": "fdsfs",
         "type": "DDR5",
         "frequency": 5000.0,
         "capacity": 16
       },
       "motherboard": {
-        "modelName": "gffgd",
+        "modelName": "ggfd",
         "socket": "lga",
-        "chipset": "gfdg",
+        "chipset": "gfd",
         "supportedRAMType": "DDR5"
       },
       "display": {
@@ -76,15 +32,59 @@
         "refreshRate": 60
       },
       "dataStorage": {
-        "componentName": "HDD",
+        "componentName": "SSD",
         "capacity": 500,
-        "transferInterface": "SATA",
-        "brand": "gfdgf",
-        "formFactor": 0.7,
-        "spindleSpeed": 4500
+        "transferInterface": "NVME",
+        "brand": "fdsf",
+        "formFactor": 2.5,
+        "typeOfFlashMemory": "NAND3D"
       }
     },
     "status": "ONHOLD",
-    "additionalInfo": "fsdfsd"
+    "additionalInfo": "fgdf"
+  },
+  {
+    "numOfOrder": 5,
+    "laptop": {
+      "modelName": "",
+      "cpu": {
+        "modelName": "",
+        "socket": "",
+        "frequency": 0.0,
+        "numOfCores": 0
+      },
+      "gpu": {
+        "modelName": "",
+        "frequency": 0.0,
+        "vram": 0
+      },
+      "ram": {
+        "modelName": "",
+        "type": "DDR",
+        "frequency": 0.0,
+        "capacity": 0
+      },
+      "motherboard": {
+        "modelName": "",
+        "socket": "",
+        "chipset": "",
+        "supportedRAMType": "DDR"
+      },
+      "display": {
+        "width": 0,
+        "height": 0,
+        "refreshRate": 0
+      },
+      "dataStorage": {
+        "componentName": "HDD",
+        "capacity": 0,
+        "transferInterface": "PATA",
+        "brand": "",
+        "formFactor": 0.0,
+        "spindleSpeed": 0
+      }
+    },
+    "status": "ONHOLD",
+    "additionalInfo": ""
   }
 ]

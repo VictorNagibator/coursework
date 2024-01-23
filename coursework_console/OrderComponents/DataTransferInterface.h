@@ -17,7 +17,7 @@ static std::string dataTransferInterfaceToString(DataTransferInterface transferI
 		result = "SAS";
 		break;
 	case DataTransferInterface::NVME:
-		result = "NVMe";
+		result = "NVME";
 		break;
 	default:
 		break;
@@ -36,7 +36,7 @@ static DataTransferInterface stringToDataTransferInterface(std::string transferI
 	else if (transferInterface == "SAS") {
 		result = DataTransferInterface::SAS;
 	}
-	else if (transferInterface == "NVMe") {
+	else if (transferInterface == "NVME") {
 		result = DataTransferInterface::NVME;
 	}
 	else {
