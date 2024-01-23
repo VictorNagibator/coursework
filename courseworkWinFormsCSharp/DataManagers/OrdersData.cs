@@ -13,24 +13,6 @@ namespace courseworkWinFormsCSharp.DataManagers
         Removing
     }
 
-    internal class OrderOperationConverter
-    {
-        internal static string ToString(OrderOperation operation)
-        {
-            switch (operation)
-            {
-                case OrderOperation.Adding:
-                    return "добавлен";
-                case OrderOperation.Editing:
-                    return "изменен";
-                case OrderOperation.Removing:
-                    return "удален";
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(operation), operation, null);
-            }
-        }
-    }
-
     internal static class OrdersData
     {
         public static List<Order> Data { get; private set; } = new List<Order>();

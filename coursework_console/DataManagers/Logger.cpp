@@ -10,6 +10,6 @@ void Logger::log(int IDOfOrder, OrderOperation operation) {
 		throw std::invalid_argument("Файл не найден!");
 	}
 	std::time_t time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-	file << "Файл " << FileInfo::getPath() << "; Заказ " << IDOfOrder << " был " << operation << "; " << std::ctime(&time);
+	file << "File " << FileInfo::getPath() << "; Order " << IDOfOrder << " was changed by " << operation << "; " << std::ctime(&time);
 	file.close();
 }

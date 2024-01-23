@@ -10,13 +10,13 @@ enum class OrderOperation
 inline std::ostream& operator <<(std::ostream& out, OrderOperation operation) {
 	switch (operation) {
 	case OrderOperation::Adding:
-		out << "добавлен";
+		out << "Adding";
 		break;
 	case OrderOperation::Editing:
-		out << "изменен";
+		out << "Editing";
 		break;
 	case OrderOperation::Removing:
-		out << "удален";
+		out << "Removing";
 		break;
 	}
 	return out;
